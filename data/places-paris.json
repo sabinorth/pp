@@ -1521,5 +1521,241 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "luxembourg",
+    "city": "paris",
+    "type": "park",
+    "name": "Люксембургский сад",
+    "name_local": "Jardin du Luxembourg",
+    "coords": [
+      48.84672,
+      2.33641
+    ],
+    "address": "Rue de Médicis / Rue de Vaugirard, 75006 Paris",
+    "summary": "Самый парижский сад: знаменитые зелёные металлические кресла вокруг большого бассейна, дворец Сената, тень каштанов. Идеален, чтобы долго сидеть.",
+    "description": "Сад при Люксембургском дворце, где заседает Сенат. Вокруг большого бассейна и вдоль газонов стоят свободные металлические кресла — их можно переставлять, но не на газоны. Сад открывается и закрывается по сезонному расписанию, которое меняется каждые две недели вслед за рассветом и закатом. Хорошо сочетается с Сен-Жерменом и кафе вокруг.",
+    "hours": {
+      "text": "1–15 октября: 7:45–18:45; с 16 октября: 8:00–18:15. Ежедневно, выходных нет.",
+      "closed_weekdays": [],
+      "source": "https://jardin.senat.fr/infos-pratiques/horaires-douverture.html",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Jardin_du_Luxembourg.JPG/1280px-Jardin_du_Luxembourg.JPG",
+        "credit": "Rdevany at English Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Jardin_du_Luxembourg.JPG"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 1,
+      "note": "Ориентировочно 35–45 минут с 1–2 пересадками (рядом станция RER B Luxembourg и метро 4 Saint-Sulpice / Odéon). Точный маршрут — по ссылке."
+    },
+    "tags": [
+      "можно посидеть долго",
+      "кресла",
+      "бесплатно",
+      "красиво"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "tuileries",
+    "city": "paris",
+    "type": "park",
+    "name": "Сад Тюильри",
+    "name_local": "Jardin des Tuileries",
+    "coords": [
+      48.86357,
+      2.32696
+    ],
+    "address": "Place de la Concorde / Rue de Rivoli, 75001 Paris",
+    "summary": "Сад между Лувром и площадью Согласия с креслами у бассейнов. Лучшее место отдышаться после Лувра или Оранжери.",
+    "description": "Бывший королевский сад, который сейчас относится к Лувру. У восьмиугольного и круглого бассейнов стоят металлические кресла, в том числе полулежачие. На одном конце сада — Оранжери, на другом — Лувр, рядом по улице Риволи — Angelina. Вход бесплатный, за 30 минут до закрытия сад начинают освобождать.",
+    "hours": {
+      "text": "В октябре ежедневно 7:30–19:30. Эвакуация начинается за 30 минут до закрытия.",
+      "closed_weekdays": [],
+      "source": "https://www.louvre.fr/en/explore/the-gardens",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Tuileries_Garden_pond_chairs.JPG/1280px-Tuileries_Garden_pond_chairs.JPG",
+        "credit": "BrokenSphere",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tuileries_Garden_pond_chairs.JPG"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Concorde, вход в сад прямо с площади."
+    },
+    "tags": [
+      "можно посидеть долго",
+      "кресла",
+      "у Лувра и Оранжери",
+      "бесплатно"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "palais-royal",
+    "city": "paris",
+    "type": "park",
+    "name": "Сад Пале-Рояль",
+    "name_local": "Jardin du Palais-Royal",
+    "coords": [
+      48.86491,
+      2.33776
+    ],
+    "address": "8 Rue de Montpensier, 75001 Paris",
+    "summary": "Тихий закрытый сад с аллеями подстриженных лип и галереями по периметру, в пяти минутах от Лувра. Скамейки и кресла у фонтана.",
+    "description": "Сад внутри квадрата дворца Пале-Рояль, окружённый галереями с маленькими магазинами и кафе. Здесь заметно тише, чем в Тюильри, хотя до Лувра рукой подать. Во дворе перед садом — полосатые колонны Бюрена. Вход свободный, сад открыт до позднего вечера.",
+    "hours": {
+      "text": "С 1 октября по 31 марта ежедневно 8:00–20:30.",
+      "closed_weekdays": [],
+      "source": "https://www.domaine-palais-royal.fr/visiter/informations-pratiques",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Garden%2C_Palais_Royal%2C_Paris_25_June_2016.jpg/1280px-Garden%2C_Palais_Royal%2C_Paris_25_June_2016.jpg",
+        "credit": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Garden,_Palais_Royal,_Paris_25_June_2016.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Palais Royal – Musée du Louvre, дальше около 200 м."
+    },
+    "tags": [
+      "тихо",
+      "у Лувра",
+      "бесплатно",
+      "можно посидеть"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "jardin-des-plantes",
+    "city": "paris",
+    "type": "park",
+    "name": "Сад растений",
+    "name_local": "Jardin des Plantes",
+    "coords": [
+      48.84404,
+      2.35973
+    ],
+    "address": "57 Rue Cuvier, 75005 Paris",
+    "summary": "Ботанический сад с длинными аллеями платанов, цветочными партерами и оранжереями. Бесплатный вход, ровные дорожки, много скамеек.",
+    "description": "Королевский сад лекарственных растений XVII века, теперь часть Музея естественной истории. Главная аллея ведёт от Сены к Большой галерее эволюции мимо цветочных партеров. Сам сад бесплатный и открыт каждый день; платные — галереи, Большие оранжереи и зверинец. Оранжереи и Большая галерея эволюции закрыты по вторникам.",
+    "hours": {
+      "text": "Сад открыт ежедневно, вход бесплатный; точные часы сада на октябрь в источнике не указаны. Большая галерея эволюции и Большие оранжереи закрыты по вторникам (6.10); зверинец открыт каждый день.",
+      "closed_weekdays": [],
+      "source": "https://www.jardindesplantesdeparis.fr/en/opening-times-prices-access",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Сад бесплатно. Большая галерея эволюции — 10–16 €, Большие оранжереи — 7–9 €, зверинец — 10–13 €."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Paris_75005_Grande_Galerie_de_l%27Evolution_20110707.jpg/1280px-Paris_75005_Grande_Galerie_de_l%27Evolution_20110707.jpg",
+        "credit": "Alvesgaspar",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_75005_Grande_Galerie_de_l%27Evolution_20110707.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Bastille, линия 5 до Gare d'Austerlitz, вход в сад со стороны Сены."
+    },
+    "tags": [
+      "бесплатно",
+      "ровные дорожки",
+      "оранжереи",
+      "можно посидеть"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
