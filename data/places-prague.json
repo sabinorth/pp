@@ -183,11 +183,11 @@
       50.06442,
       14.41788
     ],
-    "address": "V Pevnosti 159/5b, 128 00 Praha 2 – Vyšehrad",
+    "address": "V Pevnosti 163/2, 128 00 Praha 2 – Vyšehrad",
     "summary": "Старая крепость на скале над Влтавой с базиликой, кладбищем знаменитых чехов и видом на реку. Спокойнее Града, много зелени и скамеек.",
     "description": "По легендам, Вышеград — древнейшая резиденция чешских князей; на деле поселение возникло в середине X века. На территории стоят ротонда Святого Мартина, неоготическая базилика Святых Петра и Павла и национальное кладбище со Славином. В подземных казематах хранятся оригиналы некоторых барочных статуй с Карлова моста. Здесь просторно, можно долго сидеть на стенах с видом на Влтаву.",
     "hours": {
-      "text": "Территория открыта круглый год. Объекты НКП Вышеград: пн–вс 10:00–18:00, инфоцентр 10:00–12:00 и 13:00–18:00, 1–5.10 открыто. Часы базилики и цены казематов отдельно не проверяла.",
+      "text": "Территория открыта круглый год. Объекты НКП Вышеград: пн–вс 10:00–18:00; инфоцентр у Леопольдовых ворот 10:00–13:00 и 14:00–18:00 (praha-vysehrad.cz). 1–5.10 открыто. Часы базилики и цены казематов отдельно не проверяла.",
       "closed_weekdays": [],
       "source": "https://prague.eu/en/objevujte/vysehrad/",
       "checked_on": "2026-09-26"
@@ -195,7 +195,7 @@
     "price": {
       "avg_check_eur": null,
       "ticket_eur": 0,
-      "note": "Вход на территорию бесплатный. Казематы, выставки и базилика — платно, цены не проверяла. Туалет у инфоцентра 20 CZK (praha-vysehrad.cz)."
+      "note": "Вход на территорию бесплатный. Казематы, выставки и базилика — платно, цены не проверяла. Туалет у инфоцентра 20 CZK (отдельная точка)."
     },
     "booking": {
       "required": false,
@@ -1443,6 +1443,115 @@
       "бесплатно",
       "после Града",
       "тихо"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "franciscan-garden",
+    "city": "prague",
+    "type": "park",
+    "name": "Францисканский сад",
+    "name_local": "Františkánská zahrada",
+    "coords": [
+      50.08215,
+      14.42393
+    ],
+    "address": "Vnitroblok mezi Jungmannovým náměstím a Vodičkovou ulicí, 110 00 Praha 1",
+    "summary": "Тихий сад во внутреннем дворе прямо у Вацлавской площади и метро Můstek. Удобно передохнуть посреди прогулки по центру, есть туалет.",
+    "description": "Сад спрятан во внутреннем квартале между Юнгмановой площадью и улицей Водичковой, в двух шагах от Вацлавской площади. Здесь есть травяной садик, питьевая вода и туалет. Сад без барьеров, по нему можно гулять без ступенек. Хорошая короткая передышка между Старым городом и Národní třída.",
+    "hours": {
+      "text": "15.9–14.10: 7:00–20:00 (так что 1–5.10 открыто); 15.10–14.4: 8:00–19:00.",
+      "closed_weekdays": [],
+      "source": "https://www.praha1.cz/cistota-a-zivotni-prostredi/parky-a-zelen/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно. Туалет есть; платный ли, не выяснила."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Franti%C5%A1k%C3%A1nsk%C3%A1_zahrada_1.jpg/1280px-Franti%C5%A1k%C3%A1nsk%C3%A1_zahrada_1.jpg",
+        "credit": "VitVit",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Franti%C5%A1k%C3%A1nsk%C3%A1_zahrada_1.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "none",
+      "queue": "none",
+      "seating": null,
+      "toilet": true,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Můstek (3 остановки), вход с Юнгмановой площади в паре минут от метро."
+    },
+    "tags": [
+      "тихо",
+      "в центре",
+      "туалет",
+      "без ступенек"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "toilet-vysehrad",
+    "city": "prague",
+    "type": "toilet",
+    "name": "Туалет у инфоцентра Вышеграда",
+    "name_local": "Veřejné WC – Infocentrum Vyšehrad (Leopoldova brána)",
+    "coords": [
+      50.06283,
+      14.42217
+    ],
+    "address": "V Pevnosti 163/2, 128 00 Praha 2 – Vyšehrad",
+    "summary": "Общественный туалет рядом с информационным центром Вышеграда у Леопольдовых ворот. Платный, 20 CZK, доступен для колясок.",
+    "description": "Официальный сайт Вышеграда пишет, что общественные туалеты находятся прямо рядом с инфоцентром и доступны для инвалидных колясок. Инфоцентр стоит у Леопольдовых ворот, по пути от метро Vyšehrad к базилике.",
+    "hours": {
+      "text": "Часы туалета отдельно не указаны. Инфоцентр пн–вс 10:00–13:00 и 14:00–18:00.",
+      "closed_weekdays": [],
+      "source": "https://praha-vysehrad.cz/en/infocentre/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0.8,
+      "note": "Платный: 20 CZK."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": true,
+      "duration_min": 5
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Как до Вышеграда: метро B до Florenc, пересадка на C до Vyšehrad, дальше по ровному к Таборским и Леопольдовым воротам."
+    },
+    "tags": [
+      "туалет",
+      "платно"
     ],
     "game_id": null,
     "verified": true
