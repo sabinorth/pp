@@ -219,6 +219,8 @@ p { margin: 0.4em 0; }
 .pin-rest   { --pin: #0e7490; }
 .pin-toilet { --pin: #1d4ed8; }
 .pin-park   { --pin: #15803d; }
+.pin-experience { --pin: #be185d; }
+.pin-event  { --pin: #a16207; }
 .pin-hotel  { --pin: #b3261e; width: 50px; height: 50px; font-size: 26px; border-radius: 12px; }
 .pin-unv {
   position: absolute;
@@ -232,6 +234,33 @@ p { margin: 0.4em 0; }
   border: 1px solid #000;
 }
 .leaflet-div-icon.pin-wrap { background: none; border: 0; }
+.pin-rain {
+  position: absolute;
+  bottom: -6px; left: -6px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  font: 12px/20px system-ui, sans-serif;
+  text-align: center;
+  border: 1px solid #000;
+}
+.chip-action { color: var(--text); border-style: dashed; }
+/* Маршрут впечатления и подсветка кандидатов идеи */
+.route-line { stroke: var(--accent); }
+.stop-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--accent); color: var(--accent-text);
+  border: 2px solid #fff;
+  font: 700 13px/22px system-ui, sans-serif;
+  text-align: center;
+}
+.pin-hl {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
 
 /* --- Шторка --- */
 .sheet {
@@ -455,3 +484,10 @@ h2.section { margin-top: 18px; }
 .game-foot .btn { font-size: 0.95rem; padding: 10px 8px; }
 .game-foot .btn:only-child { grid-column: 1 / -1; }
 .sources .link-list a { word-break: break-all; font-size: 0.85rem; }
+
+/* --- Впечатления в шторке --- */
+.more summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-weight: 600; color: var(--accent); }
+.bul { padding-left: 1.3em; margin: 4px 0 8px; }
+.bul li { margin: 4px 0; }
+.bul.plain { list-style: none; padding-left: 0; }
+.card.idea .rec-actions { grid-template-columns: 1fr; }

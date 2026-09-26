@@ -2,7 +2,7 @@
 /* global L */
 import { CITIES, getHotel, getPlaces, getGameIds } from './data.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
-import { esc, TYPES, fmtDate, plural, effortHTML } from './ui.js';
+import { esc, TYPES, fmtDate, fmtWeekday, plural, effortHTML, effortInline, isRainy } from './ui.js';
 
 let map = null;
 let els = null;
@@ -11,8 +11,19 @@ let currentHotel = null;
 let currentPlaces = [];
 let readyGames = [];
 let hotelMarker = null;
-const layers = {};            // type → L.layerGroup
-const hiddenTypes = new Set();
+let routeLayer = null;        // пунктир маршрута открытой точки
+let highlightLayer = null;    // кольца вокруг кандидатов идеи
+const layers = {};            // слой → L.layerGroup
+const hiddenLayers = new Set();
+
+// Слои-чипы. Впечатления и события — один слой.
+const LAYERS = [
+  ...['sight', 'cafe', 'rest', 'toilet', 'park'].map((t) => ({ id: t, types: [t], ...TYPES[t] })),
+  { id: 'fun', types: ['experience', 'event'], icon: '✨', label: 'Впечатления' },
+];
+function layerOf(type) {
+  return (LAYERS.find((l) => l.types.includes(type)) || LAYERS[0]).id;
+}
 
 // ---------- ссылки ----------
 
@@ -35,15 +46,17 @@ function init(container) {
           `<button type="button" data-city="${id}" aria-pressed="false">${c.flag} ${c.name}</button>`).join('')}
       </div>
       <div class="chips" role="group" aria-label="Слои">
-        ${Object.entries(TYPES).map(([type, t]) =>
-          `<button type="button" class="chip" data-type="${type}" aria-pressed="true">${t.icon} ${t.label}</button>`).join('')}
+        ${LAYERS.map((l) =>
+          `<button type="button" class="chip" data-layer="${l.id}" aria-pressed="true">${l.icon} ${l.label}</button>`).join('')}
+        <button type="button" class="chip chip-action" data-ideas>💭 Идеи</button>
       </div>
     </div>
     <div id="map"></div>`;
 
   els = {
     seg: container.querySelectorAll('.seg button'),
-    chips: container.querySelectorAll('.chip'),
+    chips: container.querySelectorAll('.chip[data-layer]'),
+    ideas: container.querySelector('[data-ideas]'),
   };
 
   map = L.map(container.querySelector('#map'), { zoomControl: false });
@@ -53,9 +66,20 @@ function init(container) {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
-  for (const type of Object.keys(TYPES)) layers[type] = L.layerGroup().addTo(map);
+  for (const l of LAYERS) layers[l.id] = L.layerGroup().addTo(map);
+  routeLayer = L.layerGroup().addTo(map);
+  highlightLayer = L.layerGroup().addTo(map);
 
-  map.on('click', closeSheet);
+  map.on('click', () => {
+    closeSheet();
+    highlightLayer.clearLayers();
+  });
+  els.ideas.addEventListener('click', openIdeas);
+  // Кнопки внутри шторки карты.
+  document.querySelector('#sheet .sheet-body').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-candidates]');
+    if (b && !mapEl().hidden) showCandidates(b.dataset.candidates);
+  });
 
   for (const btn of els.seg) {
     btn.addEventListener('click', () => {
@@ -63,31 +87,33 @@ function init(container) {
     });
   }
   for (const chip of els.chips) {
-    chip.addEventListener('click', () => toggleType(chip.dataset.type));
+    chip.addEventListener('click', () => toggleLayer(chip.dataset.layer));
   }
 }
 
-function toggleType(type, forceOn = false) {
-  const on = forceOn || hiddenTypes.has(type);
+const mapEl = () => document.getElementById('map-view');
+
+function toggleLayer(id, forceOn = false) {
+  const on = forceOn || hiddenLayers.has(id);
   if (on) {
-    hiddenTypes.delete(type);
-    map.addLayer(layers[type]);
+    hiddenLayers.delete(id);
+    map.addLayer(layers[id]);
   } else {
-    hiddenTypes.add(type);
-    map.removeLayer(layers[type]);
+    hiddenLayers.add(id);
+    map.removeLayer(layers[id]);
   }
   for (const chip of els.chips) {
-    if (chip.dataset.type === type) chip.setAttribute('aria-pressed', String(on));
+    if (chip.dataset.layer === id) chip.setAttribute('aria-pressed', String(on));
   }
 }
 
 // ---------- маркеры ----------
 
-function pinIcon(kind, icon, unverified) {
+function pinIcon(kind, icon, unverified, rainy = false) {
   const size = kind === 'hotel' ? 50 : 40;
   return L.divIcon({
     className: 'pin-wrap',
-    html: `<div class="pin pin-${kind}">${icon}${unverified ? '<b class="pin-unv" title="не проверено">?</b>' : ''}</div>`,
+    html: `<div class="pin pin-${kind}">${icon}${unverified ? '<b class="pin-unv" title="не проверено">?</b>' : ''}${rainy ? '<b class="pin-rain" title="на дождь">☔</b>' : ''}</div>`,
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
   });
@@ -101,6 +127,8 @@ async function loadCity(city) {
   currentPlaces = places;
 
   for (const g of Object.values(layers)) g.clearLayers();
+  routeLayer.clearLayers();
+  highlightLayer.clearLayers();
   hotelMarker?.remove();
 
   hotelMarker = L.marker(hotel.coords, {
@@ -115,16 +143,18 @@ async function loadCity(city) {
   for (const p of places) {
     if (!p.coords) continue;   // идеи без адреса — только в списке
     const t = TYPES[p.type] ? p.type : 'sight';
-    counts[t] = (counts[t] || 0) + 1;
-    const m = L.marker(p.coords, { icon: pinIcon(t, TYPES[t].icon, !p.verified), title: p.name, keyboard: true });
+    const layer = layerOf(t);
+    counts[layer] = (counts[layer] || 0) + 1;
+    const m = L.marker(p.coords, { icon: pinIcon(t, TYPES[t].icon, !p.verified, isRainy(p)), title: p.name, keyboard: true });
     m.on('click', () => {
       setHash(city, p.id);
       openPlace(p);
     });
-    layers[t].addLayer(m);
+    layers[layer].addLayer(m);
   }
 
-  for (const chip of els.chips) chip.disabled = !counts[chip.dataset.type];
+  for (const chip of els.chips) chip.disabled = !counts[chip.dataset.layer];
+  els.ideas.disabled = !places.some((p) => p.type === 'idea');
   for (const btn of els.seg) btn.setAttribute('aria-pressed', String(btn.dataset.city === city));
 
   map.setView(hotel.coords, 14);
@@ -179,49 +209,162 @@ function photoHTML(photos) {
   </figure>`;
 }
 
+// ---------- поля впечатлений ----------
+
+function listHTML(title, items, ordered = false, cls = '') {
+  if (!items?.length) return '';
+  const tag = ordered ? 'ol' : 'ul';
+  return `<h3>${title}</h3><${tag} class="bul ${cls}">${items.map((t) => `<li>${esc(t)}</li>`).join('')}</${tag}>`;
+}
+
+function datesHTML(dates) {
+  if (!dates?.length) return '';
+  const rows = dates.map((d) => `<li>📅 ${fmtWeekday(d.date)}, ${fmtDate(d.date)}${d.time ? `, ${esc(d.time)}` : ''}${d.note ? ` <span class="muted">— ${esc(d.note)}</span>` : ''}</li>`);
+  return `<h3>Даты</h3><ul class="bul plain">${rows.join('')}</ul>`;
+}
+
+function bestTimeHTML(bt) {
+  if (!Array.isArray(bt) || !bt.length) return '';
+  const rows = bt.map((b) => `<li>🕑 ${esc(b.time)}${b.note ? ` <span class="muted">— ${esc(b.note)}</span>` : ''}</li>`);
+  return `<h3>Когда лучше</h3><ul class="bul plain">${rows.join('')}</ul>`;
+}
+
+function longHTML(text) {
+  if (!text) return '';
+  const paras = String(text).split(/\n\s*\n/).map((t) => `<p>${esc(t.trim())}</p>`);
+  return `<details class="more"><summary>Подробнее</summary>${paras.join('')}</details>`;
+}
+
+function stopsHTML(stops) {
+  if (!stops?.length) return '';
+  const rows = stops.map((s) => `<li>${esc(s.name)}${s.note ? ` <span class="muted">— ${esc(s.note)}</span>` : ''}</li>`);
+  return `<h3>Маршрут</h3><ol class="bul">${rows.join('')}</ol>`;
+}
+
+function placeLinks(title, ids) {
+  const found = (ids || []).map((id) => currentPlaces.find((x) => x.id === id)).filter(Boolean);
+  if (!found.length) return '';
+  const links = found.map((x) => `<li><a href="#/map?city=${x.city}&place=${encodeURIComponent(x.id)}">${(TYPES[x.type] || TYPES.sight).icon} ${esc(x.name)}</a></li>`);
+  return `<h3>${title}</h3><ul class="link-list">${links.join('')}</ul>`;
+}
+
 function placeHTML(p, hotel) {
   const type = TYPES[p.type] || TYPES.sight;
+  const isIdea = p.type === 'idea';
+  const idea = p.idea_id ? currentPlaces.find((x) => x.id === p.idea_id) : null;
   return `
     ${photoHTML(p.photos)}
     <h2 class="place-title">${type.icon} ${esc(p.name)}</h2>
     ${p.name_local ? `<p class="place-local" lang="${p.city === 'paris' ? 'fr' : 'cs'}">${esc(p.name_local)}</p>` : ''}
     <div class="place-meta">
       <span class="badge">${type.label}</span>
+      ${isRainy(p) ? '<span class="badge">☔ на дождь</span>' : ''}
       ${p.verified ? '' : '<span class="badge warn">⚠️ не проверено</span>'}
     </div>
+    ${idea ? `<p>💭 Вариант для идеи <a href="#/map?city=${idea.city}&place=${encodeURIComponent(idea.id)}">«${esc(idea.name)}»</a></p>` : ''}
     ${p.summary ? `<p class="summary">${esc(p.summary)}</p>` : ''}
     ${p.description ? `<p>${esc(p.description)}</p>` : ''}
+    ${longHTML(p.description_long)}
+    ${datesHTML(p.dates)}
+    ${bestTimeHTML(p.best_time)}
+    ${listHTML('Советы', p.tips)}
+    ${listHTML('Как сделать', p.how_to, true)}
+    ${stopsHTML(p.route_stops)}
+    ${isIdea ? placeLinks('Где можно', p.candidates) : ''}
+    ${isIdea && p.candidates?.length ? `<div class="route-btns"><button type="button" class="btn secondary" data-candidates="${esc(p.id)}">📍 Показать на карте</button></div>` : ''}
+    ${placeLinks('Удобно совместить', p.pairs_with)}
     <h3>Нагрузка</h3>
     ${effortHTML(p.effort)}
-    ${transitHTML(p.transit_hint)}
+    ${p.coords ? `${transitHTML(p.transit_hint)}
     <div class="route-btns">
       <a class="btn" href="${gmapsRoute(hotel.coords, p.coords)}" target="_blank" rel="noopener">🧭 Маршрут от отеля</a>
       <a class="btn secondary" href="${gmapsRoute(p.coords, hotel.coords)}" target="_blank" rel="noopener">🏨 Маршрут в отель</a>
-    </div>
-    <h3>Часы работы</h3>
+    </div>` : ''}
+    ${isIdea ? '' : `<h3>Часы работы</h3>
     ${hoursHTML(p.hours)}
     <h3>Цены</h3>
-    ${priceHTML(p.price, p.booking)}
+    ${priceHTML(p.price, p.booking)}`}
     ${p.address ? `<p class="muted">📍 ${esc(p.address)}</p>` : ''}
+    ${listHTML('Проверка фактов', p.fact_notes, false, 'muted')}
     ${readyGames.includes(p.game_id) ? `<div class="route-btns">
       <a class="btn game-link" href="#/game/${encodeURIComponent(p.game_id)}">🎲 Сыграть</a>
       <a class="btn secondary game-link" href="#/game/${encodeURIComponent(p.game_id)}?screen=onsite">📍 На месте</a>
     </div>` : ''}`;
 }
 
+// Пунктир маршрута от стартовой точки через остановки route_stops.
+function drawRoute(p) {
+  routeLayer.clearLayers();
+  const stops = (p.route_stops || []).filter((s) => Array.isArray(s.coords));
+  if (!stops.length) return;
+  const pts = stops.map((s) => s.coords);
+  if (p.coords && (pts[0][0] !== p.coords[0] || pts[0][1] !== p.coords[1])) pts.unshift(p.coords);
+  L.polyline(pts, { className: 'route-line', weight: 4, dashArray: '8 10', interactive: false }).addTo(routeLayer);
+  stops.forEach((s, i) => {
+    L.marker(s.coords, {
+      icon: L.divIcon({ className: 'pin-wrap', html: `<div class="stop-num">${i + 1}</div>`, iconSize: [26, 26], iconAnchor: [13, 13] }),
+      title: s.name,
+      interactive: false,
+    }).addTo(routeLayer);
+  });
+}
+
 function openPlace(p) {
   const city = currentCity;
+  drawRoute(p);
   openSheet(placeHTML(p, currentHotel), {
     // Убираем place из адреса, только если адрес всё ещё указывает на эту точку.
     onClose: () => {
+      routeLayer.clearLayers();
       const q = new URLSearchParams(location.hash.split('?')[1] || '');
       if (location.hash.startsWith('#/map') && q.get('city') === city && q.get('place') === p.id) setHash(city);
     },
   });
 }
 
+// ---------- идеи ----------
+
+function openIdeas() {
+  const ideas = currentPlaces.filter((p) => p.type === 'idea');
+  routeLayer.clearLayers();
+  setHash(currentCity);
+  const cards = ideas.map((p) => `<article class="card idea">
+      <h3 class="rec-title"><a href="#/map?city=${p.city}&place=${encodeURIComponent(p.id)}">💭 ${esc(p.name)}</a>
+        ${isRainy(p) ? '<span class="badge">☔ на дождь</span>' : ''}
+        ${p.verified ? '' : '<span class="badge warn">не проверено</span>'}</h3>
+      ${p.summary ? `<p>${esc(p.summary)}</p>` : ''}
+      ${effortInline(p.effort)}
+      <div class="rec-actions">
+        ${p.candidates?.length ? `<button type="button" class="btn secondary" data-candidates="${esc(p.id)}">📍 Кандидаты на карте</button>` : ''}
+      </div>
+    </article>`);
+  openSheet(`<h2>💭 Идеи · ${CITIES[currentCity].name}</h2>
+    <p class="muted">Впечатления без точного адреса. Можно посмотреть подходящие места на карте.</p>
+    ${cards.join('') || '<p class="muted">Идей пока нет.</p>'}`);
+}
+
+function showCandidates(ideaId) {
+  const idea = currentPlaces.find((p) => p.id === ideaId);
+  const found = (idea?.candidates || []).map((id) => currentPlaces.find((x) => x.id === id)).filter((x) => x?.coords);
+  closeSheet();
+  highlightLayer.clearLayers();
+  setHash(currentCity);
+  if (!found.length) return;
+  for (const p of found) {
+    const layer = layerOf(p.type);
+    if (hiddenLayers.has(layer)) toggleLayer(layer, true);
+    L.marker(p.coords, {
+      icon: L.divIcon({ className: 'pin-wrap', html: '<div class="pin-hl"></div>', iconSize: [60, 60], iconAnchor: [30, 30] }),
+      interactive: false,
+      zIndexOffset: -100,
+    }).addTo(highlightLayer);
+  }
+  map.fitBounds(L.latLngBounds(found.map((p) => p.coords)), { padding: [70, 70], maxZoom: 16 });
+}
+
 function openHotel() {
   const h = currentHotel;
+  routeLayer.clearLayers();
   setHash(currentCity);
   const checked = h.checked_on ? fmtDate(h.checked_on, { day: '2-digit', month: '2-digit', year: 'numeric' }) : null;
   openSheet(`
@@ -248,10 +391,12 @@ export async function show(container, query) {
     await loadCity(city);
   }
 
-  if (query.place) {
+  if (query.candidates) {
+    showCandidates(query.candidates);
+  } else if (query.place) {
     const p = currentPlaces.find((x) => x.id === query.place);
     if (p) {
-      if (hiddenTypes.has(p.type)) toggleType(p.type, true);
+      if (p.coords && hiddenLayers.has(layerOf(p.type))) toggleLayer(layerOf(p.type), true);
       if (p.coords) focusOn(p.coords);
       openPlace(p);
     } else {
