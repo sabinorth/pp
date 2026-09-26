@@ -9,9 +9,9 @@ import { esc } from './ui.js';
 
 const ROUTES = {
   plan:  { tab: 'plan',  render: days.renderList, after: days.afterList },
-  day:   { tab: 'plan',  render: days.renderDay },
+  day:   { tab: 'plan',  render: days.renderDay, after: days.afterDay },
   map:   { tab: 'map',   map: true },
-  recs:  { tab: 'recs',  render: recs.render },
+  recs:  { tab: 'recs',  render: recs.render, after: recs.after },
   games: { tab: 'games', render: games.render },
   game:  { tab: 'games', render: games.renderGame },
 };

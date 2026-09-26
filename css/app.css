@@ -352,3 +352,31 @@ h2.section { margin-top: 18px; }
 .event-links a { display: inline-flex; align-items: center; min-height: 44px; }
 .warn-card { background: var(--warn-bg); color: var(--warn-text); border-color: transparent; }
 .warn-card a { color: inherit; }
+
+/* --- Советы --- */
+.seg-links { margin-bottom: 12px; }
+.seg a {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 44px; border-radius: 9px; color: var(--text);
+  font-weight: 600; text-decoration: none; text-align: center;
+}
+.seg a[aria-current="page"] { background: var(--surface); box-shadow: var(--shadow); }
+.filters { margin-bottom: 4px; }
+.field { display: grid; gap: 4px; font-weight: 600; }
+.field select, .field input {
+  min-height: 48px; padding: 8px 12px; border-radius: 12px;
+  border: 2px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
+}
+.chip.pick[aria-pressed="false"] { text-decoration: none; opacity: 1; }
+.rec-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.9rem; }
+.rec-title { margin: 8px 0 4px; font-size: 1.15rem; }
+.eff-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.eff { padding: 4px 10px; border-radius: 999px; background: var(--surface-2); font-size: 0.88rem; }
+.eff.lvl { font-weight: 700; }
+.rec-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.day-picks { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.add-result { min-height: 1.5em; font-weight: 600; }
+.icon-btn {
+  flex: none; width: 44px; height: 44px; border-radius: 12px;
+  border: 2px solid var(--border); background: transparent; color: var(--text); font-size: 1.1rem; cursor: pointer;
+}

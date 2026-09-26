@@ -1,6 +1,7 @@
 // План по дням: лента (#/plan) и карточка дня (#/day/2026-10-08).
 import { CITIES, getDays, getPlaces } from './data.js';
 import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME } from './ui.js';
+import * as store from './store.js';
 
 function cityLine(day) {
   const to = CITIES[day.city];
@@ -50,7 +51,7 @@ export function dayCities(day) {
   return [...new Set([day.city, day.city_from, ...items.map((it) => it.city)].filter(Boolean))];
 }
 
-function itemHTML(item, day, places) {
+function itemHTML(item, day, places, removable = false) {
   const city = item.city || day.city;
   const p = item.place_id ? places.get(`${city}/${item.place_id}`) : null;
   const lvl = !item.pause && p?.effort ? EFFORT_LEVELS[p.effort.level] : null;
@@ -61,14 +62,33 @@ function itemHTML(item, day, places) {
     : `<span class="item-place">${icon}${title}</span>`;
   const bt = BEST_TIME[item.best_time];
   const when = bt ? `<p class="item-when">${bt.icon} ${bt.label}${item.best_time_why ? ` — ${esc(item.best_time_why)}` : ''}</p>` : '';
+  const remove = removable
+    ? `<button type="button" class="icon-btn" data-remove="${city}/${esc(item.place_id)}" aria-label="Убрать из моего дня">✕</button>` : '';
   return `<li class="card item${item.pause ? ' pause' : ''}">
-    <div class="item-main">${main}${when}${item.why ? `<p class="muted">${esc(item.why)}</p>` : ''}</div>
+    <div class="item-main">${main}${when}${item.why ? `<p class="muted">${esc(item.why)}</p>` : ''}</div>${remove}
   </li>`;
 }
 
 export function planHTML(items, day, places) {
   if (!items?.length) return '<div class="card"><p class="muted">Пока пусто.</p></div>';
   return `<ol class="items">${items.map((it) => itemHTML(it, day, places)).join('')}</ol>`;
+}
+
+function mineHTML(mine, day, places) {
+  const list = mine.length
+    ? `<ol class="items">${mine.map((m) => itemHTML(m, day, places, true)).join('')}</ol>`
+    : '<div class="card"><p class="muted">Пусто. Пункты добавляются из «Советов» кнопкой «В мой день».</p></div>';
+  return `<section id="mine"><h2 class="section">⭐ Моё</h2>${list}</section>`;
+}
+
+export function afterDay(el, r) {
+  el.querySelector('#mine')?.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-remove]');
+    if (!b) return;
+    const [city, placeId] = b.dataset.remove.split('/');
+    store.removeMine(r.param, city, placeId);
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+  });
 }
 
 function fmtRange(from, to) {
@@ -102,7 +122,8 @@ export async function renderDay({ param }) {
   }
   const day = days[i];
   const prev = days[i - 1], next = days[i + 1];
-  const places = await placeIndex(dayCities(day));
+  const mine = store.getMine(day.date);
+  const places = await placeIndex([...new Set([...dayCities(day), ...mine.map((m) => m.city)])]);
 
   return `<a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
@@ -114,6 +135,7 @@ export async function renderDay({ param }) {
     ${planHTML(day.plan_a, day, places)}
     <h2 class="section">План Б <span class="muted">— если устали или дождь</span></h2>
     ${planHTML(day.plan_b, day, places)}
+    ${mineHTML(mine, day, places)}
     ${eventsHTML(day.events)}
     <nav class="day-nav" aria-label="Соседние дни">
       <a class="btn secondary" ${prev ? `href="#/day/${prev.date}"` : 'aria-disabled="true"'}>← ${prev ? fmtDate(prev.date) : ''}</a>

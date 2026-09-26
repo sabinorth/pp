@@ -2,7 +2,7 @@
 /* global L */
 import { CITIES, getHotel, getPlaces } from './data.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
-import { esc, TYPES, EFFORT_LEVELS, fmtDate, fmtDuration, plural } from './ui.js';
+import { esc, TYPES, fmtDate, plural, effortHTML } from './ui.js';
 
 let map = null;
 let els = null;
@@ -135,23 +135,6 @@ function focusOn(coords, zoom = 16) {
 }
 
 // ---------- шторка ----------
-
-const STAIRS = { none: 'Лестниц нет', some: 'Есть лестницы', many: 'Много лестниц' };
-const QUEUE = { none: 'Очереди нет', short: 'Очередь небольшая', long: 'Очередь длинная' };
-
-function effortHTML(e) {
-  if (!e) return '<p class="muted">Нет данных о нагрузке.</p>';
-  const lvl = EFFORT_LEVELS[e.level];
-  const rows = [];
-  if (lvl) rows.push(`<li class="level"><span class="ic">${lvl.icon}</span>Нагрузка: ${lvl.label}</li>`);
-  if (e.walk_km != null) rows.push(`<li><span class="ic">🚶</span>${e.walk_km} км пешком</li>`);
-  if (e.duration_min != null) rows.push(`<li><span class="ic">⏱️</span>${fmtDuration(e.duration_min)}</li>`);
-  if (STAIRS[e.stairs]) rows.push(`<li><span class="ic">🪜</span>${STAIRS[e.stairs]}</li>`);
-  if (QUEUE[e.queue]) rows.push(`<li><span class="ic">⏳</span>${QUEUE[e.queue]}</li>`);
-  if (e.seating != null) rows.push(`<li><span class="ic">🪑</span>${e.seating ? 'Можно присесть' : 'Негде присесть'}</li>`);
-  if (e.toilet != null) rows.push(`<li><span class="ic">🚻</span>${e.toilet ? 'Есть туалет' : 'Нет туалета'}</li>`);
-  return `<ul class="effort">${rows.join('')}</ul>`;
-}
 
 function hoursHTML(h) {
   if (!h) return '<p class="muted">Часы работы неизвестны.</p>';

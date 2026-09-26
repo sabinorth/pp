@@ -59,3 +59,37 @@ export function fmtDuration(min) {
   if (!h) return `${m} мин`;
   return m ? `${h} ч ${m} мин` : `${h} ч`;
 }
+
+// ---------- нагрузка ----------
+
+export const STAIRS = { none: 'Лестниц нет', some: 'Есть лестницы', many: 'Много лестниц' };
+export const QUEUE = { none: 'Очереди нет', short: 'Очередь небольшая', long: 'Очередь длинная' };
+
+export function effortHTML(e) {
+  if (!e) return '<p class="muted">Нет данных о нагрузке.</p>';
+  const lvl = EFFORT_LEVELS[e.level];
+  const rows = [];
+  if (lvl) rows.push(`<li class="level"><span class="ic">${lvl.icon}</span>Нагрузка: ${lvl.label}</li>`);
+  if (e.walk_km != null) rows.push(`<li><span class="ic">🚶</span>${e.walk_km} км пешком</li>`);
+  if (e.duration_min != null) rows.push(`<li><span class="ic">⏱️</span>${fmtDuration(e.duration_min)}</li>`);
+  if (STAIRS[e.stairs]) rows.push(`<li><span class="ic">🪜</span>${STAIRS[e.stairs]}</li>`);
+  if (QUEUE[e.queue]) rows.push(`<li><span class="ic">⏳</span>${QUEUE[e.queue]}</li>`);
+  if (e.seating != null) rows.push(`<li><span class="ic">🪑</span>${e.seating ? 'Можно присесть' : 'Негде присесть'}</li>`);
+  if (e.toilet != null) rows.push(`<li><span class="ic">🚻</span>${e.toilet ? 'Есть туалет' : 'Нет туалета'}</li>`);
+  return `<ul class="effort">${rows.join('')}</ul>`;
+}
+
+// Короткая строка значков для карточек списка.
+export function effortInline(e) {
+  if (!e) return '';
+  const lvl = EFFORT_LEVELS[e.level];
+  const parts = [];
+  if (lvl) parts.push(`<span class="eff lvl">${lvl.icon} ${lvl.label}</span>`);
+  if (e.walk_km != null) parts.push(`<span class="eff" title="Пешком">🚶 ${e.walk_km} км</span>`);
+  if (e.duration_min != null) parts.push(`<span class="eff" title="Длительность">⏱️ ${fmtDuration(e.duration_min)}</span>`);
+  if (STAIRS[e.stairs]) parts.push(`<span class="eff">🪜 ${STAIRS[e.stairs].toLowerCase()}</span>`);
+  if (QUEUE[e.queue]) parts.push(`<span class="eff">⏳ ${QUEUE[e.queue].toLowerCase()}</span>`);
+  if (e.seating != null) parts.push(`<span class="eff">🪑 ${e.seating ? 'можно сесть' : 'негде сесть'}</span>`);
+  if (e.toilet != null) parts.push(`<span class="eff">🚻 ${e.toilet ? 'есть' : 'нет'}</span>`);
+  return `<div class="eff-row">${parts.join('')}</div>`;
+}
