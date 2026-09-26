@@ -1757,5 +1757,233 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "lac-daumesnil",
+    "city": "paris",
+    "type": "park",
+    "name": "Озеро Домениль в Венсенском лесу",
+    "name_local": "Lac Daumesnil — Bois de Vincennes",
+    "coords": [
+      48.83076,
+      2.41541
+    ],
+    "address": "Route de la Ceinture du Lac Daumesnil, 75012 Paris",
+    "summary": "Большое озеро с двумя островами, утками и лебедями в 10 минутах пешком от отеля. Ровная прогулка вокруг воды и скамейки.",
+    "description": "Самое большое озеро Венсенского леса, на его западном краю, у Порт Доре. На острова Рейи и Берси ведут мостики. Можно просто посидеть у воды или покататься на лодке: полный круг по озеру неспешной греблей — около 45 минут. Туалеты есть у озера со стороны зоопарка. После августовской грозы в лесу есть повреждённые деревья — городской сайт просит быть внимательнее.",
+    "hours": {
+      "text": "Венсенский лес с 1 по 24 октября 2026 открыт круглосуточно. Прокат лодок: в будни с 14:00, в выходные с 10:00, до часа перед закатом; работает ли прокат в октябре — не проверила.",
+      "closed_weekdays": [],
+      "source": "https://www.paris.fr/lieux/bois-de-vincennes-6598",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно. Цену проката лодок не проверила (paris.fr/evenements/location-de-barques-au-lac-daumesnil-117032)."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Le_Lac_Daumesnil_2010.jpg/1280px-Le_Lac_Daumesnil_2010.jpg",
+        "credit": "Julien Magne",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Le_Lac_Daumesnil_2010.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 2,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 10,
+      "transfers": 0,
+      "note": "Пешком около 800 м от отеля мимо Палэ де ла Порт Доре."
+    },
+    "tags": [
+      "рядом с отелем",
+      "озеро",
+      "можно посидеть",
+      "лодки"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "coulee-verte",
+    "city": "paris",
+    "type": "park",
+    "name": "Зелёная прогулка Coulée verte",
+    "name_local": "Coulée verte René-Dumont",
+    "coords": [
+      48.84219,
+      2.38753
+    ],
+    "address": "Jardin de Reuilly – Paul-Pernin, 75012 Paris (вся аллея: от улицы Эдуар-Ларте до Бастилии)",
+    "summary": "Прогулка по бывшей железной дороге, местами на высоте виадука, через наш 12-й округ. Можно пройти короткий кусок и сесть на скамейку.",
+    "description": "Парк на месте старой железной дороги: 4,5 км от Венсенского леса до Бастилии, частью по земле, частью по крыше Виадука искусств. Сад Рейи на середине пути — хорошее место, чтобы посидеть на газоне и скамейках. Вся аллея нам не нужна: разумно пройти 1–2 км и уйти на метро 8. Часть лифтов на подъёмах сейчас не работает (у дома 34 по улице Лион), рабочий — у улицы Эктор-Мало.",
+    "hours": {
+      "text": "В октябре: будни 8:00–19:30, выходные 9:00–19:30. Туалеты есть.",
+      "closed_weekdays": [],
+      "source": "https://www.paris.fr/lieux/coulee-verte-rene-dumont-1772",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Coul%C3%A9e_verte_Ren%C3%A9-Dumont_-_Paris.jpg/1280px-Coul%C3%A9e_verte_Ren%C3%A9-Dumont_-_Paris.jpg",
+        "credit": "André ALLIOT",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Coul%C3%A9e_verte_Ren%C3%A9-Dumont_-_Paris.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 2,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 три остановки до Montgallet, дальше около 500 м до сада Рейи. Ближайший к отелю вход на аллею — у улицы Сахель (около 600 м от отеля)."
+    },
+    "tags": [
+      "рядом с отелем",
+      "прогулка",
+      "можно сократить",
+      "Виадук искусств"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "vert-galant",
+    "city": "paris",
+    "type": "park",
+    "name": "Сквер Вер-Галан",
+    "name_local": "Square du Vert-Galant",
+    "coords": [
+      48.85741,
+      2.34033
+    ],
+    "address": "Place du Pont-Neuf, 75001 Paris",
+    "summary": "Зелёный «нос» острова Сите у самой воды под Новым мостом. Сесть у Сены между Сент-Шапель и Лувром.",
+    "description": "Маленький сквер на западной оконечности острова Сите, ниже уровня улицы — к нему спускаются по лестнице от Нового моста у конной статуи Генриха IV. С трёх сторон вода, ивы и виды на Лувр и мосты. От Сент-Шапель сюда около 500 м. Туалетов в сквере нет.",
+    "hours": {
+      "text": "С 1 по 24 октября 2026 открыт круглосуточно. В сильный ветер и непогоду может закрываться.",
+      "closed_weekdays": [],
+      "source": "https://www.paris.fr/lieux/square-du-vert-galant-2825",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Square_du_Vert-Galant_seen_from_the_Seine.jpg/1280px-Square_du_Vert-Galant_seen_from_the_Seine.jpg",
+        "credit": "DiscoA340",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Square_du_Vert-Galant_seen_from_the_Seine.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Louvre–Rivoli или Châtelet, дальше около 600 м через Новый мост. Удобно после Сент-Шапель пешком."
+    },
+    "tags": [
+      "у Сены",
+      "у Сент-Шапель",
+      "бесплатно",
+      "вид"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "toilet-paris-sanisettes",
+    "city": "paris",
+    "type": "toilet",
+    "name": "Бесплатные уличные туалеты (sanisettes)",
+    "name_local": "Sanisettes — toilettes publiques de Paris",
+    "coords": [
+      48.83652,
+      2.40442
+    ],
+    "address": "Ближайшая к отелю: 259b Avenue Daumesnil, 75012 Paris",
+    "summary": "В Париже около 435 бесплатных автоматических уличных туалетов. Чаще всего работают 6:00–22:00. Точка на карте — ближайший к отелю, в 130 м.",
+    "description": "Sanisettes — автоматические кабины на тротуарах, бесплатные с 2006 года. После каждого посетителя кабина сама моется, ожидание между использованиями около 30 секунд; писсуарная часть работает без ожидания. Главная кабина просторная и доступна для колясок, управление бесконтактное. Большинство работает с 6:00 до 22:00, часть — дольше или круглосуточно; адреса и часы каждой — на официальной карте города (capgeo.maps.arcgis.com, ссылка на странице paris.fr). Ещё варианты: туалеты в музеях (с билетом), в кафе (обычно для гостей) и в парках — в таблице города они помечены «часы парка». Ближайшая к отелю sanisette — у дома 259b по авеню Домениль, 6:00–22:00, доступна для колясок.",
+    "hours": {
+      "text": "Большинство sanisettes 6:00–22:00, часть до 1:00 или круглосуточно. Ближайшая к отелю (259b av. Daumesnil) — 6:00–22:00.",
+      "closed_weekdays": [],
+      "source": "https://opendata.paris.fr/explore/dataset/sanisettesparis/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно. Источники: paris.fr/en/pages/paris-modernizes-its-435-public-toilets-27250 и открытые данные Парижа (sanisettesparis)."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": true,
+      "duration_min": 5
+    },
+    "transit_hint": {
+      "from_hotel_min": 2,
+      "transfers": 0,
+      "note": "Ближайшая — около 130 м от отеля по авеню Домениль."
+    },
+    "tags": [
+      "туалет",
+      "бесплатно",
+      "доступно для колясок"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
