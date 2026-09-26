@@ -29,8 +29,9 @@
 ```
 index.html
 css/        стили, mobile-first
-js/         app.js (роутер), map.js, days.js, recs.js, games.js, data.js
-data/       hotels.json, places-prague.json, places-paris.json, days.json, games/*.json
+js/         app.js (роутер), map.js, days.js, recs.js, games.js, data.js,
+            plan.js (ручной план), picker.js («+ В план»), store.js, energy.js, ui.js, sheet.js, practical.js
+data/       hotels.json, places-prague.json, places-paris.json, days.json, practical.json, games/*.json
 sw.js, manifest.json
 ```
 
@@ -40,7 +41,7 @@ sw.js, manifest.json
 {
   "id": "louvre",
   "city": "paris",
-  "type": "sight | cafe | rest | toilet | park",
+  "type": "sight | cafe | rest | toilet | park | experience | event | idea",
   "name": "Лувр",
   "name_local": "Musée du Louvre",
   "coords": [48.8606, 2.3376],
@@ -67,9 +68,35 @@ sw.js, manifest.json
 }
 ```
 
+### Впечатления, события, идеи (подробно — `feature-experiences.md`)
+
+- `experience` — занятие, мастер-класс, необычный формат, маршрут. На карте в слое «✨ Впечатления».
+- `event` — привязано к датам: `"dates": [{ "date": "2026-10-03", "time": "20:00", "note": "…" }]`. Тот же слой.
+- `idea` — впечатление без адреса: `"coords": null`, на карте нет маркера. Видна в списке «💭 Идеи» на карте и в «Советах».
+  `"candidates": ["id", …]` — конкретные точки, где это можно сделать; у точки-кандидата `"idea_id": "…"`. Подсветка кандидатов на карте: `#/map?city=paris&candidates=<id идеи>`.
+- Дополнительные поля (все необязательные):
+  - `description_long` — авторский текст из подборки целиком, абзацы через `\n\n`. Не сокращать.
+  - `tips[]`, `how_to[]` (пошагово), `fact_notes[]` (расхождения текста с источниками).
+  - `origin` — откуда точка: `user-list-paris-1`, `user-list-paris-2`, `user-list-prague`.
+  - `pairs_with[]` — id точек того же города, которые удобно совместить.
+  - `route_stops: [{ "name": "…", "coords": [lat, lng], "note": "…" }]` — для маршрутов; `coords` точки = старт. На карте пунктир, пока точка открыта.
+  - `best_time: [{ "time": "после 22:00", "note": "ночь" }]` — лучшее время без конкретной даты.
+- Метка «☔ на дождь» — тег `"на дождь"` в `tags`.
+- Тестовые точки `test-*` с `[ТЕСТ]` в названии — удалить, когда появятся настоящие данные.
+
 Ссылки на маршруты НЕ хранятся, они генерируются из координат:
 `https://www.google.com/maps/dir/?api=1&origin=LAT,LNG&destination=LAT,LNG&travelmode=transit`
 (и в обратную сторону: из точки в отель).
+
+## Ручной план дня (`js/plan.js`)
+
+- Claude НЕ распределяет впечатления, события и идеи по дням в `days.json`. План собирает пользователь сам.
+- Страница дня = базовые пункты из `days.json` (план А или Б) + добавленные вручную кнопкой «+ В план». Добавленные пункты общие для А и Б.
+- Любой пункт: ↑↓ (ручной порядок отдельно для А и Б), время и заметка. Базовый пункт можно «убрать» (скрыть) и вернуть, добавленный — удалить.
+- «+ В план» предлагает только дни, когда мы в городе точки (5.10 — оба города). Если события нет в этот день (`dates`) или место закрыто (`hours.closed_weekdays`, 0 = вс), показывается мягкое предупреждение, но добавить можно.
+- Энергобюджет считает видимые пункты с учётом добавленных.
+- Хранение: localStorage (`trip2026:v1` → `dayplans`, `plans`) через store.js. Старое «Моё» (`mine`) мигрирует автоматически.
+- Перенос между телефонами: «Экспорт плана» (JSON-файл), «Импорт плана», «Поделиться ссылкой» (`#/plan?import=<base64url>`, перед заменой — подтверждение).
 
 ## Жёсткие правила
 
