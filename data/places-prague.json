@@ -289,5 +289,298 @@
     ],
     "game_id": "strahov-library",
     "verified": true
+  },
+  {
+    "id": "municipal-house",
+    "city": "prague",
+    "type": "sight",
+    "name": "Обецни дум (Муниципальный дом)",
+    "name_local": "Obecní dům",
+    "coords": [
+      50.08776,
+      14.42776
+    ],
+    "address": "náměstí Republiky 1090/5, 111 21 Praha 1 – Staré Město",
+    "summary": "Главный памятник пражского модерна: залы, салоны и кафе, оформленные Альфонсом Мухой и другими художниками. Внутрь пускают только на часовую экскурсию с гидом.",
+    "description": "Здание построено в 1905–1911 годах в стиле модерн. Над интерьерами работали Альфонс Муха, Ян Прейслер, Ладислав Шалоун и другие. Экскурсия длится около часа и проходит через Сметанов зал, кондитерскую, салоны, зал Грегра, Палацкого и Зал приматора (Mayor’s Hall). Экскурсии идут на английском и чешском, печатный текст есть на русском. Если не хочется на экскурсию, можно просто посидеть в кафе на первом этаже (отдельная точка).",
+    "hours": {
+      "text": "Касса ежедневно 10:00–19:00. Экскурсии — по расписанию: на 1.10 (чт) в расписании экскурсий нет; на 2, 3, 4 и 5.10 есть на английском (например, 2.10 в 13:00 и 15:00). Расписание на сайте может меняться.",
+      "closed_weekdays": [],
+      "source": "https://www.obecnidum.cz/en/tours/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 13.1,
+      "note": "Экскурсия 320 CZK. Билеты в исторической кассе или на сайте."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.obecnidum.cz/en/tours/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Municipal_House_Prague_2026.JPG/1280px-Municipal_House_Prague_2026.JPG",
+        "credit": "Mike is Michi",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Municipal_House_Prague_2026.JPG"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Náměstí Republiky (4 остановки), выход прямо к зданию."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "модерн"
+    ],
+    "game_id": "municipal-house",
+    "verified": true
+  },
+  {
+    "id": "josefov",
+    "city": "prague",
+    "type": "sight",
+    "name": "Еврейский квартал: Испанская синагога и Старое еврейское кладбище",
+    "name_local": "Židovské muzeum v Praze – Španělská synagoga",
+    "coords": [
+      50.09036,
+      14.42085
+    ],
+    "address": "Vězeňská 141/1, 110 00 Praha 1 – Josefov",
+    "summary": "Маршрут Еврейского музея по синагогам Йозефова и Старому еврейскому кладбищу. Самая красивая из синагог — Испанская, с золотым мавританским орнаментом.",
+    "description": "Один билет Еврейского музея включает синагоги Майзелову, Пинкасову, Клаусову, Испанскую и Старое еврейское кладбище. Каждый объект можно посетить один раз. Все они стоят рядом на ровных улицах Йозефова, но в сумме маршрут всё равно получается долгим. В Испанской синагоге можно посидеть на скамьях. Староновая синагога в билет не входит: ею управляет Пражская еврейская община.",
+    "hours": {
+      "text": "1.9–17.10.2026: 9:00–18:00. Закрыто по субботам и в еврейские праздники. Сб 3.10 и вс 4.10 (Симхат Тора) ЗАКРЫТО; чт 1.10, пт 2.10 и пн 5.10 открыто.",
+      "closed_weekdays": [
+        6
+      ],
+      "source": "https://www.jewishmuseum.cz/en/info/visit/opening-hours/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 24.6,
+      "note": "Общий билет 600 CZK (синагоги и кладбище)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.jewishmuseum.cz/en/info/visit/admission/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Praha_Spanish_Synagogue_Interior_01.jpg/1280px-Praha_Spanish_Synagogue_Interior_01.jpg",
+        "credit": "Uoaei1",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Praha_Spanish_Synagogue_Interior_01.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Náměstí Republiky, дальше около 700 м пешком по ровному. Можно выбрать только Испанскую синагогу и кладбище, чтобы не устать."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "история"
+    ],
+    "game_id": "josefov",
+    "verified": true
+  },
+  {
+    "id": "st-nicholas-mala-strana",
+    "city": "prague",
+    "type": "sight",
+    "name": "Храм Святого Николая на Малой Стране",
+    "name_local": "Kostel sv. Mikuláše (Malá Strana)",
+    "coords": [
+      50.08798,
+      14.40322
+    ],
+    "address": "Malostranské náměstí, 118 00 Praha 1 – Malá Strana",
+    "summary": "Барочный храм с огромным зелёным куполом и расписными сводами прямо у трамвайной остановки. Короткий визит, а по вечерам бывают концерты, на которых можно посидеть.",
+    "description": "Храм стоит в центре Малостранской площади, его купол виден почти отовсюду на левом берегу. Внутри — пышное барочное убранство, роспись купола и большой орган. Фотографировать можно без вспышки и штатива. В календаре храма на вечер 18:00 часто стоят органные и классические концерты: хороший способ час отдохнуть сидя в красивом месте.",
+    "hours": {
+      "text": "Октябрь: вс–чт 9:00–18:00, пт–сб 9:00–17:00; последний вход за 15 мин до закрытия. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.stnicholas.cz/en/tours/opening-hours/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 6.2,
+      "note": "Вход 150 CZK. Концерты — отдельные билеты, цены не проверяла."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.stnicholas.cz/en/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Praha_St._Nicholas_Church_Dome_01.jpg/1280px-Praha_St._Nicholas_Church_Dome_01.jpg",
+        "credit": "Uoaei1",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Praha_St._Nicholas_Church_Dome_01.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.2,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 40
+    },
+    "transit_hint": {
+      "from_hotel_min": 12,
+      "transfers": 0,
+      "note": "Ориентировочно: трамвай 12/15/20 от Arbesovo náměstí до Malostranské náměstí, храм прямо у остановки."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "концерты",
+      "рядом с отелем"
+    ],
+    "game_id": "st-nicholas-mala-strana",
+    "verified": true
+  },
+  {
+    "id": "loreta",
+    "city": "prague",
+    "type": "sight",
+    "name": "Лорета",
+    "name_local": "Loreta Praha",
+    "coords": [
+      50.08928,
+      14.39155
+    ],
+    "address": "Loretánské náměstí 7, 118 00 Praha 1 – Hradčany",
+    "summary": "Барочное паломническое место с часовней Санта-Каза, храмом, галереями и сокровищницей. Тихая альтернатива Граду в пяти минутах от него, в 2026 году отмечает 400 лет.",
+    "description": "Лорету содержат капуцины. Музей открыт каждый день, осмотр занимает около часа, с аудиогидом около 80 минут. В билет входят вся Лорета, сокровищница и сезонные выставки. С 25 марта 2026 года к 400-летию основания работает выставка о лоретанских часовнях. Лорета стоит на Лоретанской площади, рядом с Новым Светом и Страговом, и её удобно совместить с ними, спускаясь от трамвая 22 вниз.",
+    "hours": {
+      "text": "Ежедневно 10:00–17:00; кассы до 17:00, но выйти нужно до 17:30. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.loreta.cz/en/loreto-museum/opening-hours",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 11.5,
+      "note": "Взрослый 280 CZK; с Prague Visitor Pass бесплатно. Карты принимают."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.loreta.cz/en/loreto-museum/admission-fee"
+    },
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Loreta_%28Praha%29.jpg",
+        "credit": "User:Tomeczek",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Loreta_(Praha).jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: трамвай 12/15/20 до Újezd, пересадка на 22 до Pohořelec, дальше около 300 м под гору."
+    },
+    "tags": [
+      "красиво",
+      "мало туристов",
+      "тихо"
+    ],
+    "game_id": "loreta",
+    "verified": true
+  },
+  {
+    "id": "novy-svet",
+    "city": "prague",
+    "type": "sight",
+    "name": "Улочка Новый Свет",
+    "name_local": "Nový Svět",
+    "coords": [
+      50.09092,
+      14.39144
+    ],
+    "address": "Nový Svět, 118 00 Praha 1 – Hradčany",
+    "summary": "Тихая кривая улочка с маленькими домиками за Лоретой, в пяти минутах от Града, но почти без туристов. Хороша для неспешной прогулки.",
+    "description": "Улица появилась, вероятно, в XIV веке. В маленьких домах жили придворные слуги и работники Града, позже — бедняки. Квартал сильно горел в 1420 и 1541 годах, поэтому нынешние дома в основном XVII–XVIII веков. В 1600 году здесь, в доме «У Золотого грифа», ненадолго поселился астроном Тихо Браге. Это не аттракцион, а просто красивое место, чтобы пройтись медленно.",
+    "hours": {
+      "text": "Городская улица, открыта всегда.",
+      "closed_weekdays": [],
+      "source": "https://english.radio.cz/landmark-prague-stories-8685642/6",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Nov%C3%BD_Sv%C4%9Bt_na_Hrad%C4%8Danech.jpg/1280px-Nov%C3%BD_Sv%C4%9Bt_na_Hrad%C4%8Danech.jpg",
+        "credit": "Ladislav Boháč",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nov%C3%BD_Sv%C4%9Bt_na_Hrad%C4%8Danech.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 20
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: трамвай 12/15/20 до Újezd, пересадка на 22 до Pohořelec, дальше около 400 м под гору мимо Лореты. Улица мощёная брусчаткой, со спуском."
+    },
+    "tags": [
+      "красиво",
+      "мало туристов",
+      "тихо"
+    ],
+    "game_id": "novy-svet",
+    "verified": true
   }
 ]
