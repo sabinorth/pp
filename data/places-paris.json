@@ -1,62 +1,299 @@
 [
   {
-    "id": "test-paris-sight",
+    "id": "louvre",
     "city": "paris",
     "type": "sight",
-    "name": "[ТЕСТ] Музей в центре",
-    "name_local": "[TEST] Musée",
-    "coords": [48.8606, 2.3376],
-    "address": "[ТЕСТ] адрес не заполнен",
-    "summary": "[ТЕСТ] Точка с игрой: проверить кнопку «Играть».",
-    "description": "[ТЕСТ] Описание музея. Реальные данные появятся на этапе 2.",
-    "hours": { "text": "[ТЕСТ] Пн, Ср–Вс 9:00–18:00; Вт закрыто", "closed_weekdays": [2], "source": null, "checked_on": "2026-09-26" },
-    "price": { "avg_check_eur": null, "ticket_eur": 22, "note": "" },
-    "booking": { "required": true, "url": null },
-    "photos": [],
-    "effort": { "level": "mid", "walk_km": 2.5, "stairs": "some", "queue": "short", "seating": true, "toilet": true, "duration_min": 150 },
-    "transit_hint": { "from_hotel_min": 30, "transfers": 1, "note": "[ТЕСТ] на пересадке лестницы" },
-    "tags": ["тест"],
-    "game_id": "test",
-    "verified": false
+    "name": "Лувр",
+    "name_local": "Musée du Louvre",
+    "coords": [
+      48.86099,
+      2.33584
+    ],
+    "address": "Rue de Rivoli, 75001 Paris (вход через Пирамиду)",
+    "summary": "Главный музей Франции: «Джоконда», Венера Милосская, Ника Самофракийская. Выбрать 2–3 зала заранее, всё обойти невозможно.",
+    "description": "Бывший королевский дворец, ставший музеем в конце XVIII века; стеклянная Пирамида во дворе служит главным входом. Музей огромный, и за один визит реально увидеть лишь малую часть, поэтому лучше заранее выбрать маршрут и не пытаться охватить всё. Внутри много лестниц, но есть лифты и эскалаторы; скамейки в залах есть. В среду и пятницу музей работает до 21:00, вечером обычно спокойнее.",
+    "hours": {
+      "text": "Пн, Чт, Сб, Вс 9:00–18:00; Ср и Пт 9:00–21:00; Вт закрыто. Последний вход за час до закрытия. В наши даты: 6.10 (вт) закрыто, 7.10 (ср) и 9.10 (пт) до 21:00.",
+      "closed_weekdays": [
+        2
+      ],
+      "source": "https://www.louvre.fr/en/visit/hours-admission",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 32,
+      "note": "32 € для жителей стран вне ЕЭЗ, 22 € для жителей ЕЭЗ. Бронирование времени входа рекомендуется, в том числе для бесплатного входа."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://ticket.louvre.fr/en"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg",
+        "credit": "Benh LIEU SONG",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg"
+      }
+    ],
+    "effort": {
+      "level": "high",
+      "walk_km": 3,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 180
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 от Porte Dorée до Reuilly–Diderot, пересадка на линию 1 до Palais Royal – Musée du Louvre. Длину пересадки не проверяла."
+    },
+    "tags": [
+      "музей",
+      "must see",
+      "вечером до 21:00"
+    ],
+    "game_id": "louvre",
+    "verified": true
   },
   {
-    "id": "test-paris-rest",
+    "id": "orsay",
     "city": "paris",
-    "type": "rest",
-    "name": "[ТЕСТ] Место, где можно отдохнуть",
-    "name_local": "[TEST] Repos",
-    "coords": [48.8462, 2.3371],
-    "address": "[ТЕСТ] адрес не заполнен",
-    "summary": "[ТЕСТ] Скамейки, тень, тихо.",
-    "description": "[ТЕСТ] Описание места для отдыха.",
-    "hours": { "text": "[ТЕСТ] ежедневно 7:30–19:00", "closed_weekdays": [], "source": null, "checked_on": "2026-09-26" },
-    "price": { "avg_check_eur": null, "ticket_eur": 0, "note": "[ТЕСТ] бесплатно" },
-    "booking": { "required": false, "url": null },
-    "photos": [],
-    "effort": { "level": "low", "walk_km": 0.5, "stairs": "none", "queue": "none", "seating": true, "toilet": false, "duration_min": 60 },
-    "transit_hint": { "from_hotel_min": 35, "transfers": 2, "note": "" },
-    "tags": ["тест", "можно посидеть долго"],
-    "game_id": null,
-    "verified": false
+    "type": "sight",
+    "name": "Музей Орсе",
+    "name_local": "Musée d'Orsay",
+    "coords": [
+      48.85992,
+      2.32658
+    ],
+    "address": "1 Rue de la Légion d'Honneur, 75007 Paris",
+    "summary": "Импрессионисты (Моне, Ренуар, Ван Гог, Дега) в здании бывшего вокзала. Компактнее и спокойнее Лувра.",
+    "description": "Музей искусства второй половины XIX — начала XX века в здании вокзала, построенного к Всемирной выставке 1900 года. Главный зал — бывший перрон под стеклянной крышей с огромными часами. Импрессионисты собраны на верхнем этаже, туда удобно подняться на лифте или эскалаторе. По четвергам музей открыт до 21:45, а вечерний билет после 18:00 дешевле.",
+    "hours": {
+      "text": "Вт–Вс 9:30–18:00, в Чт до 21:45; Пн закрыто. Последний вход в 17:00 (в Чт в 21:00). В наши даты: 5.10 (пн) закрыто; вечер четверга 8.10 занят Версалем.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.musee-orsay.fr/en/visit/admission-opening-times-tickets",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Вечерний билет в Чт после 18:00 — 12 €. Цену обычного билета на официальном сайте проверить не удалось (сайт закрыт от автоматической загрузки) — посмотреть при покупке. Время входа бронировать не обязательно, кроме первых воскресений месяца, но с билетом на время вход быстрее."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://billetterie.musee-orsay.fr/en-GB/home"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Paris_Mus%C3%A9e_d%27Orsay_Grande_nef_centrale_01a.jpg/1280px-Paris_Mus%C3%A9e_d%27Orsay_Grande_nef_centrale_01a.jpg",
+        "credit": "Nono vlf",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_Mus%C3%A9e_d%27Orsay_Grande_nef_centrale_01a.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 без пересадок до Invalides, оттуда RER C одну остановку до Musée d'Orsay. Либо метро 8 до Concorde и пешком около 1 км через мост."
+    },
+    "tags": [
+      "музей",
+      "импрессионисты",
+      "must see",
+      "по четвергам до 21:45"
+    ],
+    "game_id": "orsay",
+    "verified": true
   },
   {
-    "id": "test-paris-park",
+    "id": "notre-dame",
     "city": "paris",
-    "type": "park",
-    "name": "[ТЕСТ] Парк рядом с отелем",
-    "name_local": "[TEST] Parc",
-    "coords": [48.8335, 2.4125],
-    "address": "[ТЕСТ] адрес не заполнен",
-    "summary": "[ТЕСТ] Прогулка недалеко от отеля.",
-    "description": "[ТЕСТ] Описание парка.",
-    "hours": { "text": "[ТЕСТ] круглосуточно", "closed_weekdays": [], "source": null, "checked_on": "2026-09-26" },
-    "price": { "avg_check_eur": null, "ticket_eur": null, "note": "" },
-    "booking": { "required": false, "url": null },
-    "photos": [],
-    "effort": { "level": "mid", "walk_km": 2, "stairs": "none", "queue": "none", "seating": true, "toilet": false, "duration_min": 90 },
-    "transit_hint": { "from_hotel_min": 10, "transfers": 0, "note": "[ТЕСТ] пешком" },
-    "tags": ["тест"],
-    "game_id": null,
-    "verified": false
+    "type": "sight",
+    "name": "Собор Парижской Богоматери",
+    "name_local": "Cathédrale Notre-Dame de Paris",
+    "coords": [
+      48.85294,
+      2.35005
+    ],
+    "address": "6 Parvis Notre-Dame – Place Jean-Paul II, 75004 Paris",
+    "summary": "Готический собор, восстановленный после пожара 2019 года. Вход бесплатный, лучше взять бесплатный слот, чтобы не стоять в очереди.",
+    "description": "Собор открылся снова в декабре 2024 года после реставрации, и интерьер сейчас необычно светлый. Вход бесплатный; бронь времени не обязательна, но без неё очередь заметно длиннее. Слоты открываются только за день-два до визита, поэтому забронировать можно только в Париже. Башни собора — отдельный платный маршрут в 424 ступени без лифта, для нас это слишком тяжело.",
+    "hours": {
+      "text": "Пн–Пт 7:50–19:00, в Чт до 22:00; Сб–Вс 8:15–19:30. Последний вход за 30 минут. Выходных нет. Башни в октябре 9:00–17:30.",
+      "closed_weekdays": [],
+      "source": "https://www.notredamedeparis.fr/en/faq/opening-hours/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Собор бесплатно; платных билетов в собор не существует, продажи на сторонних сайтах — обман. Бесплатный слот: сайт или приложение Notre-Dame de Paris, бронь открывается за 1–2 дня. Башни — 16 €, обязательна бронь на tours-notre-dame-de-paris.fr, 424 ступени, лифта и туалета нет."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.notredamedeparis.fr/en/visit/reservation-free/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Catedral_de_Notre_Dame%2C_Par%C3%ADs%2C_Francia%2C_2026-04-05%2C_DD_48-50_HDR.jpg/1280px-Catedral_de_Notre_Dame%2C_Par%C3%ADs%2C_Francia%2C_2026-04-05%2C_DD_48-50_HDR.jpg",
+        "credit": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Catedral_de_Notre_Dame,_Par%C3%ADs,_Francia,_2026-04-05,_DD_48-50_HDR.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, пересадка на линию 1 до Hôtel de Ville, дальше около 700 м пешком через мост на остров Сите. Сент-Шапель рядом, их удобно совместить."
+    },
+    "tags": [
+      "бесплатно",
+      "must see",
+      "совместить с Сент-Шапель"
+    ],
+    "game_id": "notre-dame",
+    "verified": true
+  },
+  {
+    "id": "sainte-chapelle",
+    "city": "paris",
+    "type": "sight",
+    "name": "Сент-Шапель",
+    "name_local": "Sainte-Chapelle",
+    "coords": [
+      48.85539,
+      2.34499
+    ],
+    "address": "8 Boulevard du Palais, 75001 Paris",
+    "summary": "Небольшая королевская капелла, где стены почти целиком из витражей — 1113 штук. Визит короткий, но очень впечатляющий, особенно в солнечный день.",
+    "description": "Капелла XIII века в стиле лучистой готики, построенная при Людовике IX для хранения реликвий. Стоит внутри Дворца правосудия, поэтому на входе досмотр, возможна проверка документов полицией. Нижняя капелла тёмная и низкая, главное — верхняя со сплошными витражами, туда ведёт лестница. Приходить строго ко времени, указанному в билете, раньше не пускают.",
+    "hours": {
+      "text": "С 1 октября по 31 марта ежедневно 9:00–17:00, последний вход за 30 минут до закрытия. Выходных в наши даты нет.",
+      "closed_weekdays": [],
+      "source": "https://www.sainte-chapelle.fr/en/visit/practical-information",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 22,
+      "note": "С 12.01.2026: 22 € для жителей стран вне ЕЭЗ, 16 € для граждан и жителей ЕЭЗ. Билет на конкретное время."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.sainte-chapelle.fr/en"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Sainte-Chapelle%2C_Paris%2C_upper_chapel_windows.jpg/1280px-Sainte-Chapelle%2C_Paris%2C_upper_chapel_windows.jpg",
+        "credit": "Gerda Arendt",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sainte-Chapelle,_Paris,_upper_chapel_windows.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "some",
+      "queue": "short",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, пересадка на линию 1 до Hôtel de Ville или Châtelet, дальше около 800 м пешком на остров Сите. Пересадки на Châtelet длинные, Hôtel de Ville проще."
+    },
+    "tags": [
+      "витражи",
+      "красиво",
+      "в солнечный день",
+      "совместить с Нотр-Дамом"
+    ],
+    "game_id": "sainte-chapelle",
+    "verified": true
+  },
+  {
+    "id": "eiffel-tower",
+    "city": "paris",
+    "type": "sight",
+    "name": "Эйфелева башня",
+    "name_local": "Tour Eiffel",
+    "coords": [
+      48.85826,
+      2.2945
+    ],
+    "address": "5 Avenue Anatole France, 75007 Paris",
+    "summary": "Символ Парижа. Подниматься не обязательно: на башню красиво смотреть с Марсова поля или с Трокадеро, а вечером она мерцает огнями.",
+    "description": "Башню построили к Всемирной выставке 1889 года. Подъём занимает несколько часов с учётом досмотра и очередей к лифтам, и на площадках почти негде сесть. Для щадящего варианта достаточно лифта до второго этажа; пешком наверх — точно не наш вариант, к тому же с 29.09.2026 подъём по лестнице тоже только по предварительной брони. Если подниматься, брать билет на лифт заранее на официальном сайте.",
+    "hours": {
+      "text": "Открыта ежедневно. Последний лифт на вершину в 22:30, последние подъёмы в 22:45. Время открытия на официальной странице проверить не удалось — посмотреть при покупке билета.",
+      "closed_weekdays": [],
+      "source": "https://www.toureiffel.paris/en/rates-opening-times",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 23.5,
+      "note": "Взрослый (от 25 лет): лифт до 2-го этажа — 23,50 €, лифт до вершины — 36,70 €, лестница до 2-го этажа — 14,80 €, лестница + лифт до вершины — 28 €. Билеты на лифт продаются за 90 дней, на лестницу за 60."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://ticket.toureiffel.paris/en"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/1280px-Tour_Eiffel_Wikimedia_Commons.jpg",
+        "credit": "Benh LIEU SONG",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1,
+      "stairs": "none",
+      "queue": "long",
+      "seating": false,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 45,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до École Militaire, дальше около 1 км по Марсову полю. Долго, но можно сидеть всю дорогу."
+    },
+    "tags": [
+      "must see",
+      "вид",
+      "вечером особенно",
+      "можно без подъёма"
+    ],
+    "game_id": "eiffel-tower",
+    "verified": true
   }
 ]
