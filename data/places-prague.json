@@ -594,7 +594,7 @@
       14.40722
     ],
     "address": "Vítězná 124/5, 150 00 Praha 5 – Malá Strana",
-    "summary": "Кафе в венском стиле с высоким расписным потолком, в 15 минутах пешком от отеля. Хорошо для неспешного завтрака или десерта.",
+    "summary": "Кафе в венском стиле под охраняемым неоренессансным потолком конца XIX века, в 15 минутах пешком от отеля. Хорошо для неспешного завтрака или десерта.",
     "description": "Кафе ресторанной группы Ambiente: днём здесь шумно и оживлённо, как в венской кофейне, вечером спокойнее, как в ресторане. Завтраки подают по будням до 11:30, в меню есть фирменный торт Savoy. Кафе стоит на углу Витезной и Зборовской, по дороге от отеля к Мосту Легий и Национальному театру. Лучше бронировать столик заранее, это можно сделать на сайте.",
     "hours": {
       "text": "Пн–пт 8:00–22:00; сб–вс и праздники 9:00–22:00. 1–5.10 открыто.",
@@ -862,6 +862,293 @@
       "история",
       "можно посидеть долго",
       "завтрак"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "cafe-slavia",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Кафе «Славия»",
+    "name_local": "Café Slavia",
+    "coords": [
+      50.08153,
+      14.41342
+    ],
+    "address": "Národní 1012/1, 110 00 Praha 1",
+    "summary": "Историческое кафе 1881 года напротив Национального театра. Из окон видны Карлов мост, Град и Влтава.",
+    "description": "Кафе работает с 1881 года в самом центре Праги. Со столиков у окон видны Карлов мост, Градчаны и Национальный театр. До 14:00 подают чешские завтраки, с 11:00 — традиционную чешскую кухню, есть кондитерская. От отеля недалеко: трамвай 9 останавливается прямо у кафе.",
+    "hours": {
+      "text": "Пн–сб 9:00–23:00; вс 9:00–22:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.cafeslavia.cz/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 16,
+      "ticket_eur": null,
+      "note": "≈ 400 CZK за горячее с напитком: основные блюда дневного меню 245–275 CZK (сайт кафе). В праздники бронь не принимают."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cafeslavia.cz/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Cafe_Slavia_in_Prague_interior.jpg/1280px-Cafe_Slavia_in_Prague_interior.jpg",
+        "credit": "DIMSFIKAS",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cafe_Slavia_in_Prague_interior.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.1,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 12,
+      "transfers": 0,
+      "note": "Ориентировочно: трамвай 9 от Arbesovo náměstí до Národní divadlo, кафе через дорогу. Пешком около 2 км через Мост Легий."
+    },
+    "tags": [
+      "красиво",
+      "вид на Град",
+      "история",
+      "можно посидеть долго",
+      "чешская кухня"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "cafe-imperial",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Кафе «Империал»",
+    "name_local": "Café Imperial",
+    "coords": [
+      50.08992,
+      14.43281
+    ],
+    "address": "Na Poříčí 1072/15, 110 00 Praha 1",
+    "summary": "Гранд-кафе 1914 года, где стены и потолок покрыты керамической плиткой и мозаикой. Чешская кухня от шефа Зденека Поглрайха.",
+    "description": "Кафе работает с 1914 года. Главное здесь — уникальная керамическая облицовка стен и оригинальные мозаичные потолки. Сюда ходили Франц Кафка и Леош Яначек, а сегодня кафе отмечено гидом Michelin. Кухня — классическая чешская в современной подаче под руководством Зденека Поглрайха. С 7:00 работает завтрак-буфет, так что можно начать день отсюда.",
+    "hours": {
+      "text": "Ежедневно 7:00–23:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.cafeimperial.cz/en/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 16,
+      "ticket_eur": null,
+      "note": "≈ 400 CZK за завтрак: буфет 7:00–10:30 стоит 425 CZK, завтраки à la carte 205–350 CZK (сайт кафе). Цены обедов не проверяла. Дресс-код smart casual."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cafeimperial.cz/en/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Caf%C3%A9_Imperial_01.jpg/1280px-Caf%C3%A9_Imperial_01.jpg",
+        "credit": "Derbrauni",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Imperial_01.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.4,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 75
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Náměstí Republiky (4 остановки), дальше около 400 м пешком."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "чешская кухня",
+      "завтрак"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "kavarna-obecni-dum",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Кавярна Обецни дум",
+    "name_local": "Kavárna Obecní dům",
+    "coords": [
+      50.08776,
+      14.42776
+    ],
+    "address": "náměstí Republiky 1090/5, 111 21 Praha 1",
+    "summary": "Кафе в стиле модерн на первом этаже Обецни дум. Можно увидеть интерьеры здания без экскурсии, просто за чашкой кофе с пирожным.",
+    "description": "Кафе находится на первом этаже Муниципального дома, одного из главных памятников пражского модерна. В меню в основном сладкое: торты собственного производства (их выбирают с тележки-витрины) и мороженое, есть завтраки. Хороший вариант, если экскурсия по зданию кажется слишком долгой.",
+    "hours": {
+      "text": "Ежедневно 8:00–21:00 (по сайту Обецни дум). 1–5.10 открыто. В других источниках встречается 7:30–23:00, стоит перепроверить.",
+      "closed_weekdays": [],
+      "source": "https://www.obecnidum.cz/en/restaurace-a-obchody/municipal-house-cafe/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 12,
+      "ticket_eur": null,
+      "note": "≈ 300 CZK за кофе с тортом: кусок торта 189 CZK, базовый завтрак 239 CZK (сайт kavarnaod.cz)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.kavarnaod.cz/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Kav%C3%A1rna_Obecn%C3%AD_d%C5%AFm_01.jpg/1280px-Kav%C3%A1rna_Obecn%C3%AD_d%C5%AFm_01.jpg",
+        "credit": "Derbrauni",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kav%C3%A1rna_Obecn%C3%AD_d%C5%AFm_01.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.1,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 18,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Náměstí Republiky, выход прямо к зданию."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "модерн",
+      "десерты"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "lokal-dlouha",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Локал Длоуга",
+    "name_local": "Lokál Dlouhááá",
+    "coords": [
+      50.0907,
+      14.42576
+    ],
+    "address": "Dlouhá 731/33, 110 00 Praha 1 – Staré Město",
+    "summary": "Шумная чешская пивная с простой домашней едой и пльзенским пивом из танков. Хорошее место попробовать чешскую кухню недорого.",
+    "description": "Большая пивная ресторанной группы Ambiente в Старом городе. Здесь готовят традиционные чешские блюда из свежих продуктов региональных производителей и наливают Pilsner Urquell из танков. Место людное и шумное, так что для тихого отдыха не подходит, зато кормят сытно. Официальный сайт открыть не удалось, данные взяты из каталога firmy.cz.",
+    "hours": {
+      "text": "По firmy.cz: пн–сб 11:00–0:00, вс 11:00–22:00, на 1–5.10 указано открыто. Официальный сайт не открылся.",
+      "closed_weekdays": [],
+      "source": "https://en.firmy.cz/company/2466156-lokal-dlouhaaa-praha-stare-mesto.html",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверены: официальный сайт lokal-dlouha.ambi.cz был недоступен."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://lokal-dlouha.ambi.cz/en/reservations/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 75
+    },
+    "transit_hint": {
+      "from_hotel_min": 22,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Náměstí Republiky, дальше около 500 м пешком."
+    },
+    "tags": [
+      "чешская кухня",
+      "пиво",
+      "шумно"
+    ],
+    "game_id": null,
+    "verified": false
+  },
+  {
+    "id": "strahov-brewery",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Страговский монастырский пивовар",
+    "name_local": "Klášterní pivovar Strahov",
+    "coords": [
+      50.08686,
+      14.38846
+    ],
+    "address": "Strahovské nádvoří 301/10, 118 00 Praha 1 – Hradčany",
+    "summary": "Пивоварня во дворе Страговского монастыря, где варят своё пиво и готовят чешскую кухню. Удобно пообедать в начале маршрута, до спуска к Граду.",
+    "description": "История пивоварни прослеживается примерно с 1400 года, а после долгого перерыва её восстановили в 2000 году. Пиво варят прямо на месте. В меню чешская кухня: гуляш на тёмном пиве с кнедликами, свичкова, колбаски на пиве, пивной сырный мусс. Место популярное, поэтому лучше бронировать.",
+    "hours": {
+      "text": "Ежедневно 10:00–22:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/klasterni-pivovar-strahov-the-strahov-monastic-brewery/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 18,
+      "ticket_eur": null,
+      "note": "≈ 450 CZK за горячее с пивом: гуляш 339 CZK, суп 159 CZK (меню на klasterni-pivovar.cz). Цену пива не проверяла."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.klasterni-pivovar.cz/cs"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Kl%C3%A1%C5%A1tern%C3%AD_pivovar_Strahov_-_monastic_brewery_Strahov.JPG/1280px-Kl%C3%A1%C5%A1tern%C3%AD_pivovar_Strahov_-_monastic_brewery_Strahov.JPG",
+        "credit": "Nice0205",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kl%C3%A1%C5%A1tern%C3%AD_pivovar_Strahov_-_monastic_brewery_Strahov.JPG"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 75
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: трамвай 12/15/20 до Újezd, пересадка на 22 до Pohořelec, дальше около 300 м. После обеда весь путь к Граду — под гору."
+    },
+    "tags": [
+      "чешская кухня",
+      "пиво",
+      "рядом с Градом"
     ],
     "game_id": null,
     "verified": true
