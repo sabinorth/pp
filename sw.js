@@ -1,6 +1,6 @@
 // Офлайн-кэш: оболочка — stale-while-revalidate, data/*.json — network-first с откатом в кэш.
 // Тайлы карты не кэшируются. При изменении списка файлов поднять версию.
-const VERSION = 'v7';
+const VERSION = 'v8';
 const CACHE = `trip2026-${VERSION}`;
 
 const SHELL = [
@@ -16,6 +16,7 @@ const SHELL = [
   'data/hotels.json', 'data/places-prague.json', 'data/places-paris.json',
   'data/days.json', 'data/practical.json',
   'data/games/index.json',
+  'data/games/orsay.json',
   'data/games/louvre.json',
   'data/games/versailles.json', 'data/games/charles-bridge.json', 'data/games/prague-castle.json', 'data/games/old-town-square.json', 'data/games/vysehrad.json',
 ];
