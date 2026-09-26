@@ -5,6 +5,7 @@ import { placeIndex } from './days.js';
 import { openSheet } from './sheet.js';
 import { esc, fmtDate, fmtWeekday, EFFORT_LEVELS, BEST_TIME, effortInline } from './ui.js';
 import * as store from './store.js';
+import * as practical from './practical.js';
 
 let recs = [];   // текущий список для обработчиков кнопок
 let days = [];
@@ -123,13 +124,13 @@ function openAddSheet(r) {
 
 export async function render(r) {
   if (r.query.tab === 'practical') {
-    return `<h1>Советы</h1>${segHTML('practical')}<div class="card stub"><p>Раздел в работе.</p></div>`;
+    return `<h1>Советы</h1>${segHTML('practical')}${await practical.render(r.query.focus)}`;
   }
   return renderRecs(r.query);
 }
 
 export function after(el, r) {
-  if (r.query.tab === 'practical') return;
+  if (r.query.tab === 'practical') return practical.after(el, r.query.focus);
   el.querySelector('#f-date').addEventListener('change', () => applyFilters(el));
   el.querySelector('.filters').addEventListener('click', (e) => {
     const c = e.target.closest('.chip.pick');

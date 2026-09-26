@@ -1,0 +1,106 @@
+{
+  "checked_on": "2026-09-26",
+  "transport": [
+    {
+      "city": "prague",
+      "title": "Транспорт в Праге",
+      "points": [
+        "Приложение PID Lítačka: билет покупается в два нажатия с привязанной карты. Бумажный билет нужно прокомпостировать при входе в трамвай или в метро, билет из приложения уже активен.",
+        "Билеты на зону P: 30 мин — 36 Kč в приложении / 39 Kč бумажный; 90 мин — 46 / 50 Kč; 24 часа — 140 / 150 Kč; 72 часа — 340 / 350 Kč.",
+        "Где ещё купить: автоматы в метро и на некоторых остановках (карта или монеты), терминалы для оплаты картой в трамваях.",
+        "С 4 поездок в день билет на 24 часа выгоднее (4 × 46 = 184 Kč против 140 Kč), и не нужно покупать билет перед каждой поездкой."
+      ],
+      "apps": [
+        { "name": "PID Lítačka", "url": "https://pid.cz/en/travel-information/pid-mobile-app/" }
+      ],
+      "sources": [
+        "https://pid.cz/en/tickets/",
+        "https://pid.cz/dnesni-dobe-kupovat-jizdenky-nejlepe-bezkontaktne-elektronicky/"
+      ]
+    },
+    {
+      "city": "paris",
+      "title": "Транспорт в Париже",
+      "points": [
+        "Бумажных билетов больше нет (с ноября 2025). Билет покупается в приложении Île-de-France Mobilités или записывается на карту Navigo Easy (2 €; пополняется в автоматах или со смартфона).",
+        "Билет Métro-Train-RER — 2,55 € на поездку по всему Иль-де-Франс, в том числе до Версаля. На одну Navigo Easy помещается до 20 билетов.",
+        "Оплату банковской картой прямо на валидаторе вводят постепенно, и она дороже обычного билета на 50–80 центов, без бесплатных пересадок. Надёжнее приложение или Navigo Easy.",
+        "С 28.09 объявлена бессрочная забастовка RATP — перед выходом проверять ratp.fr или приложение."
+      ],
+      "apps": [
+        { "name": "Île-de-France Mobilités", "url": "https://www.iledefrance-mobilites.fr/" },
+        { "name": "RATP — состояние линий", "url": "https://www.ratp.fr/" }
+      ],
+      "sources": [
+        "https://www.sortiraparis.com/en/news/in-paris/articles/337462-navigo-pass-and-metro-train-tickets-new-fares-expected-in-january-2026",
+        "https://www.railwaygazette.com/ticketing/2026/07/15/tourists-in-focus-as-paris-starts-phased-introduction-of-bank-card-transport-payments/",
+        "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call"
+      ]
+    }
+  ],
+  "weather": [
+    { "city": "prague", "links": [
+      { "name": "Yr.no — Прага", "url": "https://www.yr.no/en/forecast/daily-table/2-3067696/" },
+      { "name": "ČHMÚ (чешская метеослужба)", "url": "https://www.chmi.cz/" }
+    ] },
+    { "city": "paris", "links": [
+      { "name": "Yr.no — Париж", "url": "https://www.yr.no/en/forecast/daily-table/2-2988507/" },
+      { "name": "Météo-France — Париж", "url": "https://meteofrance.com/previsions-meteo-france/paris/75000" }
+    ] }
+  ],
+  "phrases": [
+    { "city": "prague", "lang": "Чешский", "items": [
+      { "local": "Dobrý den", "tr": "Добри дэн", "ru": "Здравствуйте" },
+      { "local": "Děkuji", "tr": "Дьекуйи", "ru": "Спасибо" },
+      { "local": "Prosím", "tr": "Просим", "ru": "Пожалуйста" },
+      { "local": "Promiňte", "tr": "Проминьтэ", "ru": "Извините" },
+      { "local": "Mluvíte anglicky?", "tr": "Млувитэ англицки?", "ru": "Вы говорите по-английски?" },
+      { "local": "Kde je toaleta?", "tr": "Гдэ е тоалэта?", "ru": "Где туалет?" },
+      { "local": "Kolik to stojí?", "tr": "Колик то стойи?", "ru": "Сколько это стоит?" },
+      { "local": "Účet, prosím", "tr": "Учет, просим", "ru": "Счёт, пожалуйста" },
+      { "local": "Můžu platit kartou?", "tr": "Мужу платит картоу?", "ru": "Можно заплатить картой?" },
+      { "local": "Potřebuji lékaře", "tr": "Потршебуйи лэкаржэ", "ru": "Мне нужен врач" }
+    ] },
+    { "city": "paris", "lang": "Французский", "items": [
+      { "local": "Bonjour", "tr": "Бонжур", "ru": "Здравствуйте" },
+      { "local": "Merci", "tr": "Мерси", "ru": "Спасибо" },
+      { "local": "S'il vous plaît", "tr": "Сильвупле", "ru": "Пожалуйста" },
+      { "local": "Excusez-moi", "tr": "Экскюзэ-муа", "ru": "Извините" },
+      { "local": "Vous parlez anglais ?", "tr": "Ву парлэ англэ?", "ru": "Вы говорите по-английски?" },
+      { "local": "Où sont les toilettes ?", "tr": "У сон ле туалэт?", "ru": "Где туалет?" },
+      { "local": "C'est combien ?", "tr": "Сэ комбьен?", "ru": "Сколько стоит?" },
+      { "local": "L'addition, s'il vous plaît", "tr": "Ладисьон, сильвупле", "ru": "Счёт, пожалуйста" },
+      { "local": "Une table pour deux, s'il vous plaît", "tr": "Юн табль пур дё, сильвупле", "ru": "Столик на двоих, пожалуйста" },
+      { "local": "J'ai besoin d'un médecin", "tr": "Жэ бэзуэн дэн мэдсэн", "ru": "Мне нужен врач" }
+    ] }
+  ],
+  "emergency": [
+    { "city": "prague", "numbers": [
+      { "num": "112", "what": "Единый номер экстренных служб, работает без SIM-карты и говорит по-английски" },
+      { "num": "155", "what": "Скорая помощь" },
+      { "num": "158", "what": "Полиция" },
+      { "num": "156", "what": "Городская полиция" },
+      { "num": "150", "what": "Пожарные" }
+    ], "source": "https://hzscr.gov.cz/clanek/tisnova-volani-v-ceske-republice.aspx" },
+    { "city": "paris", "numbers": [
+      { "num": "112", "what": "Единый европейский номер, работает с заблокированного телефона и без SIM-карты" },
+      { "num": "15", "what": "Скорая помощь (SAMU)" },
+      { "num": "17", "what": "Полиция" },
+      { "num": "18", "what": "Пожарные" },
+      { "num": "114", "what": "SMS, чат или видео для тех, кто не может говорить" }
+    ], "source": "https://www.masecurite.interieur.gouv.fr/fr/fiches-pratiques/famille-et-aides-aux-victimes/numeros-utiles-nationaux" }
+  ],
+  "pharmacy": [
+    { "city": "prague", "points": [
+      "Круглосуточная аптека NONSTOP lékárna Na Františku: Na Františku 847/8, Praha 1 (Старе Место), +420 222 801 397. В том же здании больница с круглосуточным приёмным отделением: +420 222 801 111.",
+      "Ищите вывеску «Lékárna». Ночные аптеки на картах находятся по запросу «lékárna nonstop»."
+    ], "address": "Na Františku 847/8, 110 00 Praha 1", "source": "https://www.praha1.cz/zdravotnictvi/zdravotnicka-zarizeni/" },
+    { "city": "paris", "points": [
+      "Дежурные аптеки ночью, в воскресенье и в праздники — на сайте или в приложении MonPharmacien (от ARS Île-de-France).",
+      "Телефон 3237 работает круглосуточно по всей Франции и подсказывает ближайшую дежурную аптеку. Аптеку узнать легко по зелёному кресту."
+    ], "links": [
+      { "name": "MonPharmacien — дежурные аптеки", "url": "https://monpharmacien-idf.fr/" },
+      { "name": "3237.fr", "url": "https://www.3237.fr/" }
+    ], "source": "https://www.iledefrance.ars.sante.fr/trouver-la-pharmacie-de-garde-la-plus-proche-monpharmacien" }
+  ]
+}

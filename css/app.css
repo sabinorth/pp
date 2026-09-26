@@ -393,3 +393,26 @@ h2.section { margin-top: 18px; }
 .soft-warn { background: var(--warn-bg); color: var(--warn-text); border-color: transparent; }
 .soft-warn .btn { margin-top: 6px; width: 100%; }
 .plan-switch { margin: 10px 0; }
+
+/* --- Практическое --- */
+.prac summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; list-style: none; }
+.prac summary::-webkit-details-marker { display: none; }
+.prac summary::after { content: '▾'; margin-left: auto; font-size: 1.2rem; color: var(--muted); }
+.prac[open] summary::after { content: '▴'; }
+.prac summary h2 { margin: 0; }
+.prac ul { padding-left: 1.2em; }
+.prac li { margin: 6px 0; }
+.src { font-size: 0.85rem; }
+.src a, .link-list a { display: inline-block; padding: 10px 4px; }
+.link-list { list-style: none; padding: 0 !important; margin: 4px 0; }
+.link-list li { margin: 0; }
+.phrases { list-style: none; padding: 0 !important; display: grid; gap: 6px; }
+.phrases li { display: grid; padding: 8px 10px; border-radius: 10px; background: var(--surface-2); margin: 0; }
+.ph-local { font-weight: 700; font-size: 1.05rem; }
+.numbers { list-style: none; padding: 0 !important; display: grid; gap: 8px; }
+.numbers li { display: flex; align-items: center; gap: 12px; margin: 0; }
+.btn.num { min-width: 96px; flex: none; }
+.setting { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-weight: 600; }
+.stepper { display: flex; align-items: center; gap: 10px; }
+.stepper output { min-width: 2ch; text-align: center; font-size: 1.3rem; font-weight: 700; }
+.btn.wide { width: 100%; margin-top: 8px; }
