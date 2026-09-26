@@ -2,6 +2,7 @@
 import { CITIES, getDays, getPlaces } from './data.js';
 import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME } from './ui.js';
 import * as store from './store.js';
+import * as energy from './energy.js';
 
 function cityLine(day) {
   const to = CITIES[day.city];
@@ -81,7 +82,35 @@ function mineHTML(mine, day, places) {
   return `<section id="mine"><h2 class="section">⭐ Моё</h2>${list}</section>`;
 }
 
+function activePlan(date) {
+  return store.get('plans', {})[date] === 'b' ? 'b' : 'a';
+}
+
+function setPlan(date, plan) {
+  store.set('plans', { ...store.get('plans', {}), [date]: plan });
+  window.dispatchEvent(new HashChangeEvent('hashchange'));
+}
+
+function budgetHTML(day, plan, mine, places) {
+  const items = [...(plan === 'b' ? day.plan_b : day.plan_a) || [], ...mine];
+  const value = energy.score(items, day.city, places);
+  const limit = energy.getThreshold();
+  let hint = '';
+  if (value > limit) {
+    hint = plan === 'a'
+      ? `<div class="card soft-warn"><p>Сегодня насыщенно. Может, взять план Б? Он спокойнее.</p>
+          <button type="button" class="btn" data-plan="b">Переключить на план Б</button></div>`
+      : `<div class="card soft-warn"><p>Даже с планом Б получается много. Можно убрать что-то из «Моё» — отдых важнее.</p></div>`;
+  }
+  return `${energy.meterHTML(value, limit)}
+    <p class="muted energy-note">Порог ${limit} меняется в <a href="#/recs?tab=practical&focus=settings">настройках</a>.</p>${hint}`;
+}
+
 export function afterDay(el, r) {
+  el.querySelector('.day-page').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-plan]');
+    if (b && b.getAttribute('aria-pressed') !== 'true') setPlan(r.param, b.dataset.plan);
+  });
   el.querySelector('#mine')?.addEventListener('click', (e) => {
     const b = e.target.closest('[data-remove]');
     if (!b) return;
@@ -122,23 +151,28 @@ export async function renderDay({ param }) {
   }
   const day = days[i];
   const prev = days[i - 1], next = days[i + 1];
-  const mine = store.getMine(day.date);
-  const places = await placeIndex([...new Set([...dayCities(day), ...mine.map((m) => m.city)])]);
+  const saved = store.getMine(day.date);
+  const places = await placeIndex([...new Set([...dayCities(day), ...saved.map((m) => m.city)].filter((c) => CITIES[c]))]);
+  const mine = saved.filter((m) => places.has(`${m.city}/${m.place_id}`));
+  const plan = activePlan(day.date);
 
-  return `<a class="back" href="#/plan">← Все дни</a>
+  return `<div class="day-page"><a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
     <p class="day-city">${cityLine(day)}</p>
     ${badgesHTML(day)}
     ${day.note ? `<p class="muted">${esc(day.note)}</p>` : ''}
     ${warningsHTML(day.warnings)}
-    <h2 class="section">План А</h2>
-    ${planHTML(day.plan_a, day, places)}
-    <h2 class="section">План Б <span class="muted">— если устали или дождь</span></h2>
-    ${planHTML(day.plan_b, day, places)}
+    ${budgetHTML(day, plan, mine, places)}
+    <div class="seg plan-switch" role="group" aria-label="Вариант плана">
+      <button type="button" data-plan="a" aria-pressed="${plan === 'a'}">План А</button>
+      <button type="button" data-plan="b" aria-pressed="${plan === 'b'}">План Б · полегче</button>
+    </div>
+    ${plan === 'b' ? '<p class="muted">Облегчённый вариант — если устали или дождь.</p>' : ''}
+    ${planHTML(plan === 'b' ? day.plan_b : day.plan_a, day, places)}
     ${mineHTML(mine, day, places)}
     ${eventsHTML(day.events)}
     <nav class="day-nav" aria-label="Соседние дни">
       <a class="btn secondary" ${prev ? `href="#/day/${prev.date}"` : 'aria-disabled="true"'}>← ${prev ? fmtDate(prev.date) : ''}</a>
       <a class="btn secondary" ${next ? `href="#/day/${next.date}"` : 'aria-disabled="true"'}>${next ? fmtDate(next.date) : ''} →</a>
-    </nav>`;
+    </nav></div>`;
 }
