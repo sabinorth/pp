@@ -1179,5 +1179,347 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "cafe-du-palais",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Кафе в Палэ де ла Порт Доре",
+    "name_local": "Café du Palais de la Porte Dorée",
+    "coords": [
+      48.83527,
+      2.40936
+    ],
+    "address": "293 Avenue Daumesnil, 75012 Paris",
+    "summary": "Кафе в парадном зале дворца ар-деко в 250 м от отеля. Билет в музей не нужен — можно зайти просто посидеть в красивом интерьере.",
+    "description": "Кафе работает в Зале почёта (Hall of Honour) Палэ де ла Порт Доре — здания 1931 года с интерьерами ар-деко. Подают горячие блюда, салаты, сэндвичи, напитки и сладкое, есть обеденные и полдниковые наборы. Вход в кафе без музейного билета. Хороший вариант для спокойного утра или дня переезда рядом с отелем, но помнить, что по понедельникам дворец закрыт.",
+    "hours": {
+      "text": "Вт–Пт 10:00–17:00; Сб–Вс 10:00–18:30; Пн закрыто (как и весь дворец). В наши даты: 5.10 (пн) закрыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.palais-portedoree.fr/en/practical-informations/the-cafe-du-palais-de-la-porte-doree",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Вход в кафе без билета. Цены на сайте не указаны."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Palais_Porte_Dor%C3%A9e_Salle_Fetes.jpg/1280px-Palais_Porte_Dor%C3%A9e_Salle_Fetes.jpg",
+        "credit": "AlSepPhoenix",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Palais_Porte_Dor%C3%A9e_Salle_Fetes.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 4,
+      "transfers": 0,
+      "note": "Пешком около 250 м по авеню Домениль. Во дворце есть пандус и лифт."
+    },
+    "tags": [
+      "рядом с отелем",
+      "красивый интерьер",
+      "ар-деко",
+      "без билета"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "cafe-marly",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Café Marly",
+    "name_local": "Le Café Marly",
+    "coords": [
+      48.86164,
+      2.33593
+    ],
+    "address": "93 Rue de Rivoli, 75001 Paris",
+    "summary": "Кафе-брассери под аркадами Лувра с видом на Пирамиду. Работает и когда музей закрыт, в том числе во вторник.",
+    "description": "Терраса стоит в галерее Лувра между двором Наполеона и садом Тюильри, прямо напротив Пирамиды. Отличное место, чтобы сесть после музея, не уходя далеко. Открыто ежедневно с утра до глубокой ночи, столик можно забронировать онлайн или по телефону. Место знаменитое, поэтому, скорее всего, недешёвое — цены на сайте не указаны.",
+    "hours": {
+      "text": "Ежедневно 8:00–2:00. Открыто и в дни, когда Лувр закрыт.",
+      "closed_weekdays": [],
+      "source": "https://www.cafe-marly.com/en",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены на сайте не указаны. Бронь онлайн или по телефону +33 1 49 26 06 60."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cafe-marly.com/en"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Le_Caf%C3%A9_Marly%2C_Louvre_26_December_2015.jpg/1280px-Le_Caf%C3%A9_Marly%2C_Louvre_26_December_2015.jpg",
+        "credit": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Le_Caf%C3%A9_Marly,_Louvre_26_December_2015.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Как до Лувра: метро 8 до Reuilly–Diderot, линия 1 до Palais Royal – Musée du Louvre, дальше около 300 м."
+    },
+    "tags": [
+      "у Лувра",
+      "вид на Пирамиду",
+      "терраса",
+      "допоздна"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "cafe-campana",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Café Campana в Орсе",
+    "name_local": "Café Campana — Musée d'Orsay",
+    "coords": [
+      48.85992,
+      2.32658
+    ],
+    "address": "Musée d'Orsay, 5-й этаж, 1 Rue de la Légion d'Honneur, 75007 Paris",
+    "summary": "Кафе на 5-м этаже Орсе, сразу у выхода из зала импрессионистов, рядом с огромными часами вокзала. Пускают только с билетом в музей.",
+    "description": "Кафе оформили братья Кампана в духе ар-нуво: сиденья природных форм, люстры из золотой «чешуи», волны света — ощущение подводного мира. Стоит у выхода из галереи импрессионистов, напротив одного из больших уличных часов музея. Меню сезонное: салаты, тушёные блюда, десерты. Бронирования нет, поэтому в обед может быть очередь.",
+    "hours": {
+      "text": "Вт–Вс 10:30–16:45, в Чт до 20:45. Пн закрыто, как и музей. В наши даты: 5.10 (пн) закрыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.musee-orsay.fr/en/visit/restaurants+and+caf%C3%A9s",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Нужен билет в музей. Цены не проверила. Бронирования нет."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 1,
+      "note": "Внутри музея Орсе, на 5-м этаже, у выхода из зала импрессионистов."
+    },
+    "tags": [
+      "в Орсе",
+      "красивый интерьер",
+      "только с билетом в музей"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "mariage-freres-marais",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Чайный салон Mariage Frères в Марэ",
+    "name_local": "Mariage Frères — 30 rue du Bourg-Tibourg",
+    "coords": [
+      48.85769,
+      2.35649
+    ],
+    "address": "30 Rue du Bourg-Tibourg, 75004 Paris",
+    "summary": "Исторический магазин и чайный салон французского чайного дома, основанного в 1854 году. Спокойное место, чтобы посидеть посреди прогулки по Марэ.",
+    "description": "Старейший адрес чайного дома Mariage Frères в самом сердце Марэ. В одной части — чайная лавка с сотнями чаёв на развес, в другой — ресторан и чайный салон. Хорошо сочетается с прогулкой от площади Вогезов и с Нотр-Дамом — до острова Сите отсюда недалеко.",
+    "hours": {
+      "text": "Ресторан и чайный салон 12:00–19:00, чайная лавка 10:30–19:30. Дни работы в источнике отдельно не указаны.",
+      "closed_weekdays": [],
+      "source": "https://www.mariagefreres.com/en/restaurants",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверила (сайт закрыт от автоматической загрузки)."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Mariage_Fr%C3%A8res%2C_30_Rue_du_Bourg-Tibourg%2C_Paris_001.jpg/1280px-Mariage_Fr%C3%A8res%2C_30_Rue_du_Bourg-Tibourg%2C_Paris_001.jpg",
+        "credit": "Norio NAKAYAMA from saitama, japan",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mariage_Fr%C3%A8res,_30_Rue_du_Bourg-Tibourg,_Paris_001.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Hôtel de Ville, дальше около 300 м. От площади Вогезов — около 1 км пешком по Марэ."
+    },
+    "tags": [
+      "чайный салон",
+      "Марэ",
+      "можно посидеть долго",
+      "у Нотр-Дама"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "saint-regis",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Le Saint-Régis",
+    "name_local": "Le Saint-Régis",
+    "coords": [
+      48.85293,
+      2.35369
+    ],
+    "address": "6 Rue Jean du Bellay, 75004 Paris",
+    "summary": "Классическая парижская брассери на острове Сен-Луи, через мост от Нотр-Дама. Работает с утра до ночи без выходных.",
+    "description": "Кафе стоит на углу острова Сен-Луи, в нескольких минутах от задней части собора Парижской Богоматери. Интерьер в винтажном стиле с плиткой в клетку, есть терраса. Открыто ежедневно с 7:30, поэтому сюда удобно зайти и до Нотр-Дама, и после Сент-Шапель.",
+    "hours": {
+      "text": "Ежедневно 7:30–2:00.",
+      "closed_weekdays": [],
+      "source": "https://www.lesaintregis-paris.com/en/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены на главной странице сайта не указаны."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Около 300 м от Нотр-Дама через мост Сен-Луи. От отеля — как до Нотр-Дама: метро 8, пересадка на 1 до Hôtel de Ville и пешком."
+    },
+    "tags": [
+      "у Нотр-Дама",
+      "терраса",
+      "брассери",
+      "с утра до ночи"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "maison-rose",
+    "city": "paris",
+    "type": "cafe",
+    "name": "La Maison Rose",
+    "name_local": "La Maison Rose",
+    "coords": [
+      48.88797,
+      2.33961
+    ],
+    "address": "2 Rue de l'Abreuvoir, 75018 Paris",
+    "summary": "Знаменитый розовый домик на Монмартре, теперь ресторан. Днём с 15:30 до 17:30 — чай и напитки без брони.",
+    "description": "Один из самых фотографируемых домов Монмартра, на тихой улочке к западу от Сакре-Кёр. Ресторан с короткой сезонной кухней в духе французской фермерской и итальянской простой кухни. Обед и ужин — по брони на сайте, а в перерыве между ними можно просто выпить чаю без брони. Дорога к дому идёт по холму вверх-вниз, так что лучше совместить с Сакре-Кёр после фуникулёра.",
+    "hours": {
+      "text": "Обед 12:00–14:30; чай и напитки 15:30–17:30 (без брони); ужин 18:00–21:45 (в Вс до 21:30). Выходные дни в источнике не указаны.",
+      "closed_weekdays": [],
+      "source": "https://lamaisonrose-montmartre.com/en/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Обед и ужин — только фиксированные меню (по меню на сайте), цены не проверила. Бронь только через сайт."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://lamaisonrose-montmartre.com/en/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/La_Maison_Rose_in_Montmartre%2C_2_May_2018.jpg/1280px-La_Maison_Rose_in_Montmartre%2C_2_May_2018.jpg",
+        "credit": "Pedro Szekely from Los Angeles, USA",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:La_Maison_Rose_in_Montmartre,_2_May_2018.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 0.4,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 55,
+      "transfers": 2,
+      "note": "Около 400 м от Сакре-Кёр по холму. Ближайшее метро — Lamarck–Caulaincourt (линия 12). От отеля маршрут проверить по ссылке."
+    },
+    "tags": [
+      "Монмартр",
+      "красиво",
+      "чай без брони 15:30–17:30"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
