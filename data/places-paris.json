@@ -592,5 +592,312 @@
     ],
     "game_id": "chateau-vincennes",
     "verified": true
+  },
+  {
+    "id": "versailles",
+    "city": "paris",
+    "type": "sight",
+    "name": "Версаль: как всё устроено",
+    "name_local": "Château de Versailles",
+    "coords": [
+      48.80384,
+      2.12465
+    ],
+    "address": "Place d'Armes, 78000 Versailles",
+    "summary": "Наш день 8 октября (чт). Дворец по билету с фиксированным временем, дальше сады и Трианоны — на паровозике или гольф-каре, чтобы не пройти пешком 10 км.",
+    "description": "Как доехать: метро 8 от Porte Dorée без пересадок до Invalides, там RER C до конечной Versailles Château Rive Gauche, от станции около 10 минут пешком до дворца. Нужен билет «Métro-Train-RER» (2,55 €, действует по всему Иль-де-Франс, кроме аэропортов, пересадки 2 часа), обычный билет метро подходит и для Версаля. Билет: Passport — на всё поместье, вход во дворец строго в выбранный слот; 8.10 — день «Музыкальных садов» (фонтаны под музыку, по Вт–Пт), в эти дни сады платные, но в Passport они уже входят. Экономия сил: паровозик (9 € туда-обратно, 5 € в одну сторону) ходит от Северной террасы дворца к Трианонам и Большому каналу; электрокар (гольф-кар) — 42 € в час на машину до 4 человек, водителю от 24 лет, в залог нужны оригинальные права; лодки на Большом канале — 16 € за полчаса. Где поесть внутри: Ore (Ален Дюкасс) в павильоне Дюфур у Королевского двора; брассери La Flottille и итальянский ресторан La Petite Venise у Большого канала; Angelina (чай, горячий шоколад, выпечка) у Малого Трианона — туда можно без билета. Порядок щадящего дня: утром дворец по слоту, обед у Большого канала, после обеда на паровозике к Трианонам и Хамо, обратно на паровозике.",
+    "hours": {
+      "text": "Высокий сезон до 31 октября. Дворец 9:00–18:30 (последний вход 17:45), Трианоны 12:00–18:30 (последний вход 17:45), сады и парк 7:00–20:30. Дворец и Трианоны закрыты по понедельникам; 8.10 (чт) всё открыто. Паровозик в сентябре–октябре 11:10–18:10, кроме понедельника. RER C: с 5 по 30 октября по будням после 23:00 участок Versailles Château Rive Gauche — Javel закрыт на работы, днём поезда ходят.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://en.chateauversailles.fr/plan-your-visit/practical-information",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 35,
+      "note": "Passport (дворец со слотом + Трианоны + сады в дни музыкальных фонтанов) — 35 €, для жителей ЕЭЗ 32 €; после 16:00 — 28 € / 25 €. Только Трианоны — 15 € (ЕЭЗ 12 €). Сады в музыкальные дни — 15 € (ЕЭЗ 12 €). Паровозик — 9 € туда-обратно, 5 € в одну сторону. Электрокар — 42 € в час + 10,50 € за каждые 15 минут, выдача 10:00–17:00 (последний выезд в 16:00), пункты у Водного партера (южная терраса) и в Маленькой Венеции; в некоторые зоны на нём нельзя. Лодки — 16 € за полчаса, 20 € за час, в будни сентября–октября 13:00–18:45. Рестораны: Ore — Вт–Вс 9:00–17:30; La Flottille — ежедневно 9:00–19:00; La Petite Venise — ежедневно 11:45–18:00; Angelina у Малого Трианона — Вт–Вс 12:00–18:00. Источники: en.chateauversailles.fr/2026-ticketing, /plan-your-visit/facilities/little-train, /small-electric-vehicles, /rowing-boats; iledefrance-mobilites.fr (билет Métro-Train-RER); monrercetlignev.transilien.com (работы RER C)."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://ticket.chateauversailles.fr/en/ticketing"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/2017_Cour_de_Marbre_du_Ch%C3%A2teau_de_Versailles_P22.jpg/1280px-2017_Cour_de_Marbre_du_Ch%C3%A2teau_de_Versailles_P22.jpg",
+        "credit": "Luis Miguel Bugallo Sánchez (Lmbuga)",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2017_Cour_de_Marbre_du_Ch%C3%A2teau_de_Versailles_P22.jpg"
+      }
+    ],
+    "effort": {
+      "level": "high",
+      "walk_km": 6,
+      "stairs": "some",
+      "queue": "long",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 420
+    },
+    "transit_hint": {
+      "from_hotel_min": 80,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 от Porte Dorée до Invalides (без пересадок), там RER C до конечной Versailles Château Rive Gauche, затем около 10 минут пешком. Время в пути RER по официальному источнику не проверила. Выехать с запасом к слоту во дворец."
+    },
+    "tags": [
+      "Версаль",
+      "8 октября",
+      "целый день",
+      "паровозик",
+      "гольф-кар"
+    ],
+    "game_id": "versailles",
+    "verified": true
+  },
+  {
+    "id": "versailles-palace",
+    "city": "paris",
+    "type": "sight",
+    "name": "Версаль: дворец",
+    "name_local": "Château de Versailles — le Palais",
+    "coords": [
+      48.80443,
+      2.12029
+    ],
+    "address": "Place d'Armes, 78000 Versailles",
+    "summary": "Королевские покои и Зеркальная галерея. Вход строго по времени из билета, внутри толпа и почти негде сесть — идти первым делом, пока силы есть.",
+    "description": "Маршрут по дворцу проходит через парадные покои короля и королевы и Зеркальную галерею. Вход по слоту, указанному в билете Passport; кассы закрываются в 17:40. Во дворце бесплатно выдают немоторизованные инвалидные кресла — если совсем устанем, это вариант. Камера хранения временно не работает, небольшие сумки пропускают, поэтому брать с собой минимум. Кафе Ore — рядом, в павильоне Дюфур у Королевского двора.",
+    "hours": {
+      "text": "До 31 октября: 9:00–18:30, последний вход 17:45. Закрыто по понедельникам. 8.10 (чт) открыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://en.chateauversailles.fr/plan-your-visit/practical-information",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 35,
+      "note": "Входит в Passport (35 €, ЕЭЗ 32 €) с фиксированным временем входа."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://ticket.chateauversailles.fr/en/ticketing"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/1280px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+        "credit": "Myrabella",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chateau_Versailles_Galerie_des_Glaces.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "long",
+      "seating": false,
+      "toilet": true,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 80,
+      "transfers": 1,
+      "note": "Как до Версаля (см. точку «Версаль: как всё устроено»): метро 8 до Invalides, RER C до Versailles Château Rive Gauche, 10 минут пешком."
+    },
+    "tags": [
+      "Версаль",
+      "8 октября",
+      "по слоту",
+      "толпа"
+    ],
+    "game_id": "versailles",
+    "verified": true
+  },
+  {
+    "id": "versailles-gardens",
+    "city": "paris",
+    "type": "park",
+    "name": "Версаль: сады и Большой канал",
+    "name_local": "Jardins de Versailles et Grand Canal",
+    "coords": [
+      48.8055,
+      2.11769
+    ],
+    "address": "Jardins du Château de Versailles, 78000 Versailles",
+    "summary": "Регулярные сады с фонтанами, в четверг 8.10 — «Музыкальные сады». Огромные, поэтому смотреть ближнюю часть у дворца, а к каналу ехать на паровозике.",
+    "description": "Сады начинаются сразу за дворцом: Водный партер, Латонин бассейн, боскеты; дальше вниз уходит Большой канал. По вторникам–пятницам с апреля по 1 ноября проходят «Музыкальные сады» — в эти дни в садах играет музыка и открыты боскеты, а вход в сады платный (в Passport включён). У Большого канала — рестораны La Flottille и La Petite Venise, прокат лодок и пункт гольф-каров в Маленькой Венеции. Дорожки гравийные, от дворца к каналу заметный спуск, обратно — подъём.",
+    "hours": {
+      "text": "До 31 октября сады и парк 7:00–20:30, ежедневно. Музыкальные сады — Вт–Пт, 8.10 (чт) как раз такой день.",
+      "closed_weekdays": [],
+      "source": "https://en.chateauversailles.fr/news/shows/musical-fountains-show-and-musical-gardens",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 15,
+      "note": "В день музыкальных садов — 15 € (ЕЭЗ 12 €), входит в Passport. Лодки — 16 € за полчаса. Гольф-кар — 42 € в час."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://ticket.chateauversailles.fr/en/ticketing"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Versailles_view_from_the_Parterre_d%27eau.jpg/1280px-Versailles_view_from_the_Parterre_d%27eau.jpg",
+        "credit": "Paolo Costa Baldi",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Versailles_view_from_the_Parterre_d%27eau.jpg"
+      }
+    ],
+    "effort": {
+      "level": "high",
+      "walk_km": 3,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 85,
+      "transfers": 1,
+      "note": "К Большому каналу — паровозиком (остановка «Grand Canal») или на гольф-каре от Водного партера."
+    },
+    "tags": [
+      "Версаль",
+      "8 октября",
+      "фонтаны",
+      "паровозик",
+      "гольф-кар",
+      "лодки"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "versailles-trianon",
+    "city": "paris",
+    "type": "sight",
+    "name": "Версаль: Большой и Малый Трианон",
+    "name_local": "Grand Trianon et Petit Trianon",
+    "coords": [
+      48.81491,
+      2.10995
+    ],
+    "address": "Domaine de Trianon, 78000 Versailles",
+    "summary": "Два небольших дворца в глубине парка, намного спокойнее главного. От дворца около 1,5 км — только на паровозике.",
+    "description": "Большой Трианон — розовый мраморный дворец Людовика XIV с колоннадой-перистилем, Малый Трианон — резиденция Марии-Антуанетты. Людей здесь гораздо меньше, чем во дворце, и залы небольшие. Паровозик останавливается и у Малого, и у Большого Трианона. У Малого Трианона — Angelina, где можно выпить горячий шоколад и посидеть, туда пускают даже без билета.",
+    "hours": {
+      "text": "До 31 октября 12:00–18:30, последний вход 17:45. Закрыто по понедельникам. 8.10 (чт) открыто, но только с полудня.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://en.chateauversailles.fr/plan-your-visit/practical-information",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 15,
+      "note": "Входит в Passport. Отдельно — 15 € (ЕЭЗ 12 €). Angelina у Малого Трианона: Вт–Вс 12:00–18:00."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://ticket.chateauversailles.fr/en/ticketing"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/P%C3%A9ristyle_du_Grand_Trianon.jpg/1280px-P%C3%A9ristyle_du_Grand_Trianon.jpg",
+        "credit": "Neoclassicism Enthusiast",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:P%C3%A9ristyle_du_Grand_Trianon.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 95,
+      "transfers": 1,
+      "note": "От дворца на паровозике с Северной террасы до остановки «Petit Trianon» или «Grand Trianon». Между двумя Трианонами около 400 м пешком."
+    },
+    "tags": [
+      "Версаль",
+      "8 октября",
+      "с полудня",
+      "паровозик",
+      "Angelina рядом"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "versailles-hameau",
+    "city": "paris",
+    "type": "sight",
+    "name": "Версаль: деревушка королевы",
+    "name_local": "Hameau de la Reine",
+    "coords": [
+      48.81922,
+      2.11279
+    ],
+    "address": "Domaine de Trianon, 78000 Versailles",
+    "summary": "Игрушечная деревня Марии-Антуанетты у пруда: фахверковые домики, мельница, ферма. Очень красиво, но это ещё около 600 м пешком от Малого Трианона.",
+    "description": "Деревушку построили для королевы в английском пейзажном парке за Малым Трианоном: домики с соломенными крышами, мельница, башня Мальборо и пруд. Это часть поместья Трианон, вход по тому же билету. Остановки паровозика здесь нет, от Малого Трианона идти пешком по ровным тропинкам. Если сил мало, этот пункт можно пропустить.",
+    "hours": {
+      "text": "Как у поместья Трианон: до 31 октября 12:00–18:30, последний вход 17:45; по понедельникам закрыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://en.chateauversailles.fr/plan-your-visit/practical-information",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 15,
+      "note": "Входит в Passport и в билет «Поместье Трианон» (15 €, ЕЭЗ 12 €)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://ticket.chateauversailles.fr/en/ticketing"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Versailles_Hameau_de_la_Reine_Maison_de_la_Reine_3.jpg/1280px-Versailles_Hameau_de_la_Reine_Maison_de_la_Reine_3.jpg",
+        "credit": "Zairon",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Versailles_Hameau_de_la_Reine_Maison_de_la_Reine_3.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 105,
+      "transfers": 1,
+      "note": "От остановки паровозика «Petit Trianon» пешком около 600 м через английский парк."
+    },
+    "tags": [
+      "Версаль",
+      "8 октября",
+      "красиво",
+      "можно пропустить"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
