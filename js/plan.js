@@ -185,3 +185,79 @@ export function setMeta(date, key, { time, note }) {
 export function clearAll() {
   store.set(KEY, {});
 }
+
+// ---------- экспорт, импорт, ссылка ----------
+// Нас двое с разными телефонами: план переносится файлом или ссылкой #/plan?import=…
+
+const APP = 'trip2026-plan';
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
+
+export function exportData() {
+  return { app: APP, v: 1, dayplans: all(), plans: store.get('plans', {}) };
+}
+
+const str = (v, max) => (typeof v === 'string' ? v.slice(0, max) : '');
+const time = (v) => (TIME_RE.test(v) ? v : '');
+const keyList = (v) => (Array.isArray(v) ? v.filter((k) => typeof k === 'string').map((k) => k.slice(0, 100)) : []);
+
+function cleanDay(d) {
+  if (!d || typeof d !== 'object') return null;
+  const added = (Array.isArray(d.added) ? d.added : [])
+    .filter((a) => a && typeof a.city === 'string' && typeof a.place_id === 'string')
+    .map((a) => ({ id: str(a.id, 12) || newId(), city: str(a.city, 20), place_id: str(a.place_id, 80), time: time(a.time), note: str(a.note, 500) }));
+  const order = {};
+  for (const p of PLANS) if (Array.isArray(d.order?.[p])) order[p] = keyList(d.order[p]);
+  const meta = {};
+  for (const [k, m] of Object.entries(d.meta && typeof d.meta === 'object' ? d.meta : {})) {
+    const t = time(m?.time), n = str(m?.note, 500);
+    if (t || n) meta[k.slice(0, 100)] = { time: t, note: n };
+  }
+  return { added, hidden: keyList(d.hidden), order, meta };
+}
+
+// Проверяет и нормализует данные; бросает ошибку, если это не план.
+export function parseImport(obj) {
+  if (!obj || obj.app !== APP || !obj.dayplans || typeof obj.dayplans !== 'object') {
+    throw new Error('Это не файл плана поездки.');
+  }
+  const dayplans = {};
+  for (const [date, d] of Object.entries(obj.dayplans)) {
+    const clean = DATE_RE.test(date) && cleanDay(d);
+    if (clean) dayplans[date] = clean;
+  }
+  const plans = {};
+  for (const [date, p] of Object.entries(obj.plans && typeof obj.plans === 'object' ? obj.plans : {})) {
+    if (DATE_RE.test(date) && (p === 'a' || p === 'b')) plans[date] = p;
+  }
+  return { dayplans, plans };
+}
+
+export function importSummary({ dayplans }) {
+  const ds = Object.values(dayplans);
+  return {
+    days: ds.length,
+    added: ds.reduce((n, d) => n + d.added.length, 0),
+    hidden: ds.reduce((n, d) => n + d.hidden.length, 0),
+  };
+}
+
+// Полностью заменяет текущий ручной план.
+export function applyImport({ dayplans, plans }) {
+  store.set('mine', undefined);
+  store.set(KEY, dayplans);
+  store.set('plans', plans);
+}
+
+export function encode(data) {
+  const bytes = new TextEncoder().encode(JSON.stringify(data));
+  let bin = '';
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+export function decode(code) {
+  const b64 = code.replace(/-/g, '+').replace(/_/g, '/');
+  const bin = atob(b64 + '==='.slice((b64.length + 3) % 4));
+  return JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0))));
+}

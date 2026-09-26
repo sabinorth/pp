@@ -23,7 +23,7 @@ function rerender() {
   window.dispatchEvent(new HashChangeEvent('hashchange'));
 }
 
-export async function renderList() {
+export async function renderList({ query }) {
   const days = await getDays();
   const today = todayISO();
   const cards = days.map((d) => {
@@ -38,11 +38,87 @@ export async function renderList() {
       <div class="day-sub">${titles ? `Мест в плане: ${titles}` : 'Пока пусто'}${d.events?.length ? ` · событий: ${d.events.length}` : ''}</div>
     </a>`;
   });
-  return `<h1>План</h1><div class="days">${cards.join('')}</div>`;
+  return `<h1>План</h1>${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
+    <section class="share-plan" id="share">
+      <h2 class="section">📲 План на двоих</h2>
+      <p class="muted">Ручные правки хранятся только на этом телефоне. Перенести их на другой — файлом или ссылкой.</p>
+      <div class="share-btns">
+        <button type="button" class="btn secondary" data-export>⬇️ Экспорт плана</button>
+        <label class="btn secondary">⬆️ Импорт плана<input type="file" accept="application/json,.json" data-import hidden></label>
+        <button type="button" class="btn" data-share>🔗 Поделиться ссылкой</button>
+      </div>
+      <p class="add-result" id="share-msg" role="status"></p>
+    </section>`;
 }
 
-export function afterList(el) {
-  el.querySelector('.day-card.today')?.scrollIntoView({ block: 'center' });
+// Ссылка #/plan?import=… : сначала спрашиваем, потом заменяем.
+function importOfferHTML(code) {
+  if (!code) return '';
+  try {
+    const s = plan.importSummary(plan.parseImport(plan.decode(code)));
+    return `<div class="card soft-warn" id="import-offer">
+      <p><strong>Открыта ссылка с планом.</strong> Дней с правками: ${s.days}, добавлено пунктов: ${s.added}, скрыто: ${s.hidden}.</p>
+      <p>Заменить им ваш текущий план на этом телефоне?</p>
+      <div class="share-btns">
+        <button type="button" class="btn" data-import-link>Заменить мой план</button>
+        <a class="btn secondary" href="#/plan">Не надо</a>
+      </div></div>`;
+  } catch {
+    return '<div class="card warn-card"><p>⚠️ Ссылка с планом повреждена — попросите прислать ещё раз.</p></div>';
+  }
+}
+
+function download(name, text) {
+  const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
+  const a = Object.assign(document.createElement('a'), { href: url, download: name });
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+async function shareLink(msg) {
+  const url = `${location.origin}${location.pathname}#/plan?import=${plan.encode(plan.exportData())}`;
+  try {
+    if (navigator.share) {
+      await navigator.share({ title: 'План: Прага + Париж', url });
+      return;
+    }
+    await navigator.clipboard.writeText(url);
+    msg.textContent = '✅ Ссылка скопирована — отправьте её подруге.';
+  } catch (err) {
+    if (err?.name === 'AbortError') return;
+    msg.innerHTML = `Скопируйте ссылку вручную:<br><input class="share-url" readonly value="${esc(url)}">`;
+    msg.querySelector('input').select();
+  }
+}
+
+export function afterList(el, r) {
+  if (!r?.query.import) el.querySelector('.day-card.today')?.scrollIntoView({ block: 'center' });
+  const msg = el.querySelector('#share-msg');
+  el.querySelector('[data-export]').addEventListener('click', () => {
+    download(`plan-praga-parizh-${todayISO()}.json`, JSON.stringify(plan.exportData(), null, 2));
+    msg.textContent = '✅ Файл сохранён. Его можно отправить в мессенджере и открыть через «Импорт плана».';
+  });
+  el.querySelector('[data-share]').addEventListener('click', () => shareLink(msg));
+  el.querySelector('[data-import]').addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    e.target.value = '';
+    if (!file) return;
+    try {
+      const data = plan.parseImport(JSON.parse(await file.text()));
+      const s = plan.importSummary(data);
+      if (!confirm(`В файле дней с правками: ${s.days}, добавлено пунктов: ${s.added}. Заменить им ваш текущий план?`)) return;
+      plan.applyImport(data);
+      rerender();
+    } catch (err) {
+      msg.textContent = `⚠️ Не получилось прочитать файл: ${err instanceof SyntaxError ? 'он повреждён' : err.message}`;
+    }
+  });
+  el.querySelector('[data-import-link]')?.addEventListener('click', () => {
+    plan.applyImport(plan.parseImport(plan.decode(r.query.import)));
+    location.hash = '#/plan';
+  });
 }
 
 export async function placeIndex(cities) {
