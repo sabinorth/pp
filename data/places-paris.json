@@ -295,5 +295,302 @@
     ],
     "game_id": "eiffel-tower",
     "verified": true
+  },
+  {
+    "id": "sacre-coeur",
+    "city": "paris",
+    "type": "sight",
+    "name": "Монмартр и базилика Сакре-Кёр",
+    "name_local": "Basilique du Sacré-Cœur de Montmartre",
+    "coords": [
+      48.88681,
+      2.34302
+    ],
+    "address": "35 Rue du Chevalier de la Barre, 75018 Paris",
+    "summary": "Белая базилика на вершине холма Монмартр с видом на весь Париж. Наверх — на фуникулёре, а не по лестницам.",
+    "description": "Базилика стоит на вершине холма, вход в неё бесплатный. От метро Anvers к подножию холма ведёт улица, дальше на вершину поднимает фуникулёр — по обычному билету метро, вместо сотен ступеней. Вокруг базилики — старые улочки Монмартра и площадь Тертр с художниками, но там много подъёмов и спусков, лучше гулять по верху понемногу. Купол — отдельная платная экскурсия, почти 300 ступеней без лифта; нам не рекомендуется.",
+    "hours": {
+      "text": "Базилика открыта ежедневно без исключений 6:30–22:30. Купол 10:30–20:30, последний вход в 20:00. Выходных в наши даты нет.",
+      "closed_weekdays": [],
+      "source": "https://www.sacre-coeur-montmartre.com/en/info-and-visits/practical-information/opening-hours-and-access/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Базилика бесплатно. Купол — 8 €, билет только в кассе на месте, почти 300 ступеней, лифта нет. Фуникулёр — по билету t+ / Navigo или 2,55 € банковской картой (ratp.fr)."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_Paris_-_GT-01_-_2024.jpg/1280px-Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_Paris_-_GT-01_-_2024.jpg",
+        "credit": "Terragio67",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_Paris_-_GT-01_-_2024.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 50,
+      "transfers": 2,
+      "note": "Ориентировочно: метро 8 до Strasbourg–Saint-Denis, линия 4 до Barbès–Rochechouart, линия 2 до Anvers, затем около 300 м в горку к нижней станции фуникулёра. Точный маршрут проверить по ссылке."
+    },
+    "tags": [
+      "вид на Париж",
+      "бесплатно",
+      "фуникулёр вместо лестниц"
+    ],
+    "game_id": "sacre-coeur",
+    "verified": true
+  },
+  {
+    "id": "marais-place-des-vosges",
+    "city": "paris",
+    "type": "sight",
+    "name": "Марэ и площадь Вогезов",
+    "name_local": "Le Marais — Place des Vosges",
+    "coords": [
+      48.85563,
+      2.36553
+    ],
+    "address": "Place des Vosges, 75004 Paris",
+    "summary": "Одна из старейших площадей Парижа с аркадами и сквером посередине — начало прогулки по кварталу Марэ. Близко от отеля, по одной ветке метро.",
+    "description": "Площадь, достроенная в 1612 году как Королевская, окружена одинаковыми домами из красного кирпича с галереями, под которыми можно идти в тени и дождь. В центре — сквер Людовика XIII с конной статуей короля, фонтанами и скамейками под липами и каштанами. Отсюда удобно гулять по ровным улочкам Марэ: особняки, маленькие музеи, чайные и кондитерские. Прогулку легко сократить: сквер — хорошее место, чтобы посидеть.",
+    "hours": {
+      "text": "Площадь открыта всегда. Сквер Людовика XIII открывается и закрывается по времени восхода и заката; в сильный ветер и непогоду закрыт. Выходных нет.",
+      "closed_weekdays": [],
+      "source": "https://www.paris.fr/lieux/square-louis-xiii-36",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Places_des_Vosges%2C_Paris_-_NE_Fountain.jpg/1280px-Places_des_Vosges%2C_Paris_-_NE_Fountain.jpg",
+        "credit": "Poulpy",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Places_des_Vosges,_Paris_-_NE_Fountain.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Chemin Vert, дальше около 400 м пешком."
+    },
+    "tags": [
+      "прогулка",
+      "бесплатно",
+      "можно посидеть",
+      "близко от отеля"
+    ],
+    "game_id": "marais",
+    "verified": true
+  },
+  {
+    "id": "orangerie",
+    "city": "paris",
+    "type": "sight",
+    "name": "Музей Оранжери",
+    "name_local": "Musée de l'Orangerie",
+    "coords": [
+      48.86377,
+      2.32266
+    ],
+    "address": "Jardin des Tuileries, Place de la Concorde, 75001 Paris",
+    "summary": "Небольшой музей с огромными «Кувшинками» Моне в двух овальных залах. Идеален для уставших: мало ходьбы, много скамеек.",
+    "description": "Оранжери стоит в углу сада Тюильри. Главное здесь — два овальных зала с панно Моне «Кувшинки», где в центре стоят скамейки, и можно просто сидеть и смотреть. На нижнем этаже — небольшая коллекция живописи конца XIX — начала XX века. Музей компактный, за час-полтора можно спокойно всё посмотреть, а после отдохнуть в саду Тюильри.",
+    "hours": {
+      "text": "Ежедневно кроме вторника 9:00–18:00. В наши даты: 6.10 (вт) закрыто.",
+      "closed_weekdays": [
+        2
+      ],
+      "source": "https://www.musee-orangerie.fr/en/visit-orangerie",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 12.5,
+      "note": "12,50 € онлайн, 11 € в кассе музея. Бронь времени сайт настоятельно рекомендует."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://billetterie.musee-orangerie.fr/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Francesco_Tosoni_alle_Ninfee_di_Monet%2C_Orangerie%2C_Parigi_%2800462%29.jpg/1280px-Francesco_Tosoni_alle_Ninfee_di_Monet%2C_Orangerie%2C_Parigi_%2800462%29.jpg",
+        "credit": "Elarionne",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Francesco_Tosoni_alle_Ninfee_di_Monet,_Orangerie,_Parigi_(00462).jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 75
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Concorde, дальше около 300 м через площадь."
+    },
+    "tags": [
+      "музей",
+      "Моне",
+      "можно посидеть долго",
+      "совместить с Тюильри"
+    ],
+    "game_id": "orangerie",
+    "verified": true
+  },
+  {
+    "id": "palais-porte-doree",
+    "city": "paris",
+    "type": "sight",
+    "name": "Палэ де ла Порт Доре",
+    "name_local": "Palais de la Porte Dorée",
+    "coords": [
+      48.83527,
+      2.40936
+    ],
+    "address": "293 Avenue Daumesnil, 75012 Paris",
+    "summary": "Дворец в стиле ар-деко в 250 м от отеля: музей истории иммиграции и тропический аквариум в подвале. Спокойный вариант на полдня без поездок.",
+    "description": "Здание построено к Колониальной выставке 1931 года; фасад покрыт огромным резным барельефом, а внутри сохранились парадные залы ар-деко. Сейчас здесь Национальный музей истории иммиграции и тропический аквариум — 84 аквариума с рыбами, кораллами, черепахами и крокодилами. Всё здание доступно для маломобильных посетителей, есть лифт. В кафе дворца можно посидеть, а сезонная терраса выходит к Венсенскому лесу.",
+    "hours": {
+      "text": "Вт–Пт 10:00–17:30; Сб–Вс 10:00–19:00; Пн закрыто. Последний вход за час до закрытия. В наши даты: 5.10 (пн) закрыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.palais-portedoree.fr/en/practical-informations",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 12,
+      "note": "Музей или аквариум — 12 € каждый, комбинированный билет — 16 €. До 26 лет бесплатно. Онлайн-бронь настоятельно рекомендуется, в кассе — по наличию мест. Кафе дворца: Вт–Пт 10:00–17:00, Сб–Вс 10:00–18:30."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.palais-portedoree.fr/en/individual-visitor"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Le_Palais_de_la_Porte_Dor%C3%A9e_12.jpg/1280px-Le_Palais_de_la_Porte_Dor%C3%A9e_12.jpg",
+        "credit": "NicolasPamart2610",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Le_Palais_de_la_Porte_Dor%C3%A9e_12.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 4,
+      "transfers": 0,
+      "note": "Пешком около 250 м от отеля по авеню Домениль."
+    },
+    "tags": [
+      "рядом с отелем",
+      "аквариум",
+      "ар-деко",
+      "есть кафе"
+    ],
+    "game_id": "palais-porte-doree",
+    "verified": true
+  },
+  {
+    "id": "chateau-vincennes",
+    "city": "paris",
+    "type": "sight",
+    "name": "Венсенский замок",
+    "name_local": "Château de Vincennes",
+    "coords": [
+      48.84291,
+      2.43581
+    ],
+    "address": "Avenue de Paris, 94300 Vincennes",
+    "summary": "Средневековый королевский замок с высоким донжоном и готической капеллой. Недалеко от отеля и почти без туристов.",
+    "description": "Королевская резиденция XIV века на краю Венсенского леса: высокий донжон, крепостная стена и Сент-Шапель, похожая на парижскую. Внутрь донжона ведут лестницы, а двор и капелла на ровной земле. Билет включает планшет-гид Revelacio, в том числе с маршрутом для маломобильных посетителей. Туалеты есть во дворе донжона и за сувенирным магазином, но только для посетителей с билетом.",
+    "hours": {
+      "text": "С 22 сентября по 20 мая ежедневно 10:00–17:00. Касса закрывается за 45 минут, последний вход в донжон за 30 минут до закрытия. Капелла закрывается днём на перерыв (12:00–14:00 или 13:00–14:00). Выходных в наши даты нет.",
+      "closed_weekdays": [],
+      "source": "https://www.chateau-de-vincennes.fr/en/visit/practical-information",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 13,
+      "note": "13 €, включает планшет Revelacio. Бронь для индивидуальных посетителей не требуется."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Donjon_du_Ch%C3%A2teau_de_Vincennes_%2836434%29.jpg/1280px-Donjon_du_Ch%C3%A2teau_de_Vincennes_%2836434%29.jpg",
+        "credit": "Schlorby",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Donjon_du_Ch%C3%A2teau_de_Vincennes_(36434).jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1,
+      "stairs": "many",
+      "queue": "none",
+      "seating": false,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: около 2,7 км от отеля по прямой; у замка станция метро 1 Château de Vincennes. Удобный маршрут (автобус или метро с пересадкой) проверить по ссылке."
+    },
+    "tags": [
+      "недалеко от отеля",
+      "средневековье",
+      "мало туристов"
+    ],
+    "game_id": "chateau-vincennes",
+    "verified": true
   }
 ]
