@@ -35,3 +35,16 @@ export async function getPlace(city, id) {
 export function getDays() {
   return loadJSON('days.json');
 }
+
+// Игры: index.json — список готовых, остальные game_id из мест показываются как «скоро».
+export async function getGameIds() {
+  try {
+    return await loadJSON('games/index.json');
+  } catch {
+    return [];
+  }
+}
+
+export function getGame(id) {
+  return loadJSON(`games/${id}.json`);
+}

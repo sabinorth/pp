@@ -12,8 +12,8 @@ const ROUTES = {
   day:   { tab: 'plan',  render: days.renderDay, after: days.afterDay },
   map:   { tab: 'map',   map: true },
   recs:  { tab: 'recs',  render: recs.render, after: recs.after },
-  games: { tab: 'games', render: games.render },
-  game:  { tab: 'games', render: games.renderGame },
+  games: { tab: 'games', render: games.render, after: games.after },
+  game:  { tab: 'games', render: games.renderGame, after: games.afterGame },
 };
 
 export function parseHash(hash = location.hash) {
