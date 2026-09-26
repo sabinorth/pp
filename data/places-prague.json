@@ -1,62 +1,293 @@
 [
   {
-    "id": "test-prague-sight",
+    "id": "charles-bridge",
     "city": "prague",
     "type": "sight",
-    "name": "[ТЕСТ] Достопримечательность в Старом городе",
-    "name_local": "[TEST] Staré Město",
-    "coords": [50.0875, 14.4213],
-    "address": "[ТЕСТ] адрес не заполнен",
-    "summary": "[ТЕСТ] Короткое описание, зачем идти.",
-    "description": "[ТЕСТ] Длинное описание в несколько предложений. Нужно, чтобы проверить, как текст переносится в шторке. Реальные данные появятся на этапе 2.",
-    "hours": { "text": "[ТЕСТ] Пн–Вс 9:00–18:00", "closed_weekdays": [], "source": null, "checked_on": "2026-09-26" },
-    "price": { "avg_check_eur": null, "ticket_eur": 15, "note": "[ТЕСТ] цена-заглушка" },
-    "booking": { "required": true, "url": null },
-    "photos": [],
-    "effort": { "level": "high", "walk_km": 3, "stairs": "many", "queue": "long", "seating": false, "toilet": true, "duration_min": 150 },
-    "transit_hint": { "from_hotel_min": 20, "transfers": 1, "note": "[ТЕСТ] подсказка по дороге" },
-    "tags": ["тест"],
-    "game_id": null,
-    "verified": false
+    "name": "Карлов мост",
+    "name_local": "Karlův most",
+    "coords": [
+      50.08663,
+      14.41148
+    ],
+    "address": "Karlův most, 110 00 Praha 1 – Staré Město / Malá Strana",
+    "summary": "Самый старый мост Праги с тридцатью барочными статуями и видом на Град. Лучше всего рано утром или вечером, когда меньше людей.",
+    "description": "Каменный мост строили с 1357 по 1402 год при Карле IV вместо разрушенного паводком Юдитина моста; Карловым его называют с 1870 года. С обеих сторон стоят мостовые башни, по бокам — галерея статуй святых. Днём здесь очень людно, а вечером при газовых фонарях мост особенно красив. Идти по нему ровно и недалеко, но присесть негде.",
+    "hours": {
+      "text": "Открыт круглосуточно, 1–5.10 без ограничений",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/charles-bridge-karluv-most/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно. Подъём на мостовые башни платный, цену не проверяла."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Praha_Charles_Bridge_20170430_01.jpg/1280px-Praha_Charles_Bridge_20170430_01.jpg",
+        "credit": "Uoaei1",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Praha_Charles_Bridge_20170430_01.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Ориентировочно: трамвай 12/15/20 от Arbesovo náměstí до Malostranské náměstí, дальше около 400 м по ровной Mostecké. Со стороны Кампы на мост ведёт лестница, так что лучше заходить с Мостецкой."
+    },
+    "tags": [
+      "красиво",
+      "вид на Град",
+      "вечером особенно"
+    ],
+    "game_id": "charles-bridge",
+    "verified": true
   },
   {
-    "id": "test-prague-cafe",
+    "id": "prague-castle",
     "city": "prague",
-    "type": "cafe",
-    "name": "[ТЕСТ] Кафе у отеля",
-    "name_local": "[TEST] Kavárna",
-    "coords": [50.0758, 14.4052],
-    "address": "[ТЕСТ] адрес не заполнен",
-    "summary": "[ТЕСТ] Можно посидеть и отдохнуть.",
-    "description": "[ТЕСТ] Описание кафе.",
-    "hours": { "text": "[ТЕСТ] Пн–Пт 8:00–20:00; Сб–Вс 9:00–18:00", "closed_weekdays": [], "source": null, "checked_on": "2026-09-26" },
-    "price": { "avg_check_eur": 12, "ticket_eur": null, "note": "" },
-    "booking": { "required": false, "url": null },
-    "photos": [],
-    "effort": { "level": "low", "walk_km": 0.3, "stairs": "none", "queue": "none", "seating": true, "toilet": true, "duration_min": 45 },
-    "transit_hint": { "from_hotel_min": 5, "transfers": 0, "note": "[ТЕСТ] пешком" },
-    "tags": ["тест", "можно посидеть долго"],
-    "game_id": null,
-    "verified": false
+    "type": "sight",
+    "name": "Пражский Град и собор Святого Вита",
+    "name_local": "Pražský hrad",
+    "coords": [
+      50.09081,
+      14.40052
+    ],
+    "address": "Hradčany, 119 08 Praha 1",
+    "summary": "Главный замковый комплекс Чехии с собором Святого Вита, Старым королевским дворцом и Золотой улочкой. Самое тяжёлое место в Праге по нагрузке, поэтому поднимайтесь на трамвае.",
+    "description": "Град — огромный комплекс дворов, храмов и дворцов на холме над Малой Страной. Основной билет (Main circuit) включает Старый королевский дворец, базилику Святого Георгия, Золотую улочку и собор Святого Вита; билет действует два дня, поэтому можно разбить визит на две части. Во дворы можно войти бесплатно, но на входе проверяют сумки, и там бывает очередь. С октября сады Града открыты только до 17:00.",
+    "hours": {
+      "text": "Территория 6:00–22:00; исторические здания 9:00–17:00; собор Св. Вита пн–сб 9:00–17:00, вс 12:00–17:00; последний вход 16:40. Летний сезон до 31.10, так что 1–5.10 открыто. Сады Града в октябре 10:00–17:00.",
+      "closed_weekdays": [],
+      "source": "https://www.hrad.cz/en/prague-castle-for-visitors/opening-hours",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 18.5,
+      "note": "Main circuit 450 CZK (по прайсу hrad.cz, действует с 1.3.2024), билет на 2 дня. Башня собора — отдельный билет. Курс ЧНБ от 25.09.2026: 24,35 CZK/EUR."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.hrad.cz/en/prague-castle-for-visitors/tickets"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Panorama_of_Vltava_river_and_Prague_Castle.jpg/1280px-Panorama_of_Vltava_river_and_Prague_Castle.jpg",
+        "credit": "Ladislav Pelcl",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_Vltava_river_and_Prague_Castle.jpg"
+      }
+    ],
+    "effort": {
+      "level": "high",
+      "walk_km": 2.5,
+      "stairs": "many",
+      "queue": "long",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 180
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 1,
+      "note": "Как облегчить: трамвай 12/15/20 до Újezd или Malostranské náměstí, пересадка на трамвай 22 наверх до Pražský hrad (или до Pohořelec, чтобы идти через Град всё время под гору). Обратно — пешком вниз по Старой замковой лестнице (Staré zámecké schody) к метро Malostranská. Вверх по лестницам пешком не идти. Время ориентировочное."
+    },
+    "tags": [
+      "красиво",
+      "главное",
+      "вид на город"
+    ],
+    "game_id": "prague-castle",
+    "verified": true
   },
   {
-    "id": "test-prague-toilet",
+    "id": "old-town-square",
     "city": "prague",
-    "type": "toilet",
-    "name": "[ТЕСТ] Туалет",
-    "name_local": "[TEST] WC",
-    "coords": [50.0812, 14.4128],
-    "address": "[ТЕСТ] адрес не заполнен",
-    "summary": "[ТЕСТ] Туалет без данных о часах работы.",
-    "description": "",
-    "hours": null,
-    "price": { "avg_check_eur": null, "ticket_eur": null, "note": "[ТЕСТ] стоимость не указана" },
-    "booking": { "required": false, "url": null },
-    "photos": [],
-    "effort": { "level": "low", "walk_km": null, "stairs": "some", "queue": "short", "seating": false, "toilet": true, "duration_min": 10 },
-    "transit_hint": null,
-    "tags": ["тест"],
-    "game_id": null,
-    "verified": false
+    "type": "sight",
+    "name": "Староместская площадь и куранты (орлой)",
+    "name_local": "Staroměstské náměstí a Staroměstský orloj",
+    "coords": [
+      50.08698,
+      14.42071
+    ],
+    "address": "Staroměstské náměstí 1/3, 110 00 Praha 1",
+    "summary": "Главная площадь Старого города с Тынским храмом и средневековыми курантами, на которых каждый час показываются двенадцать апостолов. На башню ратуши можно подняться на лифте.",
+    "description": "Староместская ратуша основана в 1338 году. Её самая старая часть — готическая башня с эркерной часовней и астрономическими часами. Каждый час с 8 до 23 в окошках курантов появляются апостолы, и перед часами собирается плотная толпа. Экскурсия включает башню, часовню, парадные залы и подземелья. На башню ходит лифт, с неё видно всю площадь.",
+    "hours": {
+      "text": "Площадь открыта всегда. Ратуша и башня: апрель–декабрь пн–вс 9:00–20:00, 1–5.10 открыто. Апостолы — каждый час с 8:00 до 23:00. В первый час после открытия билет на 50% дешевле.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 14.4,
+      "note": "Ратуша с башней: 350 CZK, в первый час после открытия скидка 50%. Площадь бесплатно. Официальный продавец — Prague City Tourism (кассы и ColosseumTicket)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Praha_Astronomical_Clock_01.jpg/1280px-Praha_Astronomical_Clock_01.jpg",
+        "credit": "Uoaei1",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Praha_Astronomical_Clock_01.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Můstek (3 остановки), дальше около 500 м пешком. На станциях длинные эскалаторы. Туалет — в ратуше на 3-м этаже (для посетителей)."
+    },
+    "tags": [
+      "красиво",
+      "главное",
+      "шоу каждый час"
+    ],
+    "game_id": "old-town-square",
+    "verified": true
+  },
+  {
+    "id": "vysehrad",
+    "city": "prague",
+    "type": "sight",
+    "name": "Вышеград",
+    "name_local": "Vyšehrad",
+    "coords": [
+      50.06442,
+      14.41788
+    ],
+    "address": "V Pevnosti 159/5b, 128 00 Praha 2 – Vyšehrad",
+    "summary": "Старая крепость на скале над Влтавой с базиликой, кладбищем знаменитых чехов и видом на реку. Спокойнее Града, много зелени и скамеек.",
+    "description": "По легендам, Вышеград — древнейшая резиденция чешских князей; на деле поселение возникло в середине X века. На территории стоят ротонда Святого Мартина, неоготическая базилика Святых Петра и Павла и национальное кладбище со Славином. В подземных казематах хранятся оригиналы некоторых барочных статуй с Карлова моста. Здесь просторно, можно долго сидеть на стенах с видом на Влтаву.",
+    "hours": {
+      "text": "Территория открыта круглый год. Объекты НКП Вышеград: пн–вс 10:00–18:00, инфоцентр 10:00–12:00 и 13:00–18:00, 1–5.10 открыто. Часы базилики и цены казематов отдельно не проверяла.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/vysehrad/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Вход на территорию бесплатный. Казематы, выставки и базилика — платно, цены не проверяла. Туалет у инфоцентра 20 CZK (praha-vysehrad.cz)."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Czech-2013-Prague-Vy%C5%A1ehrad-Saints_Peter_and_Paul.JPG/1280px-Czech-2013-Prague-Vy%C5%A1ehrad-Saints_Peter_and_Paul.JPG",
+        "credit": "Godot13",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Czech-2013-Prague-Vy%C5%A1ehrad-Saints_Peter_and_Paul.JPG"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 2,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Как облегчить: метро B от Anděl до Florenc, пересадка на C до станции Vyšehrad, оттуда около 10 минут по ровному до Таборских ворот. От трамвайных остановок Výtoň и Albertov идёт крутой подъём, их лучше использовать только для спуска. Время ориентировочное."
+    },
+    "tags": [
+      "красиво",
+      "вид на реку",
+      "можно посидеть долго",
+      "мало туристов"
+    ],
+    "game_id": "vysehrad",
+    "verified": true
+  },
+  {
+    "id": "strahov-library",
+    "city": "prague",
+    "type": "sight",
+    "name": "Страговская библиотека",
+    "name_local": "Strahovská knihovna",
+    "coords": [
+      50.08629,
+      14.38871
+    ],
+    "address": "Strahovské nádvoří 1/132, 118 00 Praha 1 – Hradčany",
+    "summary": "Два барочных библиотечных зала (Богословский и Философский) с расписными потолками в Страговском монастыре. Короткий визит, около 40 минут.",
+    "description": "Библиотека существует с основания монастыря. Нынешние залы построены в эпоху барокко и классицизма: Богословский — в начале 1670-х, Философский — в 1782–1797 годах, его потолок расписал Франц Антон Маульберч. В обычный билет входит проход по коридору с кабинетом редкостей, а на залы смотришь от входных дверей: внутрь пускают только на экскурсию с гидом по предварительной записи. Удобно совместить с Градом: от Страгова до Града всё время под гору.",
+    "hours": {
+      "text": "Пн–вс 9:00–17:00; кассы до 16:15, последний вход 16:30. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.strahovskyklaster.cz/en/for-visitors/what-you-can-visit/strahov-library",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 9,
+      "note": "Стандартный тур 220 CZK; тур с галереей и аббатством 390 CZK. Касса — в костёле Св. Роха, оплата только в CZK (карта или наличные)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.strahovskyklaster.cz/en/for-visitors/tours"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Philosophical_Hall_%28Strahov_Monastery%29.jpg/1280px-Philosophical_Hall_%28Strahov_Monastery%29.jpg",
+        "credit": "Bjørn Erik Pedersen",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Philosophical_Hall_(Strahov_Monastery).jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 40
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Как облегчить: трамвай 12/15/20 до Újezd, пересадка на 22 до Pohořelec (самая верхняя точка), дальше несколько минут до монастыря. Потом можно идти к Граду под гору. Время ориентировочное."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "недолго"
+    ],
+    "game_id": "strahov-library",
+    "verified": true
   }
 ]
