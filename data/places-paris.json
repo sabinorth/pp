@@ -1985,5 +1985,193 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "test-paris-experience",
+    "city": "paris",
+    "type": "experience",
+    "name": "[ТЕСТ] Прогулка по пассажам",
+    "name_local": "Test",
+    "coords": [
+      48.86652,
+      2.3401
+    ],
+    "address": "",
+    "summary": "Тестовая точка для проверки интерфейса. Не настоящее место.",
+    "description": "",
+    "description_long": "[ТЕСТ] Первый абзац длинного описания. Здесь будет авторский текст подборки целиком, без сокращений.\n\n[ТЕСТ] Второй абзац, чтобы проверить разбиение на абзацы в блоке «Подробнее».",
+    "hours": {
+      "text": "[ТЕСТ] Закрыто по вторникам (проверка предупреждения).",
+      "closed_weekdays": [
+        2
+      ],
+      "source": null,
+      "checked_on": null
+    },
+    "price": null,
+    "booking": null,
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 1.2,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 120
+    },
+    "transit_hint": null,
+    "tips": [
+      "[ТЕСТ] Совет из текста.",
+      "[ТЕСТ] Второй совет."
+    ],
+    "how_to": [
+      "[ТЕСТ] Шаг первый.",
+      "[ТЕСТ] Шаг второй."
+    ],
+    "fact_notes": [
+      "[ТЕСТ] В тексте: €89. По сайту: €95 (пример расхождения)."
+    ],
+    "origin": "test",
+    "pairs_with": [
+      "test-paris-event"
+    ],
+    "tags": [
+      "тест",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": false,
+    "route_stops": [
+      {
+        "name": "[ТЕСТ] Старт",
+        "coords": [
+          48.86652,
+          2.3401
+        ]
+      },
+      {
+        "name": "[ТЕСТ] Остановка 2",
+        "coords": [
+          48.87092,
+          2.34207
+        ]
+      },
+      {
+        "name": "[ТЕСТ] Финиш",
+        "coords": [
+          48.87388,
+          2.34273
+        ]
+      }
+    ]
+  },
+  {
+    "id": "test-paris-event",
+    "city": "paris",
+    "type": "event",
+    "name": "[ТЕСТ] Фестиваль",
+    "name_local": "Test",
+    "coords": [
+      48.88672,
+      2.34306
+    ],
+    "address": "",
+    "summary": "Тестовая точка для проверки интерфейса. Не настоящее место.",
+    "description": "",
+    "description_long": "[ТЕСТ] Первый абзац длинного описания. Здесь будет авторский текст подборки целиком, без сокращений.\n\n[ТЕСТ] Второй абзац, чтобы проверить разбиение на абзацы в блоке «Подробнее».",
+    "hours": null,
+    "price": null,
+    "booking": null,
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": null,
+    "tips": [
+      "[ТЕСТ] Совет из текста.",
+      "[ТЕСТ] Второй совет."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "[ТЕСТ] В тексте: €89. По сайту: €95 (пример расхождения)."
+    ],
+    "origin": "test",
+    "pairs_with": [
+      "test-paris-experience"
+    ],
+    "tags": [
+      "тест"
+    ],
+    "game_id": null,
+    "verified": false,
+    "dates": [
+      {
+        "date": "2026-10-07",
+        "time": "18:00",
+        "note": "[ТЕСТ] открытие"
+      },
+      {
+        "date": "2026-10-09",
+        "time": "",
+        "note": "[ТЕСТ] весь день"
+      },
+      {
+        "date": "2026-10-11",
+        "time": "",
+        "note": "[ТЕСТ] после нашего отъезда"
+      }
+    ]
+  },
+  {
+    "id": "test-paris-idea",
+    "city": "paris",
+    "type": "idea",
+    "name": "[ТЕСТ] Медленная терраса",
+    "name_local": "Test",
+    "coords": null,
+    "address": "",
+    "summary": "Тестовая точка для проверки интерфейса. Не настоящее место.",
+    "description": "",
+    "description_long": "[ТЕСТ] Первый абзац длинного описания. Здесь будет авторский текст подборки целиком, без сокращений.\n\n[ТЕСТ] Второй абзац, чтобы проверить разбиение на абзацы в блоке «Подробнее».",
+    "hours": null,
+    "price": null,
+    "booking": null,
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": null,
+    "tips": [
+      "[ТЕСТ] Совет из текста.",
+      "[ТЕСТ] Второй совет."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "[ТЕСТ] В тексте: €89. По сайту: €95 (пример расхождения)."
+    ],
+    "origin": "test",
+    "pairs_with": [],
+    "tags": [
+      "тест"
+    ],
+    "game_id": null,
+    "verified": false,
+    "candidates": [
+      "cafe-marly",
+      "saint-regis"
+    ]
   }
 ]

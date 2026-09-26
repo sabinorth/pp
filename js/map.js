@@ -113,6 +113,7 @@ async function loadCity(city) {
 
   const counts = {};
   for (const p of places) {
+    if (!p.coords) continue;   // идеи без адреса — только в списке
     const t = TYPES[p.type] ? p.type : 'sight';
     counts[t] = (counts[t] || 0) + 1;
     const m = L.marker(p.coords, { icon: pinIcon(t, TYPES[t].icon, !p.verified), title: p.name, keyboard: true });
@@ -251,7 +252,7 @@ export async function show(container, query) {
     const p = currentPlaces.find((x) => x.id === query.place);
     if (p) {
       if (hiddenTypes.has(p.type)) toggleType(p.type, true);
-      focusOn(p.coords);
+      if (p.coords) focusOn(p.coords);
       openPlace(p);
     } else {
       closeSheet();

@@ -1555,5 +1555,200 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "test-prague-experience",
+    "city": "prague",
+    "type": "experience",
+    "name": "[ТЕСТ] Вечерний маршрут",
+    "name_local": "Test",
+    "coords": [
+      50.08388,
+      14.40766
+    ],
+    "address": "",
+    "summary": "Тестовая точка для проверки интерфейса. Не настоящее место.",
+    "description": "",
+    "description_long": "[ТЕСТ] Первый абзац длинного описания. Здесь будет авторский текст подборки целиком, без сокращений.\n\n[ТЕСТ] Второй абзац, чтобы проверить разбиение на абзацы в блоке «Подробнее».",
+    "hours": {
+      "text": "[ТЕСТ] Закрыто по воскресеньям (проверка предупреждения).",
+      "closed_weekdays": [
+        0
+      ],
+      "source": null,
+      "checked_on": null
+    },
+    "price": null,
+    "booking": null,
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": null,
+    "tips": [
+      "[ТЕСТ] Совет из текста.",
+      "[ТЕСТ] Второй совет."
+    ],
+    "how_to": [
+      "[ТЕСТ] Шаг первый.",
+      "[ТЕСТ] Шаг второй.",
+      "[ТЕСТ] Шаг третий."
+    ],
+    "fact_notes": [
+      "[ТЕСТ] В тексте: €89. По сайту: €95 (пример расхождения)."
+    ],
+    "origin": "test",
+    "pairs_with": [
+      "test-prague-event"
+    ],
+    "tags": [
+      "тест"
+    ],
+    "game_id": null,
+    "verified": false,
+    "route_stops": [
+      {
+        "name": "[ТЕСТ] Старт у Кампы",
+        "coords": [
+          50.08388,
+          14.40766
+        ]
+      },
+      {
+        "name": "[ТЕСТ] Карлов мост",
+        "coords": [
+          50.08663,
+          14.41148
+        ]
+      },
+      {
+        "name": "[ТЕСТ] Кафе «Славия»",
+        "coords": [
+          50.08153,
+          14.41342
+        ],
+        "note": "можно сесть"
+      }
+    ],
+    "best_time": [
+      {
+        "time": "после 22:00",
+        "note": "ночь, основной вариант"
+      },
+      {
+        "time": "рассвет",
+        "note": "по желанию"
+      }
+    ]
+  },
+  {
+    "id": "test-prague-event",
+    "city": "prague",
+    "type": "event",
+    "name": "[ТЕСТ] Вечерний спектакль",
+    "name_local": "Test",
+    "coords": [
+      50.08207,
+      14.41873
+    ],
+    "address": "",
+    "summary": "Тестовая точка для проверки интерфейса. Не настоящее место.",
+    "description": "",
+    "description_long": "[ТЕСТ] Первый абзац длинного описания. Здесь будет авторский текст подборки целиком, без сокращений.\n\n[ТЕСТ] Второй абзац, чтобы проверить разбиение на абзацы в блоке «Подробнее».",
+    "hours": null,
+    "price": null,
+    "booking": null,
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": null,
+    "tips": [
+      "[ТЕСТ] Совет из текста.",
+      "[ТЕСТ] Второй совет."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "[ТЕСТ] В тексте: €89. По сайту: €95 (пример расхождения)."
+    ],
+    "origin": "test",
+    "pairs_with": [
+      "test-prague-experience"
+    ],
+    "tags": [
+      "тест"
+    ],
+    "game_id": null,
+    "verified": false,
+    "dates": [
+      {
+        "date": "2026-10-02",
+        "time": "20:00",
+        "note": "[ТЕСТ] первый показ"
+      },
+      {
+        "date": "2026-10-03",
+        "time": "18:00",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "test-prague-idea",
+    "city": "prague",
+    "type": "idea",
+    "name": "[ТЕСТ] Медленный вечер",
+    "name_local": "Test",
+    "coords": null,
+    "address": "",
+    "summary": "Тестовая точка для проверки интерфейса. Не настоящее место.",
+    "description": "",
+    "description_long": "[ТЕСТ] Первый абзац длинного описания. Здесь будет авторский текст подборки целиком, без сокращений.\n\n[ТЕСТ] Второй абзац, чтобы проверить разбиение на абзацы в блоке «Подробнее».",
+    "hours": null,
+    "price": null,
+    "booking": null,
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": null,
+    "tips": [
+      "[ТЕСТ] Совет из текста.",
+      "[ТЕСТ] Второй совет."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "[ТЕСТ] В тексте: €89. По сайту: €95 (пример расхождения)."
+    ],
+    "origin": "test",
+    "pairs_with": [],
+    "tags": [
+      "тест",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": false,
+    "candidates": [
+      "cafe-savoy",
+      "cafe-louvre"
+    ]
   }
 ]

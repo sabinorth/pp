@@ -12,7 +12,14 @@ export const TYPES = {
   rest:   { icon: '🛋️', label: 'Отдых' },
   toilet: { icon: '🚻', label: 'Туалеты' },
   park:   { icon: '🌳', label: 'Парки' },
+  experience: { icon: '✨', label: 'Впечатление' },
+  event:  { icon: '🎭', label: 'Событие' },
+  idea:   { icon: '💭', label: 'Идея' },
 };
+
+// Метка «подходит на дождь» — тег в place.tags.
+export const RAIN_TAG = 'на дождь';
+export const isRainy = (p) => Boolean(p?.tags?.includes(RAIN_TAG));
 
 export const EFFORT_LEVELS = {
   low:  { icon: '🟢', label: 'лёгкая' },
