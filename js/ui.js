@@ -20,6 +20,12 @@ export const EFFORT_LEVELS = {
   high: { icon: '🔴', label: 'тяжёлая' },
 };
 
+export const BEST_TIME = {
+  morning: { icon: '🌅', label: 'утро' },
+  day:     { icon: '☀️', label: 'день' },
+  evening: { icon: '🌙', label: 'вечер' },
+};
+
 // «2026-10-05» → Date в локальном времени (без сдвига часового пояса).
 export function parseISODate(iso) {
   const [y, m, d] = iso.split('-').map(Number);

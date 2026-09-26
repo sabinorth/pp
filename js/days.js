@@ -1,6 +1,6 @@
 // План по дням: лента (#/plan) и карточка дня (#/day/2026-10-08).
 import { CITIES, getDays, getPlaces } from './data.js';
-import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS } from './ui.js';
+import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME } from './ui.js';
 
 function cityLine(day) {
   const to = CITIES[day.city];
@@ -20,7 +20,7 @@ export async function renderList() {
   const days = await getDays();
   const today = todayISO();
   const cards = days.map((d) => {
-    const n = d.items?.length || 0;
+    const titles = (d.plan_a || []).filter((it) => !it.pause).length;
     return `<a class="card day-card${d.date === today ? ' today' : ''}" href="#/day/${d.date}" data-date="${d.date}">
       <div class="day-head">
         <span class="day-date">${fmtWeekday(d.date)}, ${fmtDate(d.date)}</span>
@@ -28,7 +28,7 @@ export async function renderList() {
         ${d.date === today ? '<span class="badge">сегодня</span>' : ''}
       </div>
       ${badgesHTML(d)}
-      <div class="day-sub">${n ? `Пунктов: ${n}` : 'Пока пусто'}</div>
+      <div class="day-sub">${titles ? `Мест в плане: ${titles}` : 'Пока пусто'}${d.events?.length ? ` · событий: ${d.events.length}` : ''}</div>
     </a>`;
   });
   return `<h1>План</h1><div class="days">${cards.join('')}</div>`;
@@ -38,25 +38,60 @@ export function afterList(el) {
   el.querySelector('.day-card.today')?.scrollIntoView({ block: 'center' });
 }
 
-async function placeIndex(cities) {
+export async function placeIndex(cities) {
   const lists = await Promise.all(cities.map((c) => getPlaces(c)));
   const index = new Map();
   for (const p of lists.flat()) index.set(`${p.city}/${p.id}`, p);
   return index;
 }
 
+export function dayCities(day) {
+  const items = [...(day.plan_a || []), ...(day.plan_b || [])];
+  return [...new Set([day.city, day.city_from, ...items.map((it) => it.city)].filter(Boolean))];
+}
+
 function itemHTML(item, day, places) {
   const city = item.city || day.city;
   const p = item.place_id ? places.get(`${city}/${item.place_id}`) : null;
-  const lvl = p?.effort ? EFFORT_LEVELS[p.effort.level] : null;
+  const lvl = !item.pause && p?.effort ? EFFORT_LEVELS[p.effort.level] : null;
+  const icon = item.pause ? '☕' : (lvl ? `<span title="Нагрузка: ${lvl.label}">${lvl.icon}</span>` : '');
   const title = esc(item.title || p?.name || '');
   const main = item.place_id
-    ? `<a class="item-place" href="#/map?city=${city}&place=${encodeURIComponent(item.place_id)}">${lvl ? `<span title="Нагрузка: ${lvl.label}">${lvl.icon}</span>` : ''}${title} 🗺️</a>`
-    : `<span>${title}</span>`;
-  return `<li class="card item">
-    <span class="item-time">${esc(item.time || '')}</span>
-    <div class="item-main">${main}${item.note ? `<p class="muted">${esc(item.note)}</p>` : ''}</div>
+    ? `<a class="item-place" href="#/map?city=${city}&place=${encodeURIComponent(item.place_id)}">${icon}${title} 🗺️</a>`
+    : `<span class="item-place">${icon}${title}</span>`;
+  const bt = BEST_TIME[item.best_time];
+  const when = bt ? `<p class="item-when">${bt.icon} ${bt.label}${item.best_time_why ? ` — ${esc(item.best_time_why)}` : ''}</p>` : '';
+  return `<li class="card item${item.pause ? ' pause' : ''}">
+    <div class="item-main">${main}${when}${item.why ? `<p class="muted">${esc(item.why)}</p>` : ''}</div>
   </li>`;
+}
+
+export function planHTML(items, day, places) {
+  if (!items?.length) return '<div class="card"><p class="muted">Пока пусто.</p></div>';
+  return `<ol class="items">${items.map((it) => itemHTML(it, day, places)).join('')}</ol>`;
+}
+
+function fmtRange(from, to) {
+  if (!to || from === to) return fmtDate(from);
+  return `${fmtDate(from)} – ${fmtDate(to)}`;
+}
+
+function eventsHTML(events) {
+  if (!events?.length) return '';
+  const cards = events.map((e) => `<li class="card event">
+      <strong>${esc(e.title)}</strong>${e.title_local ? ` <span class="muted">(${esc(e.title_local)})</span>` : ''}
+      <p>📅 ${fmtRange(e.date_from, e.date_to)}${e.time ? `, ${esc(e.time)}` : ''} · 📍 ${esc(e.where)}</p>
+      ${e.note ? `<p class="muted">${esc(e.note)}</p>` : ''}
+      <p class="event-links">${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">Подробнее</a>` : ''}
+        ${e.source && e.source !== e.url ? ` · <a href="${esc(e.source)}" target="_blank" rel="noopener">источник</a>` : ''}</p>
+    </li>`);
+  return `<h2 class="section">🎭 События</h2><ul class="items">${cards.join('')}</ul>`;
+}
+
+function warningsHTML(warnings) {
+  if (!warnings?.length) return '';
+  return warnings.map((w) => `<div class="card warn-card"><p>⚠️ ${esc(w.text)}</p>
+    ${w.source ? `<p class="muted"><a href="${esc(w.source)}" target="_blank" rel="noopener">источник</a></p>` : ''}</div>`).join('');
 }
 
 export async function renderDay({ param }) {
@@ -67,18 +102,19 @@ export async function renderDay({ param }) {
   }
   const day = days[i];
   const prev = days[i - 1], next = days[i + 1];
-  const cities = [...new Set([day.city, day.city_from, ...(day.items || []).map((it) => it.city)].filter(Boolean))];
-  const places = await placeIndex(cities);
-  const items = day.items || [];
+  const places = await placeIndex(dayCities(day));
 
   return `<a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
     <p class="day-city">${cityLine(day)}</p>
     ${badgesHTML(day)}
     ${day.note ? `<p class="muted">${esc(day.note)}</p>` : ''}
-    <h2 style="margin-top:16px">Пункты</h2>
-    ${items.length ? `<ul class="items">${items.map((it) => itemHTML(it, day, places)).join('')}</ul>`
-                   : '<div class="card"><p class="muted">Пока пусто.</p></div>'}
+    ${warningsHTML(day.warnings)}
+    <h2 class="section">План А</h2>
+    ${planHTML(day.plan_a, day, places)}
+    <h2 class="section">План Б <span class="muted">— если устали или дождь</span></h2>
+    ${planHTML(day.plan_b, day, places)}
+    ${eventsHTML(day.events)}
     <nav class="day-nav" aria-label="Соседние дни">
       <a class="btn secondary" ${prev ? `href="#/day/${prev.date}"` : 'aria-disabled="true"'}>← ${prev ? fmtDate(prev.date) : ''}</a>
       <a class="btn secondary" ${next ? `href="#/day/${next.date}"` : 'aria-disabled="true"'}>${next ? fmtDate(next.date) : ''} →</a>

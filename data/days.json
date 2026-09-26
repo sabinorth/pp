@@ -1,12 +1,181 @@
 [
-  { "date": "2026-10-01", "city": "prague", "badges": ["прилёт"], "note": "Время прилёта: TODO", "items": [] },
-  { "date": "2026-10-02", "city": "prague", "badges": [], "note": "", "items": [] },
-  { "date": "2026-10-03", "city": "prague", "badges": [], "note": "", "items": [] },
-  { "date": "2026-10-04", "city": "prague", "badges": [], "note": "", "items": [] },
-  { "date": "2026-10-05", "city": "paris", "city_from": "prague", "badges": ["переезд"], "note": "Время переезда: TODO. Ничего тяжёлого не планировать.", "items": [] },
-  { "date": "2026-10-06", "city": "paris", "badges": [], "note": "", "items": [] },
-  { "date": "2026-10-07", "city": "paris", "badges": [], "note": "", "items": [] },
-  { "date": "2026-10-08", "city": "paris", "badges": ["Версаль"], "note": "Весь день в Версале.", "items": [] },
-  { "date": "2026-10-09", "city": "paris", "badges": [], "note": "", "items": [] },
-  { "date": "2026-10-10", "city": "paris", "badges": ["вылет"], "note": "Время вылета: TODO", "items": [] }
+  {
+    "date": "2026-10-01", "city": "prague", "badges": ["прилёт"],
+    "note": "Время прилёта: TODO. План А — только если прилетаем до обеда и остались силы.",
+    "plan_a": [
+      { "place_id": "kampa", "best_time": "evening", "best_time_why": "вечером мягкий свет и меньше людей", "why": "Плоский парк у воды, 15 минут на трамвае от отеля — лёгкое начало после дороги." },
+      { "place_id": "charles-bridge", "best_time": "evening", "best_time_why": "к закату туристов меньше, мост красиво подсвечен", "why": "Кампа прямо под мостом: подняться по лестнице с острова, и сразу знакомство с Прагой." },
+      { "place_id": "cafe-slavia", "pause": true, "best_time": "evening", "best_time_why": "ужин с видом на Град и реку", "why": "Отдых и ужин после первой прогулки; от моста около 10 минут по набережной." }
+    ],
+    "plan_b": [
+      { "place_id": "kinsky-garden", "best_time": "day", "best_time_why": "пока светло", "why": "Ближайший к отелю парк: подышать после перелёта и никуда не ехать." },
+      { "place_id": "kavarna-co-hleda-jmeno", "pause": true, "best_time": "evening", "best_time_why": "до 20:00", "why": "Кафе рядом с отелем, чтобы спокойно поесть." }
+    ],
+    "events": []
+  },
+  {
+    "date": "2026-10-02", "city": "prague", "badges": ["Град"], "note": "Наверх на трамвае 22 до Pohořelec, дальше всё время под гору.",
+    "plan_a": [
+      { "place_id": "strahov-library", "best_time": "morning", "best_time_why": "к открытию в 9:00, пока нет очереди и групп", "why": "Самая высокая точка маршрута: начинаем сверху, чтобы весь день идти вниз." },
+      { "place_id": "strahov-brewery", "pause": true, "best_time": "day", "best_time_why": "обед до похода по Граду", "why": "В двух шагах от библиотеки: сесть и поесть до самой тяжёлой части дня." },
+      { "place_id": "prague-castle", "best_time": "day", "best_time_why": "собор открыт до 17:00, после обеда группы редеют", "why": "Главная достопримечательность Праги; в пятницу собор Св. Вита открыт с 9:00 (по воскресеньям только с 12:00)." },
+      { "place_id": "cafe-savoy", "pause": true, "best_time": "evening", "best_time_why": "отдых после Града", "why": "От Града на трамвае 22 вниз до Újezd, кафе прямо там. По дороге к отелю." }
+    ],
+    "plan_b": [
+      { "place_id": "strahov-library", "best_time": "morning", "best_time_why": "к открытию в 9:00, без очереди", "why": "Под крышей, недолго, почти без ходьбы." },
+      { "place_id": "loreta", "best_time": "day", "best_time_why": "после 10:00", "why": "В 5 минутах от библиотеки по ровному, тоже под крышей." },
+      { "place_id": "strahov-brewery", "pause": true, "best_time": "day", "best_time_why": "обед", "why": "Рядом с обоими местами. Обратно — трамвай 22 с Pohořelec." }
+    ],
+    "events": [
+      { "title": "Bohemia Big Band: Гленн Миллер, Дюк Эллингтон, Бенни Гудмен", "title_local": "Bohemia Big Band", "date_from": "2026-10-02", "date_to": "2026-10-02", "time": "19:00", "where": "Reduta Jazz Club", "url": "https://prague.eu/en/akce/bohemia-big-band-tribute-to-glenn-miller-duke-ellington-benny-goodman/", "source": "https://prague.eu/en/akce-kategorie/events/", "note": "Концерт сидя — вечер без нагрузки." }
+    ]
+  },
+  {
+    "date": "2026-10-03", "city": "prague", "badges": [], "note": "Еврейский квартал сегодня закрыт (суббота).",
+    "plan_a": [
+      { "place_id": "municipal-house", "best_time": "morning", "best_time_why": "экскурсию брать заранее; 3.10 есть на английском", "why": "Ар-нуво под крышей, 4 остановки на метро B от отеля без пересадок." },
+      { "place_id": "kavarna-obecni-dum", "pause": true, "best_time": "day", "best_time_why": "сразу после экскурсии", "why": "Кавярна в том же здании, никуда не надо идти." },
+      { "place_id": "old-town-square", "best_time": "day", "best_time_why": "орлой бьёт каждый час; днём много людей, лучше встать в стороне", "why": "От Обецни дума около 10 минут по ровной Целетной улице." },
+      { "place_id": "franciscan-garden", "best_time": "day", "best_time_why": "до 20:00", "why": "Тихий сад со скамейками по дороге к кафе, спокойная передышка после шумной площади." },
+      { "place_id": "cafe-louvre", "pause": true, "best_time": "evening", "best_time_why": "ужин", "why": "Рядом с садом, на Národní. Отсюда можно дойти до Стрелецкого острова на винную дегустацию (см. события)." }
+    ],
+    "plan_b": [
+      { "place_id": "municipal-house", "best_time": "morning", "best_time_why": "экскурсия по расписанию", "why": "Всё под крышей, если дождь." },
+      { "place_id": "kavarna-obecni-dum", "pause": true, "best_time": "day", "best_time_why": "после экскурсии", "why": "В том же здании; оттуда сразу на метро к отелю." }
+    ],
+    "events": [
+      { "title": "Октябрьская винная дегустация", "title_local": "October Wine Tasting", "date_from": "2026-10-03", "date_to": "2026-10-03", "time": "13:00–21:45", "where": "Стрелецкий остров (Střelecký ostrov)", "url": "https://prague.eu/en/akce/october-wine-tasting/", "source": "https://prague.eu/en/akce-kategorie/events/", "note": "Рядом с cafe-louvre и cafe-slavia." },
+      { "title": "День открытых дверей на вилле Крамаржа", "title_local": "Kramářova vila — Open Day", "date_from": "2026-10-03", "date_to": "2026-10-03", "time": "с 10:00", "where": "Вилла Крамаржа", "url": "https://prague.eu/en/akce/kramar-villa-open-house/", "source": "https://prague.eu/en/akce-kategorie/events/", "note": "" }
+    ]
+  },
+  {
+    "date": "2026-10-04", "city": "prague", "badges": [], "note": "Еврейский квартал сегодня закрыт (Симхат Тора).",
+    "plan_a": [
+      { "place_id": "petrin", "best_time": "morning", "best_time_why": "утром на фуникулёр нет очереди", "why": "Наверх на фуникулёре, вниз пешком по садам под гору. Это 12 минут от отеля." },
+      { "place_id": "kavarna-co-hleda-jmeno", "pause": true, "best_time": "day", "best_time_why": "обед и передышка", "why": "По дороге к отелю: можно заодно зайти в номер отдохнуть." },
+      { "place_id": "vysehrad", "best_time": "day", "best_time_why": "после обеда, объекты открыты до 18:00", "why": "Тихая крепость с видом на Влтаву. Доехать на метро до станции Vyšehrad, оттуда без крутого подъёма." },
+      { "place_id": "na-verandach", "pause": true, "best_time": "evening", "best_time_why": "ужин до 22:00 (в воскресенье)", "why": "Рядом с отелем, чешская кухня." }
+    ],
+    "plan_b": [
+      { "place_id": "kavarna-co-hleda-jmeno", "pause": true, "best_time": "day", "best_time_why": "спокойный поздний завтрак", "why": "Рядом с отелем." },
+      { "place_id": "kinsky-garden", "best_time": "day", "best_time_why": "пока светло", "why": "Прогулка без транспорта рядом с отелем." }
+    ],
+    "events": [
+      { "title": "Суповый фестиваль в Карлине", "title_local": "Karlínské polévkování", "date_from": "2026-10-04", "date_to": "2026-10-04", "time": "11:00–18:00", "where": "Karlínské náměstí", "url": "https://prague.eu/en/akce/karlinske-polivkovani/", "source": "https://prague.eu/en/akce-kategorie/events/", "note": "" },
+      { "title": "Фестиваль вкусов у Новой ратуши", "title_local": "Festival of Delicious Flavors", "date_from": "2026-10-04", "date_to": "2026-10-04", "time": "10:00–18:00", "where": "Новая ратуша (Nová radnice)", "url": "https://prague.eu/en/akce/festival-of-delicious-flavors/", "source": "https://prague.eu/en/akce-kategorie/events/", "note": "" }
+    ]
+  },
+  {
+    "date": "2026-10-05", "city": "paris", "city_from": "prague", "badges": ["переезд"],
+    "note": "Время переезда: TODO. Ничего тяжёлого не планировать. В Париже сегодня закрыты Орсе, Версаль и Палэ де ла Порт Доре.",
+    "warnings": [
+      { "text": "С 28.09 CGT объявила бессрочную забастовку RATP (метро, автобусы, трамваи, часть RER). Перед выходом проверить ratp.fr.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+    ],
+    "plan_a": [
+      { "place_id": "kavarna-co-hleda-jmeno", "city": "prague", "pause": true, "best_time": "morning", "best_time_why": "открыто с 8:00", "why": "Спокойный завтрак у отеля перед дорогой." },
+      { "place_id": "les-cascades", "pause": true, "best_time": "evening", "best_time_why": "ужин, кухня работает допоздна", "why": "Прямо у отеля в Париже, никуда не ехать после дороги." },
+      { "place_id": "lac-daumesnil", "best_time": "evening", "best_time_why": "только если остались силы; лес открыт круглосуточно", "why": "Озеро в нескольких минутах от отеля, можно пройти всего кусочек." }
+    ],
+    "plan_b": [
+      { "place_id": "au-bois-doree", "pause": true, "best_time": "evening", "best_time_why": "открыто до 23:30", "why": "У отеля; поесть и спать." }
+    ],
+    "events": []
+  },
+  {
+    "date": "2026-10-06", "city": "paris", "badges": [], "note": "Лувр и Оранжери сегодня закрыты.",
+    "warnings": [
+      { "text": "Забастовка RATP: проверить ratp.fr перед выходом.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+    ],
+    "plan_a": [
+      { "place_id": "orsay", "best_time": "morning", "best_time_why": "к открытию в 9:30, меньше очередь", "why": "Во вторник Лувр закрыт, а Орсе открыт. С сегодняшнего дня там выставка Мэри Кассат." },
+      { "place_id": "cafe-campana", "pause": true, "best_time": "day", "best_time_why": "обед, открыто с 10:30", "why": "Кафе внутри музея: присесть, не выходя на улицу." },
+      { "place_id": "tuileries", "best_time": "day", "best_time_why": "до 19:30", "why": "Через мост от Орсе, ровные аллеи и стулья у фонтанов." },
+      { "place_id": "angelina-rivoli", "pause": true, "best_time": "day", "best_time_why": "горячий шоколад в конце дня", "why": "На краю Тюильри, выход на Риволи." }
+    ],
+    "plan_b": [
+      { "place_id": "orsay", "best_time": "morning", "best_time_why": "к открытию", "why": "Весь день под крышей: только импрессионисты и выставка." },
+      { "place_id": "cafe-campana", "pause": true, "best_time": "day", "best_time_why": "обед", "why": "В самом музее. Потом сразу к отелю." }
+    ],
+    "events": [
+      { "title": "Мэри Кассат. Независимая", "title_local": "Mary Cassatt. L'indépendante", "date_from": "2026-10-06", "date_to": "2027-01-31", "where": "Музей Орсе", "url": "https://www.musee-orsay.fr/fr/programme/agenda/dossiers/autour-de-mary-cassatt-lindependante", "source": "https://www.musee-orsay.fr/fr/programme/agenda/dossiers/autour-de-mary-cassatt-lindependante", "note": "Открывается 6.10 — в день нашего визита в Орсе." },
+      { "title": "Курт Швиттерс. Хаос-мир 1918–1948", "title_local": "Kurt Schwitters. Le Chaos-Monde", "date_from": "2026-10-06", "date_to": "2027-02-07", "where": "Музей Пикассо", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "source": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "note": "" },
+      { "title": "Рафаэль Паваротти, фотограф", "title_local": "Rafael Pavarotti", "date_from": "2026-10-02", "date_to": "2027-05-02", "where": "Музей декоративного искусства", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "source": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "note": "" }
+    ]
+  },
+  {
+    "date": "2026-10-07", "city": "paris", "badges": ["Лувр"], "note": "Билет в Лувр с временем входа купить заранее.",
+    "warnings": [
+      { "text": "Забастовка RATP: проверить ratp.fr перед выходом.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+    ],
+    "plan_a": [
+      { "place_id": "louvre", "best_time": "morning", "best_time_why": "слот на 9:00: к полудню толпа", "why": "Лувр закрыт по вторникам, а в среду работает до 21:00, так что можно не спешить. С сегодняшнего дня открыт Сурбаран." },
+      { "place_id": "cafe-marly", "pause": true, "best_time": "day", "best_time_why": "обед сразу после музея", "why": "Под арками самого Лувра, выходить далеко не надо." },
+      { "place_id": "palais-royal", "best_time": "day", "best_time_why": "до 20:30", "why": "Через дорогу от Лувра: тихий сад со скамейками, чтобы отдохнуть." }
+    ],
+    "plan_b": [
+      { "place_id": "orangerie", "best_time": "morning", "best_time_why": "к открытию в 9:00", "why": "Вместо большого Лувра: «Кувшинки» Моне за час с небольшим." },
+      { "place_id": "tuileries", "best_time": "day", "best_time_why": "до 19:30", "why": "Оранжери стоит в самом саду." },
+      { "place_id": "angelina-rivoli", "pause": true, "best_time": "day", "best_time_why": "перерыв", "why": "На краю Тюильри." }
+    ],
+    "events": [
+      { "title": "Сурбаран, 1598–1664", "title_local": "Zurbarán", "date_from": "2026-10-07", "date_to": "2027-01-25", "where": "Лувр, Зал Наполеона", "url": "https://www.louvre.fr/en/exhibitions-and-events/exhibitions/zurbaran", "source": "https://www.louvre.fr/en/exhibitions-and-events/exhibitions/zurbaran", "note": "Открывается 7.10 — в день нашего визита в Лувр." },
+      { "title": "Праздник урожая на Монмартре", "title_local": "Fête des Vendanges de Montmartre", "date_from": "2026-10-07", "date_to": "2026-10-11", "where": "Монмартр, у Сакре-Кёр", "url": "https://fetedesvendangesdemontmartre.com/en/", "source": "https://fetedesvendangesdemontmartre.com/en/", "note": "Бесплатно: музыка, парады, еда." },
+      { "title": "«Remember Me»: шедевры фотографии", "title_local": "Remember Me", "date_from": "2026-10-07", "date_to": "2027-01-18", "where": "Bourse de Commerce", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "source": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "note": "Недалеко от Лувра." }
+    ]
+  },
+  {
+    "date": "2026-10-08", "city": "paris", "badges": ["Версаль"], "note": "Весь день в Версале. Билет Passport со слотом во дворец купить заранее. По парку — на паровозике.",
+    "warnings": [
+      { "text": "Забастовка RATP может задеть метро 8 до Invalides. Запасной вариант — RER C (SNCF) до Versailles Château Rive Gauche; проверить ratp.fr и transilien.com.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+    ],
+    "plan_a": [
+      { "place_id": "versailles-palace", "best_time": "morning", "best_time_why": "ранний слот: до основного потока групп", "why": "Главная цель дня. В понедельник Версаль закрыт, а в четверг открыто всё." },
+      { "title": "Обед: Ore или La Flottille", "place_id": "versailles", "pause": true, "best_time": "day", "best_time_why": "после дворца", "why": "Ore — у Королевского двора, La Flottille — у Большого канала (см. «Версаль: как всё устроено»)." },
+      { "place_id": "versailles-trianon", "best_time": "day", "best_time_why": "открыто с 12:00", "why": "Доехать на паровозике, чтобы не идти пешком 1,5 км через парк." },
+      { "title": "Чай: Angelina у Малого Трианона", "place_id": "versailles", "pause": true, "best_time": "day", "best_time_why": "до 18:00", "why": "Передохнуть перед обратной дорогой, потом паровозик к дворцу." }
+    ],
+    "plan_b": [
+      { "place_id": "versailles-palace", "best_time": "morning", "best_time_why": "по слоту", "why": "Только дворец — самое главное." },
+      { "title": "Обед: Ore", "place_id": "versailles", "pause": true, "best_time": "day", "best_time_why": "после дворца", "why": "Рядом с выходом из дворца, потом сразу домой." }
+    ],
+    "events": []
+  },
+  {
+    "date": "2026-10-09", "city": "paris", "badges": [], "note": "",
+    "warnings": [
+      { "text": "Забастовка RATP: проверить ratp.fr перед выходом.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+    ],
+    "plan_a": [
+      { "place_id": "sainte-chapelle", "best_time": "morning", "best_time_why": "к открытию в 9:00: меньше очередь на досмотр, утром солнце в витражах", "why": "Билет с временем купить заранее. Отсюда 5 минут до Нотр-Дама." },
+      { "place_id": "notre-dame", "best_time": "morning", "best_time_why": "до полудня очередь короче", "why": "Рядом на том же острове; вход бесплатный." },
+      { "place_id": "saint-regis", "pause": true, "best_time": "day", "best_time_why": "обед", "why": "Через мостик на острове Сен-Луи, в двух минутах от собора." },
+      { "place_id": "marais-place-des-vosges", "best_time": "day", "best_time_why": "после обеда, по ровным улицам", "why": "Мост на правый берег, и уже Марэ; на площади Вогезов можно посидеть в сквере." },
+      { "place_id": "mariage-freres-marais", "pause": true, "best_time": "day", "best_time_why": "чайный салон до 19:00", "why": "В Марэ, по пути; оттуда метро 8 до отеля без пересадок (Chemin Vert)." }
+    ],
+    "plan_b": [
+      { "place_id": "notre-dame", "best_time": "morning", "best_time_why": "до полудня очередь короче", "why": "Под крышей и без билета." },
+      { "place_id": "saint-regis", "pause": true, "best_time": "day", "best_time_why": "обед", "why": "Рядом, потом домой." }
+    ],
+    "events": [
+      { "title": "Гюстав Файе: Ван Гог, Гоген, Редон", "title_local": "Gustave Fayet", "date_from": "2026-10-09", "date_to": "2027-03-08", "where": "Fondation Louis Vuitton", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "source": "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/283020-10-must-see-exhibitions-in-paris-this-october-2026", "note": "Далеко от отеля (Булонский лес)." },
+      { "title": "Праздник урожая на Монмартре", "title_local": "Fête des Vendanges de Montmartre", "date_from": "2026-10-07", "date_to": "2026-10-11", "where": "Монмартр, у Сакре-Кёр", "url": "https://fetedesvendangesdemontmartre.com/en/", "source": "https://fetedesvendangesdemontmartre.com/en/", "note": "Если хочется — вместо Марэ после обеда." }
+    ]
+  },
+  {
+    "date": "2026-10-10", "city": "paris", "badges": ["вылет"], "note": "Время вылета: TODO. План А — только если вылет вечером.",
+    "warnings": [
+      { "text": "Забастовка RATP: заранее проверить дорогу в аэропорт на ratp.fr.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+    ],
+    "plan_a": [
+      { "place_id": "palais-porte-doree", "best_time": "morning", "best_time_why": "в субботу с 10:00", "why": "В 3 минутах от отеля, в понедельник он был закрыт. Аквариум и залы ар-деко." },
+      { "place_id": "cafe-du-palais", "pause": true, "best_time": "day", "best_time_why": "обед", "why": "В самом дворце." },
+      { "place_id": "lac-daumesnil", "best_time": "day", "best_time_why": "перед отъездом", "why": "Короткая прогулка у озера рядом с отелем." }
+    ],
+    "plan_b": [
+      { "place_id": "au-bois-doree", "pause": true, "best_time": "morning", "best_time_why": "открыто с 6:00", "why": "Спокойный завтрак у отеля перед дорогой." }
+    ],
+    "events": [
+      { "title": "Праздник урожая на Монмартре", "title_local": "Fête des Vendanges de Montmartre", "date_from": "2026-10-07", "date_to": "2026-10-11", "where": "Монмартр, у Сакре-Кёр", "url": "https://fetedesvendangesdemontmartre.com/en/", "source": "https://fetedesvendangesdemontmartre.com/en/", "note": "" }
+    ]
+  }
 ]
