@@ -582,5 +582,288 @@
     ],
     "game_id": "novy-svet",
     "verified": true
+  },
+  {
+    "id": "cafe-savoy",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Кафе «Савой»",
+    "name_local": "Café Savoy",
+    "coords": [
+      50.08093,
+      14.40722
+    ],
+    "address": "Vítězná 124/5, 150 00 Praha 5 – Malá Strana",
+    "summary": "Кафе в венском стиле с высоким расписным потолком, в 15 минутах пешком от отеля. Хорошо для неспешного завтрака или десерта.",
+    "description": "Кафе ресторанной группы Ambiente: днём здесь шумно и оживлённо, как в венской кофейне, вечером спокойнее, как в ресторане. Завтраки подают по будням до 11:30, в меню есть фирменный торт Savoy. Кафе стоит на углу Витезной и Зборовской, по дороге от отеля к Мосту Легий и Национальному театру. Лучше бронировать столик заранее, это можно сделать на сайте.",
+    "hours": {
+      "text": "Пн–пт 8:00–22:00; сб–вс и праздники 9:00–22:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.cafesavoy.ambi.cz/en/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 20,
+      "ticket_eur": null,
+      "note": "≈ 500 CZK на человека: оценка по меню (завтраки 228–535 CZK) плюс кофе."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cafesavoy.ambi.cz/en/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/V%C3%ADt%C4%9Bzn%C3%A1_-_Zborovsk%C3%A1%2C_Caf%C3%A9_Savoy.jpg/1280px-V%C3%ADt%C4%9Bzn%C3%A1_-_Zborovsk%C3%A1%2C_Caf%C3%A9_Savoy.jpg",
+        "credit": "ŠJů (cs:ŠJů)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:V%C3%ADt%C4%9Bzn%C3%A1_-_Zborovsk%C3%A1,_Caf%C3%A9_Savoy.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 13,
+      "transfers": 0,
+      "note": "Пешком около 1 км по ровному, или трамвай 9/12/15/20 от Arbesovo náměstí до Újezd (1–2 остановки)."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "можно посидеть долго",
+      "рядом с отелем",
+      "завтрак"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "kavarna-co-hleda-jmeno",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Кавярна «Ищущая имя»",
+    "name_local": "Kavárna co hledá jméno",
+    "coords": [
+      50.06979,
+      14.404
+    ],
+    "address": "Stroupežnického 493/10, 150 00 Praha 5 – Smíchov",
+    "summary": "Спрятанная во дворе кофейня под двумя каштанами, в 7 минутах пешком от отеля. Завтраки весь день до обеда и дворик, где можно долго сидеть.",
+    "description": "Чтобы найти кафе, нужно пройти через двор и парковку у дома Stroupežnického 10. Внутри есть зал и дворик. Завтраки подают по будням до 12:00, по выходным до 13:00, потом до 19:00 идёт дневное меню (супы, бургеры). Хороший вариант для спокойного утра перед выходом в город или чтобы отдохнуть вечером рядом с отелем.",
+    "hours": {
+      "text": "Пн–вс 8:00–20:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.kavarnacohledajmeno.cz/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 14,
+      "ticket_eur": null,
+      "note": "≈ 350 CZK: оценка по меню (завтраки 160–320 CZK) плюс кофе. Бронь по телефону не принимают."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.6,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 7,
+      "transfers": 0,
+      "note": "Пешком около 600 м по ровному, в сторону метро Anděl."
+    },
+    "tags": [
+      "уютно",
+      "можно посидеть долго",
+      "рядом с отелем",
+      "завтрак",
+      "дворик"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "na-verandach",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Ресторан «На верандах» (Potrefená Husa)",
+    "name_local": "Potrefená Husa Na Verandách",
+    "coords": [
+      50.06855,
+      14.40655
+    ],
+    "address": "Nádražní 43/84, 150 00 Praha 5 – Smíchov",
+    "summary": "Чешская кухня и свежее пиво Staropramen прямо в комплексе пивоварни Staropramen, в 10 минутах пешком от отеля.",
+    "description": "Ресторан сети Potrefená Husa при пивоварне Staropramen. В меню традиционные блюда и гриль: гуляш, свиная шейка, утиная ножка, плюс дегустационный сет из пяти сортов пива. Бывает обеденное меню подешевле. Место не туристическое и не особенно красивое, зато здесь сытно, недорого и близко к отелю.",
+    "hours": {
+      "text": "Пн–сб 11:00–23:00; вс 11:00–22:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.naverandach.cz/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 14,
+      "ticket_eur": null,
+      "note": "≈ 350 CZK: оценка по меню (горячее 198–285 CZK, пиво 0,5 л 59 CZK)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.naverandach.cz/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.8,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 75
+    },
+    "transit_hint": {
+      "from_hotel_min": 10,
+      "transfers": 0,
+      "note": "Пешком около 800 м по ровному на юг, через район Anděl."
+    },
+    "tags": [
+      "чешская кухня",
+      "пиво",
+      "рядом с отелем",
+      "недорого"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "grand-cafe-orient",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Гранд-кафе «Ориент»",
+    "name_local": "Grand Café Orient",
+    "coords": [
+      50.08694,
+      14.42547
+    ],
+    "address": "Ovocný trh 569/19 (Dům U Černé Matky Boží, 1-й этаж), 110 00 Praha 1",
+    "summary": "Единственная в мире кубистская кофейня в Доме у Чёрной Богоматери, по проекту Йозефа Гочара. Попробуйте кубистский «веночек» с кремом.",
+    "description": "Дом у Чёрной Богоматери построил 31-летний архитектор Йозеф Гочар; кубистские у него не только фасад, но и планировка, и интерьер кафе на втором этаже (по-чешски «I. patro»): буфет-бар, люстры, фонари. Кафе проработало около 10 лет и закрылось в 1920-х, когда кубизм вышел из моды. Спустя примерно 80 лет его восстановили. Удобно зайти передохнуть между Староместской площадью и Обецни дум.",
+    "hours": {
+      "text": "Пн–пт 9:00–21:00; сб–вс 10:00–21:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.grandcafeorient.cz/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 10,
+      "ticket_eur": null,
+      "note": "≈ 200–250 CZK за кофе с десертом: капучино 100 CZK, «веночек» 95 CZK, кубистский торт 175 CZK (меню кафе, PDF на сайте)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.grandcafeorient.cz/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Grand_Cafe_Orient.jpg/1280px-Grand_Cafe_Orient.jpg",
+        "credit": "Tiia Monto",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Grand_Cafe_Orient.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Ориентировочно: метро B от Anděl до Náměstí Republiky, дальше около 300 м пешком. Кафе на втором этаже, к нему ведёт лестница."
+    },
+    "tags": [
+      "красиво",
+      "интерьер",
+      "кубизм",
+      "десерты"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "cafe-louvre",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Кафе «Лувр»",
+    "name_local": "Café Louvre",
+    "coords": [
+      50.08207,
+      14.41873
+    ],
+    "address": "Národní 22, 110 00 Praha 1",
+    "summary": "Классическое пражское гранд-кафе, открытое в 1902 году; здесь бывали Кафка и Эйнштейн. Можно засидеться надолго, работает до 23:30.",
+    "description": "Кафе открылось в 1902 году на тогдашнем Фердинандовом проспекте (ныне Národní třída). Здесь собирался философский кружок, куда ходили студенты Макс Брод и Франц Кафка; среди известных гостей были Карел Чапек и Альберт Эйнштейн. Кафе хранит традиции старой кофейни, в меню классическая кухня и десерты. Работает с утра до почти полуночи, так что годится и на завтрак, и на поздний ужин.",
+    "hours": {
+      "text": "Пн–пт 8:00–23:30; сб–вс 9:00–23:30. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://www.cafelouvre.cz/en/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 10,
+      "ticket_eur": null,
+      "note": "≈ 250 CZK за завтрак с кофе: завтраки 119–279 CZK, завтрак подают до 12:00 (меню на сайте). Цены обедов и ужинов не проверяла."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cafelouvre.cz/en/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Prague_Caf%C3%A9_Louvre_Interior_1.jpg/1280px-Prague_Caf%C3%A9_Louvre_Interior_1.jpg",
+        "credit": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Caf%C3%A9_Louvre_Interior_1.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Ориентировочно: трамвай 9 от Arbesovo náměstí до Národní třída или метро B от Anděl до Národní třída (2 остановки)."
+    },
+    "tags": [
+      "красиво",
+      "история",
+      "можно посидеть долго",
+      "завтрак"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
