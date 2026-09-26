@@ -1,0 +1,12 @@
+[
+  { "date": "2026-10-01", "city": "prague", "badges": ["прилёт"], "note": "Время прилёта: TODO", "items": [] },
+  { "date": "2026-10-02", "city": "prague", "badges": [], "note": "", "items": [] },
+  { "date": "2026-10-03", "city": "prague", "badges": [], "note": "", "items": [] },
+  { "date": "2026-10-04", "city": "prague", "badges": [], "note": "", "items": [] },
+  { "date": "2026-10-05", "city": "paris", "city_from": "prague", "badges": ["переезд"], "note": "Время переезда: TODO. Ничего тяжёлого не планировать.", "items": [] },
+  { "date": "2026-10-06", "city": "paris", "badges": [], "note": "", "items": [] },
+  { "date": "2026-10-07", "city": "paris", "badges": [], "note": "", "items": [] },
+  { "date": "2026-10-08", "city": "paris", "badges": ["Версаль"], "note": "Весь день в Версале.", "items": [] },
+  { "date": "2026-10-09", "city": "paris", "badges": [], "note": "", "items": [] },
+  { "date": "2026-10-10", "city": "paris", "badges": ["вылет"], "note": "Время вылета: TODO", "items": [] }
+]
