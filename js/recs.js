@@ -1,19 +1,21 @@
-// Советы: все рекомендации из планов дней с фильтрами и кнопкой «в мой день».
+// Советы: все рекомендации из планов дней с фильтрами и кнопкой «в план», плюс идеи без адреса.
 // #/recs?date=2026-10-06&city=paris&level=low, #/recs?tab=practical
 import { CITIES, getDays } from './data.js';
 import { placeIndex } from './days.js';
 import { openSheet } from './sheet.js';
-import { esc, fmtDate, fmtWeekday, EFFORT_LEVELS, BEST_TIME, effortInline } from './ui.js';
-import * as plan from './plan.js';
+import { esc, fmtDate, fmtWeekday, EFFORT_LEVELS, BEST_TIME, effortInline, isRainy } from './ui.js';
+import { pickerHTML } from './picker.js';
 import * as practical from './practical.js';
 
 let recs = [];   // текущий список для обработчиков кнопок
+let ideas = [];  // точки типа idea из обоих городов
 let days = [];
 
 // Пункты планов А и Б. Паузы внутри больших мест (обед в Версале) не отдельная рекомендация.
 async function collect() {
   days = await getDays();
   const places = await placeIndex(Object.keys(CITIES));
+  ideas = [...places.values()].filter((p) => p.type === 'idea');
   const byKey = new Map();
   for (const d of days) {
     for (const [plan, label] of [['plan_a', 'А'], ['plan_b', 'Б']]) {
@@ -59,7 +61,7 @@ function cardHTML(r, i) {
     ${effortInline(p.effort)}
     <div class="rec-actions">
       <a class="btn secondary" href="#/map?city=${r.city}&place=${encodeURIComponent(p.id)}">📍 На карте</a>
-      <button type="button" class="btn" data-add="${i}">➕ В мой день</button>
+      <button type="button" class="btn" data-add="${i}">➕ В план</button>
     </div>
   </article>`;
 }
@@ -82,7 +84,27 @@ async function renderRecs(q) {
       </div>
     </div>
     <p class="muted" id="rec-count"></p>
-    <div id="rec-list">${recs.map(cardHTML).join('')}</div>`;
+    <div id="rec-list">${recs.map(cardHTML).join('')}</div>
+    ${ideas.length ? `<h2 class="section">💭 Идеи</h2>
+    <p class="muted">Впечатления без точного адреса: в какой день — решаете сами.</p>
+    <div id="idea-list">${ideas.map(ideaHTML).join('')}</div>` : ''}`;
+}
+
+function ideaHTML(p, i) {
+  const c = CITIES[p.city];
+  return `<article class="card idea-rec" data-city="${p.city}">
+    <div class="rec-meta">
+      <span class="muted">${c.flag} ${c.name}</span>
+      ${isRainy(p) ? '<span class="badge">☔ на дождь</span>' : ''}
+    </div>
+    <h3 class="rec-title"><a href="#/map?city=${p.city}&place=${encodeURIComponent(p.id)}">💭 ${esc(p.name)}</a>${p.verified === false ? ' <span class="badge warn">не проверено</span>' : ''}</h3>
+    ${p.summary ? `<p>${esc(p.summary)}</p>` : ''}
+    ${effortInline(p.effort)}
+    <div class="rec-actions">
+      ${p.candidates?.length ? `<a class="btn secondary" href="#/map?city=${p.city}&candidates=${encodeURIComponent(p.id)}">📍 Где можно</a>` : ''}
+      <button type="button" class="btn" data-add-idea="${i}">➕ В план</button>
+    </div>
+  </article>`;
 }
 
 function applyFilters(el) {
@@ -99,27 +121,21 @@ function applyFilters(el) {
     card.hidden = !show;
     if (show) n++;
   }
+  // Идеи без дат: фильтруем только по городу (или по городу выбранного дня).
+  const day = days.find((d) => d.date === f.date);
+  for (const card of el.querySelectorAll('.idea-rec')) {
+    const c = card.dataset.city;
+    card.hidden = (f.city && c !== f.city) || (day && c !== day.city && c !== day.city_from);
+  }
   el.querySelector('#rec-count').textContent = n ? `Найдено: ${n}` : 'Ничего не нашлось — попробуйте убрать фильтр.';
   const qs = new URLSearchParams(Object.entries(f).filter(([, v]) => v)).toString();
   history.replaceState(null, '', `#/recs${qs ? `?${qs}` : ''}`);
 }
 
-function openAddSheet(r) {
-  const buttons = days.map((d) => `<button type="button" class="btn ${d.date === r.date ? '' : 'secondary'} day-pick" data-date="${d.date}">
-      ${fmtWeekday(d.date)}, ${fmtDate(d.date)} ${CITIES[d.city].flag}</button>`);
-  openSheet(`<h2>В мой день</h2>
-    <p><strong>${esc(r.place.name)}</strong></p>
-    <p class="muted">Выберите день. Рекомендуем: ${fmtDate(r.date)}.</p>
-    <div class="day-picks">${buttons.join('')}</div>
-    <p class="add-result" role="status"></p>`);
-  const body = document.querySelector('#sheet .sheet-body');
-  body.querySelector('.day-picks').addEventListener('click', (e) => {
-    const btn = e.target.closest('.day-pick');
-    if (!btn) return;
-    const date = btn.dataset.date;
-    const added = plan.add(date, { city: r.city, place_id: r.place.id });
-    body.querySelector('.add-result').innerHTML = `${added ? '✅ Добавлено' : 'Уже есть'} в ${fmtDate(date)}. <a href="#/day/${date}">Открыть день →</a>`;
-  });
+function openAddSheet(place, recommended = '') {
+  openSheet(`<h2>В план</h2>
+    <p><strong>${esc(place.name)}</strong></p>
+    ${pickerHTML(place, days, { recommended, open: true })}`);
 }
 
 export async function render(r) {
@@ -142,7 +158,12 @@ export function after(el, r) {
   });
   el.querySelector('#rec-list').addEventListener('click', (e) => {
     const b = e.target.closest('[data-add]');
-    if (b) openAddSheet(recs[Number(b.dataset.add)]);
+    const r = b && recs[Number(b.dataset.add)];
+    if (r) openAddSheet(r.place, r.date);
+  });
+  el.querySelector('#idea-list')?.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-add-idea]');
+    if (b) openAddSheet(ideas[Number(b.dataset.addIdea)]);
   });
   applyFilters(el);
 }

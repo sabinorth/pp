@@ -1,6 +1,7 @@
 // Карта: Leaflet + OSM, переключатель городов, фильтр по типам, шторка точки.
 /* global L */
-import { CITIES, getHotel, getPlaces, getGameIds } from './data.js';
+import { CITIES, getHotel, getPlaces, getGameIds, getDays } from './data.js';
+import { pickerHTML } from './picker.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
 import { esc, TYPES, fmtDate, fmtWeekday, plural, effortHTML, effortInline, isRainy } from './ui.js';
 
@@ -10,6 +11,7 @@ let currentCity = null;
 let currentHotel = null;
 let currentPlaces = [];
 let readyGames = [];
+let tripDays = [];
 let hotelMarker = null;
 let routeLayer = null;        // пунктир маршрута открытой точки
 let highlightLayer = null;    // кольца вокруг кандидатов идеи
@@ -120,8 +122,9 @@ function pinIcon(kind, icon, unverified, rainy = false) {
 }
 
 async function loadCity(city) {
-  const [hotel, places, gameIds] = await Promise.all([getHotel(city), getPlaces(city), getGameIds()]);
+  const [hotel, places, gameIds, days] = await Promise.all([getHotel(city), getPlaces(city), getGameIds(), getDays()]);
   readyGames = gameIds;
+  tripDays = days;
   currentCity = city;
   currentHotel = hotel;
   currentPlaces = places;
@@ -264,6 +267,7 @@ function placeHTML(p, hotel) {
     ${idea ? `<p>💭 Вариант для идеи <a href="#/map?city=${idea.city}&place=${encodeURIComponent(idea.id)}">«${esc(idea.name)}»</a></p>` : ''}
     ${p.summary ? `<p class="summary">${esc(p.summary)}</p>` : ''}
     ${p.description ? `<p>${esc(p.description)}</p>` : ''}
+    ${pickerHTML(p, tripDays)}
     ${longHTML(p.description_long)}
     ${datesHTML(p.dates)}
     ${bestTimeHTML(p.best_time)}
@@ -336,6 +340,7 @@ function openIdeas() {
       ${effortInline(p.effort)}
       <div class="rec-actions">
         ${p.candidates?.length ? `<button type="button" class="btn secondary" data-candidates="${esc(p.id)}">📍 Кандидаты на карте</button>` : ''}
+        ${pickerHTML(p, tripDays)}
       </div>
     </article>`);
   openSheet(`<h2>💭 Идеи · ${CITIES[currentCity].name}</h2>

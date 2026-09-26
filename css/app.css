@@ -505,3 +505,11 @@ h2.section { margin-top: 18px; }
   border: 2px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
 }
 #day-items > .btn.wide { margin-top: 10px; }
+
+/* --- «+ В план» --- */
+.add-plan { margin: 12px 0; grid-column: 1 / -1; }
+.add-plan > summary { display: flex; list-style: none; cursor: pointer; }
+.add-plan > summary::-webkit-details-marker { display: none; }
+.add-plan[open] > summary { margin-bottom: 8px; }
+.day-pick { display: grid; gap: 2px; text-align: center; }
+.pick-warn { font-size: 0.8rem; font-weight: 600; }
