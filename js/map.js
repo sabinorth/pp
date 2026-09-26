@@ -1,6 +1,6 @@
 // Карта: Leaflet + OSM, переключатель городов, фильтр по типам, шторка точки.
 /* global L */
-import { CITIES, getHotel, getPlaces } from './data.js';
+import { CITIES, getHotel, getPlaces, getGameIds } from './data.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
 import { esc, TYPES, fmtDate, plural, effortHTML } from './ui.js';
 
@@ -9,6 +9,7 @@ let els = null;
 let currentCity = null;
 let currentHotel = null;
 let currentPlaces = [];
+let readyGames = [];
 let hotelMarker = null;
 const layers = {};            // type → L.layerGroup
 const hiddenTypes = new Set();
@@ -93,7 +94,8 @@ function pinIcon(kind, icon, unverified) {
 }
 
 async function loadCity(city) {
-  const [hotel, places] = await Promise.all([getHotel(city), getPlaces(city)]);
+  const [hotel, places, gameIds] = await Promise.all([getHotel(city), getPlaces(city), getGameIds()]);
+  readyGames = gameIds;
   currentCity = city;
   currentHotel = hotel;
   currentPlaces = places;
@@ -200,7 +202,10 @@ function placeHTML(p, hotel) {
     <h3>Цены</h3>
     ${priceHTML(p.price, p.booking)}
     ${p.address ? `<p class="muted">📍 ${esc(p.address)}</p>` : ''}
-    ${p.game_id ? `<a class="btn game-link" href="#/game/${encodeURIComponent(p.game_id)}">🎲 Играть</a>` : ''}`;
+    ${readyGames.includes(p.game_id) ? `<div class="route-btns">
+      <a class="btn game-link" href="#/game/${encodeURIComponent(p.game_id)}">🎲 Сыграть</a>
+      <a class="btn secondary game-link" href="#/game/${encodeURIComponent(p.game_id)}?screen=onsite">📍 На месте</a>
+    </div>` : ''}`;
 }
 
 function openPlace(p) {
