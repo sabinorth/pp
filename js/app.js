@@ -77,3 +77,7 @@ async function onRoute() {
 
 window.addEventListener('hashchange', onRoute);
 onRoute();
+
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  navigator.serviceWorker.register('sw.js').catch((err) => console.warn('Service worker не зарегистрирован:', err));
+}

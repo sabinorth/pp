@@ -1,0 +1,16 @@
+{
+  "name": "Прага + Париж 2026",
+  "short_name": "Прага+Париж",
+  "description": "Путеводитель по Праге и Парижу, 1–10 октября 2026",
+  "lang": "ru",
+  "start_url": "./#/plan",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f6f4",
+  "theme_color": "#0a50b8",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
