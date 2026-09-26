@@ -1152,5 +1152,299 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "kinsky-garden",
+    "city": "prague",
+    "type": "park",
+    "name": "Сад Кинских",
+    "name_local": "Zahrada Kinských",
+    "coords": [
+      50.07847,
+      14.39458
+    ],
+    "address": "náměstí Kinských, 150 00 Praha 5 – Smíchov (главный вход)",
+    "summary": "Большой пейзажный парк на склоне Петршина в 6 минутах пешком от отеля. Можно просто погулять и посидеть без туристов.",
+    "description": "Парк занимает 24,3 га и открыт круглый год. Летний дворец Кинских в стиле ампир построил в 1827–1831 годах венский архитектор Генрих Кох для князя Рудольфа Кинского на месте заброшенных виноградников. Сейчас в нём Этнографический музей Национального музея. Нижняя часть у площади Кинских ровная, выше парк поднимается по крутому склону Петршина, туда можно не ходить. Входы есть с náměstí Kinských, Na Hřebenkách, Šermířská и Holečkova.",
+    "hours": {
+      "text": "Парк открыт круглый год без ограничений. Три постоянных туалета: апрель–сентябрь 10:00–20:00, ноябрь–март 10:00–17:00, октябрь в источнике не указан.",
+      "closed_weekdays": [],
+      "source": "https://praha.eu/web/portalzp/zahrada-vily-kinskych",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Вход бесплатный. Платные ли туалеты, не выяснила."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Prague_Kinsk%C3%BD_Garden_%2850687264028%29.jpg/1280px-Prague_Kinsk%C3%BD_Garden_%2850687264028%29.jpg",
+        "credit": "Jorge Franganillo",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Kinsk%C3%BD_Garden_(50687264028).jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "some",
+      "queue": "none",
+      "seating": null,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 6,
+      "transfers": 0,
+      "note": "Пешком около 450 м по ровному до náměstí Kinských."
+    },
+    "tags": [
+      "рядом с отелем",
+      "тихо",
+      "зелень",
+      "мало туристов"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "petrin",
+    "city": "prague",
+    "type": "park",
+    "name": "Петршин (фуникулёр и сады)",
+    "name_local": "Petřín – lanová dráha a sady",
+    "coords": [
+      50.08352,
+      14.39509
+    ],
+    "address": "Lanová dráha: Újezd (нижняя станция), 118 00 Praha 1 – Malá Strana",
+    "summary": "Зелёный холм над Малой Страной: наверх на фуникулёре за 4 минуты, потом медленно вниз по садам с видами на Град и город.",
+    "description": "Фуникулёр ходит от трамвайной остановки Újezd через станцию Nebozízek до вершины Петршина. Он работает с 1891 года, электрифицирован в 1932 году. Промежуточная станция Nebozízek работает только на подъём. Наверху стоит смотровая башня (отдельный билет), а вниз к Малой Стране ведут садовые дорожки. Лучший щадящий вариант: подняться на фуникулёре и спускаться пешком, отдыхая по дороге.",
+    "hours": {
+      "text": "Фуникулёр с 22.09.2026 ежедневно 7:00–22:15, каждые 10 минут. 1–5.10 работает. Сады — открытый парк.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/petrin-funicular-lanova-draha-na-petrin/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 4.1,
+      "note": "Фуникулёр: разовая поездка 100 CZK (в приложении 90 CZK). Действуют проездные на 24 и 72 часа и Prague Visitor Pass. Смотровая башня — отдельно, цену не проверяла."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Pet%C5%99%C3%ADn_funicular_in_Prague_at_%C3%9Ajezd_station.jpg/1280px-Pet%C5%99%C3%ADn_funicular_in_Prague_at_%C3%9Ajezd_station.jpg",
+        "credit": "Mattsjc",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_funicular_in_Prague_at_%C3%9Ajezd_station.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": null,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 12,
+      "transfers": 1,
+      "note": "Трамвай 9/12/15/20 от Arbesovo náměstí до Újezd, пересадка на фуникулёр. Вниз идти пешком по садам, это под гору."
+    },
+    "tags": [
+      "вид на город",
+      "зелень",
+      "красиво"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "kampa",
+    "city": "prague",
+    "type": "park",
+    "name": "Остров Кампа",
+    "name_local": "Kampa",
+    "coords": [
+      50.08388,
+      14.40766
+    ],
+    "address": "Kampa, 118 00 Praha 1 – Malá Strana",
+    "summary": "Парк на острове между Влтавой и Чертовкой, рядом с Карловым мостом. Газоны, водяное колесо мельницы и вид на реку, можно отдохнуть после моста.",
+    "description": "Кампа — остров между Влтавой и её рукавом Чертовкой. Здесь сохранилось огромное колесо Великоприоратской мельницы XV века. Это одно из самых романтичных мест Праги; путеводитель VirtualTourist назвал его вторым по красоте городским островом в мире. Кампа впервые упоминается в 1169 году. На газонах сидят и устраивают пикники, так что здесь можно никуда не спешить.",
+    "hours": {
+      "text": "Городской парк, открыт всегда.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/kampa/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/%C4%8Certovka_e_isola_di_Kampa.jpg/1280px-%C4%8Certovka_e_isola_di_Kampa.jpg",
+        "credit": "Morgan Sand",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%C4%8Certovka_e_isola_di_Kampa.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 12,
+      "transfers": 0,
+      "note": "Трамвай 9/12/15/20 от Arbesovo náměstí до Újezd, дальше около 400 м по ровному. С Карлова моста на Кампу ведёт лестница."
+    },
+    "tags": [
+      "красиво",
+      "у реки",
+      "можно посидеть долго",
+      "рядом с Карловым мостом"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "vrtba-garden",
+    "city": "prague",
+    "type": "park",
+    "name": "Вртбовский сад",
+    "name_local": "Vrtbovská zahrada",
+    "coords": [
+      50.08649,
+      14.40248
+    ],
+    "address": "Karmelitská 373/25, 118 00 Praha 1 – Malá Strana",
+    "summary": "Маленький барочный сад-терраса около 1720 года с видом на Град и Малую Страну. Тихий и очень красивый, но с лестницами.",
+    "description": "Один из самых значительных барочных садов Европы, созданный около 1720 года по проекту Франтишека Максимилиана Канька. Сад небольшой и поднимается по крутому склону тремя террасами, соединёнными лестницами. Нижняя цветочная терраса с круглым фонтаном ровная, на ней можно остаться, а за видом подняться наверх. Статуи сделаны в мастерской Матиаса Бернарда Брауна.",
+    "hours": {
+      "text": "Март–октябрь ежедневно 10:00–18:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/vrtba-garden-vrtbovska-zahrada/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 6.2,
+      "note": "Вход 150 CZK. С Prague Visitor Pass, по данным prague.eu, бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Vrtbovsk%C3%A1_zahrada_a_Hrad_3.jpg/1280px-Vrtbovsk%C3%A1_zahrada_a_Hrad_3.jpg",
+        "credit": "VitVit",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vrtbovsk%C3%A1_zahrada_a_Hrad_3.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 0.3,
+      "stairs": "some",
+      "queue": "none",
+      "seating": null,
+      "toilet": null,
+      "duration_min": 40
+    },
+    "transit_hint": {
+      "from_hotel_min": 12,
+      "transfers": 0,
+      "note": "Трамвай 12/15/20 от Arbesovo náměstí до Hellichova, вход с Karmelitská через двор дворца."
+    },
+    "tags": [
+      "красиво",
+      "вид на Град",
+      "тихо",
+      "мало туристов"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "wallenstein-garden",
+    "city": "prague",
+    "type": "park",
+    "name": "Вальдштейнский сад",
+    "name_local": "Valdštejnská zahrada",
+    "coords": [
+      50.09016,
+      14.40643
+    ],
+    "address": "Letenská, 118 00 Praha 1 – Malá Strana",
+    "summary": "Геометрический сад раннего барокко при Вальдштейнском дворце с огромной сала терреной и гротом. Вход бесплатный, от метро Malostranská пара минут.",
+    "description": "Сад разбит одновременно со строительством Вальдштейнского дворца в 1623–1629 годах. Главное — открытая садовая галерея (сала террена), по тем временам беспрецедентная, и искусственный грот со сталактитами. Летом здесь проходят концерты и спектакли. Всё ровное, удобно отдохнуть после спуска с Града по Старой замковой лестнице.",
+    "hours": {
+      "text": "Апрель–октябрь: пн–пт 7:00–19:00, сб–вс 9:00–19:00. 1–5.10 открыто.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/wallenstein-garden-valdstejnska-zahrada/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Prague_Wallenstein_Gardens_Sala_terrena_seen_from_the_garden.jpg/1280px-Prague_Wallenstein_Gardens_Sala_terrena_seen_from_the_garden.jpg",
+        "credit": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Wallenstein_Gardens_Sala_terrena_seen_from_the_garden.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": null,
+      "toilet": null,
+      "duration_min": 40
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Трамвай 12/15/20 от Arbesovo náměstí до Malostranská, вход с улицы Letenská. Ориентировочно."
+    },
+    "tags": [
+      "красиво",
+      "бесплатно",
+      "после Града",
+      "тихо"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
