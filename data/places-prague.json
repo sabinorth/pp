@@ -1912,5 +1912,305 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "image-black-light",
+    "city": "prague",
+    "type": "event",
+    "name": "Чёрный театр IMAGE: Cosmic Cabinet",
+    "name_local": "IMAGE Black Light Theatre — Cosmic Cabinet",
+    "coords": [
+      50.08249,
+      14.41801
+    ],
+    "address": "Národní 25, 110 00 Praha 1 – Staré Město",
+    "summary": "Пражский «чёрный театр»: на чёрном фоне в УФ-свете предметы и тела парят в воздухе. Cosmic Cabinet — без слов, 80–90 минут, хороший «один раз в Праге».",
+    "description": "IMAGE — один из театров чёрного света на Národní, недалеко от Национального театра. Cosmic Cabinet — сборник сцен из самых успешных постановок театра за 30 лет, без слов и без антракта. Понимать чешский не нужно.",
+    "description_long": "Это одна из тех вещей, которые имеют смысл именно в Праге: чёрный фон, УФ/специальный свет, предметы и тела как будто парят в воздухе. Причём 3 октября в 20:00 в IMAGE Black light Theatre идёт Cosmic Cabinet, без слов, около 80–90 минут. Да, black-light theatre немного туристическая штука. Но это как раз хороший «один раз в Праге» экспириенс.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 24,
+      "note": "Взрослый 590 CZK, студенческий (ISIC) 500 CZK."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.imagetheatre.cz/en/programme-and-tickets/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Трамваем от Arbesovo náměstí через Újezd в сторону Národní třída, театр в паре минут от остановки. Номер линии уточнить в PID Lítačka."
+    },
+    "tips": [
+      "Да, black-light theatre немного туристическая штука. Но это как раз хороший «один раз в Праге» экспириенс.",
+      "Альтернатива Laterna Magika: в план лучше брать один театр. Автор подборки скорее советует Laterna Magika, а black light оставляет запасным."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "3.10.2026 в 20:00 Cosmic Cabinet подтверждается у продавца билетов Bohemian Concerts (https://bohemianconcerts.com/events/cosmic-cabinet-black-light-theatre-47/); длительность 80–90 минут без антракта, без слов — совпадает с текстом.",
+      "На сайте театра на 26.09.2026 расписание по датам не открылось, другие спектакли 1–4.10 проверить не удалось. Цены по сайту театра: 590 CZK взрослый, 500 CZK студенческий (https://www.imagetheatre.cz/en/programme-and-tickets/)."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "laterna-magika"
+    ],
+    "tags": [
+      "театр",
+      "вечер",
+      "без слов",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "dates": [
+      {
+        "date": "2026-10-03",
+        "time": "20:00",
+        "note": "Cosmic Cabinet, 80–90 минут без антракта"
+      }
+    ]
+  },
+  {
+    "id": "laterna-magika",
+    "city": "prague",
+    "type": "event",
+    "name": "Laterna Magika: Pluto или Perpetuum Havel",
+    "name_local": "Laterna magika (Národní divadlo)",
+    "coords": [
+      50.0823,
+      14.44896
+    ],
+    "address": "Perpetuum Havel — Palác Akropolis, Kubelíkova 1548/27, 130 00 Praha 3 – Žižkov. Pluto — La Fabrika, Studio 1, Komunardů 1001/30, 170 00 Praha 7 – Holešovice.",
+    "summary": "Чешская традиция смешения театра, кино, проекции и движения — культурно интереснее чёрного театра. На наши даты: Pluto 2 и 3.10 и Perpetuum Havel 4.10.",
+    "description": "Laterna Magika — сцена Национального театра, где с 1958 года соединяют живое действие и проекцию. Pluto — невербальная комедия-пантомима, 1 час 20 минут без антракта, в La Fabrika в Холешовицах. Perpetuum Havel — моноспектакль без слов по либретто, которое Вацлав Гавел написал в тюрьме весной 1989 года: физический театр с видеопроекциями, 50 минут, 15+, в Palác Akropolis на Жижкове.",
+    "description_long": "Или вместо black-light theatre — Laterna Magika. Это уже интереснее культурно: чешская традиция смешения театра, кино, проекции, движения и мультимедиа. На ваши даты есть Pluto 2 и 3 октября, а 4 октября в 19:30 в Palac Akropolis — премьера Perpetuum Havel. Из двух вариантов я бы вам скорее дала Laterna Magika, а black light оставила запасным.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены на сайте Национального театра на 26.09.2026 не показаны, смотреть при покупке."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.narodni-divadlo.cz/en/programme"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 80
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Обе площадки не в центре: Palác Akropolis на Жижкове, La Fabrika в Холешовицах — с пересадкой. Маршрут смотреть по кнопке «Как добраться» или в PID Lítačka."
+    },
+    "tips": [
+      "Из двух вариантов я бы вам скорее дала Laterna Magika, а black light оставила запасным.",
+      "В план лучше брать один театр: либо Laterna Magika, либо IMAGE.",
+      "4.10 — вечер перед переездом. Perpetuum Havel идёт всего 50 минут, вечер получится коротким.",
+      "На Pluto 2.10 на 26.09 оставалось 13 билетов: если выбирать его, покупать сразу. На 3.10 (17:00) билеты есть."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По программе Национального театра на 26.09.2026: Pluto — Пт 2.10 в 19:30 и Сб 3.10 в 17:00, La Fabrika; Perpetuum Havel — Вс 4.10 в 19:30, Palác Akropolis (https://www.narodni-divadlo.cz/en/programme). Даты из текста подтвердились.",
+      "В тексте: 4.10 — «премьера Perpetuum Havel». Мировая премьера прошла 4.07.2026 на фестивале в Авиньоне, чешская — 10.09.2026 в Palác Akropolis; 4.10 — один из показов премьерного сезона (на сайте помечен как premiere production). Источники: https://www.narodni-divadlo.cz/en/show/perpetuum-havel-UmymnrWnRvC2a_KyhqKeWQ, https://www.narodni-divadlo.cz/cs/emagazin/laterna-magika-nove-i-v-palaci-akropolis-RiCXXd00QqCp34y63viG8g",
+      "Pluto: невербальная комедия, 1 ч 20 мин без антракта, La Fabrika, Komunardů 30 (https://www.narodni-divadlo.cz/cs/predstaveni/pluto-asyQDy_xSomtXiAPypyJAA). Perpetuum Havel: 50 минут без антракта, без слов, 15+.",
+      "Маркер на карте стоит на Palác Akropolis. Pluto идёт в другом месте, в La Fabrika (Холешовице)."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "image-black-light"
+    ],
+    "tags": [
+      "театр",
+      "вечер",
+      "без слов",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "dates": [
+      {
+        "date": "2026-10-02",
+        "time": "19:30",
+        "note": "Pluto, La Fabrika (Holešovice). На 26.09 оставалось 13 билетов."
+      },
+      {
+        "date": "2026-10-03",
+        "time": "17:00",
+        "note": "Pluto, La Fabrika (Holešovice)"
+      },
+      {
+        "date": "2026-10-04",
+        "time": "19:30",
+        "note": "Perpetuum Havel, Palác Akropolis (Žižkov), 50 минут"
+      }
+    ]
+  },
+  {
+    "id": "naplavka-market",
+    "city": "prague",
+    "type": "event",
+    "name": "Субботний завтрак на рынке Náplavka",
+    "name_local": "Farmářské tržiště Náplavka",
+    "coords": [
+      50.07358,
+      14.41387
+    ],
+    "address": "Rašínovo nábřeží, 128 00 Praha 2 – Nové Město (набережная у Palackého most)",
+    "summary": "Фермерский рынок на набережной Влтавы по субботам 8:00–14:00. Не «посмотреть рынок», а купить завтрак из 3–4 случайных вещей и съесть его у воды.",
+    "description": "По субботам на набережной Рашинова стоят 80–100 прилавков: чешские фермерские продукты, овощи, выпечка, сыры, цветы, косметика, дизайнерские вещи, готовая еда и живая музыка. Рынок прямо у воды, напротив Смихова.",
+    "description_long": "В субботу утром сделать Náplavka как завтрак. 3 октября — суббота, а рынок на Náplavka работает по субботам 8:00–14:00: выпечка, сыр, сезонные продукты, еда, ремесленные штуки прямо на набережной Влтавы. Не «посмотреть рынок», а купить завтрак из 3–4 случайных вещей и съесть его у воды.",
+    "hours": {
+      "text": "Сб 8:00–14:00. 3.10.2026 — рынок работает.",
+      "closed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": "https://prague.eu/en/akce/naplavka-farmers-market/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": 15,
+      "ticket_eur": 0,
+      "note": "Вход свободный. Средний чек — грубая оценка на завтрак, не из источника."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "some",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Рынок на другом берегу почти напротив отеля: пешком через Palackého most по ровному. К воде с набережной ведут лестницы и пандусы."
+    },
+    "tips": [
+      "Не «посмотреть рынок», а купить завтрак из 3–4 случайных вещей и съесть его у воды.",
+      "Прийти пораньше, пока выбор больше. Сидеть можно у воды на набережной.",
+      "Потом можно пройти по набережной на юг к Вышеграду: вдоль реки ровно, но к самой крепости надо подниматься."
+    ],
+    "how_to": [
+      "Прийти к 9–10 утра.",
+      "Каждая покупает 1–2 случайные вещи: выпечку, сыр, что-то горячее, сезонные фрукты.",
+      "Сесть у воды и съесть завтрак."
+    ],
+    "fact_notes": [
+      "По Prague City Tourism на 26.09.2026: суббота 3.10.2026, 8:00–14:00, в списке дат есть. Совпадает с текстом (https://prague.eu/en/akce/naplavka-farmers-market/).",
+      "80–100 прилавков по субботам, кроме января (https://www.kudyznudy.cz/akce/farmarske-trhy-na-naplavce-u-palackeho-mostu)."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "vysehrad"
+    ],
+    "tags": [
+      "еда",
+      "утро",
+      "у воды",
+      "красиво"
+    ],
+    "game_id": null,
+    "verified": true,
+    "dates": [
+      {
+        "date": "2026-10-03",
+        "time": "08:00",
+        "note": "до 14:00; единственная суббота в Праге"
+      }
+    ]
+  },
+  {
+    "id": "beer-spa",
+    "city": "prague",
+    "type": "experience",
+    "name": "Пивные ванны вдвоём: Original Beer Spa",
+    "name_local": "Original Beer Spa Žitná",
+    "coords": [
+      50.07755,
+      14.42289
+    ],
+    "address": "Žitná 658/9, 110 00 Praha 1 – Nové Město",
+    "summary": "Дубовая ванна с компонентами пивоварения, рядом кран с пивом, потом отдых на соломе. Немного дурацкая идея — и поэтому хороший вечер после дня, когда ноги уже отвалились.",
+    "description": "Original Beer Spa — сеть пивных спа с тремя филиалами в Праге 1. Приватная комната, ручные дубовые ванны на 1000 литров с экстрактами пивоварения, безлимитное разливное Krušovice во время купания. Потом отдых на кровати из пшеничной соломы у огня и пивной хлеб. Есть вариант с хмелевой сауной.",
+    "description_long": "Это объективно немного дурацкая идея — и именно поэтому хороший vacation experience. В Original Beer Spa сидите в дубовой ванне с компонентами пивоварения, рядом кран с пивом, потом отдых. Работает ежедневно до 22:00. Я бы ставила на вечер после дня, когда ноги уже отвалились.",
+    "hours": {
+      "text": "Ежедневно 10:00–22:00.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/original-beer-spa/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 132,
+      "note": "Цены филиала Žitná за 1 час на двоих: одна ванна — 3300 CZK, две ванны — 3800 CZK; с сауной — 4000 / 4600 CZK. Каждый следующий час — скидка 15%."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.beerspa.com/en/reservation/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Филиал Žitná у Карловой площади. Трамваем от Arbesovo náměstí через реку, дальше немного пешком. Маршрут — по кнопке «Как добраться»."
+    },
+    "tips": [
+      "Я бы ставила на вечер после дня, когда ноги уже отвалились.",
+      "Бронировать заранее на конкретный час: приватные комнаты на вечер разбирают."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы из текста подтвердились: ежедневно 10:00–22:00 (https://prague.eu/en/objevujte/original-beer-spa/). Филиал в отеле Michelangelo, по сторонним сайтам, закрывается в 21:30.",
+      "Филиалы: Žitná 658/9, Rybná 3 и Vladislavova 20 (Michelangelo Grand Hotel), все в Праге 1. Для отеля в Смихове все примерно одинаково далеко, выбран Žitná как основной.",
+      "Цены по сайту на 26.09.2026: https://www.beerspa.com/beer-spa-prague-zitna-9/en/prices/ . В цену входит безлимитное пиво Krušovice во время купания и отдых на соломенной кровати (https://www.beerspa.com/en/)."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [],
+    "tags": [
+      "вечер",
+      "отдых",
+      "пиво",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
