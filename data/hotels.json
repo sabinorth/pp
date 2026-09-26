@@ -1,0 +1,35 @@
+[
+  {
+    "id": "hotel-prague",
+    "city": "prague",
+    "name": "Апарт-отель Austria Suites",
+    "name_local": "Aparthotel Austria Suites",
+    "address": "Štefánikova 18/25, 150 00 Praha 5 – Smíchov, Česko",
+    "coords": [50.07463, 14.40359],
+    "dates": { "checkin": "2026-10-01", "checkout": "2026-10-05" },
+    "source": [
+      "https://www.hotels.com/ho452462/aparthotel-austria-suites-prague-czech-republic/",
+      "https://www.itinera.com/hotels/cz-prague/aparthotel-austria-suites.htm",
+      "https://nominatim.openstreetmap.org/search?q=%C5%A0tef%C3%A1nikova+18,+Praha&format=json"
+    ],
+    "note": "Официальный сайт aparthotel-austriasuites.cz не открылся (просрочен сертификат). Координаты по дому 18/25 в OSM.",
+    "checked_on": "2026-09-26",
+    "verified": true
+  },
+  {
+    "id": "hotel-paris",
+    "city": "paris",
+    "name": "Отель De La Porte Dorée",
+    "name_local": "Hôtel De La Porte Dorée",
+    "address": "273 avenue Daumesnil, 75012 Paris, France",
+    "coords": [48.83599, 2.40597],
+    "dates": { "checkin": "2026-10-05", "checkout": "2026-10-10" },
+    "source": [
+      "https://www.hoteldelaportedoree.com/en/map",
+      "https://nominatim.openstreetmap.org/search?q=273+avenue+Daumesnil,+75012+Paris&format=json"
+    ],
+    "note": "Координаты по дому 273 в OSM.",
+    "checked_on": "2026-09-26",
+    "verified": true
+  }
+]
