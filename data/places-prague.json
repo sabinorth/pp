@@ -1717,7 +1717,8 @@
     ],
     "origin": "user-list-prague",
     "pairs_with": [
-      "future-gate"
+      "future-gate",
+      "czech-pub-evening"
     ],
     "tags": [
       "пиво",
@@ -2712,5 +2713,719 @@
         "note": "финиш, трамвай"
       }
     ]
+  },
+  {
+    "id": "czech-pub-evening",
+    "city": "prague",
+    "type": "idea",
+    "name": "Настоящий вечер в чешской hospoda",
+    "name_local": "Večer v hospodě",
+    "coords": null,
+    "address": "",
+    "summary": "Не beer tasting flight, а одна нормальная hospoda, тяжёлая чешская еда, несколько разных наливов пива и сидеть долго. После Tapster Academy — сравнить hladinka, šnyt и mlíko.",
+    "description": "Идея без адреса: выбрать одну пивную, где наливают все три чешских способа, и провести там вечер. Ниже — пивные сети Lokál (Ambiente), где разливают Pilsner Urquell из танков и знают все наливы.",
+    "description_long": "Не beer tasting flight, а одна нормальная hospoda, тяжёлая чешская еда, несколько разных наливов пива, сидеть долго. После Tapster Academy специально заказать hladinka → šnyt → mlíko и сравнивать.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": null,
+    "tips": [
+      "Сидеть долго: это вечер отдыха, а не дегустация.",
+      "Мини-игра «Сравни три налива» (оценки двух игроков для hladinka, šnyt, mlíko) запланирована отдельно, общий модуль со «Слепой дегустацией» в Париже."
+    ],
+    "how_to": [
+      "Выбрать одну hospoda и сесть надолго.",
+      "Заказать тяжёлую чешскую еду.",
+      "Заказать по очереди hladinka → šnyt → mlíko.",
+      "Каждая ставит оценку каждому наливу, потом сравнить."
+    ],
+    "fact_notes": [
+      "В пивных Lokál наливают четыре способа: hladinka, šnyt, mlíko и čochtan (Expats.cz: https://www.expats.cz/czech-news/article/in-the-czech-pub-how-do-i-order-a-beer-in-a-czech-hospoda). В меню Lokál U Bílé kuželky šnyt указан отдельной позицией."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "tapster-academy"
+    ],
+    "tags": [
+      "пиво",
+      "вечер",
+      "можно посидеть долго",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "lokal-u-bile-kuzelky",
+      "lokal-dlouha"
+    ]
+  },
+  {
+    "id": "lokal-u-bile-kuzelky",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Пивная Lokál U Bílé kuželky",
+    "name_local": "Lokál U Bílé kuželky",
+    "coords": [
+      50.08768,
+      14.4075
+    ],
+    "address": "Míšeňská 66/12, 118 00 Praha 1 – Malá Strana",
+    "summary": "Пивная сети Lokál на Малой Стране, у Карлова моста: Pilsner Urquell из танков и простая чешская кухня. Пивная на этом месте с 1862 года.",
+    "description": "Небольшой Lokál в переулке у Малостранской мостовой башни. Pilsner Urquell, Kozel тёмный, безалкогольное; на кухне свичкова, суп из рубца и другие чешские блюда, которые готовят несколько раз в день. Вечерние заказы кухня принимает до 21:45.",
+    "hours": {
+      "text": "Пн–Сб 11:00–0:00, Вс 11:00–23:00. Кухня вечером до 21:45.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/lokal-u-bile-kuzelky/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://lokal-ubilekuzelky.ambi.cz/en/reservations/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Трамваем от Arbesovo náměstí до Malostranské náměstí, дальше 5 минут вниз к Карлову мосту."
+    },
+    "tips": [
+      "Удобно после ночного Карлова моста или вечерней Малой Страны."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы по Prague City Tourism на 26.09.2026. На сторонних сайтах — Пт–Сб до 1:00; ориентироваться на официальные.",
+      "Сайт lokal-ubilekuzelky.ambi.cz на 26.09.2026 не открылся."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "charles-bridge-night",
+      "mala-strana-evening"
+    ],
+    "tags": [
+      "пиво",
+      "чешская кухня",
+      "можно посидеть долго"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "czech-pub-evening"
+  },
+  {
+    "id": "day-without-planning",
+    "city": "prague",
+    "type": "idea",
+    "name": "День без ресторанного планирования",
+    "name_local": "Den bez plánování",
+    "coords": null,
+    "address": "",
+    "summary": "Рынок или pekárna → кофе → случайная hospoda → кондитерская → пиво. В Праге оставить больше места случайности. Кандидаты — на Смихове, в шаге от отеля.",
+    "description": "Идея без адреса. Кандидаты собраны на Смихове вокруг Anděl, в 5–15 минутах пешком от отеля, чтобы день без плана не требовал поездок.",
+    "description_long": "Попробовать день без ресторанного планирования. В Праге хорошо работает схема: рынок/pekárna → кофе → случайная hospoda → кондитерская → пиво. У вас Париж больше заслуживает ресторанных резерваций; в Праге я бы оставила больше места случайности.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 2,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 360
+    },
+    "transit_hint": null,
+    "tips": [
+      "У вас Париж больше заслуживает ресторанных резерваций; в Праге я бы оставила больше места случайности.",
+      "Смихов рядом с отелем: можно в любой момент зайти отдохнуть.",
+      "Pekárna Tady a teď работает только по будням: для этого дня подходят Чт 1.10 или Пт 2.10. В субботу 3.10 вместо пекарни — рынок Náplavka."
+    ],
+    "how_to": [
+      "Утро: пекарня (Tady a teď) или субботний рынок Náplavka.",
+      "Кофе: Kavárna co hledá jméno или Café Savoy.",
+      "Обед: случайная hospoda — Na Verandách или U Buldoka.",
+      "Десерт: Café Savoy (фирменный торт).",
+      "Вечер: пиво в Andělský pivovar."
+    ],
+    "fact_notes": [
+      "Проверенных вариантов меньше, чем просит спецификация (2–3 на каждый тип): пекарня на Смихове одна (Tady a teď), кондитерская — Café Savoy, отдельный пивной бар один (Andělský pivovar). Andělská cukrárna, которую находит поиск, по firmy.cz закрыта."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "naplavka-market"
+    ],
+    "tags": [
+      "еда",
+      "рядом с отелем",
+      "без плана"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "tady-a-ted-pekarna",
+      "kavarna-co-hleda-jmeno",
+      "cafe-savoy",
+      "na-verandach",
+      "u-buldoka",
+      "andelsky-pivovar",
+      "naplavka-market"
+    ]
+  },
+  {
+    "id": "tady-a-ted-pekarna",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Пекарня и бистро Tady a teď",
+    "name_local": "Tady a teď pekárna & bistro",
+    "coords": [
+      50.07152,
+      14.4051
+    ],
+    "address": "Na Bělidle 309/31, 150 00 Praha 5 – Smíchov",
+    "summary": "Пекарня у Anděl: хлеб, багеты, лупаки (чешские рогалики), десерты и начинённые булки; при ней бистро.",
+    "description": "Небольшая пекарня с бистро на Смихове, в 5 минутах пешком от отеля. Пекут каждый день хлеб, багеты и выпечку, в бистро — начинённые булки, боулы, домашние лимонады, есть вегетарианское.",
+    "hours": {
+      "text": "Пекарня Пн–Пт 8:00–18:00, бистро Пн–Пт 8:30–20:00. Сб–Вс закрыто.",
+      "closed_weekdays": [
+        0,
+        6
+      ],
+      "source": "https://www.tadyatedpekarna.cz/",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": null,
+      "toilet": null,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 5,
+      "transfers": 0,
+      "note": "Пешком к Anděl."
+    },
+    "tips": [],
+    "how_to": [],
+    "fact_notes": [
+      "Есть ли места посидеть, на сайте не сказано."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [],
+    "tags": [
+      "выпечка",
+      "завтрак",
+      "рядом с отелем"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "day-without-planning"
+  },
+  {
+    "id": "u-buldoka",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Hospoda U Buldoka",
+    "name_local": "Hospoda a music bar U Buldoka",
+    "coords": [
+      50.07249,
+      14.40675
+    ],
+    "address": "Preslova 353/1, 150 00 Praha 5 – Smíchov",
+    "summary": "Соседская hospoda на Смихове у Anděl, вечером с музыкальным баром. Случайная пивная без туристов.",
+    "description": "Пивная и музыкальный бар в двух шагах от Anděl. Часы по разным источникам расходятся, официальных нет.",
+    "hours": {
+      "text": "Не проверено. По одному стороннему источнику: пивная Пн–Пт с 11:00, Сб с 15:00, Вс закрыто; музыкальный клуб Пн–Сб 20:00–4:30.",
+      "closed_weekdays": [],
+      "source": null,
+      "checked_on": null
+    },
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 5,
+      "transfers": 0,
+      "note": "Пешком к Anděl."
+    },
+    "tips": [],
+    "how_to": [],
+    "fact_notes": [
+      "Часы и сорт пива не подтверждены официальным источником (https://www.ubuldoka.cz/najdete-nas не проверялся)."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [],
+    "tags": [
+      "пиво",
+      "рядом с отелем"
+    ],
+    "game_id": null,
+    "verified": false,
+    "idea_id": "day-without-planning"
+  },
+  {
+    "id": "andelsky-pivovar",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Мини-пивоварня Andělský pivovar",
+    "name_local": "Andělský pivovar",
+    "coords": [
+      50.07233,
+      14.40601
+    ],
+    "address": "Lidická 337/30, 150 00 Praha 5 – Smíchov",
+    "summary": "Мини-пивоварня у метро Anděl со сводчатым подвалом: своё нефильтрованное пиво от лежака 11° до IPA 14°, чешская кухня.",
+    "description": "Ресторан при мини-пивоварне в историческом доме: бар на первом этаже и кирпичный сводчатый подвал. На кранах своё непастеризованное нефильтрованное пиво — Andělský Ležák 11, полутёмное 13°, IPA 14 — и безалкогольное.",
+    "hours": {
+      "text": "Пн–Сб 11:00–24:00, Вс 11:00–23:30.",
+      "closed_weekdays": [],
+      "source": "https://www.andelskypivovar.cz/en",
+      "checked_on": "2026-09-26"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.andelskypivovar.cz/en"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 5,
+      "transfers": 0,
+      "note": "Пешком к Anděl."
+    },
+    "tips": [
+      "Вечером в пятницу и субботу лучше забронировать."
+    ],
+    "how_to": [],
+    "fact_notes": [],
+    "origin": "user-list-prague",
+    "pairs_with": [],
+    "tags": [
+      "пиво",
+      "рядом с отелем",
+      "можно посидеть долго"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "day-without-planning"
+  },
+  {
+    "id": "old-thing-not-souvenir",
+    "city": "prague",
+    "type": "idea",
+    "name": "Купить не сувенир, а одну старую вещь",
+    "name_local": "Stará věc místo suvenýru",
+    "coords": null,
+    "address": "",
+    "summary": "Антикварная открытка Праги, старый значок, гравюра, чехословацкая полиграфия, старое стекло. Бюджет 500–1000 CZK, и каждая выбирает предмет другой.",
+    "description": "Идея без адреса. Ниже — лавки в центре со старыми вещами и печатной графикой.",
+    "description_long": "Антикварная открытка Праги, старый значок, маленькая гравюра, советская/чехословацкая полиграфия, старое стекло. Поставить бюджет условно 500–1000 CZK и каждому выбрать другому предмет.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Бюджет из текста: 500–1000 CZK на человека."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": null,
+    "tips": [
+      "Подземный антиквариат работает только по будням: для него подходят Чт 1.10 или Пт 2.10."
+    ],
+    "how_to": [
+      "Поставить бюджет 500–1000 CZK на человека.",
+      "Каждая тайно выбирает предмет для другой.",
+      "Вручить подарки вечером."
+    ],
+    "fact_notes": [],
+    "origin": "user-list-prague",
+    "pairs_with": [],
+    "tags": [
+      "сувенир",
+      "игра",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "bric-a-brac",
+      "podzemni-antikvariat",
+      "antikvariat-mustek"
+    ]
+  },
+  {
+    "id": "bric-a-brac",
+    "city": "prague",
+    "type": "experience",
+    "name": "Лавка старья Bric a Brac",
+    "name_local": "Bric a Brac Antique",
+    "coords": [
+      50.08804,
+      14.42293
+    ],
+    "address": "Týnská 627/7, 110 00 Praha 1 – Staré Město",
+    "summary": "Тесная лавка во дворике за Тынским храмом, заставленная до потолка: таблички с названиями улиц, книги, игрушки, керамика, часы, картинки.",
+    "description": "Антикварная лавка-кладовая в самом центре Старого города. Продают и покупают стекло, фарфор, украшения, серебро, картины, часы, статуэтки и всякие мелочи.",
+    "hours": {
+      "text": "Пн–Вс 10:30–18:30.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/brick-a-brack-antique/",
+      "checked_on": "2026-09-26"
+    },
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 0,
+      "note": "За Тынским храмом, в двух шагах от Староместской площади."
+    },
+    "tips": [],
+    "how_to": [],
+    "fact_notes": [
+      "Открытки и значки в описаниях прямо не упомянуты."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "old-town-square",
+      "speculum-alchemiae"
+    ],
+    "tags": [
+      "антиквариат",
+      "сувенир"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "old-thing-not-souvenir"
+  },
+  {
+    "id": "podzemni-antikvariat",
+    "city": "prague",
+    "type": "experience",
+    "name": "Подземный антиквариат",
+    "name_local": "1. Podzemní antikvariát",
+    "coords": [
+      50.08714,
+      14.43357
+    ],
+    "address": "Hybernská 1008/22, 110 00 Praha 1 – Nové Město",
+    "summary": "Большой каменный антиквариат с галереей: чешская графика, старые печатные издания XIX века, экслибрисы, новогодние открытки PF.",
+    "description": "Букинистический магазин и галерея недалеко от Náměstí Republiky: редкие книги, графика, рисунки, экслибрисы, новогодние открытки PF, старые журналы и печатные издания XIX века. Сами советуют посмотреть каталог онлайн до визита.",
+    "hours": {
+      "text": "Пн–Пт 9:00–19:00. Сб–Вс закрыто.",
+      "closed_weekdays": [
+        0,
+        6
+      ],
+      "source": "https://www.podzemni-antikvariat.cz/kontakt",
+      "checked_on": "2026-09-26"
+    },
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 40
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "У Náměstí Republiky, рядом с Муниципальным домом."
+    },
+    "tips": [],
+    "how_to": [],
+    "fact_notes": [
+      "«Подземный» — по названию; есть ли лестница вниз, не проверено."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "municipal-house"
+    ],
+    "tags": [
+      "антиквариат",
+      "графика",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "old-thing-not-souvenir"
+  },
+  {
+    "id": "antikvariat-mustek",
+    "city": "prague",
+    "type": "experience",
+    "name": "Антиквариат Galerie Můstek",
+    "name_local": "Antikvariát Galerie Můstek",
+    "coords": [
+      50.08268,
+      14.42178
+    ],
+    "address": "Národní 40 (дворец Adria), 110 00 Praha 1",
+    "summary": "Антиквариат во дворце Адрия на Národní: старые гравюры, графика, рисунки, старые карты и редкие книги.",
+    "description": "Антиквариат в пассаже дворца Адрия, рядом с театром IMAGE и кафе «Лувр». Специализация — старые печатные издания, графика, рисунки, старые карты.",
+    "hours": {
+      "text": "Не проверено.",
+      "closed_weekdays": [],
+      "source": null,
+      "checked_on": null
+    },
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Трамваем от Arbesovo náměstí в сторону Národní třída."
+    },
+    "tips": [],
+    "how_to": [],
+    "fact_notes": [
+      "Адрес и специализация — по каталогу Almanach Labyrint (https://www.almanachlabyrint.cz/knihkupectvi/1017/antikvariat-galerie-mustek-petr-koza/). Часы работы найти не удалось."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "image-black-light"
+    ],
+    "tags": [
+      "антиквариат",
+      "графика",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": false,
+    "idea_id": "old-thing-not-souvenir"
+  },
+  {
+    "id": "bohemian-evening",
+    "city": "prague",
+    "type": "idea",
+    "name": "Полностью «богемный» вечер",
+    "name_local": "Bohémský večer",
+    "coords": null,
+    "address": "",
+    "summary": "Винтажный трамвай → ужин → театр → поздняя прогулка без метро → маленький бар. Прага компактная, поэтому цельный сценарий складывается легко.",
+    "description": "Готовый сценарий на субботу 3.10 из уже найденных точек: трамвай 42, ужин в кафе «Лувр», чёрный театр IMAGE напротив, ночной Карлов мост и бар Hemingway у моста. Всё, кроме трамвая, в радиусе 10 минут пешком по ровному.",
+    "description_long": "Сделать один полностью «богемный» вечер: винтажный трамвай → ужин → театр/кино → поздняя прогулка без метро → маленький бар. Прага очень компактная, поэтому такой цельный сценарий собирается лучше, чем в большинстве больших городов.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": true,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 2,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 420
+    },
+    "transit_hint": null,
+    "tips": [
+      "Заранее: билеты в IMAGE на 3.10 20:00 и столик в Hemingway Bar (онлайн — не позже чем за 2 часа).",
+      "Вариант на 4.10: вместо IMAGE — Laterna Magika, Perpetuum Havel в 19:30 (Palác Akropolis, Жижков, 50 минут). Но туда нужно ехать, и это вечер перед переездом.",
+      "Вариант на 2.10: вместо театра — Blade Runner 2049 в 20:00 на Future Gate (Lucerna), бар и мост потом так же."
+    ],
+    "how_to": [
+      "16:00 — остановка Újezd, трамвай 42. Проехать по кругу через Град (круг — 51 минута) и выйти на Národní třída. Последний рейс около 17:20–18:00, не опаздывать.",
+      "17:30 — ужин в кафе «Лувр» (Národní 22) или «Славия» на набережной.",
+      "19:45 — театр IMAGE (Národní 25), Cosmic Cabinet в 20:00, 80–90 минут.",
+      "21:30 — пешком по Národní и Karolíny Světlé к Карлову мосту (около 10 минут по ровному), ночной мост.",
+      "22:30 — маленький бар Hemingway (Karolíny Světlé 26), бронь заранее.",
+      "Домой — трамваем от Národní divadlo/Újezd или на такси."
+    ],
+    "fact_notes": [
+      "Время сценария собрано из проверенных часов точек: трамвай 42 (DPP), IMAGE 3.10 20:00, кафе «Лувр» до 23:30, Hemingway Bar с 17:00 (по Prague City Tourism). Сам сценарий — предложение, не факт."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [],
+    "tags": [
+      "вечер",
+      "сценарий",
+      "красиво"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "tram-42",
+      "cafe-louvre",
+      "cafe-slavia",
+      "image-black-light",
+      "charles-bridge-night",
+      "hemingway-bar"
+    ]
+  },
+  {
+    "id": "hemingway-bar",
+    "city": "prague",
+    "type": "cafe",
+    "name": "Hemingway Bar",
+    "name_local": "Hemingway Bar",
+    "coords": [
+      50.08401,
+      14.41432
+    ],
+    "address": "Karolíny Světlé 279/26, 110 00 Praha 1 – Staré Město",
+    "summary": "Маленький коктейльный бар в честь Хемингуэя в двух минутах от Карлова моста. Широкий выбор абсента; без брони можно не попасть.",
+    "description": "Один из известных коктейльных баров Праги, входил в мировые рейтинги. Самый большой в стране выбор абсента, есть еда. Мест мало, бронь онлайн — не позже чем за 2 часа, на 1–3 часа.",
+    "hours": {
+      "text": "Вс–Чт 17:00–1:00, Пт–Сб 17:00–2:00 (по Prague City Tourism). На сторонних сайтах — Сб и Вс с 19:00.",
+      "closed_weekdays": [],
+      "source": "https://prague.eu/en/objevujte/hemingway-bar/",
+      "checked_on": "2026-09-26"
+    },
+    "price": null,
+    "booking": {
+      "required": true,
+      "url": "https://hemingwaybar.rezervujstul.cz/reservation-form.php?lang=en"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 0,
+      "note": "Рядом со Староместским концом Карлова моста."
+    },
+    "tips": [
+      "Бронировать заранее: мест мало."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Адрес расходится: Prague City Tourism пишет Opatovická 3, а OSM, Yelp и другие справочники — Karolíny Světlé 26. Маркер стоит на Karolíny Světlé 26. Официальный сайт hemingwaybar.cz на 26.09.2026 не открылся — проверить перед походом.",
+      "Часы по выходным в источниках расходятся (17:00 или 19:00)."
+    ],
+    "origin": "user-list-prague",
+    "pairs_with": [
+      "charles-bridge-night"
+    ],
+    "tags": [
+      "бар",
+      "вечер",
+      "коктейли"
+    ],
+    "game_id": null,
+    "verified": false,
+    "idea_id": "bohemian-evening"
   }
 ]
