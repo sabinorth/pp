@@ -4,7 +4,7 @@ import { CITIES, getDays } from './data.js';
 import { placeIndex } from './days.js';
 import { openSheet } from './sheet.js';
 import { esc, fmtDate, fmtWeekday, EFFORT_LEVELS, BEST_TIME, effortInline } from './ui.js';
-import * as store from './store.js';
+import * as plan from './plan.js';
 import * as practical from './practical.js';
 
 let recs = [];   // текущий список для обработчиков кнопок
@@ -117,7 +117,7 @@ function openAddSheet(r) {
     const btn = e.target.closest('.day-pick');
     if (!btn) return;
     const date = btn.dataset.date;
-    const added = store.addMine(date, { city: r.city, place_id: r.place.id });
+    const added = plan.add(date, { city: r.city, place_id: r.place.id });
     body.querySelector('.add-result').innerHTML = `${added ? '✅ Добавлено' : 'Уже есть'} в ${fmtDate(date)}. <a href="#/day/${date}">Открыть день →</a>`;
   });
 }

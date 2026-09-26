@@ -491,3 +491,17 @@ h2.section { margin-top: 18px; }
 .bul li { margin: 4px 0; }
 .bul.plain { list-style: none; padding-left: 0; }
 .card.idea .rec-actions { grid-template-columns: 1fr; }
+
+/* --- Ручной план дня --- */
+.item-ctrls { flex: none; display: grid; gap: 6px; }
+.icon-btn:disabled { opacity: 0.3; cursor: default; }
+.item.is-hidden { opacity: 0.6; border-style: dashed; }
+.item-place .item-time { min-width: 0; padding: 2px 8px; border-radius: 8px; background: var(--surface-2); }
+.item-note { margin: 6px 0; }
+.item-edit summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-weight: 600; color: var(--accent); }
+.item-edit form { display: grid; gap: 10px; margin: 4px 0 8px; }
+.item-edit textarea {
+  min-height: 64px; padding: 8px 12px; border-radius: 12px;
+  border: 2px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
+}
+#day-items > .btn.wide { margin-top: 10px; }

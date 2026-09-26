@@ -1,7 +1,7 @@
 // «Практическое» внутри «Советов»: транспорт, погода, фразы, экстренные номера, аптеки, настройки.
 import { CITIES, loadJSON } from './data.js';
 import { esc, fmtDate } from './ui.js';
-import * as store from './store.js';
+import * as plan from './plan.js';
 import * as energy from './energy.js';
 
 const ext = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
@@ -67,7 +67,7 @@ function settingsHTML() {
       </div>
     </div>
     <p class="muted">По умолчанию ${energy.DEFAULT_THRESHOLD}. Лёгкое место = 1, среднее = 2, тяжёлое = 3, плюс 1 за каждые 3 км пешком. Кафе и отдых не считаются.</p>
-    <button type="button" class="btn secondary wide" id="clear-mine">Очистить «Моё» во всех днях</button>
+    <button type="button" class="btn secondary wide" id="clear-mine">Сбросить ручной план во всех днях</button>
     <p class="muted" id="settings-msg" role="status"></p>`;
 }
 
@@ -91,9 +91,9 @@ export function after(el, focus) {
       energy.setThreshold(t);
       thr.textContent = t;
     }
-    if (e.target.closest('#clear-mine') && confirm('Убрать все добавленные пункты из всех дней?')) {
-      store.clearMine();
-      el.querySelector('#settings-msg').textContent = '«Моё» очищено.';
+    if (e.target.closest('#clear-mine') && confirm('Удалить добавленные пункты, время и заметки и вернуть скрытые во всех днях?')) {
+      plan.clearAll();
+      el.querySelector('#settings-msg').textContent = 'Ручной план сброшен.';
     }
   });
   if (focus) el.querySelector(`#${CSS.escape(focus)}`)?.scrollIntoView({ block: 'start' });

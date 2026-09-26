@@ -1,7 +1,8 @@
 // План по дням: лента (#/plan) и карточка дня (#/day/2026-10-08).
+// Пункты дня = базовые из days.json + ручные правки из plan.js.
 import { CITIES, getDays, getPlaces } from './data.js';
-import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME } from './ui.js';
-import * as store from './store.js';
+import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME, TYPES } from './ui.js';
+import * as plan from './plan.js';
 import * as energy from './energy.js';
 
 function cityLine(day) {
@@ -18,11 +19,15 @@ function badgesHTML(day) {
   return `<div class="day-badges">${day.badges.map((b) => `<span class="badge warn">${esc(b)}</span>`).join('')}</div>`;
 }
 
+function rerender() {
+  window.dispatchEvent(new HashChangeEvent('hashchange'));
+}
+
 export async function renderList() {
   const days = await getDays();
   const today = todayISO();
   const cards = days.map((d) => {
-    const titles = (d.plan_a || []).filter((it) => !it.pause).length;
+    const titles = plan.visibleEntries(d, plan.activePlan(d.date)).filter((e) => !e.item.pause).length;
     return `<a class="card day-card${d.date === today ? ' today' : ''}" href="#/day/${d.date}" data-date="${d.date}">
       <div class="day-head">
         <span class="day-date">${fmtWeekday(d.date)}, ${fmtDate(d.date)}</span>
@@ -52,71 +57,113 @@ export function dayCities(day) {
   return [...new Set([day.city, day.city_from, ...items.map((it) => it.city)].filter(Boolean))];
 }
 
-function itemHTML(item, day, places, removable = false) {
+// ---------- пункты дня ----------
+
+const showHidden = new Set();   // даты, где раскрыты скрытые пункты
+
+function entryHTML(e, day, places, n, total) {
+  const item = e.item;
   const city = item.city || day.city;
   const p = item.place_id ? places.get(`${city}/${item.place_id}`) : null;
   const lvl = !item.pause && p?.effort ? EFFORT_LEVELS[p.effort.level] : null;
   const icon = item.pause ? '☕' : (lvl ? `<span title="Нагрузка: ${lvl.label}">${lvl.icon}</span>` : '');
+  const typeIcon = !e.base && p && ['experience', 'event', 'idea'].includes(p.type) ? TYPES[p.type].icon : '';
   const title = esc(item.title || p?.name || '');
+  const time = e.time ? `<span class="item-time">${esc(e.time)}</span>` : '';
   const main = item.place_id
-    ? `<a class="item-place" href="#/map?city=${city}&place=${encodeURIComponent(item.place_id)}">${icon}${title} 🗺️</a>`
-    : `<span class="item-place">${icon}${title}</span>`;
+    ? `<a class="item-place" href="#/map?city=${city}&place=${encodeURIComponent(item.place_id)}">${time}${icon}${typeIcon}${title} 🗺️</a>`
+    : `<span class="item-place">${time}${icon}${title}</span>`;
   const bt = BEST_TIME[item.best_time];
   const when = bt ? `<p class="item-when">${bt.icon} ${bt.label}${item.best_time_why ? ` — ${esc(item.best_time_why)}` : ''}</p>` : '';
-  const remove = removable
-    ? `<button type="button" class="icon-btn" data-remove="${city}/${esc(item.place_id)}" aria-label="Убрать из моего дня">✕</button>` : '';
-  return `<li class="card item${item.pause ? ' pause' : ''}">
-    <div class="item-main">${main}${when}${item.why ? `<p class="muted">${esc(item.why)}</p>` : ''}</div>${remove}
+  const k = esc(e.key);
+  const ctrls = e.hidden
+    ? `<button type="button" class="icon-btn" data-restore="${k}" aria-label="Вернуть в план" title="Вернуть">↩︎</button>`
+    : `<button type="button" class="icon-btn" data-move="-1" data-key="${k}" aria-label="Выше"${n === 0 ? ' disabled' : ''}>↑</button>
+       <button type="button" class="icon-btn" data-move="1" data-key="${k}" aria-label="Ниже"${n === total - 1 ? ' disabled' : ''}>↓</button>
+       <button type="button" class="icon-btn" data-remove="${k}" aria-label="${e.base ? 'Убрать из плана' : 'Удалить'}" title="${e.base ? 'Убрать' : 'Удалить'}">✕</button>`;
+  const edit = e.hidden ? '' : `<details class="item-edit"><summary>✎ ${e.time || e.note ? 'Изменить время и заметку' : 'Время и заметка'}</summary>
+      <form data-meta="${k}">
+        <label class="field"><span>Время</span><input type="time" name="time" value="${esc(e.time)}"></label>
+        <label class="field"><span>Заметка</span><textarea name="note" rows="2" maxlength="500">${esc(e.note)}</textarea></label>
+        <button type="submit" class="btn">Сохранить</button>
+      </form></details>`;
+  return `<li class="card item${item.pause ? ' pause' : ''}${e.hidden ? ' is-hidden' : ''}">
+    <div class="item-main">${main}
+      ${e.base ? '' : '<span class="badge">добавлено</span>'}${e.hidden ? ' <span class="badge">скрыто</span>' : ''}
+      ${when}${item.why ? `<p class="muted">${esc(item.why)}</p>` : ''}
+      ${e.note ? `<p class="item-note">📝 ${esc(e.note)}</p>` : ''}
+      ${edit}
+    </div>
+    <div class="item-ctrls">${ctrls}</div>
   </li>`;
 }
 
-export function planHTML(items, day, places) {
-  if (!items?.length) return '<div class="card"><p class="muted">Пока пусто.</p></div>';
-  return `<ol class="items">${items.map((it) => itemHTML(it, day, places)).join('')}</ol>`;
+function listHTML(list, day, places) {
+  const visible = list.filter((e) => !e.hidden);
+  const hidden = list.filter((e) => e.hidden);
+  const open = showHidden.has(day.date);
+  const rows = open ? list : visible;
+  let n = 0;
+  const items = rows.map((e) => entryHTML(e, day, places, e.hidden ? -1 : n++, visible.length));
+  const body = items.length
+    ? `<ol class="items">${items.join('')}</ol>`
+    : '<div class="card"><p class="muted">Пока пусто.</p></div>';
+  const toggle = hidden.length
+    ? `<button type="button" class="btn secondary wide" data-toggle-hidden>${open ? 'Не показывать скрытые' : `Показать скрытые (${hidden.length})`}</button>`
+    : '';
+  return `<section id="day-items">${body}${toggle}
+    <p class="muted">Добавить своё: «+ В план» в шторке места на карте или в «Советах».</p></section>`;
 }
 
-function mineHTML(mine, day, places) {
-  const list = mine.length
-    ? `<ol class="items">${mine.map((m) => itemHTML(m, day, places, true)).join('')}</ol>`
-    : '<div class="card"><p class="muted">Пусто. Пункты добавляются из «Советов» кнопкой «В мой день».</p></div>';
-  return `<section id="mine"><h2 class="section">⭐ Моё</h2>${list}</section>`;
-}
-
-function activePlan(date) {
-  return store.get('plans', {})[date] === 'b' ? 'b' : 'a';
-}
-
-function setPlan(date, plan) {
-  store.set('plans', { ...store.get('plans', {}), [date]: plan });
-  window.dispatchEvent(new HashChangeEvent('hashchange'));
-}
-
-function budgetHTML(day, plan, mine, places) {
-  const items = [...(plan === 'b' ? day.plan_b : day.plan_a) || [], ...mine];
-  const value = energy.score(items, day.city, places);
+function budgetHTML(day, active, list, places) {
+  const value = energy.score(list.filter((e) => !e.hidden).map((e) => e.item), day.city, places);
   const limit = energy.getThreshold();
   let hint = '';
   if (value > limit) {
-    hint = plan === 'a'
+    hint = active === 'a'
       ? `<div class="card soft-warn"><p>Сегодня насыщенно. Может, взять план Б? Он спокойнее.</p>
           <button type="button" class="btn" data-plan="b">Переключить на план Б</button></div>`
-      : `<div class="card soft-warn"><p>Даже с планом Б получается много. Можно убрать что-то из «Моё» — отдых важнее.</p></div>`;
+      : `<div class="card soft-warn"><p>Даже с планом Б получается много. Можно убрать что-то из списка — отдых важнее.</p></div>`;
   }
   return `${energy.meterHTML(value, limit)}
     <p class="muted energy-note">Порог ${limit} меняется в <a href="#/recs?tab=practical&focus=settings">настройках</a>.</p>${hint}`;
 }
 
 export function afterDay(el, r) {
-  el.querySelector('.day-page').addEventListener('click', (e) => {
-    const b = e.target.closest('[data-plan]');
-    if (b && b.getAttribute('aria-pressed') !== 'true') setPlan(r.param, b.dataset.plan);
-  });
-  el.querySelector('#mine')?.addEventListener('click', (e) => {
-    const b = e.target.closest('[data-remove]');
+  const page = el.querySelector('.day-page');
+  if (!page) return;
+  page.addEventListener('click', async (e) => {
+    const b = e.target.closest('button');
     if (!b) return;
-    const [city, placeId] = b.dataset.remove.split('/');
-    store.removeMine(r.param, city, placeId);
-    window.dispatchEvent(new HashChangeEvent('hashchange'));
+    const date = r.param;
+    if (b.dataset.plan) {
+      if (b.getAttribute('aria-pressed') === 'true') return;
+      plan.setActivePlan(date, b.dataset.plan);
+    } else if (b.dataset.move) {
+      const day = (await getDays()).find((d) => d.date === date);
+      plan.move(day, plan.activePlan(date), b.dataset.key, Number(b.dataset.move));
+    } else if (b.dataset.remove) {
+      plan.remove(date, b.dataset.remove);
+    } else if (b.dataset.restore) {
+      plan.restore(date, b.dataset.restore);
+    } else if (b.hasAttribute('data-toggle-hidden')) {
+      if (showHidden.has(date)) showHidden.delete(date);
+      else showHidden.add(date);
+    } else {
+      return;
+    }
+    const y = window.scrollY;
+    rerender();
+    requestAnimationFrame(() => window.scrollTo(0, y));
+  });
+  page.addEventListener('submit', (e) => {
+    const form = e.target.closest('form[data-meta]');
+    if (!form) return;
+    e.preventDefault();
+    plan.setMeta(r.param, form.dataset.meta, { time: form.time.value, note: form.note.value });
+    const y = window.scrollY;
+    rerender();
+    requestAnimationFrame(() => window.scrollTo(0, y));
   });
 }
 
@@ -151,10 +198,11 @@ export async function renderDay({ param }) {
   }
   const day = days[i];
   const prev = days[i - 1], next = days[i + 1];
-  const saved = store.getMine(day.date);
-  const places = await placeIndex([...new Set([...dayCities(day), ...saved.map((m) => m.city)].filter((c) => CITIES[c]))]);
-  const mine = saved.filter((m) => places.has(`${m.city}/${m.place_id}`));
-  const plan = activePlan(day.date);
+  const active = plan.activePlan(day.date);
+  const all = plan.entries(day, active);
+  const places = await placeIndex([...new Set([...dayCities(day), ...all.map((e) => e.item.city)].filter((c) => CITIES[c]))]);
+  // Добавленные пункты, которых больше нет в данных, не показываем.
+  const list = all.filter((e) => e.base || places.has(`${e.item.city}/${e.item.place_id}`));
 
   return `<div class="day-page"><a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
@@ -162,14 +210,13 @@ export async function renderDay({ param }) {
     ${badgesHTML(day)}
     ${day.note ? `<p class="muted">${esc(day.note)}</p>` : ''}
     ${warningsHTML(day.warnings)}
-    ${budgetHTML(day, plan, mine, places)}
+    ${budgetHTML(day, active, list, places)}
     <div class="seg plan-switch" role="group" aria-label="Вариант плана">
-      <button type="button" data-plan="a" aria-pressed="${plan === 'a'}">План А</button>
-      <button type="button" data-plan="b" aria-pressed="${plan === 'b'}">План Б · полегче</button>
+      <button type="button" data-plan="a" aria-pressed="${active === 'a'}">План А</button>
+      <button type="button" data-plan="b" aria-pressed="${active === 'b'}">План Б · полегче</button>
     </div>
-    ${plan === 'b' ? '<p class="muted">Облегчённый вариант — если устали или дождь.</p>' : ''}
-    ${planHTML(plan === 'b' ? day.plan_b : day.plan_a, day, places)}
-    ${mineHTML(mine, day, places)}
+    ${active === 'b' ? '<p class="muted">Облегчённый вариант — если устали или дождь.</p>' : ''}
+    ${listHTML(list, day, places)}
     ${eventsHTML(day.events)}
     <nav class="day-nav" aria-label="Соседние дни">
       <a class="btn secondary" ${prev ? `href="#/day/${prev.date}"` : 'aria-disabled="true"'}>← ${prev ? fmtDate(prev.date) : ''}</a>
