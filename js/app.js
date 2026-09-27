@@ -6,6 +6,7 @@ import * as recs from './recs.js';
 import * as games from './games.js';
 import { closeSheet } from './sheet.js';
 import { esc } from './ui.js';
+import * as theme from './theme.js';
 
 const ROUTES = {
   plan:  { tab: 'plan',  render: days.renderList, after: days.afterList },
@@ -75,6 +76,7 @@ async function onRoute() {
   }
 }
 
+theme.apply();
 window.addEventListener('hashchange', onRoute);
 onRoute();
 

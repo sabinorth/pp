@@ -3,6 +3,7 @@ import { CITIES, loadJSON } from './data.js';
 import { esc, fmtDate } from './ui.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
+import * as theme from './theme.js';
 
 const ext = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
 const cityHead = (city) => `${CITIES[city].flag} ${CITIES[city].name}`;
@@ -56,9 +57,17 @@ function pharmacyHTML(list) {
   }).join('');
 }
 
+function themeHTML() {
+  const cur = theme.getTheme();
+  const btns = Object.entries(theme.THEMES)
+    .map(([id, t]) => `<button type="button" data-theme-set="${id}" aria-pressed="${id === cur}">${t.label}</button>`).join('');
+  return `<div class="setting theme-setting"><span>Оформление</span><div class="seg">${btns}</div></div>`;
+}
+
 function settingsHTML() {
   const t = energy.getThreshold();
-  return `<div class="setting">
+  return `${themeHTML()}
+    <div class="setting">
       <span>Порог энергобюджета на день</span>
       <div class="stepper">
         <button type="button" class="icon-btn" data-step="-1" aria-label="Меньше">−</button>
@@ -85,6 +94,11 @@ export async function render(focus) {
 export function after(el, focus) {
   const thr = el.querySelector('#thr');
   el.querySelector('#settings').addEventListener('click', (e) => {
+    const th = e.target.closest('[data-theme-set]');
+    if (th) {
+      theme.setTheme(th.dataset.themeSet);
+      for (const b of el.querySelectorAll('[data-theme-set]')) b.setAttribute('aria-pressed', b === th);
+    }
     const step = e.target.closest('[data-step]');
     if (step) {
       const t = Math.min(energy.THRESHOLD_MAX, Math.max(energy.THRESHOLD_MIN, energy.getThreshold() + Number(step.dataset.step)));

@@ -569,3 +569,41 @@ h2.section { margin-top: 18px; }
 .results tbody th { text-align: left; }
 .results tr.win { background: var(--warn-bg); color: var(--warn-text); }
 .field.reveal { margin: 8px 0; }
+
+/* --- Переключатель темы --- */
+.theme-setting { flex-wrap: wrap; margin-bottom: 12px; }
+.theme-setting .seg { flex: 1 1 220px; }
+
+/* ==========================================================================
+   Тема «emo» (эмо-MySpace 2010-х). Всегда тёмная, не зависит от системной.
+   Контраст (WCAG): текст/фон 16.3:1, muted/surface 10.1, muted/surface-2 8.9,
+   accent/surface 6.6, текст кнопки/accent 7.0, today/surface 6.9.
+   ========================================================================== */
+:root[data-theme="emo"] {
+  color-scheme: dark;
+  --bg: #0d0612;
+  --surface: #1a0f24;
+  --surface-2: #2a1838;
+  --text: #f7eefc;
+  --muted: #cdb8dc;
+  --border: #6b3a8c;
+  --accent: #ff5fb4;
+  --accent-text: #1a0612;
+  --warn-bg: #3a2a00;
+  --warn-text: #ffd966;
+  --hotel: #ff8a80;
+  --today: #c77dff;
+  --ok: #3ecf8e;
+  --over: #ffb03a;
+  --danger: #ff6b7a;
+  --on-solid: #0d0612;
+  --ok-bg: #16402a;
+  --ok-text: #b6f0cc;
+  --shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+  --radius: 6px;
+  --neon-pink: #ff5fb4;
+  --neon-purple: #b066ff;
+  --head-bg: linear-gradient(90deg, #7a1f5c, #5b2a86);
+  --head-text: #ffffff;
+  --font-display: "Rubik Wet Paint", var(--font-body);
+}
