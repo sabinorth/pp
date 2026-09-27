@@ -5,6 +5,7 @@ import { pickerHTML } from './picker.js';
 import { top8HTML } from './top8.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
 import * as facts from './facts.js';
+import { afterLeave } from './checks.js';
 import { esc, TYPES, fmtDate, fmtWeekday, plural, effortHTML, effortInline, isRainy } from './ui.js';
 
 let map = null;
@@ -222,9 +223,10 @@ function listHTML(title, items, ordered = false, cls = '') {
   return `<h3>${title}</h3><${tag} class="bul ${cls}">${items.map((t) => `<li>${esc(t)}</li>`).join('')}</${tag}>`;
 }
 
+// Даты после выезда из отеля этого города помечаются «✈️ после отъезда».
 function datesHTML(dates) {
   if (!dates?.length) return '';
-  const rows = dates.map((d) => `<li>📅 ${fmtWeekday(d.date)}, ${fmtDate(d.date)}${d.time ? `, ${esc(d.time)}` : ''}${d.note ? ` <span class="muted">— ${esc(d.note)}</span>` : ''}</li>`);
+  const rows = dates.map((d) => `<li>📅 ${fmtWeekday(d.date)}, ${fmtDate(d.date)}${d.time ? `, ${esc(d.time)}` : ''}${afterLeave(currentHotel, d.date, d.time) ? ' <span class="badge warn">✈️ после отъезда</span>' : ''}${d.note ? ` <span class="muted">— ${esc(d.note)}</span>` : ''}</li>`);
   return `<h3>Даты</h3><ul class="bul plain">${rows.join('')}</ul>`;
 }
 
