@@ -352,7 +352,13 @@
       "фуникулёр вместо лестниц"
     ],
     "game_id": "sacre-coeur",
-    "verified": true
+    "verified": true,
+    "pairs_with": [
+      "fete-vendanges-montmartre"
+    ],
+    "tips": [
+      "7–11 октября 2026 на Монмартре праздник урожая (Fête des Vendanges): будет очень людно, особенно вокруг базилики."
+    ]
   },
   {
     "id": "marais-place-des-vosges",
@@ -1985,5 +1991,432 @@
     ],
     "game_id": null,
     "verified": true
+  },
+  {
+    "id": "fete-vendanges-montmartre",
+    "city": "paris",
+    "type": "event",
+    "name": "Праздник урожая на Монмартре",
+    "name_local": "Fête des Vendanges de Montmartre",
+    "coords": [
+      48.88538,
+      2.34354
+    ],
+    "address": "Сквер Луизы Мишель и улицы Монмартра, 75018 Paris",
+    "summary": "93-й праздник урожая Монмартра, 7–11 октября 2026: музыка, шествия, еда, дегустации. Гораздо больше «живой Париж», чем просто подняться к Сакре-Кёр и уйти.",
+    "description": "Фестиваль проходит с 1934 года, в 2026-м тема — музыка («Le 18e donne le rythme»). Официальная программа бесплатная. Для нас доступны открытие 7.10 и «Сцена урожая» в Arènes de Montmartre 9.10. Главные уличные события (парад, Parcours du Goût, закрывающий бал) приходятся на 10–11.10, уже после нашего отъезда.",
+    "description_long": "Обязательно. Вы случайно попадаете почти идеально: фестиваль урожая Монмартра идёт 7–11 октября 2026. Будут музыка, шествия, еда, дегустации, танцы и районные мероприятия — это гораздо больше «живой Париж», чем просто подняться к Sacré-Cœur и уйти. Я бы заложила туда вечер 8 или 9 октября.",
+    "dates": [
+      {
+        "date": "2026-10-07",
+        "time": "19:00",
+        "note": "Вечер открытия в мэрии 18-го округа, 19:00–21:30."
+      },
+      {
+        "date": "2026-10-08",
+        "time": "19:30",
+        "note": "Ночной забег 5 км от сквера Луизы Мишель, 19:30–21:30, по регистрации. У нас день Версаля."
+      },
+      {
+        "date": "2026-10-09",
+        "time": "12:00",
+        "note": "«Сцена урожая» в Arènes de Montmartre, 12:00–20:00: беседы, дегустации, акустические концерты. Экскурсии по виноградникам Clos Montmartre в 14:00 и 16:00."
+      },
+      {
+        "date": "2026-10-10",
+        "time": "11:45",
+        "note": "Большой парад винных и гастрономических братств от виноградников Clos Montmartre, 11:45–13:30. После нашего отъезда."
+      },
+      {
+        "date": "2026-10-10",
+        "time": "10:00",
+        "note": "Parcours du Goût вокруг Сакре-Кёр, 10:00–23:00. После нашего отъезда."
+      },
+      {
+        "date": "2026-10-11",
+        "time": "16:30",
+        "note": "Закрывающий бал с диджеями в сквере Луизы Мишель, 16:30–19:30. После нашего отъезда."
+      }
+    ],
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Официальная программа бесплатная. Часть событий (забег, экскурсии по виноградникам, церемония «не-свадьбы») — по регистрации."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://fetedesvendangesdemontmartre.com/en/the-program/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/F%C3%AAte_des_vendanges_de_Montmartre_2017.jpg/1280px-F%C3%AAte_des_vendanges_de_Montmartre_2017.jpg",
+        "credit": "Xenophôn",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:F%C3%AAte_des_vendanges_de_Montmartre_2017.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "long",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 50,
+      "transfers": 2,
+      "note": "Как до Сакре-Кёр: метро 8 до Strasbourg–Saint-Denis, линия 4 до Barbès–Rochechouart, линия 2 до Anvers, дальше к фуникулёру. Сквер Луизы Мишель — у нижней станции фуникулёра."
+    },
+    "tips": [
+      "Я бы заложила туда вечер 8 или 9 октября.",
+      "8.10 — день Версаля, вечером на Монмартр тяжело. Реально — ср 7.10 или пт 9.10.",
+      "Наверх — на фуникулёре, а не по лестницам.",
+      "Будет очень людно: заложить паузу в кафе ниже по склону.",
+      "Парад, Parcours du Goût и закрывающий бал — 10–11.10, после нашего отъезда. Из того, что успеваем, самое «фестивальное» — «Сцена урожая» 9.10."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Проверено по официальному сайту на 27.09.2026: 93-й выпуск, 7–11 октября 2026, тема «Le 18e donne le rythme» (https://fetedesvendangesdemontmartre.com/en/).",
+      "Время событий — по официальной программе (https://fetedesvendangesdemontmartre.com/en/the-program/) на 27.09.2026. Ban des Vendanges 10.10 9:45–11:30 — только по приглашениям для братств.",
+      "Parcours du Goût: в официальной программе указаны 10.10 и 11.10 с 10:00 до 23:00. По Sortir à Paris — ещё пт 9.10 10:00–23:00 и вс 11.10 до 19:00 (https://www.sortiraparis.com/en/what-to-visit-in-paris/walks/articles/54579-montmartre-s-2026-grape-harvest-festival-in-paris-here-s-the-program). Источники расходятся — уточнить ближе к дате, будет ли он 9.10.",
+      "Цифру «около 1,5 млн посетителей за 5 дней» из блока «Проверено» заново не сверяла.",
+      "Церемония «не-свадьбы» — вс 11.10, 10:30–12:30, площадь Аббес, по регистрации. Ночной забег — чт 8.10."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "sacre-coeur",
+      "maison-rose"
+    ],
+    "tags": [
+      "фестиваль",
+      "бесплатно",
+      "вечер",
+      "людно"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "seine-dusk-cruise",
+    "city": "paris",
+    "type": "experience",
+    "name": "Сена в сумерках: прогулка на лодке",
+    "name_local": "Croisière sur la Seine au coucher du soleil",
+    "coords": [
+      48.85741,
+      2.34033
+    ],
+    "address": "Причал Vedettes du Pont Neuf, 1 Square du Vert-Galant, 75001 Paris",
+    "summary": "Часовой круиз без ужина: отплыть при дневном свете, увидеть blue hour и вернуться к подсвеченному городу. Рейс в 19:00 попадает ровно на закат.",
+    "description": "Закат в Париже 5–9 октября — с 19:23 до 19:15, гражданские сумерки заканчиваются около 19:50. Рейс около 19:00 начинается при свете и заканчивается уже в темноте. Причал Vedettes du Pont Neuf — в сквере Вер-Галан на острове Сите. Альтернативы — Bateaux-Mouches от моста Альма и Bateaux Parisiens от Эйфелевой башни.",
+    "description_long": "Именно так: выйти на лодку примерно на закате, чтобы начать при дневном свете, увидеть blue hour, а закончить уже с подсвеченным городом. Я бы брала обычный круиз без ужина: внимание остаётся на Париже, а поесть потом нормально в городе. Ночной Париж и речные прогулки отдельно рекомендует и официальный туристический офис.",
+    "best_time": [
+      {
+        "time": "рейс около 19:00",
+        "note": "закат 19:23 (5.10) → 19:15 (9.10), сумерки до ~19:50"
+      }
+    ],
+    "hours": {
+      "text": "Vedettes du Pont Neuf: ежедневно с 10:30, вечерние рейсы примерно каждые 30–60 минут (в сводке на октябрь есть 18:30, 19:00, 20:00). Точное расписание смотреть при покупке билета.",
+      "closed_weekdays": [],
+      "source": "https://www.vedettesdupontneuf.com/cruises/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 15,
+      "note": "Vedettes du Pont Neuf: онлайн на конкретное время €15, в кассе €17. Bateaux-Mouches: €20."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.vedettesdupontneuf.com/cruises/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Vedettes_du_Pont_Neuf%2C_16_January_2013.jpg/1280px-Vedettes_du_Pont_Neuf%2C_16_January_2013.jpg",
+        "credit": "Quique Olaso from Manises, Spain",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vedettes_du_Pont_Neuf,_16_January_2013.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 1,
+      "note": "Как до сквера Вер-Галан: метро 8 до Reuilly–Diderot, линия 1 до Châtelet или Louvre–Rivoli, дальше около 600 м через Новый мост и вниз по лестнице к причалу."
+    },
+    "tips": [
+      "Я бы брала обычный круиз без ужина: внимание остаётся на Париже, а поесть потом нормально в городе.",
+      "Лучший рейс — около 19:00: стартовать примерно за 20–30 минут до заката.",
+      "Закатные рейсы и выходные часто раскупают — брать билет онлайн на конкретное время (так ещё и дешевле).",
+      "После круиза — короткая прогулка 1,5–2 км по ровному к ужину (см. «Поздний маршрут вдоль Сены»).",
+      "Альтернатива — проплыть Canal Saint-Martin. Две водные прогулки за 5 дней, скорее всего, будет много.",
+      "На открытой палубе вечером прохладно — взять кофту; есть отапливаемый салон."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Время заката и конца гражданских сумерек для Парижа: 5.10 — 19:23 / 19:53, 7.10 — 19:19 / 19:49, 9.10 — 19:15 / 19:45 (api.sunrise-sunset.org, запрос 27.09.2026).",
+      "Vedettes du Pont Neuf (https://www.vedettesdupontneuf.com/cruises/): около 1 часа, живой гид на французском и английском, €15 онлайн / €17 в кассе, открытая палуба и отапливаемый салон, «sunset departures are often fully booked». Список рейсов 18:30/19:00/20:00 — из сводки в поиске, на официальной странице точного расписания нет.",
+      "Bateaux-Mouches (https://www.bateaux-mouches.fr/en/cruise/information): причал Port de la Conférence у моста Альма, около 1 часа, взрослый €20, с апреля по октябрь рейсы каждые 30 минут 10:00–22:30. Вечером действует дресс-код (без спортивной одежды, шлёпанцев, бейсболок).",
+      "Bateaux Parisiens (Port de la Bourdonnais, у Эйфелевой башни): опубликованное расписание 2026 (https://www.bateauxparisiens.com/upload/pdf/1320/FR%20Horaires%202026.pdf) заканчивается 27.09.2026, октябрь не опубликован.",
+      "Фраза о рекомендации официального туристического офиса не сверялась."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "vert-galant",
+      "saint-regis"
+    ],
+    "tags": [
+      "вечер",
+      "красиво",
+      "сидя",
+      "закат"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "covered-passages-walk",
+    "city": "paris",
+    "type": "experience",
+    "name": "Фланёрство по крытым пассажам",
+    "name_local": "Passages couverts: Vivienne → Panoramas → Jouffroy → Verdeau",
+    "coords": [
+      48.86673,
+      2.33976
+    ],
+    "address": "Старт: Galerie Vivienne, 4 Rue des Petits-Champs, 75002 Paris",
+    "summary": "Стекло, мозаика, отражения, старые вывески и полутёмные интерьеры: четыре крытых пассажа XIX века подряд. Идеально на дождь и под фотографию.",
+    "description": "Около 800 м почти по ровному, большую часть пути под стеклянной крышей. Galerie Vivienne — рядом с садом Пале-Рояль, где можно посидеть перед стартом. Финиш у Passage Verdeau, в двух шагах от метро Grands Boulevards: оттуда линия 8 везёт к отелю без пересадок. Все четыре пассажа открыты ежедневно, лавки внутри работают по своим часам.",
+    "description_long": "Не маршрут «Лувр → Триумфальная арка», а выбрать район и просто сворачивать туда, куда красиво. Особенно вам под фотографию я бы сделала старые крытые пассажи: Galerie Vivienne → Passage des Panoramas → Jouffroy/Verdeau. Стекло, мозаика, отражения, старые вывески, симметрия, полутёмные интерьеры — прямо под ваши визуальные предпочтения. Это действительно специфическая парижская городская форма XIX века.",
+    "hours": {
+      "text": "Galerie Vivienne ежедневно 8:30–20:00; Passage des Panoramas ежедневно 6:00–0:00; Passage Jouffroy ежедневно 8:30–20:30; Passage Verdeau ежедневно 9:00–21:30. Лавки внутри — по своим часам.",
+      "closed_weekdays": [],
+      "source": "https://www.parisdiscoveryguide.com/covered-passages-paris.html",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Вход в пассажи бесплатный."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Galerie_Vivienne%2C_12_March_2015.jpg/1280px-Galerie_Vivienne%2C_12_March_2015.jpg",
+        "credit": "Benh LIEU SONG",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Galerie_Vivienne,_12_March_2015.jpg"
+      },
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Passage_Jouffroy_1.jpg/1280px-Passage_Jouffroy_1.jpg",
+        "credit": "ZeusUpsistos",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Passage_Jouffroy_1.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.8,
+      "stairs": null,
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Туда: метро 8 до Reuilly–Diderot, линия 1 до Palais Royal – Musée du Louvre, через сад Пале-Рояль к Galerie Vivienne. Обратно: от Passage Verdeau 200 м до Grands Boulevards, линия 8 до Porte Dorée без пересадок."
+    },
+    "tips": [
+      "Не маршрут «Лувр → Триумфальная арка», а просто сворачивать туда, куда красиво.",
+      "Идеальный вариант на дождь.",
+      "Перед стартом можно посидеть в саду Пале-Рояль — он за углом от Galerie Vivienne.",
+      "Внутри пассажей есть кафе и бистро: в Galerie Vivienne — Bistro Vivienne, в Panoramas и Jouffroy — несколько маленьких кафе.",
+      "Финиш у метро Grands Boulevards — домой одной линией 8."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы по Paris Discovery Guide на 27.09.2026. Для Galerie Vivienne Visit Paris Region указывает 8:30–20:00 ежедневно (https://www.visitparisregion.com/en/galerie-vivienne), Paris Discovery Guide — до 20:30; в поле часов — более ранний вариант.",
+      "Для Passage Jouffroy в других сводках встречается 7:00–21:30. Расхождение небольшое, днём открыто по всем источникам.",
+      "Лестницы внутри пассажей не проверялись.",
+      "Длина маршрута — около 800 м по прямой между пассажами (расчёт по координатам OSM)."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "palais-royal"
+    ],
+    "tags": [
+      "на дождь",
+      "красиво",
+      "фото",
+      "бесплатно",
+      "под крышей"
+    ],
+    "game_id": null,
+    "verified": true,
+    "route_stops": [
+      {
+        "name": "Galerie Vivienne",
+        "coords": [
+          48.86673,
+          2.33976
+        ],
+        "note": "старт, мозаичный пол и стеклянная ротонда"
+      },
+      {
+        "name": "Passage des Panoramas",
+        "coords": [
+          48.87095,
+          2.34166
+        ],
+        "note": "один из старейших пассажей, много кафе"
+      },
+      {
+        "name": "Passage Jouffroy",
+        "coords": [
+          48.87223,
+          2.34207
+        ],
+        "note": "через бульвар Монмартр напротив Panoramas"
+      },
+      {
+        "name": "Passage Verdeau",
+        "coords": [
+          48.87348,
+          2.34232
+        ],
+        "note": "финиш, рядом метро Grands Boulevards (линия 8)"
+      }
+    ]
+  },
+  {
+    "id": "slow-terrace",
+    "city": "paris",
+    "type": "idea",
+    "name": "Один очень медленный café/apéro",
+    "name_local": "Une terrasse, un café, une heure",
+    "coords": null,
+    "address": "",
+    "summary": "Сесть на уличной террасе лицом к улице, заказать кофе или бокал и минут 60 просто наблюдать Париж. «Ничего не делать» — и есть экспириенс.",
+    "description": "Идея без адреса. Нужна терраса, где стулья стоят лицом к живой улице и уместно сидеть час с одной чашкой. Кандидаты: брассери у фонтана Порт Доре рядом с отелем, Le Saint-Régis на острове Сен-Луи и Café Charlot в верхнем Марэ напротив рынка Анфан-Руж.",
+    "description_long": "Не «завтрак за €35 из TikTok», а сесть на уличной террасе лицом к улице, заказать кофе/вино/что-нибудь маленькое и минут 60 просто наблюдать Париж. Это тот случай, когда «ничего не делать» — собственно и есть экспириенс.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": null,
+    "tips": [
+      "Сесть лицом к улице — в парижских кафе стулья на террасе так и стоят.",
+      "Заказать что-нибудь маленькое и минут 60 никуда не торопиться.",
+      "Хорошо в самом конце дня, когда сил на музеи уже нет."
+    ],
+    "how_to": [],
+    "fact_notes": [],
+    "origin": "user-list-paris-1",
+    "pairs_with": [],
+    "tags": [
+      "можно посидеть долго",
+      "отдых",
+      "терраса"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "les-cascades",
+      "saint-regis",
+      "cafe-charlot"
+    ]
+  },
+  {
+    "id": "cafe-charlot",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Café Charlot",
+    "name_local": "Café Charlot",
+    "coords": [
+      48.86303,
+      2.36248
+    ],
+    "address": "38 Rue de Bretagne, 75003 Paris",
+    "summary": "Угловое кафе в верхнем Марэ, терраса смотрит вдоль оживлённой улицы Бретань, напротив входа на рынок Анфан-Руж. Открыто с утра до глубокой ночи.",
+    "description": "Кафе стоит на углу улиц Бретань и Шарло, прямо напротив входа на Marché des Enfants Rouges — старейший крытый рынок Парижа. Терраса на тротуаре развёрнута к улице и к рынку, вечером здесь много местных. Работает без перерыва.",
+    "hours": {
+      "text": "Ежедневно 7:00–2:00.",
+      "closed_weekdays": [],
+      "source": "https://cafecharlotparis.com/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Filles du Calvaire, дальше около 450 м по улице Бретань."
+    },
+    "tips": [
+      "Для «медленной террасы»: сесть лицом к улице Бретань.",
+      "Можно совместить с Марэ и площадью Вогезов."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Официальный сайт кафе не найден. cafecharlotparis.com — независимый редакционный гид; часы 7:00–2:00 ежедневно совпадают со сводками в поиске (Mappy, Petit Futé) на 27.09.2026."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "marais-place-des-vosges"
+    ],
+    "tags": [
+      "терраса",
+      "Марэ",
+      "допоздна"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "slow-terrace"
   }
 ]
