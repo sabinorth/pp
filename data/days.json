@@ -1,15 +1,19 @@
 [
   {
     "date": "2026-10-01", "city": "prague", "badges": ["прилёт"],
-    "note": "Время прилёта: TODO. План А — только если прилетаем до обеда и остались силы.",
+    "note": "Прилёт в 19:30, в отеле примерно к 20:30–21:00. Сегодня только ужин рядом с отелем — выберите одно из кафе ниже.",
+    "warnings": [
+      { "text": "Future Gate 1.10 (Junk World, 18:00) — не успеваем: прилёт в 19:30. Следующие показы — 2–4.10." }
+    ],
     "plan_a": [
-      { "place_id": "kampa", "best_time": "evening", "best_time_why": "вечером мягкий свет и меньше людей", "why": "Плоский парк у воды, 15 минут на трамвае от отеля — лёгкое начало после дороги." },
-      { "place_id": "charles-bridge", "best_time": "evening", "best_time_why": "к закату туристов меньше, мост красиво подсвечен", "why": "Кампа прямо под мостом: подняться по лестнице с острова, и сразу знакомство с Прагой." },
-      { "place_id": "cafe-slavia", "pause": true, "best_time": "evening", "best_time_why": "ужин с видом на Град и реку", "why": "Отдых и ужин после первой прогулки; от моста около 10 минут по набережной." }
+      { "title": "✈️ Трансфер: аэропорт → отель", "best_time": "evening", "best_time_why": "прилёт 19:30, в отеле к 20:30–21:00", "why": "Bolt/Uber ≈25–35 мин (≈400–900 Kč) или автобус 191 до Anděl ≈51 мин (билет 90 мин — 46 Kč). Подробности: Советы → Практическое → Трансферы." },
+      { "place_id": "andelsky-pivovar", "pause": true, "best_time": "evening", "best_time_why": "в чт открыто до 24:00", "why": "Ужин, вариант 1 из 3: ближе всех к отелю, 5 минут пешком, чешская кухня и своё пиво." },
+      { "place_id": "na-verandach", "pause": true, "best_time": "evening", "best_time_why": "в чт открыто до 23:00", "why": "Ужин, вариант 2 из 3: около 10 минут пешком. До скольки работает кухня — не проверено, лучше прийти до 22:00." },
+      { "place_id": "cafe-savoy", "pause": true, "best_time": "evening", "best_time_why": "в чт до 22:00 — только если в отеле до 21:00", "why": "Ужин, вариант 3 из 3: красивое кафе у Újezd, но закрывается раньше остальных." }
     ],
     "plan_b": [
-      { "place_id": "kinsky-garden", "best_time": "day", "best_time_why": "пока светло", "why": "Ближайший к отелю парк: подышать после перелёта и никуда не ехать." },
-      { "place_id": "kavarna-co-hleda-jmeno", "pause": true, "best_time": "evening", "best_time_why": "до 20:00", "why": "Кафе рядом с отелем, чтобы спокойно поесть." }
+      { "title": "✈️ Трансфер: аэропорт → отель", "best_time": "evening", "best_time_why": "прилёт 19:30", "why": "Bolt/Uber прямо до отеля, ≈25–35 мин. Подробности: Советы → Практическое → Трансферы." },
+      { "place_id": "andelsky-pivovar", "pause": true, "best_time": "evening", "best_time_why": "до 24:00", "why": "Ближайший ужин к отелю — и спать." }
     ],
     "events": []
   },
@@ -67,16 +71,22 @@
   },
   {
     "date": "2026-10-05", "city": "paris", "city_from": "prague", "badges": ["переезд"],
-    "note": "Время переезда: TODO. Ничего тяжёлого не планировать. В Париже сегодня закрыты Орсе, Версаль и Палэ де ла Порт Доре.",
+    "note": "Вылет из Праги в 12:20, прилёт в Париж CDG в 14:15. Ничего тяжёлого. В Париже сегодня закрыты Орсе, Версаль и Палэ де ла Порт Доре. Шоу дронов на ипподроме Венсен 5.10 не проходит (ближайшие — 7 и 8.10).",
     "warnings": [
-      { "text": "С 28.09 CGT объявила бессрочную забастовку RATP (метро, автобусы, трамваи, часть RER). Перед выходом проверить ratp.fr.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+      { "kind": "strike", "text": "CGT-RATP: бессрочная забастовка с 28.09 19:00 — метро, автобусы, трамваи, RER A и RER B южнее Gare du Nord. Из CDG — такси по фиксированному тарифу 56 € (не RATP). Roissybus закрыт с 28.02.2026.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call", "checked_on": "2026-09-27" }
     ],
     "plan_a": [
-      { "place_id": "kavarna-co-hleda-jmeno", "city": "prague", "pause": true, "best_time": "morning", "best_time_why": "открыто с 8:00", "why": "Спокойный завтрак у отеля перед дорогой." },
+      { "place_id": "kavarna-co-hleda-jmeno", "city": "prague", "pause": true, "best_time": "morning", "best_time_why": "открыто с 8:00; выйти до 9:20", "why": "Спокойный завтрак у отеля перед дорогой." },
+      { "title": "🚕 Трансфер: отель → аэропорт Праги, выезд 9:30", "best_time": "morning", "best_time_why": "в аэропорту около 10:00–10:05", "why": "Bolt/Uber ≈25–35 мин. На автобусе 191 от Anděl — выйти в 9:15 (≈55 мин вместе с дорогой до остановки)." },
+      { "title": "✈️ Рейс 12:20 Прага → Париж CDG 14:15", "best_time": "day", "best_time_why": "Шенген, без паспортного контроля", "why": "В самолёте можно поспать." },
+      { "title": "🚕 Трансфер: CDG → отель", "best_time": "day", "best_time_why": "в отеле примерно к 16:00–16:30", "why": "Такси со стоянки у терминала по фиксированному тарифу 56 € (правый берег), ≈45–60 мин. Подробности: Советы → Практическое → Трансферы." },
       { "place_id": "les-cascades", "pause": true, "best_time": "evening", "best_time_why": "ужин, кухня работает допоздна", "why": "Прямо у отеля в Париже, никуда не ехать после дороги." },
       { "place_id": "lac-daumesnil", "best_time": "evening", "best_time_why": "только если остались силы; лес открыт круглосуточно", "why": "Озеро в нескольких минутах от отеля, можно пройти всего кусочек." }
     ],
     "plan_b": [
+      { "place_id": "kavarna-co-hleda-jmeno", "city": "prague", "pause": true, "best_time": "morning", "best_time_why": "открыто с 8:00", "why": "Завтрак у отеля перед дорогой." },
+      { "title": "🚕 Трансфер: отель → аэропорт Праги, выезд 9:30", "best_time": "morning", "best_time_why": "в аэропорту около 10:00", "why": "Bolt/Uber ≈25–35 мин." },
+      { "title": "🚕 Трансфер: CDG → отель", "best_time": "day", "best_time_why": "прилёт 14:15", "why": "Такси по фиксированному тарифу 56 €, ≈45–60 мин." },
       { "place_id": "au-bois-doree", "pause": true, "best_time": "evening", "best_time_why": "открыто до 23:30", "why": "У отеля; поесть и спать." }
     ],
     "events": []
@@ -84,7 +94,7 @@
   {
     "date": "2026-10-06", "city": "paris", "badges": [], "note": "Лувр и Оранжери сегодня закрыты.",
     "warnings": [
-      { "text": "Забастовка RATP: проверить ratp.fr перед выходом.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+      {"kind": "strike", "text": "Забастовка RATP (с 28.09, бессрочно): метро, автобусы, трамваи, RER A и RER B южнее Gare du Nord. Утром проверить ratp.fr или Citymapper — он строит маршруты только по работающему транспорту. Отель ↔ центр без RATP: такси; Vélib (станция Porte Dorée, 3 place Édouard-Renard); такси или Vélib до Gare de Lyon и дальше RER D (SNCF) до Châtelet.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call", "checked_on": "2026-09-27"}
     ],
     "plan_a": [
       { "place_id": "orsay", "best_time": "morning", "best_time_why": "к открытию в 9:30, меньше очередь", "why": "Во вторник Лувр закрыт, а Орсе открыт. С сегодняшнего дня там выставка Мэри Кассат." },
@@ -105,7 +115,8 @@
   {
     "date": "2026-10-07", "city": "paris", "badges": ["Лувр"], "note": "Билет в Лувр с временем входа купить заранее.",
     "warnings": [
-      { "text": "Забастовка RATP: проверить ratp.fr перед выходом.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+      {"kind": "strike", "text": "Забастовка RATP (с 28.09, бессрочно): метро, автобусы, трамваи, RER A и RER B южнее Gare du Nord. Утром проверить ratp.fr или Citymapper — он строит маршруты только по работающему транспорту. Отель ↔ центр без RATP: такси; Vélib (станция Porte Dorée, 3 place Édouard-Renard); такси или Vélib до Gare de Lyon и дальше RER D (SNCF) до Châtelet.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call", "checked_on": "2026-09-27"},
+      {"text": "7–11.10 праздник урожая на Монмартре: шествия и толпы у Сакре-Кёр. Если не идём на праздник специально — Монмартр в эти дни лучше обойти.", "source": "https://fetedesvendangesdemontmartre.com/en/"}
     ],
     "plan_a": [
       { "place_id": "louvre", "best_time": "morning", "best_time_why": "слот на 9:00: к полудню толпа", "why": "Лувр закрыт по вторникам, а в среду работает до 21:00, так что можно не спешить. С сегодняшнего дня открыт Сурбаран." },
@@ -126,7 +137,9 @@
   {
     "date": "2026-10-08", "city": "paris", "badges": ["Версаль"], "note": "Весь день в Версале. Билет Passport со слотом во дворец купить заранее. По парку — на паровозике.",
     "warnings": [
-      { "text": "Забастовка RATP может задеть метро 8 до Invalides. Запасной вариант — RER C (SNCF) до Versailles Château Rive Gauche; проверить ratp.fr и transilien.com.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+      {"kind": "strike", "text": "Забастовка RATP (с 28.09, бессрочно): метро, автобусы, трамваи, RER A и RER B южнее Gare du Nord. Утром проверить ratp.fr или Citymapper — он строит маршруты только по работающему транспорту. Отель ↔ центр без RATP: такси; Vélib (станция Porte Dorée, 3 place Édouard-Renard); такси или Vélib до Gare de Lyon и дальше RER D (SNCF) до Châtelet. Версаль — см. следующее предупреждение.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call", "checked_on": "2026-09-27"},
+      {"kind": "strike", "text": "Версаль без RATP: такси или Vélib до станции RER C Bibliothèque François-Mitterrand (≈2,5 км от отеля) → RER C до Versailles Château Rive Gauche; или такси до Montparnasse → Transilien N до Versailles Chantiers (≈20 мин пешком до дворца); или такси до Saint-Lazare → Transilien L до Versailles Rive Droite. Поезда SNCF едут ≈30 мин. Какой поезд идёт до Версаля — проверить в Citymapper или на transilien.com утром.", "source": "https://www.lebaladin.fr/comment-aller-au-chateau-de-versailles-depuis-paris/", "checked_on": "2026-09-27"},
+      {"text": "7–11.10 праздник урожая на Монмартре: шествия и толпы у Сакре-Кёр. Если не идём на праздник специально — Монмартр в эти дни лучше обойти.", "source": "https://fetedesvendangesdemontmartre.com/en/"}
     ],
     "plan_a": [
       { "place_id": "versailles-palace", "best_time": "morning", "best_time_why": "ранний слот: до основного потока групп", "why": "Главная цель дня. В понедельник Версаль закрыт, а в четверг открыто всё." },
@@ -141,9 +154,10 @@
     "events": []
   },
   {
-    "date": "2026-10-09", "city": "paris", "badges": [], "note": "",
+    "date": "2026-10-09", "city": "paris", "badges": ["последний день"], "note": "Последний полный день, вечером сборы: вылет завтра в 12:55, выезд из отеля в 8:30.",
     "warnings": [
-      { "text": "Забастовка RATP: проверить ratp.fr перед выходом.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+      {"kind": "strike", "text": "Забастовка RATP (с 28.09, бессрочно): метро, автобусы, трамваи, RER A и RER B южнее Gare du Nord. Утром проверить ratp.fr или Citymapper — он строит маршруты только по работающему транспорту. Отель ↔ центр без RATP: такси; Vélib (станция Porte Dorée, 3 place Édouard-Renard); такси или Vélib до Gare de Lyon и дальше RER D (SNCF) до Châtelet.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call", "checked_on": "2026-09-27"},
+      {"text": "7–11.10 праздник урожая на Монмартре: шествия и толпы у Сакре-Кёр. Если не идём на праздник специально — Монмартр в эти дни лучше обойти.", "source": "https://fetedesvendangesdemontmartre.com/en/"}
     ],
     "plan_a": [
       { "place_id": "sainte-chapelle", "best_time": "morning", "best_time_why": "к открытию в 9:00: меньше очередь на досмотр, утром солнце в витражах", "why": "Билет с временем купить заранее. Отсюда 5 минут до Нотр-Дама." },
@@ -162,20 +176,17 @@
     ]
   },
   {
-    "date": "2026-10-10", "city": "paris", "badges": ["вылет"], "note": "Время вылета: TODO. План А — только если вылет вечером.",
+    "date": "2026-10-10", "city": "paris", "badges": ["вылет"], "note": "Вылет из CDG в Алматы в 12:55. Сегодня только трансфер, никаких активностей.",
     "warnings": [
-      { "text": "Забастовка RATP: заранее проверить дорогу в аэропорт на ratp.fr.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call" }
+      {"kind": "strike", "text": "Забастовка RATP (с 28.09, бессрочно). В аэропорт — такси по фиксированному тарифу 56 €, выезд в 8:30, заказать накануне вечером. Roissybus закрыт с 28.02.2026.", "source": "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call", "checked_on": "2026-09-27"},
+      {"text": "7–11.10 праздник урожая на Монмартре: шествия и толпы у Сакре-Кёр. Если не идём на праздник специально — Монмартр в эти дни лучше обойти.", "source": "https://fetedesvendangesdemontmartre.com/en/"}
     ],
     "plan_a": [
-      { "place_id": "palais-porte-doree", "best_time": "morning", "best_time_why": "в субботу с 10:00", "why": "В 3 минутах от отеля, в понедельник он был закрыт. Аквариум и залы ар-деко." },
-      { "place_id": "cafe-du-palais", "pause": true, "best_time": "day", "best_time_why": "обед", "why": "В самом дворце." },
-      { "place_id": "lac-daumesnil", "best_time": "day", "best_time_why": "перед отъездом", "why": "Короткая прогулка у озера рядом с отелем." }
+      { "title": "🚕 Трансфер: отель → CDG, выезд 8:30", "best_time": "morning", "best_time_why": "в CDG к ~9:55, за 3 часа до рейса", "why": "Такси по фиксированному тарифу 56 €, заказать накануне вечером. Дорога обычно 45–60 мин, в пробки и в забастовку — до ~75 мин. Подробности: Советы → Практическое → Трансферы." }
     ],
     "plan_b": [
-      { "place_id": "au-bois-doree", "pause": true, "best_time": "morning", "best_time_why": "открыто с 6:00", "why": "Спокойный завтрак у отеля перед дорогой." }
+      { "title": "🚕 Трансфер: отель → CDG, выезд 8:30", "best_time": "morning", "best_time_why": "в CDG к ~9:55, за 3 часа до рейса", "why": "Такси по фиксированному тарифу 56 €, заказать накануне вечером. Дорога обычно 45–60 мин, в пробки и в забастовку — до ~75 мин. Подробности: Советы → Практическое → Трансферы." }
     ],
-    "events": [
-      { "title": "Праздник урожая на Монмартре", "title_local": "Fête des Vendanges de Montmartre", "date_from": "2026-10-07", "date_to": "2026-10-11", "where": "Монмартр, у Сакре-Кёр", "url": "https://fetedesvendangesdemontmartre.com/en/", "source": "https://fetedesvendangesdemontmartre.com/en/", "note": "" }
-    ]
+    "events": []
   }
 ]

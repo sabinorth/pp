@@ -335,8 +335,18 @@ function eventsHTML(events) {
 
 function warningsHTML(warnings) {
   if (!warnings?.length) return '';
-  return warnings.map((w) => `<div class="card warn-card"><p>⚠️ ${esc(w.text)}</p>
-    ${w.source ? `<p class="muted"><a href="${esc(w.source)}" target="_blank" rel="noopener">источник</a></p>` : ''}</div>`).join('');
+  // kind: "strike" — баннер «Забастовка» со ссылкой на трансферы и советы в «Практическом».
+  return warnings.map((w) => {
+    const strike = w.kind === 'strike';
+    const head = strike ? '<p class="strike-title">🚧 Забастовка</p>' : '';
+    const links = [
+      w.source ? `<a href="${esc(w.source)}" target="_blank" rel="noopener">источник</a>` : '',
+      w.checked_on ? `проверено ${fmtDate(w.checked_on)}` : '',
+      strike ? '<a href="#/recs?tab=practical&focus=transfers">варианты и трансферы</a>' : '',
+    ].filter(Boolean).join(' · ');
+    return `<div class="card warn-card${strike ? ' strike' : ''}"${strike ? ' role="note"' : ''}>${head}<p>${strike ? '' : '⚠️ '}${esc(w.text)}</p>
+    ${links ? `<p class="muted src">${links}</p>` : ''}</div>`;
+  }).join('');
 }
 
 export async function renderDay({ param }) {
