@@ -2096,7 +2096,8 @@
     "pairs_with": [
       "sacre-coeur",
       "maison-rose",
-      "studio-28"
+      "studio-28",
+      "madame-arthur"
     ],
     "tags": [
       "фестиваль",
@@ -2184,7 +2185,8 @@
     "pairs_with": [
       "vert-galant",
       "saint-regis",
-      "late-seine-walk-route"
+      "late-seine-walk-route",
+      "canal-saint-martin-cruise"
     ],
     "tags": [
       "вечер",
@@ -2272,7 +2274,8 @@
       "palais-royal",
       "librairie-jousseaume",
       "librairie-paul-vulin",
-      "rainy-day-paris"
+      "rainy-day-paris",
+      "bouillon-chartier"
     ],
     "tags": [
       "на дождь",
@@ -3615,6 +3618,463 @@
       "старинное",
       "бронь",
       "на дождь"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "canal-saint-martin-cruise",
+    "city": "paris",
+    "type": "experience",
+    "name": "Проплыть канал Сен-Мартен",
+    "name_local": "Croisière sur le canal Saint-Martin",
+    "coords": [
+      48.84994,
+      2.36746
+    ],
+    "address": "Причал Canauxrama: Port de l'Arsenal, напротив 50 Boulevard de la Bastille, 75012 Paris",
+    "summary": "Не обычный круиз, а мини-квест на корабле: подземный тоннель под Бастилией, шлюзы, разводные и подъёмный мосты. 2,5 часа сидя.",
+    "description": "Два перевозчика ходят по каналу. Canauxrama — от порта Арсенал у Бастилии (линия 8 без пересадок) до бассейна Ла-Виллет: 4,5 км, 8 шлюзов, 2 поворотных моста, подъёмный мост Кримэ и тоннель под Бастилией. Paris Canal — маршрут из текста: от причала у музея Орсе по Сене, через Арсенал и канал до парка Ла-Виллет. Оба — 2,5 часа с комментарием на французском и английском.",
+    "description_long": "Не обычный круиз по Сене, а проплыть Canal Saint-Martin. У Paris Canal есть маршрут примерно на 2,5 часа: Сена → порт Arsenal → подземный тоннель под Bastille → девять шлюзов → разводные/подъёмные мосты → Canal Saint-Martin. Вот это уже настоящий мини-квест на корабле, а не просто «вот справа Лувр».",
+    "hours": {
+      "text": "Canauxrama из порта Арсенал: 9:45 (прибытие в Ла-Виллет 12:15) и 14:30 (прибытие 17:00); с 1 апреля по 15 октября — ежедневно. Paris Canal: ежедневно, Орсе ↔ Ла-Виллет, время рейсов — в календаре брони.",
+      "closed_weekdays": [],
+      "source": "https://www.canauxrama.com/en/cruise/cruise-canal-saint-martin-old-paris.html",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 23,
+      "note": "Canauxrama — от €23. Paris Canal — €25 взрослый, €22 пенсионеры и студенты."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.canauxrama.com/en/cruise/cruise-canal-saint-martin-old-paris.html"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Bateau_promenade_sur_le_Canal_Saint-Martin.jpg/1280px-Bateau_promenade_sur_le_Canal_Saint-Martin.jpg",
+        "credit": "Jmpoirier1",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bateau_promenade_sur_le_Canal_Saint-Martin.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.4,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 20,
+      "transfers": 0,
+      "note": "Canauxrama: метро 8 без пересадок до Bastille, дальше около 300 м к порту Арсенал. Финиш у Ла-Виллет — метро Jaurès или Stalingrad; домой с пересадкой."
+    },
+    "tips": [
+      "Для нас удобнее Canauxrama: старт у Бастилии, до которой линия 8 идёт без пересадок.",
+      "Прийти за 15 минут до отправления.",
+      "На борту есть бар и туалет — 2,5 часа сидеть комфортно.",
+      "Альтернатива закатному круизу по Сене: две водные прогулки за 5 дней, скорее всего, будет много."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Canauxrama (https://www.canauxrama.com/en/cruise/cruise-canal-saint-martin-old-paris.html) на 27.09.2026: Арсенал ↔ Ла-Виллет, 4,5 км, 2 ч 30 мин, 8 шлюзов, 2 поворотных моста, подъёмный мост Кримэ, свод под Бастилией; от €23; комментарий FR/EN; бар и туалеты на борту. Время 9:45 и 14:30 из Арсенала и сезон «с 1 апреля по 15 октября ежедневно» — по сводке в поиске (tourisme93.com и др.), на странице перевозчика в календаре.",
+      "Paris Canal (https://www.pariscanal.com/en/) на 27.09.2026: ежедневно, в одну сторону Орсе → Ла-Виллет или Ла-Виллет → Орсе, 2,5 часа, взрослый €25. В какие дни в какую сторону — на сайте не указано, смотреть в календаре брони. Бронировавшие садятся в первую очередь.",
+      "В тексте «девять шлюзов» — это маршрут Paris Canal от Сены; у Canauxrama от Арсенала указано 8 шлюзов (шлюз между Сеной и портом Арсенал в него не входит)."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "marche-aligre"
+    ],
+    "tags": [
+      "сидя",
+      "необычное",
+      "вода"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "catacombs-evening",
+    "city": "paris",
+    "type": "experience",
+    "name": "Катакомбы ближе к вечеру",
+    "name_local": "Catacombes de Paris",
+    "coords": [
+      48.83389,
+      2.33236
+    ],
+    "address": "1 Avenue du Colonel Henri Rol-Tanguy, 75014 Paris (выход — 21 bis Avenue René-Coty)",
+    "summary": "Спуститься на 20 м под землю: каменные тоннели и оссуарий, стабильно около 14 °C. Поздний слот вместо утра. Нагрузка высокая: 131 ступень вниз, 112 наверх, 1,5 км без выхода посередине.",
+    "description": "Маршрут односторонний, 1,5 км, около 45 минут; выход в другом месте, на авеню Рене-Коти. С 29 сентября 2026 внутри выставка «Nadar: inventer Paris, des profondeurs au ciel» — репродукции первых подземных снимков Надара в оссуарии (1862) и канализации (1865). Билет на конкретное время, онлайн.",
+    "description_long": "Я бы ставила их не на 11 утра, а на поздний слот: спускаешься примерно на 20 м под землю, там стабильно около 14 °C, длинные каменные тоннели и оссуарий. В октябре 2026 там ещё идёт выставка про Надара. Сейчас они открыты до 20:30, последний вход — 19:30.",
+    "hours": {
+      "text": "Вт–Вс 9:45–20:30, последний вход в 19:30. Пн закрыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.catacombes.paris.fr/en/visit/useful-information",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 31,
+      "note": "€31 с аудиогидом (онлайн, на время), льготный €25 (5–26 лет, студенты)."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.catacombes.paris.fr/en/visit/individual-rates"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Catacumbas%2C_Par%C3%ADs%2C_Francia%2C_2022-11-01%2C_DD_117-119_HDR.jpg/1280px-Catacumbas%2C_Par%C3%ADs%2C_Francia%2C_2022-11-01%2C_DD_117-119_HDR.jpg",
+        "credit": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Catacumbas,_Par%C3%ADs,_Francia,_2022-11-01,_DD_117-119_HDR.jpg"
+      }
+    ],
+    "effort": {
+      "level": "high",
+      "walk_km": 1.5,
+      "stairs": "many",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Daumesnil, линия 6 до Denfert-Rochereau. Выход из катакомб — в другом месте, на авеню Рене-Коти; ближайшее метро оттуда — Mouton-Duvernet (линия 4). Точный маршрут — по ссылке."
+    },
+    "tips": [
+      "Я бы ставила их не на 11 утра, а на поздний слот.",
+      "Нагрузка высокая: длинная винтовая лестница вниз и наверх, около 1,5 км на ногах, выйти посередине нельзя.",
+      "Взять тёплую кофту: внизу около 14 °C и сыро.",
+      "Пн 5.10 закрыто."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Проверено на catacombes.paris.fr на 27.09.2026: Вт–Вс 9:45–20:30, последний вход 19:30, Пн закрыто; маршрут 1,5 км в одну сторону, около 45 минут; 131 ступень вниз и 112 наверх; средняя температура 14 °C. Часы из текста подтвердились.",
+      "Выставка «Nadar: inventer Paris, des profondeurs au ciel» — 29.09.2026–31.01.2027, только репродукции (https://www.catacombes.paris.fr/approfondir/expositions/nadar-inventer-paris-des-profondeurs-au-ciel).",
+      "Цены — https://www.catacombes.paris.fr/en/visit/individual-rates. На сколько дней вперёд открыта продажа, не указано."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "необычное",
+      "под землёй",
+      "история",
+      "бронь",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "ballet-garnier",
+    "city": "paris",
+    "type": "event",
+    "name": "Балет «История Манон» в Опере Гарнье",
+    "name_local": "L'Histoire de Manon — Palais Garnier",
+    "coords": [
+      48.87209,
+      2.33233
+    ],
+    "address": "Palais Garnier, Place de l'Opéra, 75009 Paris",
+    "summary": "Не экскурсия по Garnier, а настоящий балет: «История Манон» Кеннета Макмиллана на музыку Массне. В наши дни — ср 7.10 и чт 8.10 в 19:30.",
+    "description": "Спектакль идёт с 28 сентября по 30 октября 2026, 2 ч 45 мин с двумя антрактами. В день спектакля в кассах Garnier продают места 6-й категории по €10 (очень ограниченный обзор, не больше двух в руки). Строгого дресс-кода нет, но нужна опрятная одежда.",
+    "description_long": "Сходить не на экскурсию по Opéra Garnier, а реально на балет. В Palais Garnier во время вашей поездки идёт L'Histoire de Manon — в том числе 7 и 8 октября. Есть категории билетов вплоть до €10–12, хотя обзор сцены там может быть ограниченным. Мне сам сценарий нравится: нарядиться → бокал перед спектаклем → Garnier → поздний ужин.",
+    "dates": [
+      {
+        "date": "2026-10-07",
+        "time": "19:30",
+        "note": "Окончание около 22:15."
+      },
+      {
+        "date": "2026-10-08",
+        "time": "19:30",
+        "note": "День Версаля — тяжело."
+      }
+    ],
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Места 6-й категории — €10 в кассе в день спектакля (ограниченный обзор, максимум 2 билета). За 30 минут до начала в кассе: €25 для младше 28 лет. Полная сетка цен видна только при брони."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.operadeparis.fr/en/season-26-27/ballet/lhistoire-de-manon"
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 0.3,
+      "stairs": "many",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 165
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Opéra, выход прямо к театру."
+    },
+    "tips": [
+      "8.10 — после Версаля, лучше 7.10. На 5, 6 и 9.10 спектаклей нет.",
+      "Лучше покупать заранее: €10-места — лотерея в день спектакля и с плохим обзором.",
+      "Дешёвые категории — на верхних ярусах: подниматься по лестницам.",
+      "Поздний ужин рядом: Café de la Paix (до 23:30) или Bouillon Chartier (до полуночи, у метро линии 8)."
+    ],
+    "how_to": [
+      "Нарядиться.",
+      "Бокал перед спектаклем (бары в театре открыты перед каждым спектаклем).",
+      "Garnier.",
+      "Поздний ужин."
+    ],
+    "fact_notes": [
+      "Проверено на operadeparis.fr на 27.09.2026: «L'Histoire de Manon» 28.09–30.10.2026, Palais Garnier; в наши дни спектакли только 7.10 и 8.10 в 19:30; 2 ч 45 мин с двумя антрактами (45 + 20 + 50 + 20 + 30 мин).",
+      "В тексте: «категории вплоть до €10–12». По сайту Оперы: €10 — места 6-й категории, только в кассе в день спектакля, не больше двух. Остальные категории на странице не расписаны.",
+      "Дресс-код: «no particular dress code required, however proper attire is required» (FAQ Оперы: https://www.operadeparis.fr/infos-pratiques/foire-aux-questions).",
+      "Сколько лестниц к дешёвым местам, не проверялось; stairs: many — по расположению верхних ярусов."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "cafe-de-la-paix",
+      "bouillon-chartier"
+    ],
+    "tags": [
+      "балет",
+      "вечер",
+      "нарядиться",
+      "сидя",
+      "бронь"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "cafe-de-la-paix",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Café de la Paix",
+    "name_local": "Café de la Paix",
+    "coords": [
+      48.87077,
+      2.3317
+    ],
+    "address": "5 Place de l'Opéra, 75009 Paris",
+    "summary": "Историческое кафе напротив Оперы Гарнье. Ужин до 23:30 — успеваем после балета.",
+    "description": "Кафе на углу площади Оперы и бульвара Капуцинок, с видом на Garnier. Работает весь день, вечерняя кухня с 18:00 до 23:30 — для вечера «нарядиться → балет → ужин» самое логичное место.",
+    "hours": {
+      "text": "Ежедневно: 7:00–10:30 (Сб–Вс до 11:00), 12:00–15:00, 18:00–23:30.",
+      "closed_weekdays": [],
+      "source": "https://www.cafedelapaix.fr/en/restaurant/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cafedelapaix.fr/en/restaurant/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Opéra."
+    },
+    "tips": [
+      "После балета (конец около 22:15) — забронировать стол заранее."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы — по сводке в поиске со ссылкой на сайт кафе (https://www.cafedelapaix.fr/en/restaurant/) на 27.09.2026."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "ballet-garnier"
+    ],
+    "tags": [
+      "у Оперы",
+      "исторический",
+      "поздний ужин"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "bouillon-chartier",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Bouillon Chartier на Больших бульварах",
+    "name_local": "Bouillon Chartier Grands Boulevards",
+    "coords": [
+      48.87194,
+      2.34301
+    ],
+    "address": "7 Rue du Faubourg Montmartre, 75009 Paris",
+    "summary": "Недорогая столовая 1896 года с залом-памятником. Без выходных, до полуночи, без брони — и в двух шагах от метро линии 8 до отеля.",
+    "description": "Классический парижский «бульон»: большой зал в стиле Belle Époque, простая французская еда по низким ценам, работает 365 дней в году. Бронь не принимают — бывает очередь.",
+    "hours": {
+      "text": "Ежедневно 11:30–0:00, без перерыва.",
+      "closed_weekdays": [],
+      "source": "https://www.bouillon-chartier.com/en/bouillon-chartier-grands-boulevards-en/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Ext%C3%A9rieur_Bouillon_Chartier_Grands_Boulevards_%28ao%C3%BBt_2023%29.jpg/1280px-Ext%C3%A9rieur_Bouillon_Chartier_Grands_Boulevards_%28ao%C3%BBt_2023%29.jpg",
+        "credit": "Benoît Prieur",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ext%C3%A9rieur_Bouillon_Chartier_Grands_Boulevards_(ao%C3%BBt_2023).jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "long",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 75
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Grands Boulevards, дальше около 100 м."
+    },
+    "tips": [
+      "Брони нет: вечером может быть очередь.",
+      "От Garnier — около 900 м или одна остановка на линии 8 (Opéra → Richelieu–Drouot → Grands Boulevards).",
+      "Рядом пассажи Jouffroy и Verdeau."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы, год открытия (1896) и статус исторического памятника (с 1989) — по сайту Bouillon Chartier и Википедии, сводка на 27.09.2026."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "ballet-garnier",
+      "covered-passages-walk"
+    ],
+    "tags": [
+      "недорого",
+      "исторический",
+      "допоздна",
+      "без брони"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "madame-arthur",
+    "city": "paris",
+    "type": "event",
+    "name": "Кабаре Madame Arthur",
+    "name_local": "Madame Arthur — Cabaret Club",
+    "coords": [
+      48.88246,
+      2.33958
+    ],
+    "address": "75 bis Rue des Martyrs, 75018 Paris (угол бульвара Рошешуар)",
+    "summary": "Старое кабаре на Пигаль, но не Мулен Руж: трансформисты, песни только на французском, после шоу — клуб с блайнд-тестом. Для нас — пт 9.10.",
+    "description": "Работает с четверга по субботу: двери в 20:00, шоу в 21:00 и 23:00, потом клуб до утра. В октябре 2026 идёт программа «La Groupie du Futur». Билеты на стоячие места — от €20, есть пакеты с ужином. Отлично ложится в вечер Монмартра на празднике урожая.",
+    "description_long": "Сходить ночью в старое кабаре, но не Moulin Rouge. Madame Arthur на Монмартре — гораздо более эксцентричный вариант: кабаре, музыка, клубный вечер, Pigalle вокруг. Я бы выбрала это, если хочется одного вечера «Париж немного безумный», а не luxury-postcard Paris.",
+    "dates": [
+      {
+        "date": "2026-10-08",
+        "time": "21:00",
+        "note": "Шоу в 21:00 и 23:00. День Версаля."
+      },
+      {
+        "date": "2026-10-09",
+        "time": "21:00",
+        "note": "Шоу в 21:00 и 23:00, в пятницу в 22:30 — блайнд-тест."
+      }
+    ],
+    "hours": {
+      "text": "Чт–Сб 20:00–6:00: двери 20:00, шоу 21:00 и около 23:00, дальше клуб.",
+      "closed_weekdays": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source": "https://madamearthur.fr/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 20,
+      "note": "Стоячие места от €20; пакет «Tsarine» с ужином и ½ бутылки шампанского — €120."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://madamearthur.fr/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 0.3,
+      "stairs": null,
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 45,
+      "transfers": 2,
+      "note": "Ориентировочно: как на Монмартр — метро 8, линия 4 до Barbès–Rochechouart, линия 2 до Pigalle или Anvers, дальше около 200 м."
+    },
+    "tips": [
+      "Один вечер «Париж немного безумный», а не luxury-postcard Paris.",
+      "Дешёвые билеты — стоячие: на ногах около часа. Сидячие места — в пакетах с ужином.",
+      "Реально — пт 9.10, вместе с праздником урожая на Монмартре и фотобудкой. Чт 8.10 — день Версаля.",
+      "Всё на французском — понимание не обязательно, это шоу."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По сайту клуба на 27.09.2026: открыт Чт–Сб, двери 20:00, шоу 21:00 и 22:30–23:00, клуб 23:00–6:00; в октябре программа «Madame Arthur La Groupie du Futur» (1–31.10); «100 % musique en français».",
+      "Адрес 75 bis rue des Martyrs и цены (стоя от €20, пакет «Tsarine» €120) — по сводкам в поиске (goldenmoments.fr, cometoparis.com), на сайте клуба без JavaScript не видны.",
+      "Что сидячие места есть только в пакетах с ужином — вывод из описания пакетов, не проверено."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "fete-vendanges-montmartre"
+    ],
+    "tags": [
+      "вечер",
+      "кабаре",
+      "Пигаль",
+      "бронь"
     ],
     "game_id": null,
     "verified": true
