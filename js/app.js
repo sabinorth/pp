@@ -7,6 +7,7 @@ import * as games from './games.js';
 import { closeSheet } from './sheet.js';
 import { esc } from './ui.js';
 import * as theme from './theme.js';
+import * as facts from './facts.js';
 
 const ROUTES = {
   plan:  { tab: 'plan',  render: days.renderList, after: days.afterList },
@@ -51,6 +52,7 @@ async function onRoute() {
 
   const token = ++renderToken;
   try {
+    await facts.init();
     if (def.map) {
       viewEl.hidden = true;
       mapEl.hidden = false;
@@ -59,12 +61,15 @@ async function onRoute() {
       closeSheet();
       mapEl.hidden = true;
       viewEl.hidden = false;
-      viewEl.innerHTML = '<p class="muted">Загрузка…</p>';
+      viewEl.innerHTML = `<p class="muted">Загрузка…</p>${facts.slot()}`;
+      // Факт на экране загрузки — только если грузится заметно долго.
+      setTimeout(() => { if (token === renderToken && viewEl.querySelector('.fun-fact:empty')) facts.fill(viewEl); }, 400);
       const html = await def.render(r);
       if (token !== renderToken) return;
       viewEl.innerHTML = html;
       window.scrollTo(0, 0);
       def.after?.(viewEl, r);
+      facts.fill(viewEl);
     }
   } catch (err) {
     console.error(err);

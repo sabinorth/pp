@@ -8,6 +8,7 @@ import * as top8 from './top8.js';
 import * as store from './store.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
+import * as facts from './facts.js';
 
 function cityLine(day) {
   const to = CITIES[day.city];
@@ -245,7 +246,7 @@ function listHTML(list, day, places) {
   const items = rows.map((e) => entryHTML(e, day, places, e.hidden ? -1 : n++, visible.length));
   const body = items.length
     ? `<ol class="items">${items.join('')}</ol>`
-    : '<div class="card"><p class="muted">Пока пусто.</p></div>';
+    : `<div class="card"><p class="muted">Пока пусто.</p></div>${facts.slot({ city: day.city, tags: day.city_from ? ['переезд'] : [] })}`;
   const toggle = hidden.length
     ? `<button type="button" class="btn secondary wide" data-toggle-hidden>${open ? 'Не показывать скрытые' : `Показать скрытые (${hidden.length})`}</button>`
     : '';
@@ -262,6 +263,7 @@ function budgetHTML(day, active, list, places) {
       ? `<div class="card soft-warn"><p>Сегодня насыщенно. Может, взять план Б? Он спокойнее.</p>
           <button type="button" class="btn" data-plan="b">Переключить на план Б</button></div>`
       : `<div class="card soft-warn"><p>Даже с планом Б получается много. Можно убрать что-то из списка — отдых важнее.</p></div>`;
+    hint += facts.slot({ tags: ['усталость'] });
   }
   return `${energy.moodHTML(value, limit)}${energy.meterHTML(value, limit)}
     <p class="muted energy-note">Порог ${limit} меняется в <a href="#/recs?tab=practical&focus=settings">настройках</a>.</p>${hint}`;

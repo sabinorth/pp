@@ -1,6 +1,6 @@
 // Офлайн-кэш: оболочка — stale-while-revalidate, data/*.json — network-first с откатом в кэш.
 // Тайлы карты не кэшируются. При изменении списка файлов поднять версию.
-const VERSION = 'v25';
+const VERSION = 'v26';
 const CACHE = `trip2026-${VERSION}`;
 
 const SHELL = [
@@ -11,10 +11,10 @@ const SHELL = [
   'icons/icon.svg',
   'icons/icon-192.png',
   'icons/icon-512.png',
-  'js/app.js', 'js/data.js', 'js/days.js', 'js/energy.js', 'js/games.js', 'js/game-photo.js', 'js/game-rating.js', 'js/map.js',
+  'js/app.js', 'js/data.js', 'js/days.js', 'js/energy.js', 'js/facts.js', 'js/games.js', 'js/game-photo.js', 'js/game-rating.js', 'js/map.js',
   'js/picker.js', 'js/plan.js', 'js/players.js', 'js/practical.js', 'js/recs.js', 'js/sheet.js', 'js/store.js', 'js/theme.js', 'js/top8.js', 'js/ui.js',
   'data/hotels.json', 'data/places-prague.json', 'data/places-paris.json',
-  'data/days.json', 'data/practical.json',
+  'data/days.json', 'data/practical.json', 'data/fun-facts.json',
   'data/games/index.json',
   'data/games/photo-assignment.json',
   'data/games/gothic-photo-quest.json',

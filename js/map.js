@@ -4,6 +4,7 @@ import { CITIES, getHotel, getPlaces, getGameIds, getDays } from './data.js';
 import { pickerHTML } from './picker.js';
 import { top8HTML } from './top8.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
+import * as facts from './facts.js';
 import { esc, TYPES, fmtDate, fmtWeekday, plural, effortHTML, effortInline, isRainy } from './ui.js';
 
 let map = null;
@@ -295,7 +296,8 @@ function placeHTML(p, hotel) {
     ${readyGames.includes(p.game_id) ? `<div class="route-btns">
       <a class="btn game-link" href="#/game/${encodeURIComponent(p.game_id)}">🎲 Сыграть</a>
       ${isIdea ? '' : `<a class="btn secondary game-link" href="#/game/${encodeURIComponent(p.game_id)}?screen=onsite">📍 На месте</a>`}
-    </div>` : ''}`;
+    </div>` : ''}
+    ${facts.slot(facts.placeCtx(p))}`;
 }
 
 // Пунктир маршрута от стартовой точки через остановки route_stops.
@@ -326,6 +328,7 @@ function openPlace(p) {
       if (location.hash.startsWith('#/map') && q.get('city') === city && q.get('place') === p.id) setHash(city);
     },
   });
+  facts.fill(document.querySelector('#sheet .sheet-body'));
 }
 
 // ---------- идеи ----------

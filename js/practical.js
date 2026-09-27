@@ -4,6 +4,7 @@ import { esc, fmtDate } from './ui.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
 import * as theme from './theme.js';
+import * as facts from './facts.js';
 
 const ext = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
 const cityHead = (city) => `${CITIES[city].flag} ${CITIES[city].name}`;
@@ -66,7 +67,12 @@ function themeHTML() {
 
 function settingsHTML() {
   const t = energy.getThreshold();
+  const on = facts.isOn();
   return `${themeHTML()}
+    <div class="setting theme-setting"><span>Факты «к слову» про Оливию Родриго и пони</span><div class="seg">
+      <button type="button" data-facts="on" aria-pressed="${on}">Вкл</button>
+      <button type="button" data-facts="off" aria-pressed="${!on}">Выкл</button>
+    </div></div>
     <div class="setting">
       <span>Порог энергобюджета на день</span>
       <div class="stepper">
@@ -98,6 +104,11 @@ export function after(el, focus) {
     if (th) {
       theme.setTheme(th.dataset.themeSet);
       for (const b of el.querySelectorAll('[data-theme-set]')) b.setAttribute('aria-pressed', b === th);
+    }
+    const fb = e.target.closest('[data-facts]');
+    if (fb) {
+      facts.setOn(fb.dataset.facts === 'on');
+      for (const b of el.querySelectorAll('[data-facts]')) b.setAttribute('aria-pressed', b === fb);
     }
     const step = e.target.closest('[data-step]');
     if (step) {

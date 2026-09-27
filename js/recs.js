@@ -6,6 +6,7 @@ import { openSheet } from './sheet.js';
 import { esc, fmtDate, fmtWeekday, EFFORT_LEVELS, BEST_TIME, effortInline, isRainy } from './ui.js';
 import { pickerHTML } from './picker.js';
 import * as practical from './practical.js';
+import * as facts from './facts.js';
 
 let recs = [];   // текущий список для обработчиков кнопок
 let ideas = [];  // точки типа idea из обоих городов
@@ -84,7 +85,7 @@ async function renderRecs(q) {
       </div>
     </div>
     <p class="muted" id="rec-count"></p>
-    <div id="rec-list">${recs.map(cardHTML).join('')}</div>
+    <div id="rec-list">${recs.map((r, i) => cardHTML(r, i) + (i === 2 ? facts.slot(facts.placeCtx(r.place)) : '')).join('')}</div>
     ${ideas.length ? `<h2 class="section">💭 Идеи</h2>
     <p class="muted">Впечатления без точного адреса: в какой день — решаете сами.</p>
     <div id="idea-list">${ideas.map(ideaHTML).join('')}</div>` : ''}`;

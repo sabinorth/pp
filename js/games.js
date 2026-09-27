@@ -7,8 +7,11 @@ import { esc, whose } from './ui.js';
 import { MIN_PLAYERS, MAX_PLAYERS, getPlayers, playerName, crewName } from './players.js';
 import * as photo from './game-photo.js';
 import * as rating from './game-rating.js';
+import * as facts from './facts.js';
 
 const MINI = { photo, rating };
+// Теги фактов для мини-игр (у них нет своей точки).
+const MINI_FACT_TAGS = { photo: ['фото', 'дружба'], rating: ['сладкое', 'еда', 'дружба'] };
 
 // ---------- состояние в localStorage (store.js сам ловит ошибки хранилища) ----------
 
@@ -141,7 +144,7 @@ export function after(el) {
 
 // ---------- экран игры ----------
 
-function sceneHTML(game, prog) {
+function sceneHTML(game, prog, place) {
   const scenes = sceneMap(game);
   const scene = scenes[prog.scene] || scenes[game.meta.start];
   const { d, max } = depths(game);
@@ -167,7 +170,8 @@ function sceneHTML(game, prog) {
       ${scene.text.map((t) => `<p>${esc(t)}</p>`).join('')}
       ${lines.map((l) => `<p class="line">${esc(l.text)}</p>`).join('')}
     </article>
-    ${choices}`;
+    ${choices}
+    ${facts.slot({ ...facts.placeCtx(place), scene: scene.id })}`;
 }
 
 function quizHTML(game) {
@@ -216,7 +220,7 @@ export async function renderGame({ param, query }) {
   if (mini) body = mini.html(game, getProgress(m.id) || {}, getPlayers());
   else if (screen === 'quiz') body = quizHTML(game);
   else if (screen === 'onsite') body = onsiteHTML(game);
-  else body = sceneHTML(game, prog);
+  else body = sceneHTML(game, prog, await getPlace(m.city, m.place_id).catch(() => null));
 
   const tabs = `<nav class="game-tabs" aria-label="Разделы игры">
     <a class="chip" href="${gameLink(m.id)}" ${!screen ? 'aria-current="page"' : ''}>📖 История</a>
@@ -229,6 +233,7 @@ export async function renderGame({ param, query }) {
       <h1>${esc(m.title)}</h1>
       ${mini ? `<p class="muted">${esc(m.subtitle)}</p>` : tabs}
       <div class="game-body">${body}</div>
+      ${mini ? facts.slot({ tags: MINI_FACT_TAGS[m.kind] || [] }) : ''}
       <div class="game-foot">
         <a class="btn secondary" href="${mapLink(m)}">🗺️ Показать на карте</a>
         ${!screen ? '<button type="button" class="btn secondary" data-restart>↺ Начать заново</button>' : ''}
@@ -260,6 +265,7 @@ export function afterGame(el, r) {
   const rerender = async () => {
     el.innerHTML = await renderGame(r);
     afterGame(el, r);
+    facts.fill(el);
     el.querySelector('.game-body')?.scrollIntoView({ block: 'start' });
   };
 

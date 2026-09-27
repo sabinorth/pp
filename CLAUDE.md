@@ -31,8 +31,10 @@ index.html
 css/        стили, mobile-first
 js/         app.js (роутер), map.js, days.js, recs.js, games.js, data.js,
             plan.js (ручной план), picker.js («+ В план»), store.js, energy.js, ui.js, sheet.js, practical.js,
-            theme.js (тема, блинки, курсор-блёстки), players.js (имена игроков), top8.js
-data/       hotels.json, places-prague.json, places-paris.json, days.json, practical.json, games/*.json
+            theme.js (тема, блинки, курсор-блёстки), players.js (имена игроков), top8.js,
+            facts.js («к слову»-факты: slot(ctx) + fill(root), не больше одного на экране)
+data/       hotels.json, places-prague.json, places-paris.json, days.json, practical.json, games/*.json,
+            fun-facts.json (факты про Оливию Родриго и MLP с источниками)
 sw.js, manifest.json
 ```
 
