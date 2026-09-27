@@ -630,9 +630,7 @@ h2.section { margin-top: 18px; }
 :root[data-theme="emo"] .day-card.today { border: 3px solid var(--today); }
 :root[data-theme="emo"] .whose { display: inline; }
 :root[data-theme="emo"] .mod-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: block;
   padding: 8px 12px;
   background: var(--head-bg);
   color: var(--head-text);
@@ -650,8 +648,9 @@ h2.section { margin-top: 18px; }
 }
 :root[data-theme="emo"] .mod-head::after {
   content: '✦ ✧ ✦';
-  margin-left: auto;
-  flex: none;
+  float: right;
+  margin-left: 8px;
+  line-height: 1.6;
   font: 0.9rem var(--font-body);
   color: #ffc2e6;
   animation: emo-twinkle 1.8s steps(2, jump-none) infinite;
@@ -733,3 +732,42 @@ h2.section { margin-top: 18px; }
   background: var(--surface);
 }
 :root[data-theme="emo"] .mood-label { font-style: italic; }
+
+/* --- Top 8 --- */
+.not-emo { display: inline; }
+:root[data-theme="emo"] .not-emo { display: none; }
+.top8s { margin-top: 18px; }
+.top8-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.top8-slot {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 2px;
+  min-height: 76px;
+  padding: 6px 4px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  text-decoration: none;
+  text-align: center;
+}
+.top8-slot.empty { place-content: center; color: var(--muted); font-size: 1.4rem; font-weight: 700; border-style: dashed; background: transparent; }
+.top8-ic { font-size: 1.5rem; line-height: 1.2; }
+.top8-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.top8-pick { margin: 10px 0; }
+.top8-pick-title { font-weight: 600; margin: 0 0 6px; }
+.top8-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip.top8-btn, .chip.top8-btn[aria-pressed="false"] { text-decoration: none; opacity: 1; color: var(--text); }
+.chip.top8-btn[aria-pressed="true"] { border-color: var(--accent); }
+:root[data-theme="emo"] .top8-slot { border-color: var(--neon-purple); }
+:root[data-theme="emo"] a.top8-slot:hover { border-color: var(--neon-pink); }

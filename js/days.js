@@ -4,6 +4,7 @@ import { CITIES, getDays, getPlaces } from './data.js';
 import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME, TYPES, whose } from './ui.js';
 import { crewName } from './players.js';
 import { blinkiesHTML } from './theme.js';
+import * as top8 from './top8.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
 
@@ -27,6 +28,7 @@ function rerender() {
 
 export async function renderList({ query }) {
   const days = await getDays();
+  const places = await placeIndex(Object.keys(CITIES));
   const today = todayISO();
   const cards = days.map((d) => {
     const titles = plan.visibleEntries(d, plan.activePlan(d.date)).filter((e) => !e.item.pause).length;
@@ -41,6 +43,7 @@ export async function renderList({ query }) {
     </a>`;
   });
   return `<h1>План</h1>${blinkiesHTML()}${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
+    <div class="top8s">${top8.gridsHTML(places)}</div>
     <section class="share-plan" id="share">
       <h2 class="section mod-head">${whose('📲 План на двоих', crewName())}</h2>
       <p class="muted">Ручные правки хранятся только на этом телефоне. Перенести их на другой — файлом или ссылкой.</p>

@@ -2,6 +2,7 @@
 /* global L */
 import { CITIES, getHotel, getPlaces, getGameIds, getDays } from './data.js';
 import { pickerHTML } from './picker.js';
+import { top8HTML } from './top8.js';
 import { openSheet, closeSheet, isSheetOpen } from './sheet.js';
 import { esc, TYPES, fmtDate, fmtWeekday, plural, effortHTML, effortInline, isRainy } from './ui.js';
 
@@ -268,6 +269,7 @@ function placeHTML(p, hotel) {
     ${p.summary ? `<p class="summary">${esc(p.summary)}</p>` : ''}
     ${p.description ? `<p>${esc(p.description)}</p>` : ''}
     ${pickerHTML(p, tripDays)}
+    ${top8HTML(p)}
     ${longHTML(p.description_long)}
     ${datesHTML(p.dates)}
     ${bestTimeHTML(p.best_time)}
