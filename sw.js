@@ -1,6 +1,6 @@
 // Офлайн-кэш: оболочка — stale-while-revalidate, data/*.json — network-first с откатом в кэш.
 // Тайлы карты не кэшируются. При изменении списка файлов поднять версию.
-const VERSION = 'v27';
+const VERSION = 'v28';
 const CACHE = `trip2026-${VERSION}`;
 
 const SHELL = [
