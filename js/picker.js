@@ -8,7 +8,7 @@ import * as plan from './plan.js';
 export function dayWarnings(p, date) {
   const w = [];
   if (p.dates?.length && !p.dates.some((d) => d.date === date)) w.push('в этот день события нет');
-  if (p.hours?.closed_weekdays?.includes(parseISODate(date).getDay())) w.push('в этот день закрыто');
+  if (p.hours?.closed_weekdays?.includes(parseISODate(date).getDay()) || p.hours?.closed_dates?.includes(date)) w.push('в этот день закрыто');
   return w;
 }
 

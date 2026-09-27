@@ -9,6 +9,7 @@ import * as store from './store.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
 import * as facts from './facts.js';
+import * as checks from './checks.js';
 
 function cityLine(day) {
   const to = CITIES[day.city];
@@ -254,19 +255,17 @@ function listHTML(list, day, places) {
     <p class="muted">Добавить своё: «+ В план» в шторке места на карте или в «Советах».</p></section>`;
 }
 
-function budgetHTML(day, active, list, places) {
-  const value = energy.score(list.filter((e) => !e.hidden).map((e) => e.item), day.city, places);
-  const limit = energy.getThreshold();
-  let hint = '';
-  if (value > limit) {
-    hint = active === 'a'
-      ? `<div class="card soft-warn"><p>Сегодня насыщенно. Может, взять план Б? Он спокойнее.</p>
-          <button type="button" class="btn" data-plan="b">Переключить на план Б</button></div>`
-      : `<div class="card soft-warn"><p>Даже с планом Б получается много. Можно убрать что-то из списка — отдых важнее.</p></div>`;
-    hint += facts.slot({ tags: ['усталость'] });
-  }
+function budgetHTML(load) {
+  const { value, limit, travel } = load;
   return `${energy.moodHTML(value, limit)}${energy.meterHTML(value, limit)}
-    <p class="muted energy-note">Порог ${limit} меняется в <a href="#/recs?tab=practical&focus=settings">настройках</a>.</p>${hint}`;
+    <p class="muted energy-note">${travel ? `День перелёта: порог снижен до ${limit}. ` : `Порог ${limit}. `}Меняется в <a href="#/recs?tab=practical&focus=settings">настройках</a>.</p>`;
+}
+
+// «Проверка дня» пересчитывается при каждой отрисовке, то есть после любой правки плана.
+function checkHTML(res) {
+  return `<section class="card day-check" aria-labelledby="check-h">
+    <h2 class="mod-head check-head" id="check-h">${whose('🔍 Проверка дня', crewName())}</h2>
+    ${checks.checksHTML(res)}</section>${res.overloaded ? facts.slot({ tags: ['усталость'] }) : ''}`;
 }
 
 export function afterDay(el, r) {
@@ -333,18 +332,14 @@ function eventsHTML(events) {
   return `<h2 class="section mod-head">${whose('🎭 События', crewName())}</h2><ul class="items">${cards.join('')}</ul>`;
 }
 
+// Забастовка (kind: "strike") показывается в «Проверке дня», здесь — остальные предупреждения.
 function warningsHTML(warnings) {
-  if (!warnings?.length) return '';
-  // kind: "strike" — баннер «Забастовка» со ссылкой на трансферы и советы в «Практическом».
-  return warnings.map((w) => {
-    const strike = w.kind === 'strike';
-    const head = strike ? '<p class="strike-title">🚧 Забастовка</p>' : '';
+  return (warnings || []).filter((w) => w.kind !== 'strike').map((w) => {
     const links = [
       w.source ? `<a href="${esc(w.source)}" target="_blank" rel="noopener">источник</a>` : '',
       w.checked_on ? `проверено ${fmtDate(w.checked_on)}` : '',
-      strike ? '<a href="#/recs?tab=practical&focus=transfers">варианты и трансферы</a>' : '',
     ].filter(Boolean).join(' · ');
-    return `<div class="card warn-card${strike ? ' strike' : ''}"${strike ? ' role="note"' : ''}>${head}<p>${strike ? '' : '⚠️ '}${esc(w.text)}</p>
+    return `<div class="card warn-card"><p>⚠️ ${esc(w.text)}</p>
     ${links ? `<p class="muted src">${links}</p>` : ''}</div>`;
   }).join('');
 }
@@ -362,6 +357,8 @@ export async function renderDay({ param }) {
   const places = await placeIndex([...new Set([...dayCities(day), ...all.map((e) => e.item.city)].filter((c) => CITIES[c]))]);
   // Добавленные пункты, которых больше нет в данных, не показываем.
   const list = all.filter((e) => e.base || places.has(`${e.item.city}/${e.item.place_id}`));
+  const hotels = await checks.getHotels();
+  const res = checks.dayChecks({ day, active, list, places, hotels });
 
   return `<div class="day-page"><a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
@@ -371,7 +368,8 @@ export async function renderDay({ param }) {
     ${songHTML(day.date)}
     ${day.note ? `<p class="muted">${esc(day.note)}</p>` : ''}
     ${warningsHTML(day.warnings)}
-    ${budgetHTML(day, active, list, places)}
+    ${budgetHTML(checks.dayLoad(day, list, places, hotels))}
+    ${checkHTML(res)}
     <div class="seg plan-switch" role="group" aria-label="Вариант плана">
       <button type="button" data-plan="a" aria-pressed="${active === 'a'}">План А</button>
       <button type="button" data-plan="b" aria-pressed="${active === 'b'}">План Б · полегче</button>
