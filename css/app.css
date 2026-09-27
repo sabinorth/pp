@@ -438,6 +438,13 @@ h2.section { margin-top: 18px; }
 .soft-warn { background: var(--warn-bg); color: var(--warn-text); border-color: transparent; }
 .soft-warn .btn { margin-top: 6px; width: 100%; }
 
+/* Щадящие маршруты в «Советах» */
+.route-stops { margin: 6px 0; padding: 0; list-style: none; counter-reset: stop; display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.route-stops li { counter-increment: stop; }
+.route-stops li::before { content: counter(stop) '. '; font-weight: 700; }
+.route-stops li:not(:last-child)::after { content: ' →'; color: var(--muted); }
+.route-load { margin: 6px 0 0; font-weight: 600; }
+
 /* «Проверка дня» */
 .day-check { margin: 12px 0; }
 .check-head { margin: 0 0 8px; font-size: 1.15rem; }

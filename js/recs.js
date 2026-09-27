@@ -3,13 +3,17 @@
 import { CITIES, getDays } from './data.js';
 import { placeIndex } from './days.js';
 import { openSheet } from './sheet.js';
-import { esc, fmtDate, fmtWeekday, EFFORT_LEVELS, BEST_TIME, effortInline, isRainy } from './ui.js';
+import { esc, fmtDate, fmtWeekday, plural, EFFORT_LEVELS, BEST_TIME, effortInline, isRainy } from './ui.js';
+import { itemPoints } from './energy.js';
 import { pickerHTML } from './picker.js';
 import * as practical from './practical.js';
 import * as facts from './facts.js';
 
 let recs = [];   // текущий список для обработчиков кнопок
 let ideas = [];  // точки типа idea из обоих городов
+let routes = []; // щадящие маршруты: точки с тегом ROUTE_TAG и route_stops
+
+const ROUTE_TAG = 'щадящий маршрут';
 let days = [];
 
 // Пункты планов А и Б. Паузы внутри больших мест (обед в Версале) не отдельная рекомендация.
@@ -17,6 +21,7 @@ async function collect() {
   days = await getDays();
   const places = await placeIndex(Object.keys(CITIES));
   ideas = [...places.values()].filter((p) => p.type === 'idea');
+  routes = [...places.values()].filter((p) => p.tags?.includes(ROUTE_TAG) && p.route_stops?.length);
   const byKey = new Map();
   for (const d of days) {
     for (const [plan, label] of [['plan_a', 'А'], ['plan_b', 'Б']]) {
@@ -86,9 +91,29 @@ async function renderRecs(q) {
     </div>
     <p class="muted" id="rec-count"></p>
     <div id="rec-list">${recs.map((r, i) => cardHTML(r, i) + (i === 2 ? facts.slot(facts.placeCtx(r.place)) : '')).join('')}</div>
+    ${routes.length ? `<h2 class="section">🚶 Щадящие маршруты</h2>
+    <p class="muted">Готовые прогулки, по возможности под гору и с местами, где посидеть. В плане дня маршрут — один пункт.</p>
+    <div id="route-list">${routes.map(routeHTML).join('')}</div>` : ''}
     ${ideas.length ? `<h2 class="section">💭 Идеи</h2>
     <p class="muted">Впечатления без точного адреса: в какой день — решаете сами.</p>
     <div id="idea-list">${ideas.map(ideaHTML).join('')}</div>` : ''}`;
+}
+
+function routeHTML(p, i) {
+  const c = CITIES[p.city];
+  const pts = itemPoints({}, p);
+  return `<article class="card route-rec" data-city="${p.city}">
+    <div class="rec-meta"><span class="muted">${c.flag} ${c.name}</span>${p.verified === false ? ' <span class="badge warn">не проверено</span>' : ''}</div>
+    <h3 class="rec-title">🚶 ${esc(p.name.replace(/^Щадящий маршрут:\s*/, ''))}</h3>
+    <ol class="route-stops">${p.route_stops.map((s) => `<li>${esc(s.name)}</li>`).join('')}</ol>
+    ${p.summary ? `<p>${esc(p.summary)}</p>` : ''}
+    ${effortInline(p.effort)}
+    <p class="route-load">🔋 Общая нагрузка: ${pts} ${plural(pts, ['балл', 'балла', 'баллов'])} из дневного бюджета</p>
+    <div class="rec-actions">
+      <a class="btn secondary" href="#/map?city=${p.city}&place=${encodeURIComponent(p.id)}">📍 На карте</a>
+      <button type="button" class="btn" data-add-route="${i}">➕ В мой день</button>
+    </div>
+  </article>`;
 }
 
 function ideaHTML(p, i) {
@@ -122,9 +147,9 @@ function applyFilters(el) {
     card.hidden = !show;
     if (show) n++;
   }
-  // Идеи без дат: фильтруем только по городу (или по городу выбранного дня).
+  // Идеи и маршруты без дат: фильтруем только по городу (или по городу выбранного дня).
   const day = days.find((d) => d.date === f.date);
-  for (const card of el.querySelectorAll('.idea-rec')) {
+  for (const card of el.querySelectorAll('.idea-rec, .route-rec')) {
     const c = card.dataset.city;
     card.hidden = (f.city && c !== f.city) || (day && c !== day.city && c !== day.city_from);
   }
@@ -161,6 +186,10 @@ export function after(el, r) {
     const b = e.target.closest('[data-add]');
     const r = b && recs[Number(b.dataset.add)];
     if (r) openAddSheet(r.place, r.date);
+  });
+  el.querySelector('#route-list')?.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-add-route]');
+    if (b) openAddSheet(routes[Number(b.dataset.addRoute)]);
   });
   el.querySelector('#idea-list')?.addEventListener('click', (e) => {
     const b = e.target.closest('[data-add-idea]');

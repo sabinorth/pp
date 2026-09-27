@@ -244,7 +244,10 @@ function longHTML(text) {
 
 function stopsHTML(stops) {
   if (!stops?.length) return '';
-  const rows = stops.map((s) => `<li>${esc(s.name)}${s.note ? ` <span class="muted">— ${esc(s.note)}</span>` : ''}</li>`);
+  const rows = stops.map((s) => {
+    const name = s.place_id ? `<a href="#/map?city=${currentCity}&place=${encodeURIComponent(s.place_id)}">${esc(s.name)}</a>` : esc(s.name);
+    return `<li>${name}${s.note ? ` <span class="muted">— ${esc(s.note)}</span>` : ''}</li>`;
+  });
   return `<h3>Маршрут</h3><ol class="bul">${rows.join('')}</ol>`;
 }
 

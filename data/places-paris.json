@@ -5331,5 +5331,185 @@
     "game_id": null,
     "verified": true,
     "idea_id": "day-30-euros"
+  },
+  {
+    "id": "route-cite-half-day",
+    "city": "paris",
+    "type": "experience",
+    "name": "Щадящий маршрут: Сите за полдня",
+    "name_local": "Sainte-Chapelle – Vert-Galant – Notre-Dame – Le Saint-Régis",
+    "coords": [
+      48.85539,
+      2.34499
+    ],
+    "address": "Старт: Сент-Шапель, 8 boulevard du Palais, 75001 Paris",
+    "summary": "Остров Сите без спешки: витражи Сент-Шапель, сквер Вер-Галан у воды, Нотр-Дам и кафе на острове Сен-Луи.",
+    "description": "Всё пешком и близко, по ровному. Начать с Сент-Шапель, пройти к скверу Вер-Галан на западной оконечности острова (туда спуск по лестнице), вернуться к Нотр-Даму и закончить в кафе Le Saint-Régis на острове Сен-Луи — там можно сидеть сколько угодно.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Билеты и цены — в карточках остановок."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 3.0,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 225
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, пересадка на линию 1 до Hôtel de Ville или Châtelet, дальше около 800 м пешком на остров Сите. Пересадки на Châtelet длинные, Hôtel de Ville проще."
+    },
+    "tips": [
+      "Любую остановку можно пропустить: нагрузка посчитана для полного маршрута."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Нагрузка посчитана по карточкам остановок: их км и время плюс переходы между остановками по прямой ×1,3 при шаге 3 км/ч. Переезды (фуникулёр, метро) пешком не считаются. Уровень — самый высокий среди остановок, а от 2,5 км — не ниже среднего."
+    ],
+    "pairs_with": [
+      "cafe-du-palais"
+    ],
+    "tags": [
+      "щадящий маршрут",
+      "у Сены",
+      "красиво"
+    ],
+    "game_id": null,
+    "verified": true,
+    "route_stops": [
+      {
+        "name": "Сент-Шапель",
+        "place_id": "sainte-chapelle",
+        "coords": [
+          48.85539,
+          2.34499
+        ]
+      },
+      {
+        "name": "Сквер Вер-Галан",
+        "place_id": "vert-galant",
+        "coords": [
+          48.85741,
+          2.34033
+        ]
+      },
+      {
+        "name": "Собор Парижской Богоматери",
+        "place_id": "notre-dame",
+        "coords": [
+          48.85294,
+          2.35005
+        ]
+      },
+      {
+        "name": "Le Saint-Régis",
+        "place_id": "saint-regis",
+        "coords": [
+          48.85293,
+          2.35369
+        ]
+      }
+    ]
+  },
+  {
+    "id": "route-12e",
+    "city": "paris",
+    "type": "experience",
+    "name": "Щадящий маршрут: 12-й округ",
+    "name_local": "Palais de la Porte Dorée – Lac Daumesnil – Coulée verte – Le Train Bleu",
+    "coords": [
+      48.83527,
+      2.40936
+    ],
+    "address": "Старт: Палэ де ла Порт Доре, 293 avenue Daumesnil, 75012 Paris",
+    "summary": "Рядом с отелем: аквариум в Палэ де ла Порт Доре, озеро Домениль, прогулка по Coulée verte и чай в Le Train Bleu на Лионском вокзале.",
+    "description": "Начинается в нескольких минутах от отеля. После Палэ де ла Порт Доре — к озеру Домениль. Дальше до сада Рейи на Coulée verte доехать (метро 8 до Montgallet, в забастовку — такси или Vélib) и пройти часть аллеи в сторону Лионского вокзала. Закончить в лаунж-баре Le Train Bleu. Всю аллею проходить не нужно.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Билеты и цены — в карточках остановок."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 6.0,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 330
+    },
+    "transit_hint": {
+      "from_hotel_min": 5,
+      "transfers": 0,
+      "note": "Пешком от отеля по avenue Daumesnil."
+    },
+    "tips": [
+      "Любую остановку можно пропустить: нагрузка посчитана для полного маршрута."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Нагрузка посчитана по карточкам остановок: их км и время плюс переходы между остановками по прямой ×1,3 при шаге 3 км/ч. Переезды (фуникулёр, метро) пешком не считаются. Уровень — самый высокий среди остановок, а от 2,5 км — не ниже среднего."
+    ],
+    "pairs_with": [
+      "au-bois-doree"
+    ],
+    "tags": [
+      "щадящий маршрут",
+      "рядом с отелем",
+      "можно сократить"
+    ],
+    "game_id": null,
+    "verified": true,
+    "route_stops": [
+      {
+        "name": "Палэ де ла Порт Доре",
+        "place_id": "palais-porte-doree",
+        "coords": [
+          48.83527,
+          2.40936
+        ]
+      },
+      {
+        "name": "Озеро Домениль в Венсенском лесу",
+        "place_id": "lac-daumesnil",
+        "coords": [
+          48.83076,
+          2.41541
+        ]
+      },
+      {
+        "name": "Зелёная прогулка Coulée verte",
+        "place_id": "coulee-verte",
+        "coords": [
+          48.84219,
+          2.38753
+        ]
+      },
+      {
+        "name": "Le Train Bleu",
+        "place_id": "train-bleu",
+        "coords": [
+          48.84504,
+          2.37348
+        ]
+      }
+    ]
   }
 ]
