@@ -6,7 +6,7 @@
     "name_local": "Aparthotel Austria Suites",
     "address": "Štefánikova 18/25, 150 00 Praha 5 – Smíchov, Česko",
     "coords": [50.07463, 14.40359],
-    "dates": { "checkin": "2026-10-01", "checkout": "2026-10-05" },
+    "dates": { "checkin": "2026-10-01", "checkout": "2026-10-05", "arrive_time": "20:30", "leave_time": "09:30", "times_note": "Из трансферов (practical.json → transfers): прилёт 19:30, в отеле ~20:30–21:00; выезд в аэропорт 5.10 в 9:30." },
     "source": [
       "https://www.hotels.com/ho452462/aparthotel-austria-suites-prague-czech-republic/",
       "https://www.itinera.com/hotels/cz-prague/aparthotel-austria-suites.htm",
@@ -23,7 +23,7 @@
     "name_local": "Hôtel De La Porte Dorée",
     "address": "273 avenue Daumesnil, 75012 Paris, France",
     "coords": [48.83599, 2.40597],
-    "dates": { "checkin": "2026-10-05", "checkout": "2026-10-10" },
+    "dates": { "checkin": "2026-10-05", "checkout": "2026-10-10", "arrive_time": "16:00", "leave_time": "08:30", "times_note": "Из трансферов (practical.json → transfers): прилёт в CDG 14:15, в отеле ~16:00–16:30; выезд в CDG 10.10 в 8:30." },
     "source": [
       "https://www.hoteldelaportedoree.com/en/map",
       "https://nominatim.openstreetmap.org/search?q=273+avenue+Daumesnil,+75012+Paris&format=json"
