@@ -1470,7 +1470,8 @@
     "game_id": null,
     "verified": true,
     "pairs_with": [
-      "late-seine-walk-route"
+      "late-seine-walk-route",
+      "paroles-de-fromagers"
     ]
   },
   {
@@ -2097,7 +2098,8 @@
       "sacre-coeur",
       "maison-rose",
       "studio-28",
-      "madame-arthur"
+      "madame-arthur",
+      "fotoautomat-montmartre"
     ],
     "tags": [
       "фестиваль",
@@ -2275,7 +2277,8 @@
       "librairie-jousseaume",
       "librairie-paul-vulin",
       "rainy-day-paris",
-      "bouillon-chartier"
+      "bouillon-chartier",
+      "bains-du-marais"
     ],
     "tags": [
       "на дождь",
@@ -2751,7 +2754,8 @@
     "origin": "user-list-paris-1",
     "pairs_with": [
       "fete-vendanges-montmartre",
-      "sacre-coeur"
+      "sacre-coeur",
+      "fotoautomat-montmartre"
     ],
     "tags": [
       "кино",
@@ -4068,12 +4072,366 @@
     ],
     "origin": "user-list-paris-2",
     "pairs_with": [
-      "fete-vendanges-montmartre"
+      "fete-vendanges-montmartre",
+      "fotoautomat-montmartre"
     ],
     "tags": [
       "вечер",
       "кабаре",
       "Пигаль",
+      "бронь"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "fotoautomat-montmartre",
+    "city": "paris",
+    "type": "experience",
+    "name": "Старая фотополоска вдвоём — Fotoautomat",
+    "name_local": "Fotoautomat — Vintage photobooth Montmartre",
+    "coords": [
+      48.88543,
+      2.33878
+    ],
+    "address": "53 Rue des Trois Frères, 75018 Paris",
+    "summary": "Аналоговая фотобудка 1960-х на Монмартре: четыре чёрно-белых кадра на серебряной химии, полоска готова через 4 минуты. Физический артефакт вместо ещё 200 фото в телефоне.",
+    "description": "Будка №07 сети Fotoautomat, которая почти 20 лет реставрирует старые аналоговые фотоавтоматы. Сами называют её старейшей работающей аналоговой будкой во Франции. Принимает монеты 1 и 2 евро и бесконтактную карту. Стоит на улице Трёх Братьев, в пяти минутах от метро Abbesses.",
+    "description_long": "У Fotoautomat — Vintage photobooth Montmartre стоит винтажная фотобудка. Кажется мелочью, но именно такие физические артефакты потом оказываются гораздо приятнее очередных 200 фото на телефон. Особенно хорошо встроить в вечер Монмартра.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 6,
+      "note": "Около €6 за полоску (по сводке в поиске на 27.09.2026). Монеты 1 и 2 € или бесконтактная карта."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://fotoautomat.fr/en/noscabines/photobooth-07/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.4,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": false,
+      "duration_min": 15
+    },
+    "transit_hint": {
+      "from_hotel_min": 45,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Madeleine, линия 12 до Abbesses (глубокая станция — на лифте), дальше около 300 м."
+    },
+    "tips": [
+      "Особенно хорошо встроить в вечер Монмартра: праздник урожая 9.10, кино в Studio 28 или Madame Arthur.",
+      "Проявка — 4 минуты, можно подождать рядом."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По сайту Fotoautomat (https://fotoautomat.fr/en/noscabines/photobooth-07/) на 27.09.2026: 53 rue des Trois Frères, аппарат 1960-х, «the oldest analog photobooth in France», ч/б, 4 позы, готово через 4 минуты; монеты 1 и 2 € и бесконтактная карта. Цена на странице не указана, €6 — по сводкам.",
+      "Часы работы не указаны; стоит на улице — ориентироваться на день и вечер."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "fete-vendanges-montmartre",
+      "madame-arthur",
+      "studio-28",
+      "sacre-coeur"
+    ],
+    "tags": [
+      "фото",
+      "сувенир",
+      "Монмартр",
+      "недорого"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "puces-saint-ouen",
+    "city": "paris",
+    "type": "experience",
+    "name": "Блошиный рынок Сент-Уэн с заданием",
+    "name_local": "Marché aux Puces de Paris Saint-Ouen",
+    "coords": [
+      48.90288,
+      2.3436
+    ],
+    "address": "Marché Vernaison, 85 Rue des Rosiers / 136 Avenue Michelet, 93400 Saint-Ouen",
+    "summary": "Не в этот раз: в наши дни рынок работает только в пятницу 10:00–13:00 и частично, а в понедельник у нас переезд. Карточка — на будущую поездку.",
+    "description": "Самый большой блошиный рынок Парижа: 11 крытых рынков, торговые улицы и уличные лотки, около 1100 антикваров и старьёвщиков. Полностью работает в субботу–понедельник. Старейший из рынков — Vernaison (с 1920 года, 300 прилавков): плакаты, кофемолки, старая обувь и всякие странные вещи.",
+    "description_long": "Marché aux Puces de Saint-Ouen огромный — больше 1 700 торговцев в 15 отдельных рынках: мебель, старые фотографии, украшения, винил, книги, странные объекты. Я бы не ходила туда «посмотреть рынок», а дала каждому €20–40 и задачу найти друг другу максимально подходящую старую вещь. По пятницам рынок работает ограниченно, основные дни — суббота–понедельник.",
+    "hours": {
+      "text": "Пт 10:00–13:00 (частично), Сб–Вс 10:00–18:00, Пн 11:00–17:00. Вт–Чт закрыто.",
+      "closed_weekdays": [
+        2,
+        3,
+        4
+      ],
+      "source": "https://www.pucesdeparissaintouen.com/en/les-puces/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Вход свободный. Бюджет задания — €20–40 каждой."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Saint-Ouen-sur-Seine_%2893%29_March%C3%A9_aux_puces_977.jpg/1280px-Saint-Ouen-sur-Seine_%2893%29_March%C3%A9_aux_puces_977.jpg",
+        "credit": "GFreihalter",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Saint-Ouen-sur-Seine_(93)_March%C3%A9_aux_puces_977.jpg"
+      }
+    ],
+    "effort": {
+      "level": "high",
+      "walk_km": 2.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 180
+    },
+    "transit_hint": {
+      "from_hotel_min": 55,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Strasbourg–Saint-Denis, линия 4 до Porte de Clignancourt, дальше около 600 м под эстакадой к рынкам."
+    },
+    "tips": [
+      "Не ходить «посмотреть рынок», а с заданием.",
+      "Не в этот раз: пн 5.10 — переезд, сб 10.10 — вылет, а в пт 9.10 открыто только 10:00–13:00 и не всё. Ехать почти час в одну сторону ради трёх неполных часов — вряд ли стоит.",
+      "Если всё-таки в пятницу — сразу в Vernaison, самый старый и «деревенский» из рынков.",
+      "Территория огромная: для нас — 1–2 рынка, а не весь."
+    ],
+    "how_to": [
+      "Бюджет €20–40 каждой.",
+      "Задание — найти другой максимально подходящую старую вещь.",
+      "Встретиться в кафе на рынке и вручить."
+    ],
+    "fact_notes": [
+      "В тексте: «больше 1 700 торговцев в 15 отдельных рынках». По официальному сайту на 27.09.2026: 11 крытых рынков, 5 торговых улиц и уличные лотки, около 1100 антикваров и старьёвщиков (https://www.pucesdeparissaintouen.com/en/les-puces/).",
+      "Часы по официальному сайту: Пт 10–13, Сб–Вс 10–18, Пн 11–17. В пятницу утром Paul Bert Serpette работает только для профессионалов (сводка в поиске).",
+      "Vernaison: с 1920 года, 300 прилавков, Сб–Вс 9–18, Пн 10–18; пятница на его странице не указана (https://www.paulbert-serpette.com/en/marche-vernaison)."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "не в этот раз",
+      "старые вещи",
+      "задание",
+      "большая территория"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "paroles-de-fromagers",
+    "city": "paris",
+    "type": "experience",
+    "name": "Французский сыр как занятие — Paroles de Fromagers",
+    "name_local": "Paroles de Fromagers — Musée Vivant du Fromage",
+    "coords": [
+      48.85193,
+      2.35611
+    ],
+    "address": "Musée Vivant du Fromage, 39 Rue Saint-Louis en l'Île, 75004 Paris",
+    "summary": "Не очередная сырная тарелка, а урок: сыровар-аффинёр объясняет стили сыров и пары с вином в погребе XVII века. Есть занятия на английском, от €70.",
+    "description": "У сыроваров Paroles de Fromagers (их лавка La Ferme du Faubourg — в 10-м округе) есть «Живой музей сыра» на острове Сен-Луи, где и проходят мастер-классы. На английском: «Introduction to Cheese and Wine» (€70), «The Art of Pairing» (€95), сыроварня с дегустацией (€70). Музей сам по себе — €20. Всё сидя, рядом Le Saint-Régis и Нотр-Дам.",
+    "description_long": "Например, у Paroles de Fromagers — La Ferme du Faubourg можно строить отдельный cheese-experience: узнавать стили сыров, пробовать сочетания, разбираться, что вы вообще едите. Я бы предпочла такой формат просто очередной cheese board.",
+    "hours": {
+      "text": "Музей: Вт–Вс 9:00–19:00, Пн закрыто. Мастер-классы — по расписанию в брони.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.pariszigzag.fr/paris-au-quotidien/musee-vivant-fromage-paris/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 70,
+      "note": "Мастер-классы на английском: €70 (сыр и вино; сыроварня), €95 (пары сыра и вина). Вход в музей €20. Абонементы «музей + мастер-класс» €79–139."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://parolesdefromagers.com/en/tastings-workshop/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Saint-Paul или Hôtel de Ville, дальше около 700 м через мост Мари на остров Сен-Луи."
+    },
+    "tips": [
+      "Я бы предпочла такой формат просто очередной cheese board.",
+      "Брать занятие на английском — они отдельной страницей.",
+      "Участникам — скидка на покупку сыра в лавке."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По сайту Paroles de Fromagers на 27.09.2026: занятия проходят в Musée Vivant du Fromage (Paris IV, 39 rue Saint-Louis en l'Île); на английском — €70/€95/€70 (https://parolesdefromagers.com/en/tastings-workshop/). Французская «Immersion dans la caséologie» — 1 ч 30 мин, 7 сыров и 3 вина. Дни и время занятий на страницах не указаны — смотреть при брони на 6–9.10.",
+      "Лавка La Ferme du Faubourg — 41 rue du Faubourg du Temple, 75010 (сводка в поиске).",
+      "Часы музея (Вт–Вс 9–19) — по Paris ZigZag; музей открыт с 25.06.2024.",
+      "Скидка 10 % на сыр для участников — по сводке в поиске, не сверялась."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "saint-regis",
+      "notre-dame"
+    ],
+    "tags": [
+      "сыр",
+      "вино",
+      "сидя",
+      "мастер-класс",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "hammam-pacha",
+    "city": "paris",
+    "type": "experience",
+    "name": "Хаммам Pacha",
+    "name_local": "Hammam Pacha",
+    "coords": [
+      48.8465,
+      2.3192
+    ],
+    "address": "17 Rue Mayet, 75006 Paris",
+    "summary": "Женский хаммам на 700 м² в 6-м округе: пар, гоммаж, массаж и ресторан с тажинами. Без записи. Закончить хаммамом день после 15–20 тысяч шагов.",
+    "description": "Только для женщин, 7 дней в неделю, запись нужна только на эпиляцию. Есть пакеты «вход + гоммаж + чёрное мыло» и расширенные с массажем. Ресторан работает на час дольше хаммама. В чт и пт открыт до 22:00.",
+    "description_long": "Полдня закончить хаммамом. После 15–20 тыс. шагов это может оказаться одним из лучших решений поездки. Из вариантов есть, например, Hammam Pacha. Я бы ставила хаммам в середину путешествия, чтобы это было именно «перезагрузили тело и продолжили Париж», а не SPA ради SPA.",
+    "hours": {
+      "text": "Пн–Ср 11:00–19:00, Чт–Пт 11:00–22:00, Сб–Вс 10:00–19:00. Без записи.",
+      "closed_weekdays": [],
+      "source": "https://hammampacha.com/wpress/horaires/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 35,
+      "note": "Вход около €35, пакеты с уходом €55–150 (по сводкам; на сайте цены в магазине)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://hammampacha.com/wpress/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": null,
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 50,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до La Motte-Picquet–Grenelle, линия 10 до Duroc или Vaneau, дальше около 300 м. Точный маршрут — по ссылке."
+    },
+    "tips": [
+      "Ставить в середину поездки, чтобы «перезагрузили тело и продолжили Париж», а не SPA ради SPA.",
+      "Чт 8.10 открыт до 22:00 — теоретически можно после Версаля, но дорога от отеля длинная.",
+      "Ближе к отелю и центру — Les Bains du Marais (у метро Grands Boulevards, линия 8)."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По сайту хаммама на 27.09.2026: «Exclusivement réservé aux femmes», около 700 м², 7 дней в неделю, часы обновлены 27.08.2026, запись только на эпиляцию, дети с 14 лет.",
+      "Цены (вход €35, пакеты €55–150) — по сводкам в поиске (guide-piscine.fr, spaetc.fr); на официальном сайте не сверялись."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "luxembourg",
+      "bains-du-marais"
+    ],
+    "tags": [
+      "отдых",
+      "только для женщин",
+      "без записи"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "bains-du-marais",
+    "city": "paris",
+    "type": "experience",
+    "name": "Хаммам Les Bains du Marais",
+    "name_local": "Les Bains du Marais",
+    "coords": [
+      48.87028,
+      2.34565
+    ],
+    "address": "14 Rue Saint-Fiacre, 75002 Paris",
+    "summary": "Хаммам и спа на 700 м² у Больших бульваров — от отеля одной линией 8. Обычно смешанный, женские часы — в среду 11:00–16:00.",
+    "description": "Бывший хаммам с улицы Блан-Манто переехал во 2-й округ, к метро Grands Boulevards и Bonne Nouvelle. Хаммам, сауна, гоммаж, массажи, ресторан. Вход от €40, пакет «хаммам + гоммаж» — €70. Запись онлайн или по телефону.",
+    "hours": {
+      "text": "Хаммам с 11:00: Пн–Ср до 21:00, Чт–Пт до 22:00, Сб до 22:00 (с 10:00), Вс до 21:00. Только женщины — Ср 11:00–16:00; только мужчины — Чт 16:00–22:00; в остальное время смешанный.",
+      "closed_weekdays": [],
+      "source": "https://www.bainsdumarais.fr/hammam-traditionnel-spa-a-paris",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 40,
+      "note": "От €40; «хаммам + гоммаж» €70."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.bainsdumarais.fr/hammam-traditionnel-spa-a-paris"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": null,
+      "queue": "none",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Grands Boulevards или Bonne Nouvelle, дальше около 300 м."
+    },
+    "tips": [
+      "Женские часы — ср 7.10, 11:00–16:00.",
+      "Можно совместить с пассажами: Panoramas и Jouffroy в пяти минутах."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По сайту Les Bains du Marais на 27.09.2026: адрес 14 rue Saint-Fiacre 75002, хаммам «mixte la plupart du temps», женщины — Ср 11–16, мужчины — Чт 16–22, вход от €40, запись онлайн или +33 1 48 87 20 20. Переезд с rue des Blancs-Manteaux — по сводке в поиске.",
+      "Пакет «хаммам + гоммаж» €70 — по сводке в поиске.",
+      "Нужен ли купальник, на сайте не указано."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "covered-passages-walk",
+      "bouillon-chartier",
+      "hammam-pacha"
+    ],
+    "tags": [
+      "отдых",
+      "рядом с линией 8",
       "бронь"
     ],
     "game_id": null,
