@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "id": "photo-assignment",
+    "place_id": "photo-assignment",
+    "city": "paris",
+    "kind": "photo",
+    "title": "Фото-задание: Париж",
+    "subtitle": "Два часа на темы, вечером — по 5 лучших кадров",
+    "duration_min": 120,
+    "sources": []
+  },
+  "topics": [
+    "красный Париж",
+    "одиночество",
+    "отражения",
+    "геометрия",
+    "что-то очень французское, но без Эйфелевой башни"
+  ],
+  "timer_min": [120],
+  "pick_count": 5
+}

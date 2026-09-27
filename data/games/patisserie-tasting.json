@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "id": "patisserie-tasting",
+    "place_id": "patisserie-tasting",
+    "city": "paris",
+    "kind": "rating",
+    "title": "Слепая дегустация",
+    "subtitle": "Три пирожных из трёх pâtisseries, оценки вслепую",
+    "duration_min": 30,
+    "sources": []
+  },
+  "blind": true,
+  "scale": 5,
+  "slots": [
+    { "id": "s1", "name": "Пирожное №1" },
+    { "id": "s2", "name": "Пирожное №2" },
+    { "id": "s3", "name": "Пирожное №3" }
+  ],
+  "reveal_label": "Что это и откуда"
+}

@@ -292,7 +292,7 @@ function placeHTML(p, hotel) {
     ${listHTML('Проверка фактов', p.fact_notes, false, 'muted')}
     ${readyGames.includes(p.game_id) ? `<div class="route-btns">
       <a class="btn game-link" href="#/game/${encodeURIComponent(p.game_id)}">🎲 Сыграть</a>
-      <a class="btn secondary game-link" href="#/game/${encodeURIComponent(p.game_id)}?screen=onsite">📍 На месте</a>
+      ${isIdea ? '' : `<a class="btn secondary game-link" href="#/game/${encodeURIComponent(p.game_id)}?screen=onsite">📍 На месте</a>`}
     </div>` : ''}`;
 }
 

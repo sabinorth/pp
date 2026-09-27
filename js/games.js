@@ -1,8 +1,13 @@
 // Игры: кооперативные истории по местам, квиз и задания «на месте».
 // Схема: #/games, #/game/charles-bridge, #/game/charles-bridge?screen=quiz|onsite
+// Мини-игры (meta.kind) рисуют свои модули: #/game/photo-assignment
 import { CITIES, getGameIds, getGame, getPlace } from './data.js';
 import { get, set } from './store.js';
 import { esc } from './ui.js';
+import * as photo from './game-photo.js';
+import * as rating from './game-rating.js';
+
+const MINI = { photo, rating };
 
 const MIN_PLAYERS = 2;
 const MAX_PLAYERS = 4;
@@ -201,6 +206,7 @@ function onsiteHTML(game) {
 }
 
 function sourcesHTML(meta) {
+  if (!meta.sources?.length) return '';
   return `<details class="card sources"><summary>Источники</summary>
     <ul class="link-list">${meta.sources.map((s) => `<li><a href="${esc(s)}" target="_blank" rel="noopener">${esc(decodeURI(s).replace(/^https?:\/\//, ''))}</a></li>`).join('')}</ul>
   </details>`;
@@ -214,11 +220,13 @@ export async function renderGame({ param, query }) {
   }
   const game = await getGame(param);
   const m = game.meta;
-  const screen = query.screen;
+  const mini = MINI[m.kind];
+  const screen = mini ? undefined : query.screen;
   const prog = getProgress(m.id) || { scene: m.start, flags: [], step: 0 };
 
   let body;
-  if (screen === 'quiz') body = quizHTML(game);
+  if (mini) body = mini.html(game, getProgress(m.id) || {}, getPlayers());
+  else if (screen === 'quiz') body = quizHTML(game);
   else if (screen === 'onsite') body = onsiteHTML(game);
   else body = sceneHTML(game, prog);
 
@@ -229,9 +237,9 @@ export async function renderGame({ param, query }) {
   </nav>`;
 
   return `<a class="back" href="#/games">← Все игры</a>
-    <div class="game" data-id="${esc(m.id)}">
+    <div class="game" data-id="${esc(m.id)}" ${mini ? `data-kind="${esc(m.kind)}"` : ''}>
       <h1>${esc(m.title)}</h1>
-      ${tabs}
+      ${mini ? `<p class="muted">${esc(m.subtitle)}</p>` : tabs}
       <div class="game-body">${body}</div>
       <div class="game-foot">
         <a class="btn secondary" href="${mapLink(m)}">🗺️ Показать на карте</a>
@@ -245,6 +253,21 @@ export function afterGame(el, r) {
   const root = el.querySelector('.game');
   if (!root) return;
   const id = root.dataset.id;
+  const mini = MINI[root.dataset.kind];
+
+  // Мини-игра обновляет только своё тело, без прокрутки.
+  if (mini) {
+    const body = root.querySelector('.game-body');
+    getGame(id).then((game) => {
+      const players = getPlayers();
+      mini.bind(body, game, {
+        state: () => getProgress(id) || {},
+        save: (s) => setProgress(id, s),
+        refresh: () => { body.innerHTML = mini.html(game, getProgress(id) || {}, players); },
+        players,
+      });
+    });
+  }
 
   const rerender = async () => {
     el.innerHTML = await renderGame(r);
@@ -271,6 +294,7 @@ export function afterGame(el, r) {
     }
 
     if (e.target.closest('[data-restart]')) {
+      if (mini && !confirm('Стереть все отметки и начать заново?')) return;
       setProgress(id, null);
       await rerender();
       return;

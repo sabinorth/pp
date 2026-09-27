@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "id": "czech-pub-evening",
+    "place_id": "czech-pub-evening",
+    "city": "prague",
+    "kind": "rating",
+    "title": "Сравни три налива",
+    "subtitle": "Hladinka, šnyt, mlíko — оценки каждой",
+    "duration_min": 90,
+    "sources": []
+  },
+  "blind": false,
+  "scale": 5,
+  "slots": [
+    { "id": "hladinka", "name": "Hladinka" },
+    { "id": "snyt", "name": "Šnyt" },
+    { "id": "mliko", "name": "Mlíko" }
+  ]
+}

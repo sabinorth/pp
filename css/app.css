@@ -522,3 +522,41 @@ h2.section { margin-top: 18px; }
   width: 100%; min-height: 44px; margin-top: 6px; padding: 8px 12px; border-radius: 12px;
   border: 2px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: 0.85rem;
 }
+
+/* --- Мини-игра «Фото-задание» --- */
+.timer-btns { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.timer { margin: 4px 0; font-size: 2.6rem; font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
+.timer.done { font-size: 1.6rem; color: var(--hotel); }
+.topic { padding: 10px 0; border-top: 1px solid var(--border); }
+.topic-name { margin: 0 0 8px; font-size: 1.05rem; }
+.topic-players { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip.shot, .chip.shot[aria-pressed="false"] { min-height: 44px; text-decoration: none; opacity: 1; }
+.chip.shot[aria-pressed="true"] { border-color: var(--accent); }
+.pick-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 16px 0 6px; }
+.pick-row { display: grid; grid-template-columns: auto 1fr 44px; gap: 6px 8px; align-items: center; margin: 8px 0; }
+.pick-num { font-weight: 700; width: 1.5ch; text-align: center; }
+.pick-row select, .pick-row input {
+  min-width: 0; min-height: 44px; padding: 6px 10px; border-radius: 12px;
+  border: 2px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
+}
+.pick-row select { grid-column: 2 / 4; }
+.pick-row input { grid-column: 2; }
+.pick-row .icon-btn { grid-column: 3; }
+.icon-btn[aria-pressed="true"] { border-color: var(--accent); }
+
+/* --- Мини-игра «Оценки игроков» --- */
+.rate-who { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip.who, .chip.who[aria-pressed="false"] { min-height: 44px; text-decoration: none; opacity: 1; }
+.chip.who[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--accent-text); }
+.rate-status { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.rate-slot h3 { margin: 0 0 8px; }
+.score-btns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.btn.score { padding: 8px 0; font-size: 1.15rem; }
+.btn.score[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+.verdict { font-size: 1.1rem; }
+.table-wrap { overflow-x: auto; }
+.results { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.results th, .results td { padding: 10px 6px; border-bottom: 1px solid var(--border); text-align: center; }
+.results tbody th { text-align: left; }
+.results tr.win { background: var(--warn-bg); color: var(--warn-text); }
+.field.reveal { margin: 8px 0; }
