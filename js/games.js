@@ -104,7 +104,7 @@ export async function render() {
 
   const achieved = ready.filter((g) => getDone(g.meta.id)?.achievement);
   const achHTML = achieved.length
-    ? `<section class="card"><h2 class="mod-head">${whose('Достижения', crewName())}</h2><p class="ach-list">${achieved.map((g) => `<span class="badge ok">${esc(g.achievement.emoji)} ${esc(g.achievement.title)}</span>`).join(' ')}</p></section>`
+    ? `<section class="card"><h2 class="mod-head">${whose('Достижения', crewName())}</h2><p class="ach-list">${achieved.map((g) => `<span class="badge ok">${esc(g.achievement.emoji)} ${esc(g.achievement.title)}</span>`).join(' ')}</p>${facts.slot({ tags: ['награда', 'дружба'] })}</section>`
     : '';
 
   const groups = Object.entries(CITIES).map(([city, c]) => {
@@ -171,7 +171,7 @@ function sceneHTML(game, prog, place) {
       ${lines.map((l) => `<p class="line">${esc(l.text)}</p>`).join('')}
     </article>
     ${choices}
-    ${facts.slot({ ...facts.placeCtx(place), scene: scene.id })}`;
+    ${facts.slot({ ...facts.placeCtx(place, isEnd ? ['награда'] : []), scene: scene.id })}`;
 }
 
 function quizHTML(game) {
