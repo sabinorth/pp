@@ -1,6 +1,6 @@
 // Офлайн-кэш: оболочка — stale-while-revalidate, data/*.json — network-first с откатом в кэш.
 // Тайлы карты не кэшируются. При изменении списка файлов поднять версию.
-const VERSION = 'v24';
+const VERSION = 'v25';
 const CACHE = `trip2026-${VERSION}`;
 
 const SHELL = [
@@ -38,6 +38,8 @@ const SHELL = [
   'data/games/louvre.json',
   'data/games/versailles.json', 'data/games/charles-bridge.json', 'data/games/prague-castle.json', 'data/games/old-town-square.json', 'data/games/vysehrad.json',
 ];
+// Шрифт заголовков эмо-темы: кэшируется при первом использовании. Офлайн без него — системный.
+const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 const CDN = [
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
@@ -102,7 +104,7 @@ self.addEventListener('fetch', (event) => {
     } else {
       event.respondWith(staleWhileRevalidate(event));
     }
-  } else if (CDN.includes(request.url)) {
+  } else if (CDN.includes(request.url) || FONT_HOSTS.includes(url.hostname)) {
     event.respondWith(staleWhileRevalidate(event));
   }
   // Остальное (тайлы OSM, Wikimedia, внешние ссылки) — напрямую в сеть.

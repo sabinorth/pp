@@ -30,7 +30,8 @@
 index.html
 css/        стили, mobile-first
 js/         app.js (роутер), map.js, days.js, recs.js, games.js, data.js,
-            plan.js (ручной план), picker.js («+ В план»), store.js, energy.js, ui.js, sheet.js, practical.js
+            plan.js (ручной план), picker.js («+ В план»), store.js, energy.js, ui.js, sheet.js, practical.js,
+            theme.js (тема, блинки, курсор-блёстки), players.js (имена игроков), top8.js
 data/       hotels.json, places-prague.json, places-paris.json, days.json, practical.json, games/*.json
 sw.js, manifest.json
 ```
@@ -97,6 +98,14 @@ sw.js, manifest.json
 - Энергобюджет считает видимые пункты с учётом добавленных.
 - Хранение: localStorage (`trip2026:v1` → `dayplans`, `plans`) через store.js. Старое «Моё» (`mine`) мигрирует автоматически.
 - Перенос между телефонами: «Экспорт плана» (JSON-файл), «Импорт плана», «Поделиться ссылкой» (`#/plan?import=<base64url>`, перед заменой — подтверждение).
+
+## Тема оформления
+
+- `<html data-theme="emo|plain">`, по умолчанию `emo` (эмо-MySpace, всегда тёмная). Ставится инлайн-скриптом в `index.html`, переключатель — в «Советы → Практическое → Настройки» (`store` → `theme`).
+- Эмо — только рамка: фон, шапки блоков `.mod-head`, h1, декор. Текст, кнопки, карта — контраст WCAG AA, тайлы не трогать. Цвета — токены в `:root[data-theme="emo"]`.
+- Шапка «<Имя>'s …» — `whose(title, who)` из ui.js; имена — из игроков (`players.js`). `.emo-only` / `.not-emo` — разметка только для одной из тем.
+- Анимации только CSS, все выключаются при `prefers-reduced-motion`. Никаких GIF, внешних картинок и персонажей — только эмодзи и CSS/SVG-декор.
+- MySpace-механики: Mood (energy.js), Top 8 (`top8`), «Currently listening» (`songs` по дате), заметки как стена комментариев, счётчик на «Плане». В экспорт плана `top8` и `songs` не входят.
 
 ## Жёсткие правила
 
