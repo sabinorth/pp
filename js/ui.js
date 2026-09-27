@@ -6,6 +6,12 @@ export function esc(value) {
   })[c]);
 }
 
+// Шапка блока в духе MySpace: «Игрок 1's Top 8». Приставка видна только в эмо-теме.
+// title — уже готовая разметка.
+export function whose(title, who) {
+  return `<span class="whose">${esc(who)}'s </span>${title}`;
+}
+
 export const TYPES = {
   sight:  { icon: '🏛️', label: 'Места' },
   cafe:   { icon: '☕', label: 'Кафе' },

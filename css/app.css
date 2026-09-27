@@ -607,3 +607,118 @@ h2.section { margin-top: 18px; }
   --head-text: #ffffff;
   --font-display: "Rubik Wet Paint", var(--font-body);
 }
+
+/* Шапка «<Имя>'s …» и блинки видны только в эмо. */
+.whose, .blinkies { display: none; }
+
+/* --- Эмо: фон — клетка + звёздочки (инлайновый SVG), неподвижный --- */
+:root[data-theme="emo"] {
+  background-color: var(--bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg fill='%23ff5fb4' opacity='.28'%3E%3Cpath d='M30 18l2.5 7.5 7.5 2.5-7.5 2.5-2.5 7.5-2.5-7.5-7.5-2.5 7.5-2.5z'/%3E%3Cpath d='M130 100l1.8 5.2 5.2 1.8-5.2 1.8-1.8 5.2-1.8-5.2-5.2-1.8 5.2-1.8z'/%3E%3C/g%3E%3Cg fill='%23b066ff' opacity='.3'%3E%3Cpath d='M110 30l1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5z'/%3E%3Cpath d='M50 130l2 6 6 2-6 2-2 6-2-6-6-2 6-2z'/%3E%3Ccircle cx='160' cy='160' r='1.5'/%3E%3Ccircle cx='85' cy='70' r='1.2'/%3E%3C/g%3E%3C/svg%3E"),
+    repeating-conic-gradient(#150a1d 0 25%, #0d0612 0 50%);
+  background-size: 180px 180px, 36px 36px;
+  background-attachment: fixed;
+}
+:root[data-theme="emo"] body { background: transparent; }
+
+/* --- Эмо: блоки MySpace — рамка и цветная шапка --- */
+:root[data-theme="emo"] .card {
+  border: 2px solid var(--border);
+  box-shadow: 0 0 0 1px #000, 0 0 14px rgba(176, 102, 255, 0.18);
+}
+:root[data-theme="emo"] .day-card.today { border: 3px solid var(--today); }
+:root[data-theme="emo"] .whose { display: inline; }
+:root[data-theme="emo"] .mod-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--head-bg);
+  color: var(--head-text);
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--neon-pink);
+  border-radius: 4px;
+  text-shadow: 0 0 6px rgba(255, 95, 180, 0.8);
+}
+:root[data-theme="emo"] .card > .mod-head:first-child {
+  margin: -14px -16px 12px;
+  border-width: 0 0 2px;
+  border-radius: 4px 4px 0 0;
+}
+:root[data-theme="emo"] .mod-head::after {
+  content: '✦ ✧ ✦';
+  margin-left: auto;
+  flex: none;
+  font: 0.9rem var(--font-body);
+  color: #ffc2e6;
+  animation: emo-twinkle 1.8s steps(2, jump-none) infinite;
+}
+
+/* --- Эмо: glitter на h1 (светлые тона — контраст с фоном ≥ 12:1) --- */
+:root[data-theme="emo"] h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  color: #ffe3f3;
+  background: linear-gradient(100deg, #ffffff 0%, #ffc2e6 18%, #ffffff 34%, #e0b3ff 52%, #ffffff 68%, #ffc2e6 84%, #ffffff 100%) 0 0 / 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 6px rgba(255, 95, 180, 0.55));
+  animation: emo-glitter 5s linear infinite;
+}
+@keyframes emo-glitter { to { background-position: -250% 0; } }
+@keyframes emo-twinkle { 50% { opacity: 0.35; } }
+
+/* --- Эмо: блинки-плашки --- */
+:root[data-theme="emo"] .blinkies { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 12px; }
+.blinkie {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #000;
+  outline: 1px solid var(--neon-pink);
+  background: #2a0a24;
+  color: #ffc2e6;
+  font: 700 0.72rem/1.6 ui-monospace, "Courier New", monospace;
+  white-space: nowrap;
+  animation: emo-blink 1.6s steps(1) infinite;
+}
+.blinkie:nth-child(2) { outline-color: var(--neon-purple); background: #1c0a33; color: #e0b3ff; animation-delay: 0.5s; }
+.blinkie:nth-child(3) { animation-delay: 1s; }
+@keyframes emo-blink { 50% { background: #5b1447; color: #ffffff; } }
+
+/* --- Эмо: навигация, кнопки, фокус --- */
+:root[data-theme="emo"] .tabbar { background: #120818; border-top: 2px solid var(--neon-pink); }
+:root[data-theme="emo"] .tabbar a.active { text-shadow: 0 0 8px rgba(255, 95, 180, 0.7); }
+:root[data-theme="emo"] .btn { box-shadow: 0 0 10px rgba(255, 95, 180, 0.35); }
+:root[data-theme="emo"] .btn.secondary { background: var(--surface); }
+:root[data-theme="emo"] .seg button[aria-pressed="true"],
+:root[data-theme="emo"] .seg a[aria-current="page"] { background: var(--accent); color: var(--accent-text); }
+:root[data-theme="emo"] .map-top { border-bottom: 2px solid var(--neon-pink); }
+:root[data-theme="emo"] .sheet { border-top: 2px solid var(--neon-pink); }
+:root[data-theme="emo"] :focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
+
+/* --- Эмо: курсор-блёстки (создаёт theme.js только на десктопе) --- */
+.spark {
+  position: fixed;
+  z-index: 3000;
+  pointer-events: none;
+  color: var(--neon-pink);
+  font-size: 14px;
+  line-height: 1;
+  text-shadow: 0 0 6px currentColor;
+  animation: emo-spark 0.8s ease-out forwards;
+}
+.spark:nth-of-type(2n) { color: var(--neon-purple); }
+@keyframes emo-spark {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  to { opacity: 0; transform: translate(-50%, 40%) scale(0.3) rotate(90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme="emo"] h1, .blinkie, :root[data-theme="emo"] .mod-head::after { animation: none; }
+  .spark { display: none; }
+}

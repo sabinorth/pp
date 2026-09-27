@@ -3,26 +3,14 @@
 // Мини-игры (meta.kind) рисуют свои модули: #/game/photo-assignment
 import { CITIES, getGameIds, getGame, getPlace } from './data.js';
 import { get, set } from './store.js';
-import { esc } from './ui.js';
+import { esc, whose } from './ui.js';
+import { MIN_PLAYERS, MAX_PLAYERS, getPlayers, playerName, crewName } from './players.js';
 import * as photo from './game-photo.js';
 import * as rating from './game-rating.js';
 
 const MINI = { photo, rating };
 
-const MIN_PLAYERS = 2;
-const MAX_PLAYERS = 4;
-
 // ---------- состояние в localStorage (store.js сам ловит ошибки хранилища) ----------
-
-function getPlayers() {
-  const p = get('games.players', null);
-  if (Array.isArray(p) && p.length >= MIN_PLAYERS) return p.slice(0, MAX_PLAYERS);
-  return ['Игрок 1', 'Игрок 2'];
-}
-
-function playerName(players, i) {
-  return players[i % players.length]?.trim() || `Игрок ${(i % players.length) + 1}`;
-}
 
 function getProgress(id) {
   return get('games.progress', {})[id] || null;
@@ -80,7 +68,7 @@ function playersHTML(players) {
       <input type="text" name="player" data-i="${i}" value="${esc(name)}" maxlength="20" autocomplete="off" aria-label="Имя игрока ${i + 1}">
     </label>`).join('');
   return `<section class="card players">
-    <h2>Игроки</h2>
+    <h2 class="mod-head">${whose('Игроки', crewName(players))}</h2>
     <p class="muted">Ход переходит по кругу: каждую сцену выбирает следующий игрок.</p>
     ${inputs}
     <div class="players-btns">
@@ -113,7 +101,7 @@ export async function render() {
 
   const achieved = ready.filter((g) => getDone(g.meta.id)?.achievement);
   const achHTML = achieved.length
-    ? `<section class="card"><h2>Достижения</h2><p class="ach-list">${achieved.map((g) => `<span class="badge ok">${esc(g.achievement.emoji)} ${esc(g.achievement.title)}</span>`).join(' ')}</p></section>`
+    ? `<section class="card"><h2 class="mod-head">${whose('Достижения', crewName())}</h2><p class="ach-list">${achieved.map((g) => `<span class="badge ok">${esc(g.achievement.emoji)} ${esc(g.achievement.title)}</span>`).join(' ')}</p></section>`
     : '';
 
   const groups = Object.entries(CITIES).map(([city, c]) => {

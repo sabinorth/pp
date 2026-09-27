@@ -1,7 +1,9 @@
 // План по дням: лента (#/plan) и карточка дня (#/day/2026-10-08).
 // Пункты дня = базовые из days.json + ручные правки из plan.js.
 import { CITIES, getDays, getPlaces } from './data.js';
-import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME, TYPES } from './ui.js';
+import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME, TYPES, whose } from './ui.js';
+import { crewName } from './players.js';
+import { blinkiesHTML } from './theme.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
 
@@ -38,9 +40,9 @@ export async function renderList({ query }) {
       <div class="day-sub">${titles ? `Мест в плане: ${titles}` : 'Пока пусто'}${d.events?.length ? ` · событий: ${d.events.length}` : ''}</div>
     </a>`;
   });
-  return `<h1>План</h1>${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
+  return `<h1>План</h1>${blinkiesHTML()}${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
     <section class="share-plan" id="share">
-      <h2 class="section">📲 План на двоих</h2>
+      <h2 class="section mod-head">${whose('📲 План на двоих', crewName())}</h2>
       <p class="muted">Ручные правки хранятся только на этом телефоне. Перенести их на другой — файлом или ссылкой.</p>
       <div class="share-btns">
         <button type="button" class="btn secondary" data-export>⬇️ Экспорт плана</button>
@@ -257,7 +259,7 @@ function eventsHTML(events) {
       <p class="event-links">${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">Подробнее</a>` : ''}
         ${e.source && e.source !== e.url ? ` · <a href="${esc(e.source)}" target="_blank" rel="noopener">источник</a>` : ''}</p>
     </li>`);
-  return `<h2 class="section">🎭 События</h2><ul class="items">${cards.join('')}</ul>`;
+  return `<h2 class="section mod-head">${whose('🎭 События', crewName())}</h2><ul class="items">${cards.join('')}</ul>`;
 }
 
 function warningsHTML(warnings) {
@@ -283,6 +285,7 @@ export async function renderDay({ param }) {
   return `<div class="day-page"><a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
     <p class="day-city">${cityLine(day)}</p>
+    ${blinkiesHTML(day.date)}
     ${badgesHTML(day)}
     ${day.note ? `<p class="muted">${esc(day.note)}</p>` : ''}
     ${warningsHTML(day.warnings)}
