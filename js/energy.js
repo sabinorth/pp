@@ -40,3 +40,15 @@ export function meterHTML(value, threshold) {
     <div class="energy-bar">${segs.join('')}</div>
   </div>`;
 }
+
+// Настроение дня в духе MySpace — по той же нагрузке.
+export function mood(value, threshold) {
+  if (value > threshold) return { icon: '😴', text: 'exhausted', cls: 'tired' };
+  if (value > threshold * 0.6) return { icon: '🙂', text: 'chill', cls: 'chill' };
+  return { icon: '✨', text: 'ready', cls: 'ready' };
+}
+
+export function moodHTML(value, threshold) {
+  const m = mood(value, threshold);
+  return `<p class="mood mood-${m.cls}"><span class="mood-label">Mood:</span> <span aria-hidden="true">${m.icon}</span> ${m.text}</p>`;
+}

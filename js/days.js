@@ -203,7 +203,7 @@ function budgetHTML(day, active, list, places) {
           <button type="button" class="btn" data-plan="b">Переключить на план Б</button></div>`
       : `<div class="card soft-warn"><p>Даже с планом Б получается много. Можно убрать что-то из списка — отдых важнее.</p></div>`;
   }
-  return `${energy.meterHTML(value, limit)}
+  return `${energy.moodHTML(value, limit)}${energy.meterHTML(value, limit)}
     <p class="muted energy-note">Порог ${limit} меняется в <a href="#/recs?tab=practical&focus=settings">настройках</a>.</p>${hint}`;
 }
 
