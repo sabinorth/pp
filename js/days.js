@@ -268,6 +268,42 @@ function checkHTML(res) {
     ${checks.checksHTML(res)}</section>${res.overloaded ? facts.slot({ tags: ['усталость'] }) : ''}`;
 }
 
+// ---------- день текстом ----------
+
+let shown = null;   // { day, active, list, places, res } последней отрисованной страницы дня
+
+function dayText({ day, active, list, places, res }) {
+  const base = `${location.origin}${location.pathname}`;
+  const lines = [`${fmtWeekday(day.date)}, ${fmtDate(day.date)} · ${cityLine(day)} · план ${active === 'b' ? 'Б' : 'А'}`, ''];
+  list.filter((e) => !e.hidden).forEach((e, i) => {
+    const city = e.item.city || day.city;
+    const p = e.item.place_id ? places.get(`${city}/${e.item.place_id}`) : null;
+    const title = e.item.title || p?.name || '';
+    lines.push(`${i + 1}. ${e.time ? `${e.time} ` : ''}${e.item.pause ? '☕ ' : ''}${title}`);
+    if (e.note) lines.push(`   📝 ${e.note}`);
+    if (p) lines.push(`   ${base}#/map?city=${city}&place=${encodeURIComponent(p.id)}`);
+  });
+  const notes = checks.checksText(res);
+  if (notes.length) lines.push('', 'Проверка дня:', ...notes);
+  return lines.join('\n');
+}
+
+async function shareDay(msg) {
+  const text = dayText(shown);
+  try {
+    if (navigator.share) {
+      await navigator.share({ title: `План на ${fmtDate(shown.day.date)}`, text });
+      return;
+    }
+    await navigator.clipboard.writeText(text);
+    msg.textContent = '✅ План дня скопирован — вставьте его в мессенджер.';
+  } catch (err) {
+    if (err?.name === 'AbortError') return;
+    msg.innerHTML = `Скопируйте вручную:<br><textarea class="share-url" rows="8" readonly>${esc(text)}</textarea>`;
+    msg.querySelector('textarea').select();
+  }
+}
+
 export function afterDay(el, r) {
   const page = el.querySelector('.day-page');
   if (!page) return;
@@ -275,6 +311,10 @@ export function afterDay(el, r) {
     const b = e.target.closest('button');
     if (!b) return;
     const date = r.param;
+    if (b.hasAttribute('data-share-day')) {
+      shareDay(page.querySelector('#day-share-msg'));
+      return;
+    }
     if (b.dataset.plan) {
       if (b.getAttribute('aria-pressed') === 'true') return;
       plan.setActivePlan(date, b.dataset.plan);
@@ -359,6 +399,7 @@ export async function renderDay({ param }) {
   const list = all.filter((e) => e.base || places.has(`${e.item.city}/${e.item.place_id}`));
   const hotels = await checks.getHotels();
   const res = checks.dayChecks({ day, active, list, places, hotels });
+  shown = { day, active, list, places, res };
 
   return `<div class="day-page"><a class="back" href="#/plan">← Все дни</a>
     <h1>${fmtWeekday(day.date)}, ${fmtDate(day.date)}</h1>
@@ -377,6 +418,10 @@ export async function renderDay({ param }) {
     ${active === 'b' ? '<p class="muted">Облегчённый вариант — если устали или дождь.</p>' : ''}
     ${listHTML(list, day, places)}
     ${eventsHTML(day.events)}
+    <div class="day-share">
+      <button type="button" class="btn secondary wide" data-share-day>📤 Отправить день текстом</button>
+      <p class="add-result" id="day-share-msg" role="status"></p>
+    </div>
     <nav class="day-nav" aria-label="Соседние дни">
       <a class="btn secondary" ${prev ? `href="#/day/${prev.date}"` : 'aria-disabled="true"'}>← ${prev ? fmtDate(prev.date) : ''}</a>
       <a class="btn secondary" ${next ? `href="#/day/${next.date}"` : 'aria-disabled="true"'}>${next ? fmtDate(next.date) : ''} →</a>
