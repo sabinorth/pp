@@ -2427,7 +2427,9 @@
     ],
     "origin": "user-list-paris-1",
     "pairs_with": [
-      "marais-place-des-vosges"
+      "marais-place-des-vosges",
+      "bontemps-patisserie",
+      "patisserie-tasting"
     ],
     "tags": [
       "терраса",
@@ -4848,5 +4850,439 @@
     "candidates": [
       "fotoautomat-montmartre"
     ]
+  },
+  {
+    "id": "patisserie-tasting",
+    "city": "paris",
+    "type": "idea",
+    "name": "Pâtisserie tasting со слепым голосованием",
+    "name_local": "Dégustation de pâtisseries à l'aveugle",
+    "coords": null,
+    "address": "",
+    "summary": "Вместо одного десерта — по одной штуке на двоих из трёх разных кондитерских, а вечером слепое голосование. Три кондитерские в Марэ — в пределах километра.",
+    "description": "Идея без адреса. Маршрут по Марэ около 1 км: Yann Couvreur на улице Розье → Pain de Sucre на улице Рамбюто → Bontemps на улице Бретань. Финиш у Café Charlot — там же можно и проголосовать. Все три открыты одновременно только в пт 9.10 (и чт 8.10, но это Версаль). В ср 7.10 Pain de Sucre закрыт.",
+    "description_long": "Устроить pâtisserie tasting вместо одного десерта. Купить в 3 разных pâtisseries по одной штуке на двоих — например Paris-Brest, mille-feuille и что-то сезонное — и вечером провести слепое голосование. Прикольнее, чем три раза отдельно ходить «в известную кондитерскую».",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 1,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": null,
+    "tips": [
+      "Лучший день — пт 9.10: открыты все три. Удобно совместить с Марэ в тот же день.",
+      "Мини-игра «Слепая дегустация» (3 слота, оценки двух игроков, итог голосования) запланирована отдельно.",
+      "Попросить упаковать пирожные в коробку — до вечера они должны доехать."
+    ],
+    "how_to": [
+      "Купить в каждой из трёх кондитерских по одной штуке на двоих.",
+      "Вечером одна раскладывает пирожные без подписей, другая пробует и ставит оценки; потом наоборот.",
+      "Открыть, где что куплено, и сравнить оценки."
+    ],
+    "fact_notes": [],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "marais-place-des-vosges",
+      "cafe-charlot"
+    ],
+    "tags": [
+      "сладкое",
+      "игра",
+      "Марэ"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "yann-couvreur-rosiers",
+      "pain-de-sucre",
+      "bontemps-patisserie"
+    ]
+  },
+  {
+    "id": "yann-couvreur-rosiers",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Кондитерская Yann Couvreur на улице Розье",
+    "name_local": "Yann Couvreur Pâtisserie — Rosiers",
+    "coords": [
+      48.85753,
+      2.35869
+    ],
+    "address": "23 bis Rue des Rosiers, 75004 Paris",
+    "summary": "Кондитерская Янна Куврёра в Марэ. Первая точка pâtisserie-маршрута, открыта ежедневно.",
+    "description": "Одна из парижских кондитерских шефа Янна Куврёра, в самом центре Марэ на улице Розье. Обзоры советуют здесь Paris-Brest — брать одну штуку на двоих.",
+    "hours": {
+      "text": "Ежедневно 10:00–20:00.",
+      "closed_weekdays": [],
+      "source": "https://www.pagesjaunes.fr/pros/56296654",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 15
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Saint-Paul, дальше около 300 м."
+    },
+    "tips": [
+      "Первая точка маршрута: отсюда 500 м до Pain de Sucre."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Адрес — по сайту Yann Couvreur (https://yanncouvreur.com/pages/boutiques). Часы — по справочникам (PagesJaunes, сводка в поиске), на сайте не указаны.",
+      "Paris-Brest в Yann Couvreur советуют обзоры (Paris by Mouth); в меню на сайте его не нашлось — ассортимент проверить на месте."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "marais-place-des-vosges"
+    ],
+    "tags": [
+      "сладкое",
+      "Марэ",
+      "с собой"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "patisserie-tasting"
+  },
+  {
+    "id": "pain-de-sucre",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Кондитерская Pain de Sucre",
+    "name_local": "Pâtisserie Pain de Sucre",
+    "coords": [
+      48.86055,
+      2.35565
+    ],
+    "address": "14 Rue Rambuteau, 75003 Paris",
+    "summary": "Необычная кондитерская у Центра Помпиду: разноцветный зефир, квадратные тарты и баба, которую пропитывают ромом из шприца. Вторник и среда — выходные.",
+    "description": "Два магазина по одному адресу: солёная лавка и сладкий бутик. Открыта с 10 до 20 с четверга по понедельник.",
+    "hours": {
+      "text": "Чт–Пн 10:00–20:00. Вт и Ср закрыто.",
+      "closed_weekdays": [
+        2,
+        3
+      ],
+      "source": "https://www.patisseriepaindesucre.com/magasins/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 15
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Hôtel de Ville или Rambuteau (линия 11), дальше несколько минут пешком."
+    },
+    "tips": [
+      "Вт 6.10 и ср 7.10 закрыто."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы и адрес — по сайту кондитерской на 27.09.2026. Описание ассортимента (зефир, квадратные тарты, баба со шприцем) — по Paris by Mouth (сводка в поиске)."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "сладкое",
+      "Марэ",
+      "необычное"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "patisserie-tasting"
+  },
+  {
+    "id": "bontemps-patisserie",
+    "city": "paris",
+    "type": "cafe",
+    "name": "Кондитерская Bontemps",
+    "name_local": "Bontemps Pâtisserie",
+    "coords": [
+      48.86389,
+      2.3606
+    ],
+    "address": "57 Rue de Bretagne, 75003 Paris",
+    "summary": "Кондитерская в верхнем Марэ, известная песочным печеньем и лимонным кексом. При ней ресторан-сад Jardin Secret, где можно сесть. Пн и Вт закрыто.",
+    "description": "Последняя точка pâtisserie-маршрута, на той же улице, что Café Charlot и рынок Анфан-Руж. Во дворе — ресторан Jardin Secret: обед, бранч и чай.",
+    "hours": {
+      "text": "Ср–Пт 11:00–14:30 и 15:00–19:00; Сб 10:30–14:30 и 15:00–19:00; Вс 10:30–14:30 и 15:00–17:30. Пн и Вт закрыто.",
+      "closed_weekdays": [
+        1,
+        2
+      ],
+      "source": "https://bontemps.paris/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://bontemps.paris/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 20
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Filles du Calvaire, дальше около 500 м по улице Бретань."
+    },
+    "tips": [
+      "Перерыв 14:30–15:00 — не попасть в него.",
+      "Вт 6.10 закрыто."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы, адрес и ресторан Jardin Secret — по сайту Bontemps на 27.09.2026."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "cafe-charlot"
+    ],
+    "tags": [
+      "сладкое",
+      "Марэ",
+      "можно сесть"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "patisserie-tasting"
+  },
+  {
+    "id": "day-30-euros",
+    "city": "paris",
+    "type": "idea",
+    "name": "День «€30 на двоих и никакого плана»",
+    "name_local": "30 € à deux, sans programme",
+    "coords": null,
+    "address": "",
+    "summary": "Выбрать район, где ничего не запланировано, и тратить €30 только на то, что случайно встретилось: кофе, странная открытка, выпечка, винил, маленькая выставка.",
+    "description": "Идея без адреса. Два района, где в нашем плане ничего нет: Бют-о-Кай в 13-м округе (холм с «деревенскими» улочками, бары, стрит-арт; линия 6 от Daumesnil) и Батиньоль в 17-м (бывшая деревня, где собирались Мане и его друзья, сквер 1862 года; линия 14 от Madeleine).",
+    "description_long": "Выбрать район, в котором ничего не запланировано, и разрешить тратить бюджет исключительно на вещи, которые случайно встретились: кофе, странная открытка, выпечка, винил, маленькая выставка. Это хороший противовес вашему довольно структурированному путешествию.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 2,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 180
+    },
+    "transit_hint": null,
+    "tips": [
+      "Хороший противовес довольно структурированному путешествию.",
+      "Бюджет — наличными в кармане: когда кончились, день закончен.",
+      "Лучше пт 9.10 или вторая половина вт 6.10."
+    ],
+    "how_to": [
+      "Выбрать район.",
+      "Взять €30 на двоих.",
+      "Тратить только на то, что случайно встретилось: кофе, открытка, выпечка, винил, маленькая выставка.",
+      "Никаких заранее выбранных адресов."
+    ],
+    "fact_notes": [],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "бесцельно",
+      "бюджет",
+      "местная жизнь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "butte-aux-cailles",
+      "batignolles"
+    ]
+  },
+  {
+    "id": "butte-aux-cailles",
+    "city": "paris",
+    "type": "experience",
+    "name": "Бют-о-Кай: деревня на холме",
+    "name_local": "La Butte-aux-Cailles",
+    "coords": [
+      48.82764,
+      2.348
+    ],
+    "address": "Старт: Rue de la Butte-aux-Cailles, 75013 Paris",
+    "summary": "Холм в 13-м округе, который сохранил деревенскую атмосферу: маленькие улицы, бары и ресторанчики, стрит-арт Miss.Tic и Jef Aérosol. В нашем плане этого района нет.",
+    "description": "Название — не от перепелов, а от Пьера Кая, купившего здесь виноградник в 1543 году. Под мостовыми течёт закрытая в 1860 году речка Бьевр, её русло отмечено бронзовыми табличками. Ближайшее метро — Corvisart (линия 6), оттуда немного в горку.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно; бюджет дня — €30 на двоих."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Paris_Rue_Butte-aux-Cailles_depuis_R_Bobillot_2014b.jpg/1280px-Paris_Rue_Butte-aux-Cailles_depuis_R_Bobillot_2014b.jpg",
+        "credit": "JLPC",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_Rue_Butte-aux-Cailles_depuis_R_Bobillot_2014b.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Daumesnil, линия 6 до Corvisart, дальше около 400 м в горку."
+    },
+    "tips": [
+      "Это холм: от метро Corvisart — в горку.",
+      "Искать на стенах работы Miss.Tic и Jef Aérosol."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Описание района, происхождение названия, Бьевр и стрит-арт — по Википедии (https://en.wikipedia.org/wiki/Butte-aux-Cailles), 27.09.2026."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "район",
+      "стрит-арт",
+      "местная жизнь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "day-30-euros"
+  },
+  {
+    "id": "batignolles",
+    "city": "paris",
+    "type": "experience",
+    "name": "Батиньоль: бывшая деревня Мане",
+    "name_local": "Les Batignolles",
+    "coords": [
+      48.88755,
+      2.31623
+    ],
+    "address": "Старт: Square des Batignolles, 75017 Paris",
+    "summary": "Спокойный квартал в 17-м округе, до 1860 года — отдельная деревня. Здесь Мане и его друзья («группа Батиньоль») писали кафе. Сквер 1862 года со скамейками — точка старта.",
+    "description": "Квартал между бульваром Батиньоль, авеню Клиши, улицей Кардине и улицей Рима. Старт — Square des Batignolles, небольшой парк 1862 года, где можно посидеть. Рядом новый парк Clichy-Batignolles – Martin-Luther-King на месте бывших железнодорожных путей. Метро — линии 2, 13 и 14.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно; бюджет дня — €30 на двоих."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Square_des_Batignolles_20060815_05.jpg/1280px-Square_des_Batignolles_20060815_05.jpg",
+        "credit": "Georges Seguin (Okki)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Square_des_Batignolles_20060815_05.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 1.5,
+      "stairs": "none",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Madeleine, линия 14 до Pont Cardinet, дальше около 400 м до сквера."
+    },
+    "tips": [
+      "Начать со скамейки в сквере — и дальше куда потянет."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Описание квартала, год сквера (1862), «группа Батиньоль» и линии метро — по Википедии (https://en.wikipedia.org/wiki/Batignolles), 27.09.2026."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "район",
+      "спокойно",
+      "местная жизнь",
+      "можно посидеть"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "day-30-euros"
   }
 ]
