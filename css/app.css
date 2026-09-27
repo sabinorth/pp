@@ -771,3 +771,40 @@ h2.section { margin-top: 18px; }
 .chip.top8-btn[aria-pressed="true"] { border-color: var(--accent); }
 :root[data-theme="emo"] .top8-slot { border-color: var(--neon-purple); }
 :root[data-theme="emo"] a.top8-slot:hover { border-color: var(--neon-pink); }
+
+/* Показывать только в эмо */
+.emo-only { display: none; }
+:root[data-theme="emo"] .emo-only { display: inline; }
+:root[data-theme="emo"] p.emo-only { display: block; }
+
+/* --- Currently listening --- */
+.listening { margin: 10px 0; }
+.listening label { display: block; font-weight: 600; margin-bottom: 4px; }
+.listening-row { display: flex; gap: 8px; }
+.listening input {
+  flex: 1; min-width: 0; min-height: 44px; padding: 8px 12px; border-radius: 12px;
+  border: 2px solid var(--border); background: var(--surface); color: var(--text); font: inherit;
+}
+:root[data-theme="emo"] .listening label { color: var(--neon-pink); font-style: italic; }
+:root[data-theme="emo"] .listening input { border-style: dashed; font-style: italic; }
+
+/* --- Стена комментариев (заметки к пунктам) --- */
+.wall-comment { display: flex; gap: 8px; align-items: flex-start; margin: 6px 0; }
+.wall-ava { flex: none; line-height: 1.45; }
+.wall-body { flex: 1; min-width: 0; }
+.wall-comment .item-note { margin: 0; overflow-wrap: anywhere; }
+:root[data-theme="emo"] .wall-ava {
+  display: grid; place-items: center;
+  width: 40px; height: 40px;
+  border: 2px solid var(--neon-purple);
+  background: var(--surface-2);
+  font-size: 1.3rem;
+}
+:root[data-theme="emo"] .wall-body {
+  position: relative;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+:root[data-theme="emo"] .wall-who { margin: 0 0 2px; font-size: 0.85rem; font-weight: 700; color: var(--neon-pink); }

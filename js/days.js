@@ -5,6 +5,7 @@ import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME, TYPES, wh
 import { crewName } from './players.js';
 import { blinkiesHTML } from './theme.js';
 import * as top8 from './top8.js';
+import * as store from './store.js';
 import * as plan from './plan.js';
 import * as energy from './energy.js';
 
@@ -142,6 +143,38 @@ export function dayCities(day) {
 
 const showHidden = new Set();   // даты, где раскрыты скрытые пункты
 
+// Заметка к пункту — «стена комментариев» в эмо-теме, обычная заметка в обычной.
+function wallHTML(note) {
+  return `<div class="wall-comment">
+    <span class="wall-ava" aria-hidden="true"><span class="emo-only">🖤</span><span class="not-emo">📝</span></span>
+    <div class="wall-body"><p class="wall-who emo-only">${esc(crewName())} wrote:</p><p class="item-note">${esc(note)}</p></div>
+  </div>`;
+}
+
+// «Песня дня» — просто текст, без плеера.
+function getSongs() {
+  const s = store.get('songs', {});
+  return s && typeof s === 'object' ? s : {};
+}
+
+function songHTML(date) {
+  return `<form class="listening" data-song>
+    <label for="song">🎧 Currently listening:</label>
+    <div class="listening-row">
+      <input id="song" name="song" type="text" maxlength="100" autocomplete="off" placeholder="песня дня" value="${esc(getSongs()[date] || '')}">
+      <button type="submit" class="icon-btn" aria-label="Сохранить песню">✓</button>
+    </div>
+  </form>`;
+}
+
+function saveSong(date, text) {
+  const songs = { ...getSongs() };
+  const t = text.trim().slice(0, 100);
+  if (t) songs[date] = t;
+  else delete songs[date];
+  store.set('songs', songs);
+}
+
 function entryHTML(e, day, places, n, total) {
   const item = e.item;
   const city = item.city || day.city;
@@ -162,7 +195,7 @@ function entryHTML(e, day, places, n, total) {
     : `<button type="button" class="icon-btn" data-move="-1" data-key="${k}" aria-label="Выше"${n === 0 ? ' disabled' : ''}>↑</button>
        <button type="button" class="icon-btn" data-move="1" data-key="${k}" aria-label="Ниже"${n === total - 1 ? ' disabled' : ''}>↓</button>
        <button type="button" class="icon-btn" data-remove="${k}" aria-label="${e.base ? 'Убрать из плана' : 'Удалить'}" title="${e.base ? 'Убрать' : 'Удалить'}">✕</button>`;
-  const edit = e.hidden ? '' : `<details class="item-edit"><summary>✎ ${e.time || e.note ? 'Изменить время и заметку' : 'Время и заметка'}</summary>
+  const edit = e.hidden ? '' : `<details class="item-edit"><summary>✎ ${e.time || e.note ? 'Изменить время и заметку' : 'Время и заметка'}<span class="emo-only">&nbsp;· 💬 comment</span></summary>
       <form data-meta="${k}">
         <label class="field"><span>Время</span><input type="time" name="time" value="${esc(e.time)}"></label>
         <label class="field"><span>Заметка</span><textarea name="note" rows="2" maxlength="500">${esc(e.note)}</textarea></label>
@@ -172,7 +205,7 @@ function entryHTML(e, day, places, n, total) {
     <div class="item-main">${main}
       ${e.base ? '' : '<span class="badge">добавлено</span>'}${e.hidden ? ' <span class="badge">скрыто</span>' : ''}
       ${when}${item.why ? `<p class="muted">${esc(item.why)}</p>` : ''}
-      ${e.note ? `<p class="item-note">📝 ${esc(e.note)}</p>` : ''}
+      ${e.note ? wallHTML(e.note) : ''}
       ${edit}
     </div>
     <div class="item-ctrls">${ctrls}</div>
@@ -237,7 +270,16 @@ export function afterDay(el, r) {
     rerender();
     requestAnimationFrame(() => window.scrollTo(0, y));
   });
+  page.addEventListener('change', (e) => {
+    if (e.target.name === 'song') saveSong(r.param, e.target.value);
+  });
   page.addEventListener('submit', (e) => {
+    if (e.target.matches('form[data-song]')) {
+      e.preventDefault();
+      saveSong(r.param, e.target.song.value);
+      e.target.song.blur();
+      return;
+    }
     const form = e.target.closest('form[data-meta]');
     if (!form) return;
     e.preventDefault();
@@ -290,6 +332,7 @@ export async function renderDay({ param }) {
     <p class="day-city">${cityLine(day)}</p>
     ${blinkiesHTML(day.date)}
     ${badgesHTML(day)}
+    ${songHTML(day.date)}
     ${day.note ? `<p class="muted">${esc(day.note)}</p>` : ''}
     ${warningsHTML(day.warnings)}
     ${budgetHTML(day, active, list, places)}
