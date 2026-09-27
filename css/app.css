@@ -808,3 +808,18 @@ h2.section { margin-top: 18px; }
   background: var(--surface-2);
 }
 :root[data-theme="emo"] .wall-who { margin: 0 0 2px; font-size: 0.85rem; font-weight: 700; color: var(--neon-pink); }
+
+/* --- Счётчик (visitor counter) --- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.counter { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 12px; }
+.counter-row { display: flex; align-items: center; gap: 6px; margin: 0; font-weight: 600; color: var(--muted); }
+.counter-digits { display: inline-flex; gap: 2px; font: 700 1.05rem/1 ui-monospace, "Courier New", monospace; font-variant-numeric: tabular-nums; }
+.counter-digits span { padding: 3px 4px; border-radius: 3px; background: var(--surface-2); color: var(--text); }
+:root[data-theme="emo"] .counter {
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 2px ridge var(--neon-purple);
+  background: #000;
+}
+:root[data-theme="emo"] .counter-digits span { background: #111; color: #7dff9a; border: 1px solid #333; text-shadow: 0 0 4px rgba(125, 255, 154, 0.7); }
+:root[data-theme="emo"] .counter-label { font-family: ui-monospace, "Courier New", monospace; font-size: 0.85rem; text-transform: uppercase; }

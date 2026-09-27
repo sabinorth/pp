@@ -1,7 +1,7 @@
 // План по дням: лента (#/plan) и карточка дня (#/day/2026-10-08).
 // Пункты дня = базовые из days.json + ручные правки из plan.js.
-import { CITIES, getDays, getPlaces } from './data.js';
-import { esc, fmtDate, fmtWeekday, todayISO, EFFORT_LEVELS, BEST_TIME, TYPES, whose } from './ui.js';
+import { CITIES, getDays, getPlaces, getGameIds } from './data.js';
+import { esc, fmtDate, fmtWeekday, todayISO, parseISODate, plural, EFFORT_LEVELS, BEST_TIME, TYPES, whose } from './ui.js';
 import { crewName } from './players.js';
 import { blinkiesHTML } from './theme.js';
 import * as top8 from './top8.js';
@@ -27,6 +27,30 @@ function rerender() {
   window.dispatchEvent(new HashChangeEvent('hashchange'));
 }
 
+// Счётчик в стиле visitor counter: дни до поездки и пройденные игры.
+function digitsHTML(n, width) {
+  return `<span class="counter-digits" aria-hidden="true">${[...String(n).padStart(width, '0')].map((c) => `<span>${c}</span>`).join('')}</span>`;
+}
+
+function counterRow(label, n, width, tail, sr) {
+  return `<p class="counter-row"><span class="counter-label">${label}</span>${digitsHTML(n, width)}<span class="counter-tail" aria-hidden="true">${tail}</span><span class="sr-only">${sr}</span></p>`;
+}
+
+async function counterHTML(days) {
+  const today = parseISODate(todayISO());
+  const first = parseISODate(days[0].date);
+  const total = days.length;
+  const n = Math.round((first - today) / 86400000);
+  let tripRow;
+  if (n > 0) tripRow = counterRow('до поездки', n, 3, plural(n, ['день', 'дня', 'дней']), `${n} ${plural(n, ['день', 'дня', 'дней'])}`);
+  else if (-n < total) tripRow = counterRow('день поездки', 1 - n, 2, `из ${total}`, `${1 - n} из ${total}`);
+  else tripRow = '<p class="counter-row"><span class="counter-label">поездка завершена 🖤</span></p>';
+  const ids = await getGameIds().catch(() => []);
+  const doneAll = store.get('games.done', {}) || {};
+  const done = ids.filter((id) => doneAll[id]?.achievement).length;
+  return `<div class="counter">${tripRow}${counterRow('игр пройдено', done, 2, `/ ${ids.length}`, `${done} из ${ids.length}`)}</div>`;
+}
+
 export async function renderList({ query }) {
   const days = await getDays();
   const places = await placeIndex(Object.keys(CITIES));
@@ -43,7 +67,7 @@ export async function renderList({ query }) {
       <div class="day-sub">${titles ? `Мест в плане: ${titles}` : 'Пока пусто'}${d.events?.length ? ` · событий: ${d.events.length}` : ''}</div>
     </a>`;
   });
-  return `<h1>План</h1>${blinkiesHTML()}${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
+  return `<h1>План</h1>${blinkiesHTML()}${await counterHTML(days)}${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
     <div class="top8s">${top8.gridsHTML(places)}</div>
     <section class="share-plan" id="share">
       <h2 class="section mod-head">${whose('📲 План на двоих', crewName())}</h2>
