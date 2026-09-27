@@ -2031,13 +2031,13 @@
       },
       {
         "date": "2026-10-10",
-        "time": "11:45",
-        "note": "Большой парад винных и гастрономических братств от виноградников Clos Montmartre, 11:45–13:30. После нашего отъезда."
+        "time": "10:00",
+        "note": "Parcours du Goût вокруг Сакре-Кёр, 10:00–23:00. После нашего отъезда."
       },
       {
         "date": "2026-10-10",
-        "time": "10:00",
-        "note": "Parcours du Goût вокруг Сакре-Кёр, 10:00–23:00. После нашего отъезда."
+        "time": "11:45",
+        "note": "Большой парад винных и гастрономических братств от виноградников Clos Montmartre, 11:45–13:30. После нашего отъезда."
       },
       {
         "date": "2026-10-11",
@@ -3310,5 +3310,313 @@
         "note": "финиш, можно сесть"
       }
     ]
+  },
+  {
+    "id": "fashion-week-tail",
+    "city": "paris",
+    "type": "event",
+    "name": "Хвост Недели моды в Париже",
+    "name_local": "Paris Fashion Week SS27 — SPHERE, Palais de Tokyo",
+    "coords": [
+      48.86399,
+      2.29652
+    ],
+    "address": "Palais de Tokyo, 13 Avenue du Président Wilson, 75116 Paris",
+    "summary": "Женская неделя моды весна–лето 2027 идёт до 6 октября: 5–6.10 мы застаём самый хвост. Даже без билетов на показы интересно понаблюдать за модной публикой в центре.",
+    "description": "Неделя моды — 28.09–6.10.2026, закрывает Louis Vuitton 6.10 в 18:30. Шоурум молодых дизайнеров SPHERE работает в Palais de Tokyo с 30.09 по 6.10, но он рассчитан на байеров и прессу: пустят ли обычных посетителей, не подтвердилось. Сам Palais de Tokyo (центр современного искусства) открыт для всех, кроме вторника.",
+    "description_long": "Paris Fashion Week заканчивается 6 октября, то есть 5–6-го вы зацепите самый хвост недели моды. Даже без билетов на показы в центральных районах будет интереснее обычного наблюдать за городской модной тусовкой.",
+    "dates": [
+      {
+        "date": "2026-10-05",
+        "time": "",
+        "note": "Предпоследний день недели моды. Palais de Tokyo открыт 12:00–22:00. Наш день переезда."
+      },
+      {
+        "date": "2026-10-06",
+        "time": "18:30",
+        "note": "Последний день; показ Louis Vuitton в 18:30 закрывает неделю. Palais de Tokyo во вторник закрыт."
+      }
+    ],
+    "hours": {
+      "text": "Palais de Tokyo: ежедневно 12:00–22:00, в четверг до 0:00; вторник закрыто.",
+      "closed_weekdays": [
+        2
+      ],
+      "source": "https://palaisdetokyo.com/horaires-acces/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 13,
+      "note": "Выставки Palais de Tokyo: €13, льготный €9. Наблюдать за публикой на улице — бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.fhcm.paris/en/paris-fashion-week"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 45,
+      "transfers": 2,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Franklin D. Roosevelt, линия 9 до Iéna, дальше около 300 м. Точный маршрут — по ссылке."
+    },
+    "tips": [
+      "Без билетов на показы — просто наблюдать за городской модной тусовкой в центральных районах.",
+      "5.10 — день переезда: только если силы остались. 6.10 Palais de Tokyo закрыт."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Проверено по FHCM на 27.09.2026: женская неделя моды SS27 — 28.09–06.10.2026; SPHERE — ср 30.09 – вт 06.10.2026 в Palais de Tokyo (https://www.fhcm.paris/en/paris-fashion-week).",
+      "Louis Vuitton 6.10 в 18:30 закрывает неделю (Complex, Luxury.it — по сводке в поиске).",
+      "Доступ публики в SPHERE: FHCM даёт контакты только для байеров и прессы; в сторонних обзорах — «open to trade and, on select days, the public», без указания дней. Не подтверждено.",
+      "Часы Palais de Tokyo: вторник — выходной, значит 6.10 внутрь не попасть (https://palaisdetokyo.com/horaires-acces/, сводка на 27.09.2026)."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [],
+    "tags": [
+      "мода",
+      "город",
+      "люди"
+    ],
+    "game_id": null,
+    "verified": false
+  },
+  {
+    "id": "droneart-show",
+    "city": "paris",
+    "type": "event",
+    "name": "Шоу дронов DroneArt: Гарри Поттер",
+    "name_local": "DroneArt Show: Harry Potter™ — Hippodrome de Paris-Vincennes",
+    "coords": [
+      48.82048,
+      2.45028
+    ],
+    "address": "Hippodrome de Paris-Vincennes, 2 Route de la Ferme, 75012 Paris",
+    "summary": "1200 светящихся дронов над ипподромом Венсена под музыку из «Гарри Поттера» и живую электроскрипку. Всё время сидя, в нашем же 12-м округе.",
+    "description": "Шоу к 25-летию фильмов о Гарри Поттере: дроны рисуют сцены из фильмов, зрителям раздают светящиеся браслеты. Около 65 минут, все места — стулья в рядах. Двери открываются за 2 часа. В наши дни — ср 7.10 и чт 8.10, начало в 20:45.",
+    "dates": [
+      {
+        "date": "2026-10-07",
+        "time": "20:45",
+        "note": "Двери за 2 часа до начала, шоу около 65 минут."
+      },
+      {
+        "date": "2026-10-08",
+        "time": "20:45",
+        "note": "День Версаля — только если остались силы."
+      },
+      {
+        "date": "2026-10-10",
+        "time": "20:45",
+        "note": "После нашего отъезда."
+      }
+    ],
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 48.9,
+      "note": "Parterre €48,90 (со скидкой на Fever €44,01); есть трибуна и deluxe-зоны. Цены зависят от даты: в сводках от €26,90 до €60."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://feverup.com/m/647897/en"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Hippodrome_de_Vincennes_2014-11-10.jpg/1280px-Hippodrome_de_Vincennes_2014-11-10.jpg",
+        "credit": "Christophe Pinard",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hippodrome_de_Vincennes_2014-11-10.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 65
+    },
+    "transit_hint": {
+      "from_hotel_min": 25,
+      "transfers": 1,
+      "note": "Около 3,6 км через Венсенский лес. Автобус 77 останавливается прямо у ипподрома (Hippodrome de Vincennes) — где на него удобнее сесть от Porte Dorée, проверить в приложении RATP. Обратно в 22:00 через лес — удобнее такси."
+    },
+    "tips": [
+      "Сидя всё время — хороший вечер для уставших ног.",
+      "Одеться слоями и взять что-нибудь тёплое: вечером на открытом воздухе холодно.",
+      "Parterre — единственная зона с доступом для колясок, значит без ступенек."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "По Fever на 27.09.2026 (https://feverup.com/m/647897/en): 7, 8 и 10 октября в 20:45; двери за 2 часа; около 65 минут; все места — стулья в рядах; Parterre €48,90.",
+      "Полный список дат по сводкам в поиске: 30.09, 1, 3, 7, 8 и 10.10.2026. В сентябре–октябре — версия «Harry Potter™», а не «Четыре сезона» Вивальди (та была 28 и 30 мая).",
+      "В блоке «Проверено» указано «30.09–10.10». Шоу идёт не каждый день, а только в отдельные даты.",
+      "Автобус 77 — по данным страницы о доступе к ипподрому (https://www.vincennes-hippodrome.com/fr/infos-pratiques/, сводка в поиске)."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "lac-daumesnil"
+    ],
+    "tags": [
+      "вечер",
+      "сидя",
+      "рядом с отелем",
+      "шоу"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "galimard-perfume",
+    "city": "paris",
+    "type": "experience",
+    "name": "Свой парфюм в Galimard",
+    "name_local": "Galimard — Atelier de création de parfum",
+    "coords": [
+      48.87418,
+      2.33569
+    ],
+    "address": "43 Rue de Provence, 75009 Paris",
+    "summary": "Сесть за «орган» из 126 нот, собрать свой аромат и унести 100 мл своих духов. Сидя 1,5–2 часа — и лучший физический сувенир из поездки.",
+    "description": "Парижская мастерская старого парфюмерного дома из Грасса. Инструктор объясняет верхние, средние и базовые ноты, дальше каждый собирает свою формулу. Формулу сохраняют в базе, духи можно дозаказать. Мастер-классы 7 дней в неделю, есть на английском.",
+    "description_long": "В Galimard дают настоящий «орган» ароматов: собираешь верхние/средние/базовые ноты и уходишь со своими 100 мл духов. Обычный воркшоп сейчас стоит €89 и занимает 1,5–2 часа. Это ещё и очень хороший физический сувенир из поездки.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 89,
+      "note": "€89 на человека, 100 мл Eau de Parfum включены. Спрей-флакон — за доплату."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.galimard.com/en/product/perfume-creation-workshop-in-paris"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.4,
+      "stairs": null,
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Richelieu–Drouot, дальше около 400 м."
+    },
+    "tips": [
+      "Опоздавших после начала не пускают и деньги не возвращают — прийти заранее.",
+      "Отменить можно не позже чем за 24 часа.",
+      "Язык мастер-класса выбирается при брони: английский, французский или китайский."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Проверено по сайту Galimard на 27.09.2026: €89, 1 ч 30 мин – 2 ч, 100 мл включены, орган на 126 нот, до 30 участников, 7 дней в неделю, языки EN/FR/CN, адрес 43 rue de Provence. Цена из текста подтвердилась.",
+      "Свободные слоты на 6–9.10 видны только в форме брони на сайте (JavaScript); в этом обзоре не проверялись."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [
+      "covered-passages-walk"
+    ],
+    "tags": [
+      "сидя",
+      "мастер-класс",
+      "сувенир",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true
+  },
+  {
+    "id": "musee-arts-forains",
+    "city": "paris",
+    "type": "experience",
+    "name": "Музей ярмарочных искусств",
+    "name_local": "Musée des Arts Forains — Pavillons de Bercy",
+    "coords": [
+      48.83277,
+      2.38934
+    ],
+    "address": "53 Avenue des Terroirs de France, 75012 Paris",
+    "summary": "Старинный ярмарочный Париж, где экспонаты запускают: гиды-актёры включают карусели и механическую музыку, на части аттракционов можно прокатиться. Только экскурсии по брони, для нас — ср 7.10.",
+    "description": "Музей в старых винных складах Берси, в нашем же 12-м округе. Попасть можно только с гидом, экскурсия 1,5 часа, есть туры на английском. Экскурсии идут по средам, выходным, праздникам и в школьные каникулы. Билеты — только онлайн, открываются за 2–3 недели.",
+    "description_long": "Старинный ярмарочный Париж, где экспонаты можно запускать. В Les Pavillons de Bercy — Musée des Arts Forains не просто смотришь на старые карусели: гиды-актёры запускают аттракционы, механическую музыку, на части вещей посетители сами катаются/играют. Тур около 90 минут. И это гораздо более странное и сказочное место, чем обычный музей. Бронирование открывают примерно за 2–3 недели; обычные визиты чаще бывают по средам и выходным. Для вас среда 7 октября потенциально особенно удобна.",
+    "hours": {
+      "text": "Только экскурсии с гидом по брони: по средам, выходным, праздникам и ежедневно в школьные каникулы. Экскурсия 1 ч 30 мин.",
+      "closed_weekdays": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "source": "https://arts-forains.tickeasy.com/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цена по источникам различается: €18,80, €19 и €21 за взрослого. Точную цену видно при брони."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://arts-forains.tickeasy.com/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Salle_du_Mus%C3%A9e_des_Arts_Forains_des_Pavillons_de_Bercy.jpg/1280px-Salle_du_Mus%C3%A9e_des_Arts_Forains_des_Pavillons_de_Bercy.jpg",
+        "credit": "Pavillons de Bercy · Musée des Arts Forains",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Salle_du_Mus%C3%A9e_des_Arts_Forains_des_Pavillons_de_Bercy.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 0.5,
+      "stairs": null,
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 2,
+      "note": "Ориентировочно: метро 8 до Daumesnil, линия 6 до Bercy, линия 14 до Cour Saint-Émilion, дальше около 300 м. Такси — около 10 минут."
+    },
+    "tips": [
+      "⚠️ Бронировать срочно: слоты открываются за 2–3 недели, для ср 7.10 бронь уже должна быть открыта.",
+      "Реально подходит только ср 7.10: сб 10.10 — вылет.",
+      "Билеты только онлайн, на месте не продают.",
+      "90 минут на ногах: сесть можно разве что на карусель."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Проверено по странице бронирования на 27.09.2026 (https://arts-forains.tickeasy.com/): только экскурсии с гидом 1 ч 30 мин, от 5 лет, на французском, английском и китайском; только по средам, выходным, праздникам и в школьные каникулы; бронь открывается примерно за 2–3 недели; «pas d'achat de billet possible sur place».",
+      "Адрес — 53 avenue des Terroirs de France, 75012 (https://arts-forains.com/en/). Метро 14 Cour Saint-Émilion.",
+      "Цена: в тексте блока «Проверено» — €18,80 и €21; в сводке jds.fr — €19. Расписание слотов на 7.10 без JavaScript не видно — проверить при брони.",
+      "Осенние школьные каникулы во Франции начинаются во второй половине октября, так что 5–9.10 работают обычные дни (не сверялось с календарём Минобразования)."
+    ],
+    "origin": "user-list-paris-2",
+    "pairs_with": [],
+    "tags": [
+      "необычное",
+      "старинное",
+      "бронь",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": true
   }
 ]
