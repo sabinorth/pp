@@ -30,6 +30,23 @@ function transportHTML(list) {
     ${linksHTML(t.apps)}${sourcesHTML(t.sources)}`).join('');
 }
 
+// Баннер вроде «Забастовка RATP»: всегда развёрнут, над разделами.
+function alertsHTML(list) {
+  return (list || []).map((a) => `<div class="card warn-card strike" role="note">
+    <p class="strike-title">🚧 ${esc(a.title)} · ${cityHead(a.city)}</p>
+    <p>${esc(a.text)}</p>
+    ${a.tips?.length ? `<ul>${a.tips.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+    ${sourcesHTML(a.sources)}${a.checked_on ? `<p class="muted">Проверено ${fmtDate(a.checked_on)}.</p>` : ''}</div>`).join('');
+}
+
+function transfersHTML(list) {
+  return list.map((t) => `<h3 id="${esc(t.id)}">${CITIES[t.city].flag} ${esc(t.title)}</h3>
+    <p class="transfer-rec">👉 ${esc(t.recommended)}</p>
+    <ul class="transfer-opts">${t.options.map((o) => `<li><strong>${esc(o.name)}</strong>
+      <br>⏱️ ${esc(o.time)} · 💶 ${esc(o.price)}${o.note ? `<br><span class="muted">${esc(o.note)}</span>` : ''}</li>`).join('')}</ul>
+    ${sourcesHTML(t.sources)}${t.checked_on ? `<p class="muted">Проверено ${fmtDate(t.checked_on)}.</p>` : ''}`).join('');
+}
+
 function weatherHTML(list) {
   return `<p class="muted">Прогноз по ссылке — он всегда свежий.</p>`
     + list.map((w) => `<h3>${cityHead(w.city)}</h3>${linksHTML(w.links)}`).join('');
@@ -89,6 +106,8 @@ function settingsHTML() {
 export async function render(focus) {
   const d = await loadJSON('practical.json');
   return `<p class="muted">Проверено ${fmtDate(d.checked_on)}.</p>
+    ${alertsHTML(d.alerts)}
+    ${section('transfers', '✈️ Трансферы', transfersHTML(d.transfers || []), focus === 'transfers')}
     ${section('transport', '🚇 Транспорт', transportHTML(d.transport), !focus)}
     ${section('weather', '🌦️ Погода', weatherHTML(d.weather))}
     ${section('phrases', '💬 Полезные фразы', phrasesHTML(d.phrases))}

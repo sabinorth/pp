@@ -1,5 +1,108 @@
 {
   "checked_on": "2026-09-26",
+  "alerts": [
+    {
+      "kind": "strike",
+      "city": "paris",
+      "title": "Забастовка RATP",
+      "text": "CGT-RATP объявила бессрочную забастовку с 28.09.2026 19:00: всё метро, автобусы, трамваи T1–T8, RER A и RER B южнее Gare du Nord. Прогнозы движения RATP публикует накануне вечером. На 27.09 даты окончания нет. Не на RATP: RER B севернее Gare du Nord (SNCF), RER C, RER D, Transilien (SNCF), Vélib, такси. Из CDG по умолчанию — такси по фиксированному тарифу.",
+      "tips": [
+        "Citymapper строит маршруты только по работающему транспорту — в дни забастовки удобнее его, чем схема метро.",
+        "Утром перед выходом проверить ratp.fr (Infos trafic) или приложение Île-de-France Mobilités.",
+        "Закрытие линии 2 этой осенью (11.10 до полудня и 19–25.10) — после нашего отъезда, нас не затрагивает."
+      ],
+      "sources": [
+        "https://www.sortiraparis.com/en/news/in-paris/articles/352590-ratp-cgt-launches-an-unlimited-strike-call",
+        "https://www.sortiraparis.com/en/news/in-paris/articles/352808-strike-on-september-29-2026-in-paris-protests-at-ratp-schools-and-hospitals-what-to-expect",
+        "https://mobilitycenter.fr/greve-29-septembre-2026-ratp-preavis-illimite-28-septembre-sncf-fonction-publique/",
+        "https://www.sortiraparis.com/en/news/in-paris/articles/352319-line-2-service-interrupted-this-autumn-seven-metro-stations-closed"
+      ],
+      "checked_on": "2026-09-27"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "prg-to-hotel",
+      "city": "prague",
+      "date": "2026-10-01",
+      "title": "Аэропорт Праги → отель, чт 1.10 вечером",
+      "recommended": "Bolt или Uber прямо до отеля: после перелёта вечером это проще всего. Прилёт 19:30, в отеле примерно к 20:30–21:00.",
+      "options": [
+        { "name": "🚕 Uber Airport (официальное такси аэропорта)", "time": "≈25–35 мин", "price": "≈650–900 Kč", "note": "Машины ждут прямо у выхода из зала прилёта терминалов 1 и 2. Не соглашаться на водителей, которые подходят в зале." },
+        { "name": "🚗 Bolt", "time": "≈25–35 мин", "price": "≈400–700 Kč, зависит от спроса", "note": "Посадка не у выхода, а на парковках P1 EXPRESS / P2 EXPRESS (указатель Taxi Point) — несколько минут с чемоданом." },
+        { "name": "🚌 Автобус 191 до Anděl", "time": "≈51 мин + ~5 мин пешком", "price": "билет PID 90 мин — 46 Kč в приложении, 50 Kč бумажный", "note": "Идёт прямо до Na Knížecí / Anděl, без пересадок. Ходит примерно до 0:30, интервал 5–30 мин." },
+        { "name": "🚌+🚇 Автобус 100 → метро B", "time": "≈16 мин до Zličín + метро B до Anděl", "price": "тот же билет 90 мин — 46 Kč", "note": "Быстрее 191, но с пересадкой. Кассы DPP в залах прилёта работают до 21:00; билет удобнее купить в PID Lítačka." }
+      ],
+      "sources": [
+        "https://www.dpp.cz/en/travelling/transport-to-airport/daytime-operation",
+        "https://www.prg.aero/en/public-transport-buses",
+        "https://www.prg.aero/en/taxi",
+        "https://www.praguego.com/transport/bolt",
+        "https://pid.cz/en/tickets/"
+      ],
+      "checked_on": "2026-09-27"
+    },
+    {
+      "id": "hotel-to-prg",
+      "city": "prague",
+      "date": "2026-10-05",
+      "title": "Отель → аэропорт Праги, пн 5.10 (рейс 12:20)",
+      "recommended": "Выезд в 9:30 на Bolt/Uber: в аэропорту около 10:00–10:05, за 2 с лишним часа до рейса по Шенгену. На автобусе 191 — выйти в 9:15.",
+      "options": [
+        { "name": "🚗 Bolt / Uber", "time": "≈25–35 мин", "price": "≈400–900 Kč", "note": "Заказать из номера в 9:25, выйти к 9:30." },
+        { "name": "🚌 Автобус 191 от Na Knížecí / Anděl", "time": "≈5 мин пешком + ≈51 мин", "price": "46 Kč (90 мин)", "note": "Без пересадок. Выйти из отеля в 9:15 — в аэропорту около 10:15." }
+      ],
+      "sources": [
+        "https://www.dpp.cz/en/travelling/transport-to-airport/daytime-operation",
+        "https://www.praguego.com/transport/bolt"
+      ],
+      "checked_on": "2026-09-27"
+    },
+    {
+      "id": "cdg-to-hotel",
+      "city": "paris",
+      "date": "2026-10-05",
+      "title": "CDG → отель, пн 5.10 (прилёт 14:15)",
+      "recommended": "Такси по фиксированному тарифу 56 € (правый берег, наш 12-й округ). Стоянка такси — у выхода каждого терминала. В отеле примерно к 16:00–16:30.",
+      "options": [
+        { "name": "🚕 Такси, фиксированный тариф", "time": "≈45–60 мин, в пробки дольше", "price": "56 € за машину", "note": "Тариф одинаковый днём и ночью, в обе стороны, багаж и до 4 пассажиров включены. Только без остановок по пути — иначе включат счётчик. Не на RATP, забастовка не мешает." },
+        { "name": "🚗 Uber / Bolt", "time": "≈40–60 мин", "price": "≈55–75 €, при высоком спросе дороже", "note": "В дни забастовки спрос выше — цена может быть больше, чем у такси." },
+        { "name": "🧑‍✈️ Трансфер, заказанный заранее", "time": "≈45–60 мин", "price": "≈65–85 €", "note": "Встреча с табличкой и ожидание, если рейс задержится. Дороже такси без явной выгоды." },
+        { "name": "🚆 RER B (не рекомендуется при забастовке)", "time": "не проверено", "price": "билет до/из аэропорта — 14 €", "note": "От CDG до Gare du Nord линию ведёт SNCF, южнее — RATP. Во время забастовок RATP на Gare du Nord часто нужна пересадка, а дальше до отеля — только метро/RER A (RATP)." },
+        { "name": "❌ Roissybus", "time": "—", "price": "—", "note": "Закрыт с 28.02.2026. Заменившая его линия 9517 ходит через Saint-Denis-Pleyel, куда из центра едут на метро (RATP)." }
+      ],
+      "sources": [
+        "https://www.taxineo.fr/en/blog/prix-taxi-paris-cdg",
+        "https://www.handivoyage.net/taxi-tarif-paris-charles-de-gaulle/",
+        "https://privatedrive.co/en/blog/uber-in-paris-2026-guide",
+        "https://www.vtc-paris.com/paris-airport-transfer-prices/",
+        "https://mobilitycenter.fr/greve-29-septembre-2026-ratp-preavis-illimite-28-septembre-sncf-fonction-publique/",
+        "https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/billets-de-dessertes-directes-des-aeroports",
+        "https://www.transbus.org/actualite/actu-2026-02-arret-ligne-roissybus-ratp-paris.html"
+      ],
+      "checked_on": "2026-09-27"
+    },
+    {
+      "id": "hotel-to-cdg",
+      "city": "paris",
+      "date": "2026-10-10",
+      "title": "Отель → CDG, сб 10.10 (рейс в Алматы 12:55)",
+      "recommended": "Такси по фиксированному тарифу 56 €, выезд в 8:30. Цель — быть в CDG к 9:55, за 3 часа до международного рейса. Дорога обычно 45–60 мин, но в пробки на A1 и при забастовке (больше машин на дорогах) — до 75 мин, поэтому запас. Заказать такси накануне вечером (например, в приложении G7) или взять на стоянке.",
+      "options": [
+        { "name": "🚕 Такси, фиксированный тариф", "time": "≈45–60 мин, в пробки до ~75 мин", "price": "56 €", "note": "Выезд 8:30 → в CDG примерно 9:15–9:45. Сказать водителю номер терминала (указан в билете)." },
+        { "name": "🚗 Uber / Bolt", "time": "≈40–75 мин", "price": "≈55–75 €, при спросе дороже", "note": "Запасной вариант, если такси не приехало." },
+        { "name": "🧑‍✈️ Трансфер, заказанный заранее", "time": "≈45–75 мин", "price": "≈65–85 €", "note": "Фиксированная цена и время подачи — если хочется спокойствия." },
+        { "name": "🚆 RER B", "time": "не проверено", "price": "14 €", "note": "Только если забастовка закончится: до RER B от отеля всё равно нужно метро (RATP)." }
+      ],
+      "sources": [
+        "https://www.taxineo.fr/en/blog/prix-taxi-paris-cdg",
+        "https://www.handivoyage.net/taxi-tarif-paris-charles-de-gaulle/",
+        "https://privatedrive.co/en/blog/uber-in-paris-2026-guide",
+        "https://www.vtc-paris.com/paris-airport-transfer-prices/"
+      ],
+      "checked_on": "2026-09-27"
+    }
+  ],
   "transport": [
     {
       "city": "prague",
@@ -25,7 +128,8 @@
         "Бумажных билетов больше нет (с ноября 2025). Билет покупается в приложении Île-de-France Mobilités или записывается на карту Navigo Easy (2 €; пополняется в автоматах или со смартфона).",
         "Билет Métro-Train-RER — 2,55 € на поездку по всему Иль-де-Франс, в том числе до Версаля. На одну Navigo Easy помещается до 20 билетов.",
         "Оплату банковской картой прямо на валидаторе вводят постепенно, и она дороже обычного билета на 50–80 центов, без бесплатных пересадок. Надёжнее приложение или Navigo Easy.",
-        "С 28.09 объявлена бессрочная забастовка RATP — перед выходом проверять ratp.fr или приложение."
+        "С 28.09 объявлена бессрочная забастовка RATP — перед выходом проверять ratp.fr или приложение. Подробности и варианты не на RATP — в карточке «Забастовка» выше.",
+        "Roissybus больше не ходит (закрыт 28.02.2026). Из CDG и в CDG — см. «✈️ Трансферы»."
       ],
       "apps": [
         { "name": "Île-de-France Mobilités", "url": "https://www.iledefrance-mobilites.fr/" },

@@ -391,6 +391,12 @@ h2.section { margin-top: 18px; }
 .event-links a { display: inline-flex; align-items: center; min-height: 44px; }
 .warn-card { background: var(--warn-bg); color: var(--warn-text); border-color: transparent; }
 .warn-card a { color: inherit; }
+.warn-card.strike { border-left: 6px solid currentColor; }
+.warn-card .muted { color: inherit; opacity: .85; }
+.strike-title { font-weight: 700; font-size: 1.05em; }
+.warn-card .src a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+.transfer-rec { font-weight: 600; }
+.transfer-opts li { margin-bottom: 10px; }
 
 /* --- Советы --- */
 .seg-links { margin-bottom: 12px; }
