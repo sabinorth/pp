@@ -1468,7 +1468,10 @@
       "с утра до ночи"
     ],
     "game_id": null,
-    "verified": true
+    "verified": true,
+    "pairs_with": [
+      "late-seine-walk-route"
+    ]
   },
   {
     "id": "maison-rose",
@@ -1939,7 +1942,11 @@
       "вид"
     ],
     "game_id": null,
-    "verified": true
+    "verified": true,
+    "pairs_with": [
+      "seine-dusk-cruise",
+      "late-seine-walk-route"
+    ]
   },
   {
     "id": "toilet-paris-sanisettes",
@@ -2088,7 +2095,8 @@
     "origin": "user-list-paris-1",
     "pairs_with": [
       "sacre-coeur",
-      "maison-rose"
+      "maison-rose",
+      "studio-28"
     ],
     "tags": [
       "фестиваль",
@@ -2175,7 +2183,8 @@
     "origin": "user-list-paris-1",
     "pairs_with": [
       "vert-galant",
-      "saint-regis"
+      "saint-regis",
+      "late-seine-walk-route"
     ],
     "tags": [
       "вечер",
@@ -2232,7 +2241,7 @@
     "effort": {
       "level": "low",
       "walk_km": 0.8,
-      "stairs": null,
+      "stairs": "some",
       "queue": "none",
       "seating": false,
       "toilet": null,
@@ -2255,11 +2264,15 @@
       "Часы по Paris Discovery Guide на 27.09.2026. Для Galerie Vivienne Visit Paris Region указывает 8:30–20:00 ежедневно (https://www.visitparisregion.com/en/galerie-vivienne), Paris Discovery Guide — до 20:30; в поле часов — более ранний вариант.",
       "Для Passage Jouffroy в других сводках встречается 7:00–21:30. Расхождение небольшое, днём открыто по всем источникам.",
       "Лестницы внутри пассажей не проверялись.",
-      "Длина маршрута — около 800 м по прямой между пассажами (расчёт по координатам OSM)."
+      "Длина маршрута — около 800 м по прямой между пассажами (расчёт по координатам OSM).",
+      "По ramentafaim.fr: у входа в Passage Jouffroy с бульвара Монмартр 2–3 ступени, у выхода на Grange-Batelière одна, внутри пол ровный (https://ramentafaim.fr/passage-jouffroy/). Проверить на месте."
     ],
     "origin": "user-list-paris-1",
     "pairs_with": [
-      "palais-royal"
+      "palais-royal",
+      "librairie-jousseaume",
+      "librairie-paul-vulin",
+      "rainy-day-paris"
     ],
     "tags": [
       "на дождь",
@@ -2418,5 +2431,884 @@
     "game_id": null,
     "verified": true,
     "idea_id": "slow-terrace"
+  },
+  {
+    "id": "food-quest",
+    "city": "paris",
+    "type": "idea",
+    "name": "Французский продуктовый квест",
+    "name_local": "Pique-nique du marché",
+    "coords": null,
+    "address": "",
+    "summary": "Утром boulangerie, сыр, пирожное, фрукты и паштет — 4–5 вещей, которые дома не купили бы, — и съесть всё у Сены. Бытовая Франция вместо очередного ресторана.",
+    "description": "Идея без адреса. Удобнее всего собрать всё на одном рынке: Marché d'Aligre (ст. метро Ledru-Rollin, линия 8 без пересадок) работает со вторника по воскресенье. У самого отеля рынок бывает только по четвергам и воскресеньям, а это день Версаля и день после отъезда. Поесть — на скамейках сквера Вер-Галан у воды.",
+    "description_long": "Зайти утром в boulangerie + fromagerie/рынок, набрать 4–5 вещей, которые вы сами бы дома не купили: хороший багет, сыр, pâtisserie, фрукты, что-нибудь мясное/паштет — и съесть это где-нибудь у Сены. Это лучше передаёт бытовую Францию, чем очередной ресторан.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 1.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 150
+    },
+    "transit_hint": null,
+    "tips": [
+      "Утром: на рынках лучший выбор до обеда, уличные ряды сворачиваются к 13:30–14:30.",
+      "В fromagerie попросить совета: сказать, что хотите сыр на пикник у реки."
+    ],
+    "how_to": [
+      "Boulangerie → багет.",
+      "Fromagerie → 1–2 сыра (попросить совета).",
+      "Pâtisserie → одно пирожное.",
+      "Рынок или épicerie → фрукты, паштет или колбаса.",
+      "Место у Сены, где можно сесть."
+    ],
+    "fact_notes": [
+      "Рынок Porte Dorée у самого отеля (avenue Daumesnil) работает только по четвергам 7:00–13:30 и воскресеньям 7:00–14:30 (https://www.paris.fr/lieux/marche-porte-doree-5486). Чт 8.10 — Версаль, вс 11.10 — после отъезда.",
+      "Конкретные boulangerie и fromagerie рядом с рынками не проверялись — выбирать на месте."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [],
+    "tags": [
+      "еда",
+      "пикник",
+      "утро",
+      "недорого"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "marche-aligre",
+      "marche-daumesnil",
+      "vert-galant"
+    ]
+  },
+  {
+    "id": "marche-aligre",
+    "city": "paris",
+    "type": "experience",
+    "name": "Рынок Алигр и крытый рынок Бово",
+    "name_local": "Marché d'Aligre – Marché Beauvau",
+    "coords": [
+      48.8489,
+      2.37832
+    ],
+    "address": "Place d'Aligre, 75012 Paris",
+    "summary": "Любимый парижанами рынок в 12-м округе: крытый павильон Бово с сырами и мясными лавками плюс уличные ряды с овощами и фруктами. Всё для продуктового квеста в одном месте.",
+    "description": "Крытый павильон Бово, а вокруг него на площади Алигр и соседних улицах — открытый рынок. От отеля — линия 8 без пересадок до Ledru-Rollin. Понедельник — выходной.",
+    "hours": {
+      "text": "Крытый рынок: Вт–Пт 9:00–13:00 и 16:00–19:30; Сб 9:00–13:00 и 15:30–19:30; Вс 9:00–13:30. Пн закрыто.",
+      "closed_weekdays": [
+        1
+      ],
+      "source": "https://www.visitparisregion.com/fr/marche-d-aligre",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/March%C3%A9_dAligre_4.jpg/1280px-March%C3%A9_dAligre_4.jpg",
+        "credit": "Jesús Gorriti from Madrid, Spain",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:March%C3%A9_dAligre_4.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 15,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Ledru-Rollin, дальше около 300 м."
+    },
+    "tips": [
+      "Для продуктового квеста — утром во вторник, среду или пятницу.",
+      "Пн 5.10 закрыто."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Открытый (уличный) рынок по сводкам работает Вт–Пт 7:30–13:30, Сб–Вс 7:30–14:30 (auvergne-mobilite.fr и др.). В поле часов — время крытого рынка по Visit Paris Region."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "le-viaduc",
+      "coulee-verte"
+    ],
+    "tags": [
+      "рынок",
+      "еда",
+      "утро",
+      "местная жизнь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "food-quest"
+  },
+  {
+    "id": "marche-daumesnil",
+    "city": "paris",
+    "type": "experience",
+    "name": "Уличный рынок Домениль",
+    "name_local": "Marché Daumesnil",
+    "coords": [
+      48.8398,
+      2.3925
+    ],
+    "address": "Boulevard de Reuilly (между rue de Charenton и place Félix-Éboué), 75012 Paris",
+    "summary": "Районный продуктовый рынок на бульваре Рейи, две остановки от отеля. Только по вторникам и пятницам утром.",
+    "description": "Обычный рынок квартала: овощи, фрукты, сыры, мясо, хлеб. Ряды стоят на бульваре между улицей Шарантон и площадью Феликс-Эбуэ. Ближайшее метро — Daumesnil, линия 8 без пересадок от отеля.",
+    "hours": {
+      "text": "Вт и Пт 7:00–13:30. В остальные дни рынка нет.",
+      "closed_weekdays": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ],
+      "source": "https://www.paris.fr/lieux/marche-daumesnil-5484",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "none",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 45
+    },
+    "transit_hint": {
+      "from_hotel_min": 10,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 две остановки до Daumesnil, дальше пара минут пешком. Пешком около 1,3 км по авеню Домениль."
+    },
+    "tips": [
+      "Наши дни: вт 6.10 и пт 9.10."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Координата — середина участка бульвара, где стоит рынок (по описанию paris.fr), точный вход не определялся."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "coulee-verte"
+    ],
+    "tags": [
+      "рынок",
+      "еда",
+      "утро",
+      "рядом с отелем"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "food-quest"
+  },
+  {
+    "id": "cinema-jazz-evening",
+    "city": "paris",
+    "type": "idea",
+    "name": "Один вечер — маленькое кино или джаз",
+    "name_local": "Ciné de quartier ou club de jazz",
+    "coords": null,
+    "address": "",
+    "summary": "Маленький зал со старым или авторским кино, потом поздний ужин и прогулка. Или камерный джаз-клуб. Важен вечерний городской ритуал, а не идеальный французский.",
+    "description": "Идея без адреса. Кандидаты: Studio 28 на Монмартре (кинотеатр 1928 года) и Le Champo в Латинском квартале (классика и ретроспективы); Caveau de la Huchette (джаз в подвале с 1946 года, без брони) и Le Duc des Lombards (80 сидячих мест, концерты в 19:30 и 21:30). Программа на 5–9.10 ещё не опубликована.",
+    "description_long": "Париж очень «киношный»: маленький зал, французское/старое кино, после него поздний ужин и прогулка. Или камерный jazz-клуб. Не обязательно понимать французский идеально — тут важен именно вечерний городской ритуал.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": true,
+      "duration_min": 150
+    },
+    "transit_hint": null,
+    "tips": [
+      "В программе кино искать пометку «VO» или «VOST» — фильм на языке оригинала с французскими субтитрами. Английский фильм в VO будет понятен.",
+      "Немое кино — вариант, где язык не нужен вообще.",
+      "Для джаза — ранний сет (19:30 в Duc des Lombards), чтобы не возвращаться за полночь."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Программы кинотеатров обычно меняются по средам; расписание на 5–9.10 на 27.09.2026 не опубликовано ни у Studio 28, ни у Le Champo. Проверить за 2–3 дня."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [],
+    "tags": [
+      "вечер",
+      "кино",
+      "джаз",
+      "на дождь",
+      "сидя"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "studio-28",
+      "le-champo",
+      "duc-des-lombards",
+      "caveau-huchette"
+    ]
+  },
+  {
+    "id": "studio-28",
+    "city": "paris",
+    "type": "experience",
+    "name": "Кинотеатр Studio 28",
+    "name_local": "Studio 28",
+    "coords": [
+      48.88614,
+      2.33539
+    ],
+    "address": "10 Rue Tholozé, 75018 Paris",
+    "summary": "Кинотеатр на Монмартре, открыт в 1928 году как первый авангардный зал Парижа. Сейчас — районное арт-кино на 170 мест.",
+    "description": "Studio 28 основал Жан-Плакид Моклер; сегодня это зал категории «art et essai», показывает недавние авторские фильмы. Зал на 170 мест обновлён в 2011 году. Логично совместить с вечером на Монмартре.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 9.5,
+      "note": "Полный тариф €9,50 (по сводке salles-cinema.com на 27.09.2026)."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.offi.fr/cinema/studio-28-3203.html"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Studio_28_nuit.jpg/1280px-Studio_28_nuit.jpg",
+        "credit": "Tatvam",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Studio_28_nuit.jpg"
+      }
+    ],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.5,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 45,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Madeleine, линия 12 до Abbesses, дальше около 400 м в горку. Abbesses — очень глубокая станция: подниматься на лифте."
+    },
+    "tips": [
+      "Удобно совместить с праздником урожая на Монмартре (пт 9.10) и фотобудкой.",
+      "Улица Толозе идёт в гору — лучше подъехать, а не идти пешком от бульвара."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "История и зал на 170 мест — по Википедии (https://fr.wikipedia.org/wiki/Studio_28). Тариф — по salles-cinema.com (https://salles-cinema.com/paris/cinema-studio-28-a-paris), на сайте кинотеатра не сверялся.",
+      "Программа на 5–9.10 на 27.09.2026 не опубликована."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "fete-vendanges-montmartre",
+      "sacre-coeur"
+    ],
+    "tags": [
+      "кино",
+      "вечер",
+      "на дождь",
+      "Монмартр"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "cinema-jazz-evening"
+  },
+  {
+    "id": "le-champo",
+    "city": "paris",
+    "type": "experience",
+    "name": "Кинотеатр Le Champo",
+    "name_local": "Cinéma Le Champo",
+    "coords": [
+      48.84999,
+      2.34323
+    ],
+    "address": "51 Rue des Écoles, 75005 Paris",
+    "summary": "Репертуарный кинотеатр Латинского квартала: классика, ретроспективы и старое авторское кино. Ровно то «маленький зал, старое кино».",
+    "description": "Le Champo показывает в основном классику мирового кино и ретроспективы режиссёров. Рядом Сорбонна и бульвар Сен-Мишель — после сеанса легко найти поздний ужин и пройти к Сене.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены на сайте не нашлись."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.cinema-lechampo.com/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.6,
+      "stairs": "some",
+      "queue": "short",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 150
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 2,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Châtelet, линия 4 до Saint-Michel, дальше около 600 м. Точный маршрут — по ссылке."
+    },
+    "tips": [
+      "После сеанса — поздний ужин в Латинском квартале и прогулка к Сене."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Адрес — по сайту кинотеатра (https://www.cinema-lechampo.com/). Программа на октябрь 2026 на 27.09.2026 не опубликована, цены и язык показов не проверены."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "late-seine-walk-route"
+    ],
+    "tags": [
+      "кино",
+      "классика",
+      "вечер",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": false,
+    "idea_id": "cinema-jazz-evening"
+  },
+  {
+    "id": "duc-des-lombards",
+    "city": "paris",
+    "type": "experience",
+    "name": "Джаз-клуб Le Duc des Lombards",
+    "name_local": "Le Duc des Lombards",
+    "coords": [
+      48.85967,
+      2.34858
+    ],
+    "address": "42 Rue des Lombards, 75001 Paris",
+    "summary": "Камерный джаз-клуб у Шатле: около 80 сидячих мест, два концерта за вечер — в 19:30 и 21:30. Можно успеть рано и не возвращаться за полночь.",
+    "description": "Один из известных джаз-клубов на улице Ломбардцев. Концерты по билетам, программа меняется каждый вечер. Ранний сет в 19:30 удобен, если не хочется поздно возвращаться.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цена зависит от концерта; в сводках — от €34 до €45."
+    },
+    "booking": {
+      "required": true,
+      "url": "https://www.ducdeslombards.com/"
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.3,
+      "stairs": null,
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 120
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 1,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Châtelet, дальше около 300 м."
+    },
+    "tips": [
+      "Брать ранний концерт 19:30."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Время сетов 19:30 и 21:30 — по сайту клуба на 27.09.2026 (https://www.ducdeslombards.com/); концерты на 5–9.10 на сайте пока не показаны.",
+      "80 сидячих мест и цены от €34 до €45 — по сводкам в поиске (agendaculturel.fr, abcsalles.com), на официальном сайте не сверялись."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [],
+    "tags": [
+      "джаз",
+      "вечер",
+      "сидя",
+      "на дождь"
+    ],
+    "game_id": null,
+    "verified": false,
+    "idea_id": "cinema-jazz-evening"
+  },
+  {
+    "id": "caveau-huchette",
+    "city": "paris",
+    "type": "experience",
+    "name": "Джаз-клуб Caveau de la Huchette",
+    "name_local": "Caveau de la Huchette",
+    "coords": [
+      48.85279,
+      2.3463
+    ],
+    "address": "5 Rue de la Huchette, 75005 Paris",
+    "summary": "Джаз в средневековом подвале Латинского квартала с 1946 года. Каждый вечер живой джаз и свинг, без брони, вход €14–16.",
+    "description": "Caveau открыт каждый вечер круглый год, брони нет — просто приходить. Сеты начинаются в 21:30, 23:00 и после полуночи; публика часто танцует свинг. Клуб в подвале — вниз по лестнице. В двух шагах от Нотр-Дама и Сены.",
+    "hours": {
+      "text": "Ежедневно с 21:00: Вс–Чт до 2:00, Пт–Сб до 4:00. Сеты в 21:30, 23:00 и 0:30 (в выходные 0:45).",
+      "closed_weekdays": [],
+      "source": "https://www.caveaudelahuchette.fr/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 14,
+      "note": "Вс–Чт €14, Пт–Сб и канун праздников €16, студенты до 25 лет €10."
+    },
+    "booking": {
+      "required": false,
+      "url": "https://www.caveaudelahuchette.fr/"
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Caveau_de_la_Huchette%2C_5_rue_de_la_Huchette%2C_Paris_5e.jpg/1280px-Caveau_de_la_Huchette%2C_5_rue_de_la_Huchette%2C_Paris_5e.jpg",
+        "credit": "Celette",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Caveau_de_la_Huchette,_5_rue_de_la_Huchette,_Paris_5e.jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": null,
+      "stairs": "some",
+      "queue": "short",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 90
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 2,
+      "note": "Ориентировочно: метро 8 до Reuilly–Diderot, линия 1 до Châtelet, линия 4 до Saint-Michel, дальше около 150 м."
+    },
+    "tips": [
+      "Начинается поздно (первый сет 21:30) — только в день без утренних планов.",
+      "Сидячих мест немного, клуб в подвале — вниз по лестнице.",
+      "Удобно после ночной прогулки вдоль Сены: Saint-Michel рядом."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы и цены — по сайту клуба на 27.09.2026."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "late-seine-walk-route"
+    ],
+    "tags": [
+      "джаз",
+      "вечер",
+      "поздно",
+      "без брони"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "cinema-jazz-evening"
+  },
+  {
+    "id": "rainy-day-paris",
+    "city": "paris",
+    "type": "idea",
+    "name": "Если дождь — не считать день испорченным",
+    "name_local": "Paris sous la pluie",
+    "coords": null,
+    "address": "",
+    "summary": "Дождь + крытые пассажи + кафе + книжные и антикварные лавки — отдельный режим Парижа. Не пересиживать весь дождь в музее.",
+    "description": "Идея без адреса. Основа — маршрут по крытым пассажам (Vivienne → Panoramas → Jouffroy → Verdeau). По пути две старые книжные: Jousseaume в Galerie Vivienne (с 1826 года, старые книги, открытки, гравюры) и Paul Vulin в Passage Jouffroy.",
+    "description_long": "Для Парижа дождь + крытые пассажи + кафе + книжные/антикварные лавки — фактически отдельный режим города. Я бы даже специально не пыталась весь дождь пересидеть в музее.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": 0.8,
+      "stairs": "some",
+      "queue": "none",
+      "seating": true,
+      "toilet": null,
+      "duration_min": 180
+    },
+    "transit_hint": null,
+    "tips": [
+      "Я бы даже специально не пыталась весь дождь пересидеть в музее.",
+      "Книжные в пассажах в воскресенье и понедельник закрыты — лучше вт–сб после обеда."
+    ],
+    "how_to": [],
+    "fact_notes": [],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "covered-passages-walk"
+    ],
+    "tags": [
+      "на дождь",
+      "книги",
+      "под крышей"
+    ],
+    "game_id": null,
+    "verified": true,
+    "candidates": [
+      "covered-passages-walk",
+      "librairie-jousseaume",
+      "librairie-paul-vulin"
+    ]
+  },
+  {
+    "id": "librairie-jousseaume",
+    "city": "paris",
+    "type": "experience",
+    "name": "Букинистическая лавка Jousseaume",
+    "name_local": "Librairie Jousseaume",
+    "coords": [
+      48.8665,
+      2.3399
+    ],
+    "address": "45–47 Galerie Vivienne, 75002 Paris",
+    "summary": "Одна из старейших книжных лавок Парижа, работает без перерыва с 1826 года прямо в Galerie Vivienne. Книги XIX–XX веков, старые открытки, гравюры.",
+    "description": "Лавка занимает несколько номеров в Galerie Vivienne. Здесь можно найти старую открытку или гравюру за небольшие деньги — хороший вариант для «кусочка визуального Парижа».",
+    "hours": {
+      "text": "Пн–Сб 11:00–19:00. Вс закрыто.",
+      "closed_weekdays": [
+        0
+      ],
+      "source": "https://www.galerie-vivienne.com/boutiques/culture/librairie-jousseaume",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 35,
+      "transfers": 1,
+      "note": "Как до Galerie Vivienne: метро 8 до Reuilly–Diderot, линия 1 до Palais Royal – Musée du Louvre."
+    },
+    "tips": [
+      "Открытки и гравюры — подойдут и для букинист-челленджа."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Часы, адрес и год основания — по сайту Galerie Vivienne на 27.09.2026."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "covered-passages-walk"
+    ],
+    "tags": [
+      "на дождь",
+      "книги",
+      "старые открытки"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "rainy-day-paris"
+  },
+  {
+    "id": "librairie-paul-vulin",
+    "city": "paris",
+    "type": "experience",
+    "name": "Книжная лавка Paul Vulin",
+    "name_local": "Librairie Paul Vulin",
+    "coords": [
+      48.87215,
+      2.34205
+    ],
+    "address": "34–36 Passage Jouffroy, 75009 Paris",
+    "summary": "Букинистическая лавка в Passage Jouffroy: старые и редкие издания, лотки с книгами прямо в пассаже.",
+    "description": "Лавка в середине Passage Jouffroy, книги выставлены на лотках у входа — можно рыться, не заходя внутрь. По соседству, в № 39, — лавка театральных текстов, афиш и старых программок.",
+    "hours": {
+      "text": "Обычно Вт–Сб 12:00–19:00; Вс и Пн закрыто.",
+      "closed_weekdays": [
+        0,
+        1
+      ],
+      "source": "https://ramentafaim.fr/passage-jouffroy/",
+      "checked_on": "2026-09-27"
+    },
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": null,
+      "note": "Цены не проверялись."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "low",
+      "walk_km": null,
+      "stairs": "none",
+      "queue": "none",
+      "seating": false,
+      "toilet": false,
+      "duration_min": 30
+    },
+    "transit_hint": {
+      "from_hotel_min": 30,
+      "transfers": 0,
+      "note": "Ориентировочно: метро 8 без пересадок до Grands Boulevards, дальше около 150 м."
+    },
+    "tips": [],
+    "how_to": [],
+    "fact_notes": [
+      "Часы — из обзорной статьи блога («обычно»), официального сайта у лавки не нашлось. Проверить на месте."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "covered-passages-walk"
+    ],
+    "tags": [
+      "на дождь",
+      "книги"
+    ],
+    "game_id": null,
+    "verified": false,
+    "idea_id": "rainy-day-paris"
+  },
+  {
+    "id": "late-seine-walk",
+    "city": "paris",
+    "type": "idea",
+    "name": "Поздний бесцельный маршрут пешком",
+    "name_local": "Balade nocturne le long de la Seine",
+    "coords": null,
+    "address": "",
+    "summary": "После ужина пройти по центру без задачи «успеть посмотреть»: подсветка, мокрый асфальт, витрины, мосты, отражения. Для нас — 1,5–2 км по ровному вдоль Сены.",
+    "description": "Идея без адреса. Готовый вариант — «Вдоль Сены ночью»: от сквера Вер-Галан (причал круиза) через Новый мост по левому берегу к Сен-Мишель, мимо Нотр-Дама на остров Сен-Луи. Финиш в брассери Le Saint-Régis, где можно сесть.",
+    "description_long": "После ужина пройти километра 3–4 по центральному Парижу без задачи «успеть посмотреть». Подсветка, мокрый асфальт, витрины, мосты, отражения — мне кажется, вам этот Париж зайдёт сильнее дневного открыточного.",
+    "hours": null,
+    "price": null,
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.8,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": null,
+    "tips": [
+      "Для нашей нагрузки — не 3–4 км, а 1,5–2 км по ровному вдоль Сены.",
+      "Хорошо сразу после круиза в сумерках: старт у того же причала."
+    ],
+    "how_to": [],
+    "fact_notes": [],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "seine-dusk-cruise"
+    ],
+    "tags": [
+      "вечер",
+      "красиво",
+      "бесплатно",
+      "ночь"
+    ],
+    "game_id": null,
+    "verified": true,
+    "best_time": [
+      {
+        "time": "после ужина",
+        "note": "подсветка мостов и Нотр-Дама"
+      }
+    ],
+    "candidates": [
+      "late-seine-walk-route"
+    ]
+  },
+  {
+    "id": "late-seine-walk-route",
+    "city": "paris",
+    "type": "experience",
+    "name": "Вдоль Сены ночью: от Вер-Галан до Сен-Луи",
+    "name_local": "Du Vert-Galant à l'île Saint-Louis",
+    "coords": [
+      48.85741,
+      2.34033
+    ],
+    "address": "Старт: Square du Vert-Galant, 75001 Paris",
+    "summary": "Около 1,8 км почти по ровному: Новый мост, набережные левого берега, вид на подсвеченный Нотр-Дам, остров Сен-Луи. Финиш — в брассери, где можно сесть.",
+    "description": "От сквера Вер-Галан подняться на Новый мост и перейти на левый берег, дальше по набережной Великих Августинцев к площади Сен-Мишель, по набережным напротив Нотр-Дама до моста Архиепископства. Там перейти на остров Сите за собором и по мосту Сен-Луи — на остров Сен-Луи. Финиш — Le Saint-Régis, открыт до 2:00.",
+    "hours": null,
+    "price": {
+      "avg_check_eur": null,
+      "ticket_eur": 0,
+      "note": "Бесплатно."
+    },
+    "booking": {
+      "required": false,
+      "url": null
+    },
+    "photos": [
+      {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Paris_2016_09_06_%286%29_%2834323099666%29.jpg/1280px-Paris_2016_09_06_%286%29_%2834323099666%29.jpg",
+        "credit": "Carl Campbell from Santiago de Querétaro, México",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_2016_09_06_(6)_(34323099666).jpg"
+      }
+    ],
+    "effort": {
+      "level": "mid",
+      "walk_km": 1.8,
+      "stairs": "some",
+      "queue": "none",
+      "seating": false,
+      "toilet": null,
+      "duration_min": 60
+    },
+    "transit_hint": {
+      "from_hotel_min": 40,
+      "transfers": 1,
+      "note": "К старту — как до сквера Вер-Галан (метро 8 + линия 1). Обратно от острова Сен-Луи: около 500 м до Pont Marie (линия 7) или Hôtel de Ville (линия 1), дальше линия 8 от Reuilly–Diderot."
+    },
+    "tips": [
+      "Со сквера Вер-Галан на Новый мост — лестница; остальной путь ровный.",
+      "Сесть по дороге — в кафе на площади Сен-Мишель; в конце — Le Saint-Régis.",
+      "Если сил мало — закончить на Сен-Мишель (метро 4) после 800 м."
+    ],
+    "how_to": [],
+    "fact_notes": [
+      "Длина — около 1,3 км по прямой между точками, по улицам примерно 1,6–1,8 км (оценка по координатам OSM)."
+    ],
+    "origin": "user-list-paris-1",
+    "pairs_with": [
+      "seine-dusk-cruise",
+      "saint-regis",
+      "vert-galant",
+      "caveau-huchette"
+    ],
+    "tags": [
+      "вечер",
+      "красиво",
+      "бесплатно",
+      "вид на Нотр-Дам"
+    ],
+    "game_id": null,
+    "verified": true,
+    "idea_id": "late-seine-walk",
+    "route_stops": [
+      {
+        "name": "Сквер Вер-Галан",
+        "coords": [
+          48.85741,
+          2.34033
+        ],
+        "note": "старт у причала круиза, наверх по лестнице"
+      },
+      {
+        "name": "Новый мост",
+        "coords": [
+          48.8566,
+          2.3415
+        ]
+      },
+      {
+        "name": "Площадь Сен-Мишель",
+        "coords": [
+          48.85332,
+          2.34376
+        ],
+        "note": "кафе, метро 4 — можно закончить здесь"
+      },
+      {
+        "name": "Набережная напротив Нотр-Дама",
+        "coords": [
+          48.8521,
+          2.3475
+        ],
+        "note": "вид на подсвеченный собор"
+      },
+      {
+        "name": "Мост Архиепископства",
+        "coords": [
+          48.85151,
+          2.35156
+        ]
+      },
+      {
+        "name": "Мост Сен-Луи",
+        "coords": [
+          48.85276,
+          2.35276
+        ]
+      },
+      {
+        "name": "Le Saint-Régis",
+        "coords": [
+          48.85293,
+          2.35369
+        ],
+        "note": "финиш, можно сесть"
+      }
+    ]
   }
 ]
