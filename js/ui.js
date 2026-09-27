@@ -6,10 +6,14 @@ export function esc(value) {
   })[c]);
 }
 
-// Шапка блока в духе MySpace: «Игрок 1's Top 8». Приставка видна только в эмо-теме.
-// title — уже готовая разметка.
+// Шапка блока в духе MySpace: «📲 Игрок 1's План». Приставка видна только в эмо-теме,
+// эмодзи из начала title встаёт перед ней. title — уже готовая разметка.
+const LEAD_EMOJI = /^(\p{Extended_Pictographic}[\uFE0F\u200D\p{Extended_Pictographic}]*)\s*/u;
+
 export function whose(title, who) {
-  return `<span class="whose">${esc(who)}'s </span>${title}`;
+  const m = title.match(LEAD_EMOJI);
+  const lead = m ? `${m[1]} ` : '';
+  return `${lead}<span class="whose">${esc(who)}'s </span>${m ? title.slice(m[0].length) : title}`;
 }
 
 export const TYPES = {

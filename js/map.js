@@ -261,7 +261,10 @@ function placeLinks(title, ids) {
 function placeHTML(p, hotel) {
   const type = TYPES[p.type] || TYPES.sight;
   const isIdea = p.type === 'idea';
-  const idea = p.idea_id ? currentPlaces.find((x) => x.id === p.idea_id) : null;
+  // Идея, для которой точка — кандидат: по idea_id или по списку candidates у идеи.
+  const idea = currentPlaces.find((x) => x.id === p.idea_id)
+    || currentPlaces.find((x) => x.type === 'idea' && x.candidates?.includes(p.id));
+  const ideaGame = !isIdea && !readyGames.includes(p.game_id) && readyGames.includes(idea?.game_id) ? idea.game_id : null;
   return `
     ${photoHTML(p.photos)}
     <h2 class="place-title">${type.icon} ${esc(p.name)}</h2>
@@ -301,6 +304,9 @@ function placeHTML(p, hotel) {
     ${readyGames.includes(p.game_id) ? `<div class="route-btns">
       <a class="btn game-link" href="#/game/${encodeURIComponent(p.game_id)}">🎲 Сыграть</a>
       ${isIdea ? '' : `<a class="btn secondary game-link" href="#/game/${encodeURIComponent(p.game_id)}?screen=onsite">📍 На месте</a>`}
+    </div>` : ''}
+    ${ideaGame ? `<div class="route-btns">
+      <a class="btn game-link" href="#/game/${encodeURIComponent(ideaGame)}">🎲 Игра для идеи «${esc(idea.name)}»</a>
     </div>` : ''}
     ${facts.slot(facts.placeCtx(p))}`;
 }

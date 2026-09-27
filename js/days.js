@@ -56,9 +56,14 @@ async function counterHTML(days) {
 export async function renderList({ query }) {
   const days = await getDays();
   const places = await placeIndex(Object.keys(CITIES));
+  const hotels = await checks.getHotels();
   const today = todayISO();
   const cards = days.map((d) => {
-    const titles = plan.visibleEntries(d, plan.activePlan(d.date)).filter((e) => !e.item.pause).length;
+    const visible = plan.visibleEntries(d, plan.activePlan(d.date))
+      .filter((e) => e.base || places.has(`${e.item.city}/${e.item.place_id}`));
+    const titles = visible.filter((e) => !e.item.pause).length;
+    const { value, limit } = checks.dayLoad(d, visible, places, hotels);
+    const m = energy.mood(value, limit);
     return `<a class="card day-card${d.date === today ? ' today' : ''}" href="#/day/${d.date}" data-date="${d.date}">
       <div class="day-head">
         <span class="day-date">${fmtWeekday(d.date)}, ${fmtDate(d.date)}</span>
@@ -67,6 +72,7 @@ export async function renderList({ query }) {
       </div>
       ${badgesHTML(d)}
       <div class="day-sub">${titles ? `Мест в плане: ${titles}` : 'Пока пусто'}${d.events?.length ? ` · событий: ${d.events.length}` : ''}</div>
+      <p class="mood mood-${m.cls} mood-card"><span class="mood-label">Mood:</span> <span aria-hidden="true">${m.icon}</span> ${m.text} <span class="muted">· ${value}/${limit}</span></p>
     </a>`;
   });
   return `<h1>План</h1>${blinkiesHTML()}${await counterHTML(days)}${importOfferHTML(query.import)}<div class="days">${cards.join('')}</div>
